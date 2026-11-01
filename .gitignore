@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+.claude/
+senguard_msc/data/
+senguard_msc/external/
+senguard_msc/checkpoints/
+senguard_msc/results/
+senguard_msc/reports/
+senguard_msc/manifests/
+senguard_msc/logs/
+senguard_msc/figures/
+senguard_msc/.venv_check/
+deliverables/demo/input/
+kaggle_runs/*/senguard_msc/figures/*.svg

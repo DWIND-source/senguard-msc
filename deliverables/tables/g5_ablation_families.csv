@@ -1,0 +1,323 @@
+design,cell_type,paradigm,candidate,auroc
+LOCO,BJ,all,L2 genes (k=5000),0.75
+LOCO,BMMSC,all,L2 genes (k=5000),1.0
+LOCO,HCAEC,all,L2 genes (k=5000),1.0
+LOCO,HEKn,all,L2 genes (k=5000),1.0
+LOCO,HSAEC,all,L2 genes (k=5000),1.0
+LOCO,HUVEC,all,L2 genes (k=5000),1.0
+LOCO,HVSMC,all,L2 genes (k=5000),1.0
+LOCO,HeMn,all,L2 genes (k=5000),1.0
+LOCO,Myoblasts,all,L2 genes (k=5000),1.0
+LOCO,NHA,all,L2 genes (k=5000),1.0
+LOCO,NHO,all,L2 genes (k=5000),1.0
+LOCO,PBMCs,all,L2 genes (k=5000),1.0
+LOCO,WI-38,all,L2 genes (k=5000),1.0
+LOCO,prAD,all,L2 genes (k=5000),1.0
+LOCPO,BJ,Etoposide,L2 genes (k=5000),1.0
+LOCPO,BJ,Ionizing,L2 genes (k=5000),1.0
+LOCPO,BJ,Oxidative,L2 genes (k=5000),1.0
+LOCPO,BJ,RasV12,L2 genes (k=5000),0.0
+LOCPO,BMMSC,Etoposide,L2 genes (k=5000),1.0
+LOCPO,BMMSC,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HCAEC,Doxorubicin,L2 genes (k=5000),1.0
+LOCPO,HCAEC,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HEKn,Etoposide,L2 genes (k=5000),1.0
+LOCPO,HEKn,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HSAEC,Etoposide,L2 genes (k=5000),1.0
+LOCPO,HSAEC,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HUVEC,Etoposide,L2 genes (k=5000),1.0
+LOCPO,HUVEC,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HVSMC,Doxorubicin,L2 genes (k=5000),1.0
+LOCPO,HVSMC,Ionizing,L2 genes (k=5000),1.0
+LOCPO,HeMn,Etoposide,L2 genes (k=5000),1.0
+LOCPO,HeMn,Ionizing,L2 genes (k=5000),1.0
+LOCPO,Myoblasts,Etoposide,L2 genes (k=5000),1.0
+LOCPO,Myoblasts,Ionizing,L2 genes (k=5000),1.0
+LOCPO,NHA,Etoposide,L2 genes (k=5000),1.0
+LOCPO,NHA,Ionizing,L2 genes (k=5000),1.0
+LOCPO,NHO,Etoposide,L2 genes (k=5000),1.0
+LOCPO,NHO,Ionizing,L2 genes (k=5000),1.0
+LOCPO,PBMCs,Etoposide,L2 genes (k=5000),1.0
+LOCPO,PBMCs,Ionizing,L2 genes (k=5000),1.0
+LOCPO,WI-38,Etoposide,L2 genes (k=5000),1.0
+LOCPO,WI-38,Ionizing,L2 genes (k=5000),1.0
+LOCPO,WI-38,Oxidative,L2 genes (k=5000),1.0
+LOCPO,WI-38,RasV12,L2 genes (k=5000),1.0
+LOCPO,prAD,Etoposide,L2 genes (k=5000),1.0
+LOCPO,prAD,Ionizing,L2 genes (k=5000),1.0
+LOCO,BJ,all,L1 genes (k=2000),0.75
+LOCO,BMMSC,all,L1 genes (k=2000),1.0
+LOCO,HCAEC,all,L1 genes (k=2000),1.0
+LOCO,HEKn,all,L1 genes (k=2000),1.0
+LOCO,HSAEC,all,L1 genes (k=2000),1.0
+LOCO,HUVEC,all,L1 genes (k=2000),1.0
+LOCO,HVSMC,all,L1 genes (k=2000),1.0
+LOCO,HeMn,all,L1 genes (k=2000),1.0
+LOCO,Myoblasts,all,L1 genes (k=2000),1.0
+LOCO,NHA,all,L1 genes (k=2000),1.0
+LOCO,NHO,all,L1 genes (k=2000),1.0
+LOCO,PBMCs,all,L1 genes (k=2000),1.0
+LOCO,WI-38,all,L1 genes (k=2000),1.0
+LOCO,prAD,all,L1 genes (k=2000),1.0
+LOCPO,BJ,Etoposide,L1 genes (k=2000),1.0
+LOCPO,BJ,Ionizing,L1 genes (k=2000),1.0
+LOCPO,BJ,Oxidative,L1 genes (k=2000),1.0
+LOCPO,BJ,RasV12,L1 genes (k=2000),0.0
+LOCPO,BMMSC,Etoposide,L1 genes (k=2000),1.0
+LOCPO,BMMSC,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HCAEC,Doxorubicin,L1 genes (k=2000),1.0
+LOCPO,HCAEC,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HEKn,Etoposide,L1 genes (k=2000),1.0
+LOCPO,HEKn,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HSAEC,Etoposide,L1 genes (k=2000),1.0
+LOCPO,HSAEC,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HUVEC,Etoposide,L1 genes (k=2000),1.0
+LOCPO,HUVEC,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HVSMC,Doxorubicin,L1 genes (k=2000),1.0
+LOCPO,HVSMC,Ionizing,L1 genes (k=2000),1.0
+LOCPO,HeMn,Etoposide,L1 genes (k=2000),1.0
+LOCPO,HeMn,Ionizing,L1 genes (k=2000),1.0
+LOCPO,Myoblasts,Etoposide,L1 genes (k=2000),1.0
+LOCPO,Myoblasts,Ionizing,L1 genes (k=2000),1.0
+LOCPO,NHA,Etoposide,L1 genes (k=2000),1.0
+LOCPO,NHA,Ionizing,L1 genes (k=2000),1.0
+LOCPO,NHO,Etoposide,L1 genes (k=2000),1.0
+LOCPO,NHO,Ionizing,L1 genes (k=2000),1.0
+LOCPO,PBMCs,Etoposide,L1 genes (k=2000),1.0
+LOCPO,PBMCs,Ionizing,L1 genes (k=2000),1.0
+LOCPO,WI-38,Etoposide,L1 genes (k=2000),1.0
+LOCPO,WI-38,Ionizing,L1 genes (k=2000),1.0
+LOCPO,WI-38,Oxidative,L1 genes (k=2000),1.0
+LOCPO,WI-38,RasV12,L1 genes (k=2000),1.0
+LOCPO,prAD,Etoposide,L1 genes (k=2000),1.0
+LOCPO,prAD,Ionizing,L1 genes (k=2000),1.0
+LOCO,BJ,all,Hallmark pathway LR,0.75
+LOCO,BMMSC,all,Hallmark pathway LR,1.0
+LOCO,HCAEC,all,Hallmark pathway LR,1.0
+LOCO,HEKn,all,Hallmark pathway LR,1.0
+LOCO,HSAEC,all,Hallmark pathway LR,1.0
+LOCO,HUVEC,all,Hallmark pathway LR,1.0
+LOCO,HVSMC,all,Hallmark pathway LR,1.0
+LOCO,HeMn,all,Hallmark pathway LR,1.0
+LOCO,Myoblasts,all,Hallmark pathway LR,1.0
+LOCO,NHA,all,Hallmark pathway LR,1.0
+LOCO,NHO,all,Hallmark pathway LR,1.0
+LOCO,PBMCs,all,Hallmark pathway LR,1.0
+LOCO,WI-38,all,Hallmark pathway LR,1.0
+LOCO,prAD,all,Hallmark pathway LR,1.0
+LOCPO,BJ,Etoposide,Hallmark pathway LR,1.0
+LOCPO,BJ,Ionizing,Hallmark pathway LR,1.0
+LOCPO,BJ,Oxidative,Hallmark pathway LR,1.0
+LOCPO,BJ,RasV12,Hallmark pathway LR,0.0
+LOCPO,BMMSC,Etoposide,Hallmark pathway LR,1.0
+LOCPO,BMMSC,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HCAEC,Doxorubicin,Hallmark pathway LR,1.0
+LOCPO,HCAEC,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HEKn,Etoposide,Hallmark pathway LR,1.0
+LOCPO,HEKn,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HSAEC,Etoposide,Hallmark pathway LR,1.0
+LOCPO,HSAEC,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HUVEC,Etoposide,Hallmark pathway LR,1.0
+LOCPO,HUVEC,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HVSMC,Doxorubicin,Hallmark pathway LR,1.0
+LOCPO,HVSMC,Ionizing,Hallmark pathway LR,1.0
+LOCPO,HeMn,Etoposide,Hallmark pathway LR,1.0
+LOCPO,HeMn,Ionizing,Hallmark pathway LR,0.875
+LOCPO,Myoblasts,Etoposide,Hallmark pathway LR,1.0
+LOCPO,Myoblasts,Ionizing,Hallmark pathway LR,1.0
+LOCPO,NHA,Etoposide,Hallmark pathway LR,1.0
+LOCPO,NHA,Ionizing,Hallmark pathway LR,1.0
+LOCPO,NHO,Etoposide,Hallmark pathway LR,1.0
+LOCPO,NHO,Ionizing,Hallmark pathway LR,1.0
+LOCPO,PBMCs,Etoposide,Hallmark pathway LR,1.0
+LOCPO,PBMCs,Ionizing,Hallmark pathway LR,1.0
+LOCPO,WI-38,Etoposide,Hallmark pathway LR,1.0
+LOCPO,WI-38,Ionizing,Hallmark pathway LR,1.0
+LOCPO,WI-38,Oxidative,Hallmark pathway LR,1.0
+LOCPO,WI-38,RasV12,Hallmark pathway LR,1.0
+LOCPO,prAD,Etoposide,Hallmark pathway LR,1.0
+LOCPO,prAD,Ionizing,Hallmark pathway LR,1.0
+LOCO,BJ,all,hUSI raw (fixed),1.0
+LOCO,BMMSC,all,hUSI raw (fixed),1.0
+LOCO,HCAEC,all,hUSI raw (fixed),1.0
+LOCO,HEKn,all,hUSI raw (fixed),1.0
+LOCO,HSAEC,all,hUSI raw (fixed),1.0
+LOCO,HUVEC,all,hUSI raw (fixed),1.0
+LOCO,HVSMC,all,hUSI raw (fixed),1.0
+LOCO,HeMn,all,hUSI raw (fixed),1.0
+LOCO,Myoblasts,all,hUSI raw (fixed),1.0
+LOCO,NHA,all,hUSI raw (fixed),1.0
+LOCO,NHO,all,hUSI raw (fixed),1.0
+LOCO,PBMCs,all,hUSI raw (fixed),1.0
+LOCO,WI-38,all,hUSI raw (fixed),1.0
+LOCO,prAD,all,hUSI raw (fixed),1.0
+LOCPO,BJ,Etoposide,hUSI raw (fixed),1.0
+LOCPO,BJ,Ionizing,hUSI raw (fixed),1.0
+LOCPO,BJ,Oxidative,hUSI raw (fixed),1.0
+LOCPO,BJ,RasV12,hUSI raw (fixed),1.0
+LOCPO,BMMSC,Etoposide,hUSI raw (fixed),1.0
+LOCPO,BMMSC,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HCAEC,Doxorubicin,hUSI raw (fixed),1.0
+LOCPO,HCAEC,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HEKn,Etoposide,hUSI raw (fixed),1.0
+LOCPO,HEKn,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HSAEC,Etoposide,hUSI raw (fixed),1.0
+LOCPO,HSAEC,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HUVEC,Etoposide,hUSI raw (fixed),1.0
+LOCPO,HUVEC,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HVSMC,Doxorubicin,hUSI raw (fixed),1.0
+LOCPO,HVSMC,Ionizing,hUSI raw (fixed),1.0
+LOCPO,HeMn,Etoposide,hUSI raw (fixed),1.0
+LOCPO,HeMn,Ionizing,hUSI raw (fixed),1.0
+LOCPO,Myoblasts,Etoposide,hUSI raw (fixed),1.0
+LOCPO,Myoblasts,Ionizing,hUSI raw (fixed),1.0
+LOCPO,NHA,Etoposide,hUSI raw (fixed),1.0
+LOCPO,NHA,Ionizing,hUSI raw (fixed),1.0
+LOCPO,NHO,Etoposide,hUSI raw (fixed),1.0
+LOCPO,NHO,Ionizing,hUSI raw (fixed),1.0
+LOCPO,PBMCs,Etoposide,hUSI raw (fixed),1.0
+LOCPO,PBMCs,Ionizing,hUSI raw (fixed),1.0
+LOCPO,WI-38,Etoposide,hUSI raw (fixed),1.0
+LOCPO,WI-38,Ionizing,hUSI raw (fixed),1.0
+LOCPO,WI-38,Oxidative,hUSI raw (fixed),1.0
+LOCPO,WI-38,RasV12,hUSI raw (fixed),1.0
+LOCPO,prAD,Etoposide,hUSI raw (fixed),1.0
+LOCPO,prAD,Ionizing,hUSI raw (fixed),1.0
+LOCO,BJ,all,SenMayo (fixed),1.0
+LOCO,BMMSC,all,SenMayo (fixed),0.78125
+LOCO,HCAEC,all,SenMayo (fixed),1.0
+LOCO,HEKn,all,SenMayo (fixed),1.0
+LOCO,HSAEC,all,SenMayo (fixed),1.0
+LOCO,HUVEC,all,SenMayo (fixed),1.0
+LOCO,HVSMC,all,SenMayo (fixed),1.0
+LOCO,HeMn,all,SenMayo (fixed),0.90625
+LOCO,Myoblasts,all,SenMayo (fixed),1.0
+LOCO,NHA,all,SenMayo (fixed),1.0
+LOCO,NHO,all,SenMayo (fixed),1.0
+LOCO,PBMCs,all,SenMayo (fixed),1.0
+LOCO,WI-38,all,SenMayo (fixed),0.9453125
+LOCO,prAD,all,SenMayo (fixed),1.0
+LOCPO,BJ,Etoposide,SenMayo (fixed),1.0
+LOCPO,BJ,Ionizing,SenMayo (fixed),1.0
+LOCPO,BJ,Oxidative,SenMayo (fixed),1.0
+LOCPO,BJ,RasV12,SenMayo (fixed),1.0
+LOCPO,BMMSC,Etoposide,SenMayo (fixed),1.0
+LOCPO,BMMSC,Ionizing,SenMayo (fixed),0.5625
+LOCPO,HCAEC,Doxorubicin,SenMayo (fixed),1.0
+LOCPO,HCAEC,Ionizing,SenMayo (fixed),1.0
+LOCPO,HEKn,Etoposide,SenMayo (fixed),1.0
+LOCPO,HEKn,Ionizing,SenMayo (fixed),1.0
+LOCPO,HSAEC,Etoposide,SenMayo (fixed),1.0
+LOCPO,HSAEC,Ionizing,SenMayo (fixed),1.0
+LOCPO,HUVEC,Etoposide,SenMayo (fixed),1.0
+LOCPO,HUVEC,Ionizing,SenMayo (fixed),1.0
+LOCPO,HVSMC,Doxorubicin,SenMayo (fixed),1.0
+LOCPO,HVSMC,Ionizing,SenMayo (fixed),1.0
+LOCPO,HeMn,Etoposide,SenMayo (fixed),1.0
+LOCPO,HeMn,Ionizing,SenMayo (fixed),0.8125
+LOCPO,Myoblasts,Etoposide,SenMayo (fixed),1.0
+LOCPO,Myoblasts,Ionizing,SenMayo (fixed),1.0
+LOCPO,NHA,Etoposide,SenMayo (fixed),1.0
+LOCPO,NHA,Ionizing,SenMayo (fixed),1.0
+LOCPO,NHO,Etoposide,SenMayo (fixed),1.0
+LOCPO,NHO,Ionizing,SenMayo (fixed),1.0
+LOCPO,PBMCs,Etoposide,SenMayo (fixed),1.0
+LOCPO,PBMCs,Ionizing,SenMayo (fixed),1.0
+LOCPO,WI-38,Etoposide,SenMayo (fixed),1.0
+LOCPO,WI-38,Ionizing,SenMayo (fixed),1.0
+LOCPO,WI-38,Oxidative,SenMayo (fixed),0.78125
+LOCPO,WI-38,RasV12,SenMayo (fixed),1.0
+LOCPO,prAD,Etoposide,SenMayo (fixed),1.0
+LOCPO,prAD,Ionizing,SenMayo (fixed),1.0
+LOCO,BJ,all,Hallmark E2F inverted (fixed),0.5390625
+LOCO,BMMSC,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HCAEC,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HEKn,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HSAEC,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HUVEC,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HVSMC,all,Hallmark E2F inverted (fixed),1.0
+LOCO,HeMn,all,Hallmark E2F inverted (fixed),1.0
+LOCO,Myoblasts,all,Hallmark E2F inverted (fixed),1.0
+LOCO,NHA,all,Hallmark E2F inverted (fixed),1.0
+LOCO,NHO,all,Hallmark E2F inverted (fixed),1.0
+LOCO,PBMCs,all,Hallmark E2F inverted (fixed),1.0
+LOCO,WI-38,all,Hallmark E2F inverted (fixed),1.0
+LOCO,prAD,all,Hallmark E2F inverted (fixed),1.0
+LOCPO,BJ,Etoposide,Hallmark E2F inverted (fixed),0.5625
+LOCPO,BJ,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,BJ,Oxidative,Hallmark E2F inverted (fixed),0.59375
+LOCPO,BJ,RasV12,Hallmark E2F inverted (fixed),0.0
+LOCPO,BMMSC,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,BMMSC,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HCAEC,Doxorubicin,Hallmark E2F inverted (fixed),1.0
+LOCPO,HCAEC,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HEKn,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,HEKn,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HSAEC,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,HSAEC,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HUVEC,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,HUVEC,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HVSMC,Doxorubicin,Hallmark E2F inverted (fixed),1.0
+LOCPO,HVSMC,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,HeMn,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,HeMn,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,Myoblasts,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,Myoblasts,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,NHA,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,NHA,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,NHO,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,NHO,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,PBMCs,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,PBMCs,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,WI-38,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,WI-38,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCPO,WI-38,Oxidative,Hallmark E2F inverted (fixed),1.0
+LOCPO,WI-38,RasV12,Hallmark E2F inverted (fixed),1.0
+LOCPO,prAD,Etoposide,Hallmark E2F inverted (fixed),1.0
+LOCPO,prAD,Ionizing,Hallmark E2F inverted (fixed),1.0
+LOCO,BJ,all,Late fusion: L2 + pathway + hUSI,0.9609375
+LOCO,BMMSC,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HCAEC,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HEKn,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HSAEC,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HUVEC,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HVSMC,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,HeMn,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,Myoblasts,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,NHA,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,NHO,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,PBMCs,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,WI-38,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCO,prAD,all,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,BJ,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,BJ,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,BJ,Oxidative,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,BJ,RasV12,Late fusion: L2 + pathway + hUSI,0.375
+LOCPO,BMMSC,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,BMMSC,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HCAEC,Doxorubicin,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HCAEC,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HEKn,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HEKn,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HSAEC,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HSAEC,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HUVEC,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HUVEC,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HVSMC,Doxorubicin,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HVSMC,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HeMn,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,HeMn,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,Myoblasts,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,Myoblasts,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,NHA,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,NHA,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,NHO,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,NHO,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,PBMCs,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,PBMCs,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,WI-38,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,WI-38,Ionizing,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,WI-38,Oxidative,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,WI-38,RasV12,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,prAD,Etoposide,Late fusion: L2 + pathway + hUSI,1.0
+LOCPO,prAD,Ionizing,Late fusion: L2 + pathway + hUSI,1.0

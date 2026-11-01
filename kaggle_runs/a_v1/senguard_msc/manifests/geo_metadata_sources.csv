@@ -1,0 +1,4 @@
+accession,route,path,samples_parsed,samples_listed_in_series,expected_at_authoring,title,pubmed,public,retrieved
+GSE284666,family_soft:https,/kaggle/working/senguard_msc/data/metadata/GSE284666_family.soft.gz,190,190,190,SenCat: Redefining human cell senescence through multiomic profiling of multiple senescent cell types,42276073,Public on Jun 15 2026,2026-11-01
+GSE309666,family_soft:https,/kaggle/working/senguard_msc/data/metadata/GSE309666_family.soft.gz,18,18,18,Assessing Senescence in ASC Product and Discovery of Potential Biomarkers,41791726,Public on Mar 11 2026,2026-11-01
+GSE178514,family_soft:https,/kaggle/working/senguard_msc/data/metadata/GSE178514_family.soft.gz,18,18,18,Effects of Long-term Culture on the Biological Characteristics and ceRNA Network-associated RNA Profiles of Human Bone Marrow-derived Mesenchymal Stem Cells,37831180,Public on Jun 21 2021,2026-11-01

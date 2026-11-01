@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SenGuard-MSC</title>
+<meta name="description" content="Track a senescence signature across passages of mesenchymal stromal cell cultures, with checks that refuse invalid data. Research prototype.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#analyze">SenGuard<span>-MSC</span></a>
+    <nav aria-label="Sections">
+      <a href="#analyze">Analyze</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#method">How it works</a>
+      <a href="#limits">Limits</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="intro" class="intro">
+    <h1>Is a culture drifting toward senescence as it is expanded? Check it, and refuse to answer when the data can't support it.</h1>
+    <p class="lede">SenGuard-MSC tracks a published senescence signature across passages, donor by donor. Your data stays in this browser. It is a research prototype: it does not measure potency, immune function or clinical safety, and it makes no pass or fail call.</p>
+  </section>
+
+  <section id="analyze" aria-labelledby="analyze-h">
+    <h2 id="analyze-h">Analyze a passage series</h2>
+    <div class="scenarios" role="group" aria-label="Choose data">
+      <button type="button" class="scenario" data-scenario="adipose"><b>Adipose MSC</b><small>GSE309666, 5 donors</small></button>
+      <button type="button" class="scenario" data-scenario="marrow"><b>Bone-marrow MSC</b><small>GSE178514, 3 inferred donors</small></button>
+      <button type="button" class="scenario bad" data-scenario="logged"><b>Bad input: already logged</b><small>Same adipose data, log-transformed</small></button>
+      <button type="button" class="scenario bad" data-scenario="entrez"><b>Bad input: wrong gene ids</b><small>Bone-marrow table with Entrez ids</small></button>
+      <button type="button" class="scenario bad" data-scenario="mislabelled"><b>Real labelling error</b><small>GSE125632, as deposited on GEO</small></button>
+      <button type="button" class="scenario" data-scenario="upload"><b>Use my own data</b><small>Stays in this browser</small></button>
+    </div>
+
+    <form id="upload" class="upload" hidden>
+      <div class="field"><label for="f-table">Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id, one column per sample. .tsv, .csv or .gz</small></div>
+      <div class="field"><label for="f-sheet">Sample sheet</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt" required><small>Columns: sample_id, donor, passage</small></div>
+      <div class="field"><label for="f-scale">Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small>Untransformed values only</small></div>
+      <button type="submit" class="primary">Check and analyze</button>
+    </form>
+
+    <p id="status" class="status" role="status" aria-live="polite">Loading the signature...</p>
+    <div id="results" class="results"></div>
+  </section>
+
+  <section id="evidence" aria-labelledby="evidence-h">
+    <h2 id="evidence-h">What supports this</h2>
+    <div id="evidence-body"><p class="status">Loading results...</p></div>
+  </section>
+
+  <section id="method" aria-labelledby="method-h">
+    <h2 id="method-h">How it works</h2>
+    <ol class="steps">
+      <li><b>Check.</b> Gene identifiers, data scale, transformation, signature coverage, sequencing depth, sample identity and passage design. Each check exists because of a failure we met in public data.</li>
+      <li><b>Normalize.</b> Median-of-ratios for counts, verified against PyDESeq2 to 1e-14, using the published filters. FPKM is rescaled to TPM.</li>
+      <li><b>Score.</b> Published SenCat weights: log1p applied once, then a weighted sum with no intercept. The weights are fetched from the authors' repository at a pinned commit and their SHA-256 is verified on load.</li>
+      <li><b>Trend, within each donor.</b> Slope and rank correlation against passage. Donors are never pooled into one absolute scale, because absolute scores shift between labs and media.</li>
+      <li><b>Control.</b> Random gene sets of the same size and weights show whether a rise is specific to this signature.</li>
+      <li><b>Second readout.</b> A culture-drift clock, a ridge model we trained on within-donor gene ranks across MSC cohorts and tested by leaving out each cohort in turn. It estimates passage-like drift and is not a senescence measure.</li>
+    </ol>
+    <p class="note">This page runs the same analysis as the validated Python pipeline. Automated tests compare the two: scores agree within 1e-13. <a href="https://github.com/DWIND-source/senguard-msc">Code, protocols and result tables</a>.</p>
+  </section>
+
+  <section id="limits" aria-labelledby="limits-h">
+    <h2 id="limits-h">What it cannot tell you</h2>
+    <ul class="limits">
+      <li><b>Not potency.</b> Nothing here measures T-cell suppression, immune function, therapeutic effect or safety.</li>
+      <li><b>Not a release test.</b> No threshold has been validated, so a rising score doesn't mean a lot has failed and a flat one doesn't mean it is fine.</li>
+      <li><b>Not a substitute for assays.</b> Public MSC cohorts rarely have per-sample senescence assays, so this reports trends and not accuracy.</li>
+      <li><b>Partly time in culture.</b> Passage, culture time and possibly batch move together in these datasets.</li>
+    </ul>
+  </section>
+</main>
+
+<footer class="wrap foot">
+  <p>Research prototype for AMIM 2026 Track 3. Signature: SenCat, Anerillas et al., Molecular Cell 2026. Data: NCBI GEO. Not for clinical or manufacturing decisions.</p>
+</footer>
+<div id="tip" class="tip" role="tooltip" hidden></div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

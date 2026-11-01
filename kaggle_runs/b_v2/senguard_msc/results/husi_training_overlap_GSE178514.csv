@@ -1,0 +1,10 @@
+Data_id,Study_name,Project_name,Sample_id,Sample_title,Cell_line_raw,Tissue_type,Cell_type_name,Cell_type,Cell_type_id,Stage,Treatment,Sene_type,Growth_arrest,SA-beta-gal,LMNB1,pRb/pRb,CCK-8,p16/p21/p53/p-p53,SASP,MKi67,BrdU/EdU_stain,SAHFs_stain,SASP_associated_genes
+SRR14867840,GSE178514,PRJNA739464,GSM5393148,MSC_P12_REP1 [P12393],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Sene,Expansion in vitro to passage 12,RS,0,1,0,0,0,1,1,0,1,0,0
+SRR14867841,GSE178514,PRJNA739464,GSM5393149,MSC_P12_REP2 [P12411],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Sene,Expansion in vitro to passage 12,RS,0,1,0,0,0,1,1,0,1,0,0
+SRR14867842,GSE178514,PRJNA739464,GSM5393150,MSC_P12_REP3 [P12413],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Sene,Expansion in vitro to passage 12,RS,0,1,0,0,0,1,1,0,1,0,0
+SRR14867834,GSE178514,PRJNA739464,GSM5393142,MSC_P4_REP1 [P4393],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0
+SRR14867835,GSE178514,PRJNA739464,GSM5393143,MSC_P4_REP2 [P4411],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0
+SRR14867836,GSE178514,PRJNA739464,GSM5393144,MSC_P4_REP3 [P4413],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0
+SRR14867837,GSE178514,PRJNA739464,GSM5393145,MSC_P6_REP1 [P6393],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0
+SRR14867838,GSE178514,PRJNA739464,GSM5393146,MSC_P6_REP2 [P6411],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0
+SRR14867839,GSE178514,PRJNA739464,GSM5393147,MSC_P6_REP3 [P6413],,Normal,Bone marrow-derived mesenchymal stem cells,Mesenchymal stem cell,BM-MSC,Pro,,,0,0,0,0,0,0,0,0,0,0,0

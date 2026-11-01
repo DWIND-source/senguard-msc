@@ -1,0 +1,128 @@
+[{"stream_name":"stderr","time":10.211894654,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.211962518,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.211970018,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.211993872,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.124481593,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.124526147,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.12453301,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.124538346,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":49.846994679,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-b/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":56.730243103,"data":"paradigm   Doxorubicin  Etoposide  Ionizing  Oxidative  RasV12  control\n"}
+,{"stream_name":"stdout","time":56.73028828,"data":"cell_line                                                              \n"}
+,{"stream_name":"stdout","time":56.730295246,"data":"BJ                   0          4         4          4       4        8\n"}
+,{"stream_name":"stdout","time":56.73030046,"data":"BMMSC                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730305537,"data":"HCAEC                4          0         3          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730310632,"data":"HEKn                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730315592,"data":"HSAEC                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730320749,"data":"HUVEC                0          3         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730325792,"data":"HVSMC                4          0         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730330603,"data":"HeMn                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730337677,"data":"Myoblasts            0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730347729,"data":"NHA                  0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730351279,"data":"NHO                  0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730354636,"data":"PBMCs                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":56.730358011999996,"data":"WI-38                0          4         4          4       4        8\n"}
+,{"stream_name":"stdout","time":56.730361546,"data":"prAD                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":57.030951675,"data":"LOCO folds 14 | LOCPO folds 32\n"}
+,{"stream_name":"stdout","time":119.896772963,"data":"               mean_auroc        ci_low        ci_high       min_auroc      \n"}
+,{"stream_name":"stdout","time":119.89682492,"data":"design               LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO LOCPO\n"}
+,{"stream_name":"stdout","time":119.896842818,"data":"candidate                                                                   \n"}
+,{"stream_name":"stdout","time":119.896848237,"data":"L2 genes, cpm       0.984  0.982  0.953  0.946     1.0   1.0     0.781   0.0\n"}
+,{"stream_name":"stdout","time":119.896853356,"data":"L2 genes, mor       0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":119.89685762,"data":"L2 genes, none      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":119.896861554,"data":"L2 genes, rank      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":174.830314099,"data":"                                 mean_auroc        ci_low        ci_high       min_auroc       \n"}
+,{"stream_name":"stdout","time":174.830364553,"data":"design                                 LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO  LOCPO\n"}
+,{"stream_name":"stdout","time":174.830373294,"data":"candidate                                                                                      \n"}
+,{"stream_name":"stdout","time":174.830378888,"data":"Hallmark E2F inverted (fixed)         0.967  0.967  0.901  0.901     1.0   1.0     0.539  0.000\n"}
+,{"stream_name":"stdout","time":174.83038457,"data":"Hallmark pathway LR                   0.982  0.978  0.946  0.938     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":174.83038984,"data":"L1 genes (k=2000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":174.830395043,"data":"L2 genes (k=5000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":174.830400283,"data":"Late fusion: L2 + pathway + hUSI      0.997  0.989  0.992  0.967     1.0   1.0     0.961  0.375\n"}
+,{"stream_name":"stdout","time":174.83040563,"data":"SenMayo (fixed)                       0.974  0.974  0.939  0.939     1.0   1.0     0.781  0.562\n"}
+,{"stream_name":"stdout","time":174.830425043,"data":"hUSI raw (fixed)                      1.000  1.000  1.000  1.000     1.0   1.0     1.000  1.000\n"}
+,{"stream_name":"stdout","time":174.830430897,"data":"\n"}
+,{"stream_name":"stdout","time":174.830436224,"data":"Fusion minus L2 genes, mean over cell types: {'LOCO': 0.0151, 'LOCPO': 0.0067} | cell types improved / worsened: {'LOCO': (1, 0), 'LOCPO': (1, 0)}\n"}
+,{"stream_name":"stdout","time":174.830447297,"data":"\n"}
+,{"stream_name":"stdout","time":174.830452002,"data":"Hardest paradigms under LOCPO (mean AUROC):\n"}
+,{"stream_name":"stdout","time":174.830457183,"data":"candidate    Hallmark E2F inverted (fixed)  Hallmark pathway LR  L1 genes (k=2000)  L2 genes (k=5000)  Late fusion: L2 + pathway + hUSI  SenMayo (fixed)  hUSI raw (fixed)\n"}
+,{"stream_name":"stdout","time":174.83046296,"data":"paradigm                                                                                                                                                                  \n"}
+,{"stream_name":"stdout","time":174.830468262,"data":"Doxorubicin                          1.000                1.000                1.0                1.0                             1.000            1.000               1.0\n"}
+,{"stream_name":"stdout","time":174.830473604,"data":"Etoposide                            0.964                1.000                1.0                1.0                             1.000            1.000               1.0\n"}
+,{"stream_name":"stdout","time":174.830480357,"data":"Ionizing                             1.000                0.991                1.0                1.0                             1.000            0.955               1.0\n"}
+,{"stream_name":"stdout","time":174.830498918,"data":"Oxidative                            0.797                1.000                1.0                1.0                             1.000            0.891               1.0\n"}
+,{"stream_name":"stdout","time":174.830503817,"data":"RasV12                               0.500                0.500                0.5                0.5                             0.688            1.000               1.0\n"}
+,{"stream_name":"stdout","time":301.702537605,"data":"    method    k design  mean_auroc  ci_low  ci_high  min_auroc  jaccard_across_folds\n"}
+,{"stream_name":"stdout","time":301.702587718,"data":"        l1   10   LOCO       0.982   0.946      1.0      0.750                 0.437\n"}
+,{"stream_name":"stdout","time":301.702594837,"data":"        l1   20   LOCO       0.982   0.946      1.0      0.750                 0.408\n"}
+,{"stream_name":"stdout","time":301.702600237,"data":"        l1   30   LOCO       0.982   0.946      1.0      0.750                 0.424\n"}
+,{"stream_name":"stdout","time":301.70260536,"data":"        l1   10  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702610435,"data":"        l1   20  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702617564,"data":"        l1   30  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702627699,"data":"univariate   10   LOCO       0.972   0.915      1.0      0.602                 0.453\n"}
+,{"stream_name":"stdout","time":301.702631363,"data":"univariate   20   LOCO       0.978   0.935      1.0      0.695                 0.699\n"}
+,{"stream_name":"stdout","time":301.702634811,"data":"univariate   30   LOCO       0.973   0.922      1.0      0.656                 0.763\n"}
+,{"stream_name":"stdout","time":301.702638387,"data":"univariate  100   LOCO       0.982   0.946      1.0      0.750                 0.837\n"}
+,{"stream_name":"stdout","time":301.702641791,"data":"univariate  500   LOCO       0.982   0.946      1.0      0.750                 0.798\n"}
+,{"stream_name":"stdout","time":301.702645259,"data":"univariate 2000   LOCO       0.982   0.946      1.0      0.750                 0.822\n"}
+,{"stream_name":"stdout","time":301.702648691,"data":"univariate 5000   LOCO       0.982   0.946      1.0      0.750                 0.883\n"}
+,{"stream_name":"stdout","time":301.702652057,"data":"univariate   10  LOCPO       0.972   0.916      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702655457,"data":"univariate   20  LOCPO       0.974   0.923      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702658811,"data":"univariate   30  LOCPO       0.972   0.917      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702662245,"data":"univariate  100  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702665685,"data":"univariate  500  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702669066,"data":"univariate 2000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":301.702672586,"data":"univariate 5000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stderr","time":303.228940093,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":303.230017845,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":303.230055608,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":303.230081915,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":303.230087389,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":303.230091787,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":303.23009574,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":303.230099656,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":303.230103895,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":303.23010838,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":303.230112477,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":303.230116575,"data":"Exception encountered at \"In [7]\":\n"}
+,{"stream_name":"stderr","time":303.230120625,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":303.230124739,"data":"KeyError                                  Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":303.230129013,"data":"/tmp/ipykernel_16/143175535.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":303.230133308,"data":"      2 freq = pd.Series([g for x in sel.genes for g in x]).value_counts()\n"}
+,{"stream_name":"stderr","time":303.230139311,"data":"      3 Xall, _ = norm_pair(counts, counts, 'mor')\n"}
+,{"stream_name":"stderr","time":303.230143425,"data":"----\u003e 4 ssa = StandardScaler().fit(Xall[freq.index])\n"}
+,{"stream_name":"stderr","time":303.230149624,"data":"      5 m_all = LogisticRegression(solver='liblinear', C=1.0, max_iter=2000, random_state=sg.SEED).fit(ssa.transform(Xall[freq.index]), y)\n"}
+,{"stream_name":"stderr","time":303.230154265,"data":"      6 panel_tbl = pd.DataFrame({'gene_id': freq.index, 'symbol': ens2sym.reindex(freq.index).values, 'folds_selected': freq.values, 'abs_coef_all_dev': np.abs(m_all.coef_[0])}).sort_values(['folds_selected', 'abs_coef_all_dev'], ascending=False).reset_index(drop=True)\n"}
+,{"stream_name":"stderr","time":303.230160282,"data":"\n"}
+,{"stream_name":"stderr","time":303.230164728,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/frame.py in __getitem__(self, key)\n"}
+,{"stream_name":"stderr","time":303.230169753,"data":"   4117             if is_iterator(key):\n"}
+,{"stream_name":"stderr","time":303.230174186,"data":"   4118                 key = list(key)\n"}
+,{"stream_name":"stderr","time":303.230198293,"data":"-\u003e 4119             indexer = self.columns._get_indexer_strict(key, \"columns\")[1]\n"}
+,{"stream_name":"stderr","time":303.230203131,"data":"   4120 \n"}
+,{"stream_name":"stderr","time":303.23020823,"data":"   4121         # take() does not accept boolean indexers\n"}
+,{"stream_name":"stderr","time":303.230212613,"data":"\n"}
+,{"stream_name":"stderr","time":303.230216364,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py in _get_indexer_strict(self, key, axis_name)\n"}
+,{"stream_name":"stderr","time":303.230220627,"data":"   6210             keyarr, indexer, new_indexer = self._reindex_non_unique(keyarr)\n"}
+,{"stream_name":"stderr","time":303.23022473,"data":"   6211 \n"}
+,{"stream_name":"stderr","time":303.230234028,"data":"-\u003e 6212         self._raise_if_missing(keyarr, indexer, axis_name)\n"}
+,{"stream_name":"stderr","time":303.230238163,"data":"   6213 \n"}
+,{"stream_name":"stderr","time":303.230243995,"data":"   6214         keyarr = self.take(indexer)\n"}
+,{"stream_name":"stderr","time":303.230248018,"data":"\n"}
+,{"stream_name":"stderr","time":303.230253814,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py in _raise_if_missing(self, key, indexer, axis_name)\n"}
+,{"stream_name":"stderr","time":303.230258095,"data":"   6262 \n"}
+,{"stream_name":"stderr","time":303.230262522,"data":"   6263             not_found = list(ensure_index(key)[missing_mask.nonzero()[0]].unique())\n"}
+,{"stream_name":"stderr","time":303.230267979,"data":"-\u003e 6264             raise KeyError(f\"{not_found} not in index\")\n"}
+,{"stream_name":"stderr","time":303.230273348,"data":"   6265 \n"}
+,{"stream_name":"stderr","time":303.230277938,"data":"   6266     @overload\n"}
+,{"stream_name":"stderr","time":303.230282487,"data":"\n"}
+,{"stream_name":"stderr","time":303.230286326,"data":"KeyError: \"['ENSG00000117724', 'ENSG00000138160', 'ENSG00000087586', 'ENSG00000004961'] not in index\"\n"}
+,{"stream_name":"stderr","time":303.230290787,"data":"\n"}
+,{"stream_name":"stderr","time":306.145913413,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":306.145981948,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":306.378565848,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":306.378600602,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":307.358800049,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":307.464215344,"data":"[NbConvertApp] Writing 57123 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":310.709963789,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":311.58890549,"data":"[NbConvertApp] Writing 460039 bytes to __results__.html\n"}
+]

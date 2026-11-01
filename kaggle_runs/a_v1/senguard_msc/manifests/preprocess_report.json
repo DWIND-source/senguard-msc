@@ -1,0 +1,13 @@
+{
+ "pydeseq2_check": {
+  "status": "not run: PyDESeq2 environment absent"
+ },
+ "gene_overlap": {
+  "dev_filtered_genes": 30433,
+  "asc_filtered_genes": 13661,
+  "bm_ensembl_genes": 16832,
+  "dev_and_asc": 13154,
+  "dev_and_bm": 16290,
+  "all_three": 11889
+ }
+}

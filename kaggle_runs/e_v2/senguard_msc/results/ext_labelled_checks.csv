@@ -1,0 +1,29 @@
+cohort,contrast,score,n_pos,n_neg,auroc
+GSE48662,irradiated vs control,SenCat published,4,4,1.0
+GSE48662,irradiated vs control,"SenCat refit, lineage excluded",4,4,0.9375
+GSE48662,irradiated vs control,"SenCat published, rank form",4,4,1.0
+GSE48662,irradiated vs control,hUSI,4,4,0.9375
+GSE48662,irradiated vs control,SenMayo,4,4,0.625
+GSE48662,irradiated vs control,Yang 2023 7 genes,4,4,0.5
+GSE48662,irradiated vs control,Hallmark E2F (inverted),4,4,1.0
+GSE48662,irradiated vs control,Hallmark G2M (inverted),4,4,1.0
+GSE48662,irradiated vs control,AD-MSC 40 biomarkers,4,4,0.9375
+GSE48662,irradiated vs control,CDKN2A,4,4,0.75
+GSE48662,irradiated vs control,CDKN1A,4,4,1.0
+GSE48662,irradiated vs control,IL6,4,4,0.4375
+GSE48662,irradiated vs control,GDF15,4,4,1.0
+GSE48662,irradiated vs control,LMNB1 (inverted),4,4,0.25
+GSE125632,P11 labelled senescent vs P2,SenCat published,5,5,0.36
+GSE125632,P11 labelled senescent vs P2,"SenCat refit, lineage excluded",5,5,0.31999999999999995
+GSE125632,P11 labelled senescent vs P2,"SenCat published, rank form",5,5,0.44
+GSE125632,P11 labelled senescent vs P2,hUSI,5,5,0.48
+GSE125632,P11 labelled senescent vs P2,SenMayo,5,5,0.36000000000000004
+GSE125632,P11 labelled senescent vs P2,Yang 2023 7 genes,5,5,0.44
+GSE125632,P11 labelled senescent vs P2,Hallmark E2F (inverted),5,5,0.36
+GSE125632,P11 labelled senescent vs P2,Hallmark G2M (inverted),5,5,0.27999999999999997
+GSE125632,P11 labelled senescent vs P2,AD-MSC 40 biomarkers,5,5,0.27999999999999997
+GSE125632,P11 labelled senescent vs P2,CDKN2A,5,5,0.52
+GSE125632,P11 labelled senescent vs P2,CDKN1A,5,5,0.4
+GSE125632,P11 labelled senescent vs P2,IL6,5,5,0.36
+GSE125632,P11 labelled senescent vs P2,GDF15,5,5,0.52
+GSE125632,P11 labelled senescent vs P2,LMNB1 (inverted),5,5,0.32

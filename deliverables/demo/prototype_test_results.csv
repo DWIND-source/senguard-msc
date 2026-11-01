@@ -1,0 +1,15 @@
+case,expected,got,pass,detail
+"AD-MSC real cohort, counts",REPORT,REPORT,True,"5/5 donors rising, mean slope +1.927"
+"BM-MSC real cohort, TPM",REPORT,REPORT,True,"3/3 donors rising, mean slope +0.624"
+AD-MSC scores match the frozen G3 scores,max difference under 1e-3,0.000048,True,
+BM-MSC scores match the frozen G3 scores,max difference under 1e-3,0.000048,True,
+"Entrez ids, not Ensembl",REFUSED,REFUSED,True,Gene ids are not Ensembl. Map them first; ids are never guessed.
+Already log-transformed table,REFUSED,REFUSED,True,"Largest value is 14.7, which looks log-transformed. The score applies log1p once, so a logged table would be logged twice."
+Negative values,REFUSED,REFUSED,True,Negative values found: the table looks already transformed. Provide untransformed values.
+Half of the genes missing,REFUSED,REFUSED,True,"Signature coverage is 48.6% of total weight, under the 90% minimum."
+TPM table declared as counts,REFUSED,REFUSED,True,"Declared counts, but column sums are about 1e6, as in TPM. Declare the right scale."
+Counts declared as TPM,REFUSED,REFUSED,True,"Declared TPM, but the median column sum is 20,736,309."
+One passage per donor,REFUSED,REFUSED,True,"No donor has at least 3 distinct passages, so no within-donor trend can be estimated."
+Sample missing from table,REFUSED,REFUSED,True,"1 samples in the sheet have no column in the table, for example ['GSM0']."
+One donor under 3 passages: others still assessed,REPORT,REPORT,True,"4/4 donors rising, mean slope +1.760"
+Short donor reported as not assessed,warning names donor A,True,True,

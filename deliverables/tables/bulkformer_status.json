@@ -1,0 +1,77 @@
+{
+ "gate": "G4",
+ "repo_commit": "not a git checkout",
+ "outcome": "completed",
+ "steps": {
+  "pip": {
+   "returncode": 0,
+   "stderr_tail": ""
+  },
+  "torch": {
+   "version": "2.11.0+cu128",
+   "cuda": "12.8",
+   "gpu": true,
+   "name": "Tesla T4",
+   "vram_gb": 15.64,
+   "bf16": true
+  },
+  "bundle": {
+   "path": "/kaggle/working/senguard_msc/checkpoints/bulkformer-latest",
+   "checkpoint_id": "v1plus-stage1-epoch17-update126055",
+   "model_sha256": "0fb65ec123386ef753651cfcc43e2a64728c719307fe565a5ffe16f5d8cf3cfa"
+  },
+  "coverage": [
+   {
+    "dataset": "GSE284666",
+    "samples": 190,
+    "vocab_genes_present": 19915,
+    "vocab_size": 19973,
+    "coverage": 0.9970960797076053,
+    "meets_90pct": true
+   },
+   {
+    "dataset": "GSE309666",
+    "samples": 18,
+    "vocab_genes_present": 19935,
+    "vocab_size": 19973,
+    "coverage": 0.9980974315325689,
+    "meets_90pct": true
+   },
+   {
+    "dataset": "GSE178514",
+    "samples": 9,
+    "vocab_genes_present": 16679,
+    "vocab_size": 19973,
+    "coverage": 0.8350773544284784,
+    "meets_90pct": false
+   }
+  ],
+  "first_sample": {
+   "seconds": 2.33,
+   "peak_gpu_gb": 1.571309568,
+   "amp": "bf16",
+   "device": "cuda:0",
+   "shape": [
+    1,
+    768
+   ]
+  },
+  "GSE178514_skipped": "coverage 0.835 is below the recommended 90%; not extracted",
+  "extraction": {
+   "peak_gpu_gb": 1.63273216,
+   "batch_size": 1,
+   "amp": "bf16",
+   "finished": [
+    "GSE284666",
+    "GSE309666"
+   ]
+  }
+ },
+ "dev_mean_auroc": {
+  "mean": 0.9910714285714286,
+  "ci": [
+   0.9732142857142857,
+   1.0
+  ]
+ }
+}

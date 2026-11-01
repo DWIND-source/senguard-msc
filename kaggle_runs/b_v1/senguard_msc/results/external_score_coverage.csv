@@ -1,0 +1,18 @@
+score,GSE309666,GSE178514
+SenCat published,0.969,0.968
+SenCat refit all14,0.969,0.967
+SenCat refit no_BMMSC,0.968,0.968
+SenCat refit no_BMMSC_prAD,0.968,0.969
+"SenCat published, no E2F/G2M genes",0.968,0.967
+hUSI raw,0.789,0.95
+SenMayo,0.72,0.96
+Hallmark E2F (inverted),1.0,0.995
+Hallmark G2M (inverted),0.98,0.985
+AD-MSC 40 biomarkers (up minus down),1.0,1.0
+CDKN2A transcript,1.0,1.0
+CDKN1A transcript,1.0,1.0
+IL6 transcript,1.0,1.0
+GDF15 transcript,1.0,1.0
+LMNB1 transcript (inverted),1.0,1.0
+"Frozen logreg_l1 (no_BMMSC_prAD), decision value",0.967,
+"Frozen logreg_l1 (no_BMMSC), decision value",,0.968

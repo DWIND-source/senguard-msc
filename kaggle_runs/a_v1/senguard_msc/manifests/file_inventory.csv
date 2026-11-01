@@ -1,0 +1,6 @@
+accession,file,url,head_status,declared_bytes,last_modified,raw_read_format,allowlisted
+GSE284666,GSE284666_RAW.tar,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE284nnn/GSE284666/suppl/GSE284666_RAW.tar,200,41850880,"Tue, 16 Jun 2026 04:26:36 GMT",False,True
+GSE309666,GSE309666_salmon_gene_counts.tsv.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE309nnn/GSE309666/suppl/GSE309666_salmon_gene_counts.tsv.gz,200,1611287,"Tue, 30 Sep 2025 14:32:44 GMT",False,True
+GSE178514,GSE178514_AllGeneFPKM_lncRNA.txt.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178514/suppl/GSE178514_AllGeneFPKM_lncRNA.txt.gz,200,738269,"Sun, 20 Jun 2021 19:03:24 GMT",False,False
+GSE178514,GSE178514_AllGeneFPKM_mRNA.txt.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178514/suppl/GSE178514_AllGeneFPKM_mRNA.txt.gz,200,393751,"Sun, 20 Jun 2021 19:03:24 GMT",False,True
+GSE178514,GSE178514_AllGeneFPKM_miRNA.txt.gz,https://ftp.ncbi.nlm.nih.gov/geo/series/GSE178nnn/GSE178514/suppl/GSE178514_AllGeneFPKM_miRNA.txt.gz,200,109873,"Sun, 20 Jun 2021 19:03:24 GMT",False,False

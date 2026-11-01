@@ -1,0 +1,433 @@
+sample_id,study_accession,subject,passage,score_name,score,evidence
+GSM9271434,GSE309666,D,1.0,SenCat published,-2.6189852573076644,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,SenCat published,7.562418613840691,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,SenCat published,-0.36703878947622837,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,SenCat published,5.057290033801136,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,SenCat published,-2.5948920561869184,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,SenCat published,0.6346209046203467,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,SenCat published,9.03664366708719,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,SenCat published,12.874233093307843,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,SenCat published,-4.468265833789135,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,SenCat published,-1.4814140044963096,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,SenCat published,3.488901095078894,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,SenCat published,12.685671526553316,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,SenCat published,-1.4331070827271637,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,SenCat published,-0.3375645753126869,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,SenCat published,12.484747519673267,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,SenCat published,-1.7828707503807693,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,SenCat published,1.2838703713297979,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,SenCat published,13.148372603077869,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,SenCat refit all14,-2.587807476828668,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,SenCat refit all14,7.525100825440284,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,SenCat refit all14,-0.3524776567315606,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,SenCat refit all14,5.018117644094581,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,SenCat refit all14,-2.5596939597557373,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,SenCat refit all14,0.6353924005371473,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,SenCat refit all14,9.016592966484554,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,SenCat refit all14,12.81383812109609,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,SenCat refit all14,-4.436964558836513,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,SenCat refit all14,-1.4802484850774797,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,SenCat refit all14,3.450244029140079,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,SenCat refit all14,12.658030326062605,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,SenCat refit all14,-1.3859913114739137,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,SenCat refit all14,-0.30751510146373373,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,SenCat refit all14,12.427913001109614,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,SenCat refit all14,-1.7490573841022123,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,SenCat refit all14,1.2815064653746362,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,SenCat refit all14,13.069697037955402,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,SenCat refit no_BMMSC,-3.2617962858414753,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,SenCat refit no_BMMSC,6.596412738882002,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,SenCat refit no_BMMSC,-1.0379288044874821,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,SenCat refit no_BMMSC,4.1815338395924915,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,SenCat refit no_BMMSC,-3.2036129959222976,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,SenCat refit no_BMMSC,-0.05864145433374673,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,SenCat refit no_BMMSC,8.289260215277656,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,SenCat refit no_BMMSC,11.889505428236788,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,SenCat refit no_BMMSC,-5.098310231083924,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,SenCat refit no_BMMSC,-2.083216508532999,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,SenCat refit no_BMMSC,2.690042953744611,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,SenCat refit no_BMMSC,11.739608217717448,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,SenCat refit no_BMMSC,-1.978340286257738,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,SenCat refit no_BMMSC,-1.0101193642316864,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,SenCat refit no_BMMSC,11.470127476201998,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,SenCat refit no_BMMSC,-2.451615096235435,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,SenCat refit no_BMMSC,0.6277842583519738,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,SenCat refit no_BMMSC,12.192783455613403,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,SenCat refit no_BMMSC_prAD,-1.1375836295848878,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,SenCat refit no_BMMSC_prAD,9.219189635273962,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,SenCat refit no_BMMSC_prAD,1.4430254236229292,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,SenCat refit no_BMMSC_prAD,6.342187327745549,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,SenCat refit no_BMMSC_prAD,-0.9071844125177977,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,SenCat refit no_BMMSC_prAD,2.5360794780963247,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,SenCat refit no_BMMSC_prAD,10.255111610227619,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,SenCat refit no_BMMSC_prAD,13.492308809778201,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,SenCat refit no_BMMSC_prAD,-2.9422691652921222,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,SenCat refit no_BMMSC_prAD,-0.06955950088280081,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,SenCat refit no_BMMSC_prAD,4.04104173485264,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,SenCat refit no_BMMSC_prAD,13.710836068938653,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,SenCat refit no_BMMSC_prAD,0.29512312242142225,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,SenCat refit no_BMMSC_prAD,1.386057254224922,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,SenCat refit no_BMMSC_prAD,13.255507234629455,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,SenCat refit no_BMMSC_prAD,-0.11553800640300976,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,SenCat refit no_BMMSC_prAD,3.2633859179231064,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,SenCat refit no_BMMSC_prAD,14.078578055376116,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,"SenCat published, no E2F/G2M genes",9.82277454947182,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,"SenCat published, no E2F/G2M genes",17.391632774629926,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,"SenCat published, no E2F/G2M genes",11.770772045031427,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,"SenCat published, no E2F/G2M genes",15.045273140710403,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,"SenCat published, no E2F/G2M genes",10.00881588594659,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,"SenCat published, no E2F/G2M genes",12.5273578035298,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,"SenCat published, no E2F/G2M genes",18.1288595723414,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,"SenCat published, no E2F/G2M genes",21.88162075651407,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,"SenCat published, no E2F/G2M genes",8.258544888334676,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,"SenCat published, no E2F/G2M genes",10.542142318247926,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,"SenCat published, no E2F/G2M genes",13.387776190842386,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,"SenCat published, no E2F/G2M genes",21.80498039774674,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,"SenCat published, no E2F/G2M genes",11.056890746389012,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,"SenCat published, no E2F/G2M genes",11.966596277733679,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,"SenCat published, no E2F/G2M genes",21.680933319318807,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,"SenCat published, no E2F/G2M genes",10.893340250693967,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,"SenCat published, no E2F/G2M genes",13.547469350265397,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,"SenCat published, no E2F/G2M genes",22.392498547381233,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,hUSI raw,0.0294590278307662,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,hUSI raw,0.18618988063698994,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,hUSI raw,0.06706149531537964,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,hUSI raw,0.16265339448025962,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,hUSI raw,0.02582016869244704,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,hUSI raw,0.08832730963224464,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,hUSI raw,0.20865799689461378,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,hUSI raw,0.2789247926645512,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,hUSI raw,0.0037396274098520747,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,hUSI raw,0.06930821026472092,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,hUSI raw,0.1526581259033185,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,hUSI raw,0.24616375479841257,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,hUSI raw,0.0329160610814741,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,hUSI raw,0.05931281135373717,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,hUSI raw,0.24181789048337746,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,hUSI raw,0.02122091483484057,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,hUSI raw,0.07265360935165205,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,hUSI raw,0.24767766109059314,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,SenMayo,0.5083135894742841,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,SenMayo,0.5827516018986671,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,SenMayo,0.5463378194637811,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,SenMayo,0.5887793817118943,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,SenMayo,0.5265528443369727,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,SenMayo,0.5786912874624459,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,SenMayo,0.5922994878809344,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,SenMayo,0.5981750160800503,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,SenMayo,0.5058352263012628,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,SenMayo,0.5393232537879713,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,SenMayo,0.5728373350268272,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,SenMayo,0.6277138646670412,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,SenMayo,0.5365546355324329,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,SenMayo,0.554704737711992,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,SenMayo,0.6459893505288097,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,SenMayo,0.5305915830096969,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,SenMayo,0.5939673351082452,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,SenMayo,0.6360115776361105,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,Hallmark E2F (inverted),-0.7141397376712831,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,Hallmark E2F (inverted),-0.4696229940646296,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,Hallmark E2F (inverted),-0.6764138638528615,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,Hallmark E2F (inverted),-0.47013556092914194,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,Hallmark E2F (inverted),-0.7297426174250751,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,Hallmark E2F (inverted),-0.6440609657800249,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,Hallmark E2F (inverted),-0.43697680808968997,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,Hallmark E2F (inverted),-0.4233038396717227,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,Hallmark E2F (inverted),-0.7372396863779584,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,Hallmark E2F (inverted),-0.6510738623873378,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,Hallmark E2F (inverted),-0.4622270462372683,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,Hallmark E2F (inverted),-0.4370266358906719,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,Hallmark E2F (inverted),-0.725087565032608,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,Hallmark E2F (inverted),-0.6965613321609144,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,Hallmark E2F (inverted),-0.42842694365061923,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,Hallmark E2F (inverted),-0.7348862387337877,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,Hallmark E2F (inverted),-0.6880528687623654,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,Hallmark E2F (inverted),-0.4351868542536821,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,Hallmark G2M (inverted),-0.7350028712298284,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,Hallmark G2M (inverted),-0.5050354940833225,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,Hallmark G2M (inverted),-0.7042556635756082,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,Hallmark G2M (inverted),-0.5144253128818025,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,Hallmark G2M (inverted),-0.7439128432203832,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,Hallmark G2M (inverted),-0.6827909774593504,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,Hallmark G2M (inverted),-0.47825099483627254,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,Hallmark G2M (inverted),-0.47331662935563323,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,Hallmark G2M (inverted),-0.7529553478898704,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,Hallmark G2M (inverted),-0.6911194132522211,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,Hallmark G2M (inverted),-0.5078001743673948,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,Hallmark G2M (inverted),-0.48693515656427444,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,Hallmark G2M (inverted),-0.7370291818639965,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,Hallmark G2M (inverted),-0.7210327305246125,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,Hallmark G2M (inverted),-0.48416094289991224,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,Hallmark G2M (inverted),-0.7489206718079625,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,Hallmark G2M (inverted),-0.7198786307224582,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,Hallmark G2M (inverted),-0.4906083119112671,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,AD-MSC 40 biomarkers (up minus down),-0.34325675972741265,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,AD-MSC 40 biomarkers (up minus down),0.7408551329962628,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,AD-MSC 40 biomarkers (up minus down),-0.14743716567743836,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,AD-MSC 40 biomarkers (up minus down),0.5369714955667912,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,AD-MSC 40 biomarkers (up minus down),-0.366162892943504,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,AD-MSC 40 biomarkers (up minus down),-0.08109840990693928,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,AD-MSC 40 biomarkers (up minus down),0.6757877189125816,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,AD-MSC 40 biomarkers (up minus down),0.8420440389829266,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,AD-MSC 40 biomarkers (up minus down),-0.3886073862387338,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,AD-MSC 40 biomarkers (up minus down),-0.1460284311570308,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,AD-MSC 40 biomarkers (up minus down),0.5064721184143034,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,AD-MSC 40 biomarkers (up minus down),0.7973400747417014,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,AD-MSC 40 biomarkers (up minus down),-0.37638675166703295,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,AD-MSC 40 biomarkers (up minus down),-0.17432769106763396,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,AD-MSC 40 biomarkers (up minus down),0.8194529933318679,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,AD-MSC 40 biomarkers (up minus down),-0.3664266871839965,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,AD-MSC 40 biomarkers (up minus down),-0.13701729317798794,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,AD-MSC 40 biomarkers (up minus down),0.8100443320876384,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,CDKN2A transcript,5.028230587882848,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,CDKN2A transcript,6.216143911243771,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,CDKN2A transcript,5.594550580973268,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,CDKN2A transcript,6.141188291346105,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,CDKN2A transcript,5.294306853448686,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,CDKN2A transcript,5.772291402667481,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,CDKN2A transcript,6.063543649412306,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,CDKN2A transcript,6.445207414478278,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,CDKN2A transcript,5.075344589795049,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,CDKN2A transcript,5.339074286854997,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,CDKN2A transcript,6.090959680714195,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,CDKN2A transcript,6.47179588350854,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,CDKN2A transcript,4.578405524953368,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,CDKN2A transcript,5.2264183764042365,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,CDKN2A transcript,6.260624650644747,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,CDKN2A transcript,5.084732127281087,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,CDKN2A transcript,5.490677861245477,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,CDKN2A transcript,6.722886439986028,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,CDKN1A transcript,8.875236799401648,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,CDKN1A transcript,8.945129798103029,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,CDKN1A transcript,8.309953605300768,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,CDKN1A transcript,9.342185869067707,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,CDKN1A transcript,8.848800760620025,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,CDKN1A transcript,8.75038184343268,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,CDKN1A transcript,9.787385439030658,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,CDKN1A transcript,9.871414828716693,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,CDKN1A transcript,8.37957012423549,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,CDKN1A transcript,8.634148191211047,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,CDKN1A transcript,9.547693078849477,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,CDKN1A transcript,9.837710252267522,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,CDKN1A transcript,9.41424386332058,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,CDKN1A transcript,8.73468177386498,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,CDKN1A transcript,10.182376813137761,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,CDKN1A transcript,8.800573600453545,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,CDKN1A transcript,8.74689240903738,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,CDKN1A transcript,10.017072297787507,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,IL6 transcript,7.507276842348077,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,IL6 transcript,8.025183470270298,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,IL6 transcript,8.570017667969733,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,IL6 transcript,9.073592512012512,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,IL6 transcript,7.03727819529603,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,IL6 transcript,9.013151685143946,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,IL6 transcript,7.878882556345276,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,IL6 transcript,7.942467327819766,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,IL6 transcript,6.788141550194043,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,IL6 transcript,9.03035885343441,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,IL6 transcript,9.37588357224657,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,IL6 transcript,8.788115191260363,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,IL6 transcript,7.292747932897438,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,IL6 transcript,9.013957180689827,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,IL6 transcript,9.415278724886836,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,IL6 transcript,5.742612342499169,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,IL6 transcript,8.640461888366593,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,IL6 transcript,9.16013992383912,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,GDF15 transcript,5.68585222080968,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,GDF15 transcript,6.420496259781522,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,GDF15 transcript,5.715902697922533,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,GDF15 transcript,6.8310040589378005,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,GDF15 transcript,5.553166946128293,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,GDF15 transcript,6.037624815458184,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,GDF15 transcript,7.040379340669487,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,GDF15 transcript,8.105764380392092,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,GDF15 transcript,4.67833433162964,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,GDF15 transcript,5.676970481690276,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,GDF15 transcript,7.041003676073489,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,GDF15 transcript,7.689411446085072,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,GDF15 transcript,6.2282750996783545,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,GDF15 transcript,5.785859322823459,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,GDF15 transcript,7.871209409837892,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,GDF15 transcript,5.496864586751435,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,GDF15 transcript,5.952344979747939,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,GDF15 transcript,7.37031434029483,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,LMNB1 transcript (inverted),-7.124764282077894,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,LMNB1 transcript (inverted),-4.0016855110371745,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,LMNB1 transcript (inverted),-6.784837451515888,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,LMNB1 transcript (inverted),-3.901320330471227,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,LMNB1 transcript (inverted),-7.082844465492279,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,LMNB1 transcript (inverted),-6.4574009991855075,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,LMNB1 transcript (inverted),-2.5284475402370568,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,LMNB1 transcript (inverted),-2.5953419495313548,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,LMNB1 transcript (inverted),-7.211311439995885,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,LMNB1 transcript (inverted),-6.495156950383036,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,LMNB1 transcript (inverted),-3.8636420774151725,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,LMNB1 transcript (inverted),-3.1766422518807325,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,LMNB1 transcript (inverted),-6.962810186733916,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,LMNB1 transcript (inverted),-6.91162467894522,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,LMNB1 transcript (inverted),-2.904379511866694,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,LMNB1 transcript (inverted),-7.1822769680096865,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,LMNB1 transcript (inverted),-6.8056678970695454,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,LMNB1 transcript (inverted),-2.8633626428976813,model inference on measured expression; passage and donor from GEO
+GSM9271434,GSE309666,D,1.0,"Frozen logreg_l1, target lineage excluded, decision value",-4.07515267202634,model inference on measured expression; passage and donor from GEO
+GSM9271435,GSE309666,D,10.0,"Frozen logreg_l1, target lineage excluded, decision value",-0.01585347730016179,model inference on measured expression; passage and donor from GEO
+GSM9271436,GSE309666,D,3.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.722103979222818,model inference on measured expression; passage and donor from GEO
+GSM9271437,GSE309666,D,6.0,"Frozen logreg_l1, target lineage excluded, decision value",-0.8834653994475414,model inference on measured expression; passage and donor from GEO
+GSM9271438,GSE309666,B,1.0,"Frozen logreg_l1, target lineage excluded, decision value",-4.278684850243651,model inference on measured expression; passage and donor from GEO
+GSM9271439,GSE309666,B,3.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.079788687536542,model inference on measured expression; passage and donor from GEO
+GSM9271440,GSE309666,B,7.0,"Frozen logreg_l1, target lineage excluded, decision value",0.31421690418640236,model inference on measured expression; passage and donor from GEO
+GSM9271441,GSE309666,B,8.0,"Frozen logreg_l1, target lineage excluded, decision value",1.5501021122981489,model inference on measured expression; passage and donor from GEO
+GSM9271442,GSE309666,E,1.0,"Frozen logreg_l1, target lineage excluded, decision value",-4.603880736280413,model inference on measured expression; passage and donor from GEO
+GSM9271443,GSE309666,E,3.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.5847697357683757,model inference on measured expression; passage and donor from GEO
+GSM9271444,GSE309666,E,6.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.3469409120260811,model inference on measured expression; passage and donor from GEO
+GSM9271445,GSE309666,E,10.0,"Frozen logreg_l1, target lineage excluded, decision value",0.5819811256313139,model inference on measured expression; passage and donor from GEO
+GSM9271446,GSE309666,C,1.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.5767121134597373,model inference on measured expression; passage and donor from GEO
+GSM9271447,GSE309666,C,3.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.6829171792720716,model inference on measured expression; passage and donor from GEO
+GSM9271448,GSE309666,C,9.0,"Frozen logreg_l1, target lineage excluded, decision value",0.9795610619323303,model inference on measured expression; passage and donor from GEO
+GSM9271449,GSE309666,A,1.0,"Frozen logreg_l1, target lineage excluded, decision value",-4.0869726213322135,model inference on measured expression; passage and donor from GEO
+GSM9271450,GSE309666,A,3.0,"Frozen logreg_l1, target lineage excluded, decision value",-3.476908043485005,model inference on measured expression; passage and donor from GEO
+GSM9271451,GSE309666,A,7.0,"Frozen logreg_l1, target lineage excluded, decision value",0.6835330260223091,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,SenCat published,1.8460381050711676,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,SenCat published,-1.262905377133516,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,SenCat published,1.1517695518600688,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,SenCat published,2.661218163399872,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,SenCat published,-1.2494721443920436,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,SenCat published,3.3946640128416163,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,SenCat published,6.444251787664322,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,SenCat published,2.2908118599166185,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,SenCat published,7.782514250273447,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,SenCat refit all14,1.9015391208759858,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,SenCat refit all14,-1.1819505769652672,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,SenCat refit all14,1.2378655895506365,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,SenCat refit all14,2.71354927459728,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,SenCat refit all14,-1.1730300111533083,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,SenCat refit all14,3.4443090736682485,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,SenCat refit all14,6.487073297442511,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,SenCat refit all14,2.3369542945016266,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,SenCat refit all14,7.806938546578515,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,SenCat refit no_BMMSC,1.4927139508696072,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,SenCat refit no_BMMSC,-1.7174502631566033,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,SenCat refit no_BMMSC,0.7557989366669273,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,SenCat refit no_BMMSC,2.196108259085407,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,SenCat refit no_BMMSC,-1.6136424840155748,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,SenCat refit no_BMMSC,2.90794108623884,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,SenCat refit no_BMMSC,5.948517612392834,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,SenCat refit no_BMMSC,1.7665299015774998,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,SenCat refit no_BMMSC,7.171374498444305,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,SenCat refit no_BMMSC_prAD,2.4738386800636203,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,SenCat refit no_BMMSC_prAD,-0.7010674866572547,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,SenCat refit no_BMMSC_prAD,1.8111382802745313,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,SenCat refit no_BMMSC_prAD,3.2085770420215276,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,SenCat refit no_BMMSC_prAD,-0.65232855821519,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,SenCat refit no_BMMSC_prAD,3.8943230665600064,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,SenCat refit no_BMMSC_prAD,7.2925380082539535,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,SenCat refit no_BMMSC_prAD,2.862129255159512,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,SenCat refit no_BMMSC_prAD,8.152872870575797,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,"SenCat published, no E2F/G2M genes",6.651315727397039,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,"SenCat published, no E2F/G2M genes",3.9139045490583273,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,"SenCat published, no E2F/G2M genes",6.017528865439758,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,"SenCat published, no E2F/G2M genes",7.834487492981281,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,"SenCat published, no E2F/G2M genes",3.8975618879065874,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,"SenCat published, no E2F/G2M genes",8.279272750323303,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,"SenCat published, no E2F/G2M genes",11.304326537250839,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,"SenCat published, no E2F/G2M genes",7.058813093786644,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,"SenCat published, no E2F/G2M genes",12.057502094863843,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,hUSI raw,0.0480405264273259,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,hUSI raw,0.05800306353769625,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,hUSI raw,0.056195052709151615,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,hUSI raw,0.07034440348086066,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,hUSI raw,0.06149703783572157,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,hUSI raw,0.07807441281673481,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,hUSI raw,0.10193693627808048,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,hUSI raw,0.08298978342036188,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,hUSI raw,0.10455759697346326,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,SenMayo,0.5694353271607961,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,SenMayo,0.5750046947206845,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,SenMayo,0.5482888763696337,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,SenMayo,0.5689462597364425,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,SenMayo,0.5758548474011659,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,SenMayo,0.56974987344666,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,SenMayo,0.5887879864138866,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,SenMayo,0.5908208004702885,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,SenMayo,0.5801170414278484,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,Hallmark E2F (inverted),-0.6374454204102372,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,Hallmark E2F (inverted),-0.6543325061106248,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,Hallmark E2F (inverted),-0.6260967306527248,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,Hallmark E2F (inverted),-0.6486795167233806,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,Hallmark E2F (inverted),-0.6453140881992877,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,Hallmark E2F (inverted),-0.640995478543947,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,Hallmark E2F (inverted),-0.6491781397557523,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,Hallmark E2F (inverted),-0.6354493281574679,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,Hallmark E2F (inverted),-0.5999338533651947,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,Hallmark G2M (inverted),-0.635780398725705,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,Hallmark G2M (inverted),-0.6587596835996571,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,Hallmark G2M (inverted),-0.6283967044988003,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,Hallmark G2M (inverted),-0.6597747628228351,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,Hallmark G2M (inverted),-0.6532993431825692,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,Hallmark G2M (inverted),-0.6459753302426716,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,Hallmark G2M (inverted),-0.6552309031693497,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,Hallmark G2M (inverted),-0.6448549384151286,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,Hallmark G2M (inverted),-0.611832038953976,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,AD-MSC 40 biomarkers (up minus down),0.32313231764071915,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,AD-MSC 40 biomarkers (up minus down),0.22361607798951633,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,AD-MSC 40 biomarkers (up minus down),0.3134313917601528,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,AD-MSC 40 biomarkers (up minus down),0.3275265762014403,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,AD-MSC 40 biomarkers (up minus down),0.2620144025865869,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,AD-MSC 40 biomarkers (up minus down),0.3319306324401117,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,AD-MSC 40 biomarkers (up minus down),0.4292644393278793,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,AD-MSC 40 biomarkers (up minus down),0.3586391025326997,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,AD-MSC 40 biomarkers (up minus down),0.46734556410130795,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,CDKN2A transcript,3.977732393817084,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,CDKN2A transcript,4.175511507089153,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,CDKN2A transcript,4.398566869359119,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,CDKN2A transcript,3.7347603239612757,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,CDKN2A transcript,4.133414905444985,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,CDKN2A transcript,4.391066695938833,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,CDKN2A transcript,4.389173918151019,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,CDKN2A transcript,3.8950088800563183,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,CDKN2A transcript,4.619140527380942,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,CDKN1A transcript,5.800876182721595,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,CDKN1A transcript,6.00448445848139,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,CDKN1A transcript,5.98041777361066,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,CDKN1A transcript,5.677124750030841,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,CDKN1A transcript,6.01134582786584,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,CDKN1A transcript,5.6945255263325825,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,CDKN1A transcript,6.134971728322773,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,CDKN1A transcript,5.883945429841581,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,CDKN1A transcript,5.7807159951284275,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,IL6 transcript,2.58704021167076,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,IL6 transcript,4.00769778497108,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,IL6 transcript,3.0288900918317596,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,IL6 transcript,3.704688347895242,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,IL6 transcript,3.910740607225435,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,IL6 transcript,3.8353821178635745,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,IL6 transcript,3.0946342000201374,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,IL6 transcript,3.9636089896847304,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,IL6 transcript,3.9763591894050383,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,GDF15 transcript,3.307411957135933,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,GDF15 transcript,3.819306719940183,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,GDF15 transcript,3.670133009149044,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,GDF15 transcript,3.70086495996817,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,GDF15 transcript,4.01895646214992,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,GDF15 transcript,3.198277770523076,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,GDF15 transcript,3.527926789566907,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,GDF15 transcript,3.4156769255194503,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,GDF15 transcript,3.6956663292064906,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,LMNB1 transcript (inverted),-1.8534644860390783,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,LMNB1 transcript (inverted),-2.28047109444102,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,LMNB1 transcript (inverted),-1.8196797188534557,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,LMNB1 transcript (inverted),-1.9304891852048556,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,LMNB1 transcript (inverted),-2.166199903927047,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,LMNB1 transcript (inverted),-1.8772867651444143,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,LMNB1 transcript (inverted),-1.61744029377484,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,LMNB1 transcript (inverted),-1.6723203864755392,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,LMNB1 transcript (inverted),-0.9616550734181193,model inference on measured expression; passage and donor from GEO
+GSM5393142,GSE178514,393,4.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.4559406134318396,model inference on measured expression; passage and donor from GEO
+GSM5393143,GSE178514,411,4.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.6486186882062195,model inference on measured expression; passage and donor from GEO
+GSM5393144,GSE178514,413,4.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.106219254972177,model inference on measured expression; passage and donor from GEO
+GSM5393145,GSE178514,393,6.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.4904399111152684,model inference on measured expression; passage and donor from GEO
+GSM5393146,GSE178514,411,6.0,"Frozen logreg_l1, target lineage excluded, decision value",-1.4340178357538909,model inference on measured expression; passage and donor from GEO
+GSM5393147,GSE178514,413,6.0,"Frozen logreg_l1, target lineage excluded, decision value",-0.8342768387693186,model inference on measured expression; passage and donor from GEO
+GSM5393148,GSE178514,393,12.0,"Frozen logreg_l1, target lineage excluded, decision value",-0.37582538090854656,model inference on measured expression; passage and donor from GEO
+GSM5393149,GSE178514,411,12.0,"Frozen logreg_l1, target lineage excluded, decision value",-0.6536704386845228,model inference on measured expression; passage and donor from GEO
+GSM5393150,GSE178514,413,12.0,"Frozen logreg_l1, target lineage excluded, decision value",0.36955368855809423,model inference on measured expression; passage and donor from GEO

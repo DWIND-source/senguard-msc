@@ -1,0 +1,13 @@
+cohort,status,samples,genes,subjects,units,kind,tissue,pooled,note
+GSE309666,loaded,18.0,13661.0,5.0,5.0,normalized,AD,False,
+GSE178514,loaded,9.0,16832.0,3.0,3.0,fpkm,BM,False,Donors inferred
+GSE137186,loaded,18.0,33119.0,4.0,4.0,counts,BM,True,Authors report retained immunoregulatory potency
+GSE275980,loaded,9.0,16038.0,3.0,3.0,counts,MSC,True,Gene symbols only; C1-C3 are the three donors in the series title
+GSE125632,loaded,10.0,58038.0,5.0,5.0,fpkm,BM,True,Column order to GSM inferred; sex check agreement 65%
+GSE125632_iMSC,loaded,10.0,58038.0,5.0,5.0,fpkm,iPSC-derived,False,Reported separately
+GSE194298,loaded,20.0,58233.0,12.0,4.0,normcounts,BM,True,Medium arms averaged per donor; mBG arm has no p1
+GSE233634,loaded,12.0,58735.0,1.0,1.0,fpkm,UC,True,No donor stated; one unit
+GSE269586,loaded,23.0,36485.0,11.0,11.0,counts,WJ,False,GMP production; short expansion; not pooled
+GSE119987,loaded,57.0,12502.0,5.0,5.0,log_array,UC,True,Cultured to replicative senescence
+GSE56362,"failed: RuntimeError: GPL18503: no symbol column in ['ID', 'GB_ACC', 'GENE_NAME', 'GEN_DESCR_MFR', 'GEN_ID_MFR', 'SEQUENCE', 'LOCUS_ID', 'POS_DESCR_MFR', 'SPOT_ID']",,,,,,,,
+GSE48662,loaded,13.0,21754.0,,,log_array,BM,False,"{'G1': 5, 'WT': 4, 'SEN': 4}"

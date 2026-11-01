@@ -1,0 +1,27 @@
+{
+ "GSE309666_positive_control": {
+  "n_samples": 18,
+  "n_genes": 2000,
+  "within_minus_between_spearman": 0.4061,
+  "perm_p": 0.0001,
+  "n_perm": 9999
+ },
+ "GSE178514_suffix": {
+  "n_samples": 9,
+  "n_genes": 2000,
+  "within_minus_between_spearman": 0.9311,
+  "perm_p": 0.0284,
+  "n_perm": 9999
+ },
+ "GSE178514_sex_by_suffix": {
+  "393": {
+   "Y-low (XIST not in table)": 3
+  },
+  "411": {
+   "Y-low (XIST not in table)": 3
+  },
+  "413": {
+   "Y-high (XIST not in table)": 3
+  }
+ }
+}

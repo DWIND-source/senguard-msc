@@ -1,0 +1,273 @@
+[{"stream_name":"stderr","time":10.630605718,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.630692362,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.630699244,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.630702381999999,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.577858753,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.57790254,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.577907739,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.577910837,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":36.352229997,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-b/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":43.33465641,"data":"paradigm   Doxorubicin  Etoposide  Ionizing  Oxidative  RasV12  control\n"}
+,{"stream_name":"stdout","time":43.334699716,"data":"cell_line                                                              \n"}
+,{"stream_name":"stdout","time":43.334705558,"data":"BJ                   0          4         4          4       4        8\n"}
+,{"stream_name":"stdout","time":43.334710233,"data":"BMMSC                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334714791,"data":"HCAEC                4          0         3          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334719322,"data":"HEKn                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334724036,"data":"HSAEC                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334728423,"data":"HUVEC                0          3         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334732859,"data":"HVSMC                4          0         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334737947,"data":"HeMn                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334743067,"data":"Myoblasts            0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334747606,"data":"NHA                  0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334752106,"data":"NHO                  0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334756605,"data":"PBMCs                0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.334761554,"data":"WI-38                0          4         4          4       4        8\n"}
+,{"stream_name":"stdout","time":43.334766142,"data":"prAD                 0          4         4          0       0        4\n"}
+,{"stream_name":"stdout","time":43.631579503,"data":"LOCO folds 14 | LOCPO folds 32\n"}
+,{"stream_name":"stdout","time":107.257747946,"data":"               mean_auroc        ci_low        ci_high       min_auroc      \n"}
+,{"stream_name":"stdout","time":107.257783465,"data":"design               LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO LOCPO\n"}
+,{"stream_name":"stdout","time":107.257800765,"data":"candidate                                                                   \n"}
+,{"stream_name":"stdout","time":107.257806266,"data":"L2 genes, cpm       0.984  0.982  0.953  0.946     1.0   1.0     0.781   0.0\n"}
+,{"stream_name":"stdout","time":107.257811432,"data":"L2 genes, mor       0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":107.257816374,"data":"L2 genes, none      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":107.257821144,"data":"L2 genes, rank      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":161.104947186,"data":"                                 mean_auroc        ci_low        ci_high       min_auroc       \n"}
+,{"stream_name":"stdout","time":161.105001626,"data":"design                                 LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO  LOCPO\n"}
+,{"stream_name":"stdout","time":161.105008771,"data":"candidate                                                                                      \n"}
+,{"stream_name":"stdout","time":161.105014022,"data":"Hallmark E2F inverted (fixed)         0.967  0.967  0.901  0.901     1.0   1.0     0.539  0.000\n"}
+,{"stream_name":"stdout","time":161.105019127,"data":"Hallmark pathway LR                   0.982  0.978  0.946  0.938     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":161.105024336,"data":"L1 genes (k=2000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":161.105029358,"data":"L2 genes (k=5000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":161.105034411,"data":"Late fusion: L2 + pathway + hUSI      0.997  0.989  0.992  0.967     1.0   1.0     0.961  0.375\n"}
+,{"stream_name":"stdout","time":161.105039389,"data":"SenMayo (fixed)                       0.974  0.974  0.939  0.939     1.0   1.0     0.781  0.562\n"}
+,{"stream_name":"stdout","time":161.105046468,"data":"hUSI raw (fixed)                      1.000  1.000  1.000  1.000     1.0   1.0     1.000  1.000\n"}
+,{"stream_name":"stdout","time":161.105051802,"data":"\n"}
+,{"stream_name":"stdout","time":161.105056761,"data":"Fusion minus L2 genes, mean over cell types: {'LOCO': 0.0151, 'LOCPO': 0.0067} | cell types improved / worsened: {'LOCO': (1, 0), 'LOCPO': (1, 0)}\n"}
+,{"stream_name":"stdout","time":161.105064187,"data":"\n"}
+,{"stream_name":"stdout","time":161.105069691,"data":"Hardest paradigms under LOCPO (mean AUROC):\n"}
+,{"stream_name":"stdout","time":161.105075847,"data":"candidate    Hallmark E2F inverted (fixed)  Hallmark pathway LR  L1 genes (k=2000)  L2 genes (k=5000)  Late fusion: L2 + pathway + hUSI  SenMayo (fixed)  hUSI raw (fixed)\n"}
+,{"stream_name":"stdout","time":161.10508255,"data":"paradigm                                                                                                                                                                  \n"}
+,{"stream_name":"stdout","time":161.105088919,"data":"Doxorubicin                          1.000                1.000                1.0                1.0                             1.000            1.000               1.0\n"}
+,{"stream_name":"stdout","time":161.105094533,"data":"Etoposide                            0.964                1.000                1.0                1.0                             1.000            1.000               1.0\n"}
+,{"stream_name":"stdout","time":161.105099981,"data":"Ionizing                             1.000                0.991                1.0                1.0                             1.000            0.955               1.0\n"}
+,{"stream_name":"stdout","time":161.105106765,"data":"Oxidative                            0.797                1.000                1.0                1.0                             1.000            0.891               1.0\n"}
+,{"stream_name":"stdout","time":161.105124579,"data":"RasV12                               0.500                0.500                0.5                0.5                             0.688            1.000               1.0\n"}
+,{"stream_name":"stdout","time":290.184343625,"data":"    method    k design  mean_auroc  ci_low  ci_high  min_auroc  jaccard_across_folds\n"}
+,{"stream_name":"stdout","time":290.184413519,"data":"        l1   10   LOCO       0.982   0.946      1.0      0.750                 0.458\n"}
+,{"stream_name":"stdout","time":290.184423591,"data":"        l1   20   LOCO       0.982   0.946      1.0      0.750                 0.395\n"}
+,{"stream_name":"stdout","time":290.184429904,"data":"        l1   30   LOCO       0.982   0.946      1.0      0.750                 0.409\n"}
+,{"stream_name":"stdout","time":290.184435769,"data":"        l1   10  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184441453,"data":"        l1   20  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184447423,"data":"        l1   30  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184459033,"data":"univariate   10   LOCO       0.972   0.915      1.0      0.602                 0.453\n"}
+,{"stream_name":"stdout","time":290.184463522,"data":"univariate   20   LOCO       0.978   0.935      1.0      0.695                 0.699\n"}
+,{"stream_name":"stdout","time":290.184467447,"data":"univariate   30   LOCO       0.973   0.922      1.0      0.656                 0.763\n"}
+,{"stream_name":"stdout","time":290.184471279,"data":"univariate  100   LOCO       0.982   0.946      1.0      0.750                 0.837\n"}
+,{"stream_name":"stdout","time":290.184475138,"data":"univariate  500   LOCO       0.982   0.946      1.0      0.750                 0.798\n"}
+,{"stream_name":"stdout","time":290.184479122,"data":"univariate 2000   LOCO       0.982   0.946      1.0      0.750                 0.822\n"}
+,{"stream_name":"stdout","time":290.18448328,"data":"univariate 5000   LOCO       0.982   0.946      1.0      0.750                 0.883\n"}
+,{"stream_name":"stdout","time":290.184505852,"data":"univariate   10  LOCPO       0.972   0.916      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184513088,"data":"univariate   20  LOCPO       0.974   0.923      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184519996,"data":"univariate   30  LOCPO       0.972   0.917      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184526638,"data":"univariate  100  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184533499,"data":"univariate  500  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184576538,"data":"univariate 2000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.184582891,"data":"univariate 5000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":290.888021637,"data":"4 of 99 fold-selected genes do not pass the gene filter on all development data and are excluded from ranking: ['ENSG00000117724', 'ENSG00000138160', 'ENSG00000087586', 'ENSG00000004961']\n"}
+,{"stream_name":"stdout","time":290.888060975,"data":"        gene_id    symbol  folds_selected  abs_coef_all_dev  is_e2f_g2m  in_senmayo  published_sencat_coef\n"}
+,{"stream_name":"stdout","time":290.888084427,"data":"ENSG00000135679      MDM2              14             0.380       False       False                  0.030\n"}
+,{"stream_name":"stdout","time":290.888089162,"data":"ENSG00000124201     ZNFX1              14             0.337       False       False                  0.023\n"}
+,{"stream_name":"stdout","time":290.888093305,"data":"ENSG00000131747     TOP2A              14             0.257        True       False                 -0.078\n"}
+,{"stream_name":"stdout","time":290.888097394,"data":"ENSG00000048392     RRM2B              13             0.360       False       False                  0.030\n"}
+,{"stream_name":"stdout","time":290.88810755,"data":"ENSG00000130066      SAT1              13             0.338       False       False                  0.040\n"}
+,{"stream_name":"stdout","time":290.888110647,"data":"ENSG00000102393       GLA              13             0.162       False       False                  0.023\n"}
+,{"stream_name":"stdout","time":290.88811345,"data":"ENSG00000145386     CCNA2              13             0.144        True       False                 -0.066\n"}
+,{"stream_name":"stdout","time":290.888116178,"data":"ENSG00000116717   GADD45A              12             0.328       False       False                  0.032\n"}
+,{"stream_name":"stdout","time":290.888119026,"data":"ENSG00000185825    BCAP31              12             0.194       False       False                  0.017\n"}
+,{"stream_name":"stdout","time":290.888121738,"data":"ENSG00000177556     ATOX1              12             0.146       False       False                  0.016\n"}
+,{"stream_name":"stdout","time":290.888124593,"data":"ENSG00000189403     HMGB1              12             0.128       False        True                 -0.021\n"}
+,{"stream_name":"stdout","time":290.888127329,"data":"ENSG00000152795   HNRNPDL              11             0.163       False       False                 -0.016\n"}
+,{"stream_name":"stdout","time":290.888130262,"data":"ENSG00000109572     CLCN3              10             0.246       False       False                  0.008\n"}
+,{"stream_name":"stdout","time":290.888153873,"data":"ENSG00000127483    HP1BP3              10             0.187       False       False                 -0.011\n"}
+,{"stream_name":"stdout","time":290.888159209,"data":"ENSG00000135018    UBQLN1               9             0.221       False       False                  0.007\n"}
+,{"stream_name":"stdout","time":290.88816397,"data":"ENSG00000196072   BLOC1S2               9             0.197       False       False                  0.018\n"}
+,{"stream_name":"stdout","time":290.888171065,"data":"ENSG00000034713 GABARAPL2               9             0.191       False       False                  0.012\n"}
+,{"stream_name":"stdout","time":290.888175971,"data":"ENSG00000101639    CEP192               9             0.161       False       False                 -0.019\n"}
+,{"stream_name":"stdout","time":290.888180748,"data":"ENSG00000259781   HMGB1P6               9             0.115       False       False                 -0.024\n"}
+,{"stream_name":"stdout","time":290.888185921,"data":"ENSG00000132967   HMGB1P5               9             0.108       False       False                 -0.024\n"}
+,{"stream_name":"stdout","time":290.8881905,"data":"ENSG00000144021     CIAO1               9             0.108       False       False                  0.008\n"}
+,{"stream_name":"stdout","time":290.888194551,"data":"ENSG00000105819     PMPCB               8             0.212       False       False                 -0.013\n"}
+,{"stream_name":"stdout","time":290.888199368,"data":"ENSG00000086065     CHMP5               8             0.204       False       False                  0.017\n"}
+,{"stream_name":"stdout","time":290.888211537,"data":"ENSG00000113810      SMC4               8             0.152        True       False                 -0.040\n"}
+,{"stream_name":"stdout","time":290.888215752,"data":"ENSG00000147140      NONO               8             0.123       False       False                 -0.010\n"}
+,{"stream_name":"stdout","time":290.888219893,"data":"ENSG00000263426 RN7SL471P               8             0.001       False       False                  0.071\n"}
+,{"stream_name":"stdout","time":290.888224031,"data":"ENSG00000109685      NSD2               7             0.193        True       False                 -0.028\n"}
+,{"stream_name":"stdout","time":290.888228163,"data":"ENSG00000128335     APOL2               6             0.259       False       False                  0.030\n"}
+,{"stream_name":"stdout","time":290.8882323,"data":"ENSG00000011426      ANLN               6             0.184       False       False                 -0.063\n"}
+,{"stream_name":"stdout","time":290.88823715,"data":"ENSG00000102054     RBBP7               6             0.155        True       False                 -0.014\n"}
+,{"stream_name":"stdout","time":290.888242021,"data":"\n"}
+,{"stream_name":"stdout","time":290.888245643,"data":"Panel composition: {10: {'e2f_g2m_share': 0.2, 'senmayo_share': 0.0}, 20: {'e2f_g2m_share': 0.1, 'senmayo_share': 0.05}, 30: {'e2f_g2m_share': 0.16666666666666666, 'senmayo_share': 0.03333333333333333}}\n"}
+,{"stream_name":"stdout","time":292.698719587,"data":"   cohort  panel_size  genes_present  mean_slope  positive  donors  sign_flip_p  standardized_slope\n"}
+,{"stream_name":"stdout","time":292.698760609,"data":"GSE309666          10             10       1.765         5       5        0.062               0.307\n"}
+,{"stream_name":"stdout","time":292.698766882,"data":"GSE309666          20             19       1.861         5       5        0.062               0.312\n"}
+,{"stream_name":"stdout","time":292.698771129,"data":"GSE309666          30             28       2.282         5       5        0.062               0.312\n"}
+,{"stream_name":"stdout","time":292.69877582,"data":"GSE178514          10             10       0.326         3       3        0.250               0.193\n"}
+,{"stream_name":"stdout","time":292.698780083,"data":"GSE178514          20             18       0.501         3       3        0.250               0.225\n"}
+,{"stream_name":"stdout","time":292.698784408,"data":"GSE178514          30             27       0.636         3       3        0.250               0.234\n"}
+,{"stream_name":"stdout","time":292.754948573,"data":"        gene_id    symbol  donors_up  donors_down  dev_sign\n"}
+,{"stream_name":"stdout","time":292.754986274,"data":"ENSG00000135679      MDM2          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.754993167,"data":"ENSG00000124201     ZNFX1          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.754998182,"data":"ENSG00000131747     TOP2A          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.75500261,"data":"ENSG00000048392     RRM2B          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755006517,"data":"ENSG00000130066      SAT1          4            1       1.0\n"}
+,{"stream_name":"stdout","time":292.755010478,"data":"ENSG00000102393       GLA          4            1       1.0\n"}
+,{"stream_name":"stdout","time":292.755014206,"data":"ENSG00000145386     CCNA2          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755018583,"data":"ENSG00000116717   GADD45A          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.75502244,"data":"ENSG00000185825    BCAP31          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755046787,"data":"ENSG00000177556     ATOX1          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755119008,"data":"ENSG00000189403     HMGB1          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755123859,"data":"ENSG00000152795   HNRNPDL          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755127979,"data":"ENSG00000109572     CLCN3          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755132121,"data":"ENSG00000127483    HP1BP3          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755136956,"data":"ENSG00000135018    UBQLN1          3            2       1.0\n"}
+,{"stream_name":"stdout","time":292.755141302,"data":"ENSG00000196072   BLOC1S2          1            4       1.0\n"}
+,{"stream_name":"stdout","time":292.755145776,"data":"ENSG00000034713 GABARAPL2          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755150245,"data":"ENSG00000101639    CEP192          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755154689,"data":"ENSG00000259781   HMGB1P6          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755158931,"data":"ENSG00000144021     CIAO1          3            2       1.0\n"}
+,{"stream_name":"stdout","time":292.755162742,"data":"ENSG00000105819     PMPCB          1            4      -1.0\n"}
+,{"stream_name":"stdout","time":292.755166642,"data":"ENSG00000086065     CHMP5          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755170484,"data":"ENSG00000113810      SMC4          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755174296,"data":"ENSG00000147140      NONO          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755182728,"data":"ENSG00000109685      NSD2          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755186366,"data":"ENSG00000128335     APOL2          5            0       1.0\n"}
+,{"stream_name":"stdout","time":292.755189018,"data":"ENSG00000011426      ANLN          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":292.755191699,"data":"ENSG00000102054     RBBP7          0            5      -1.0\n"}
+,{"stream_name":"stdout","time":350.687877444,"data":"            n  coverage  abstain  neither\n"}
+,{"stream_name":"stdout","time":350.687912885,"data":"cell_type                                \n"}
+,{"stream_name":"stdout","time":350.687919517,"data":"BJ         24     0.500    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687924869,"data":"BMMSC      12     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687931662,"data":"HCAEC      11     1.000    0.182      0.0\n"}
+,{"stream_name":"stdout","time":350.687936537,"data":"HEKn       12     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687943631,"data":"HSAEC      12     1.000    0.333      0.0\n"}
+,{"stream_name":"stdout","time":350.687948553,"data":"HUVEC      11     0.636    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687954262,"data":"HVSMC      12     1.000    0.083      0.0\n"}
+,{"stream_name":"stdout","time":350.687960245,"data":"HeMn       12     0.667    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687966485,"data":"Myoblasts  12     1.000    0.333      0.0\n"}
+,{"stream_name":"stdout","time":350.687972459,"data":"NHA        12     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687977605,"data":"NHO        12     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.687982414,"data":"PBMCs      12     1.000    0.167      0.0\n"}
+,{"stream_name":"stdout","time":350.687987144,"data":"WI-38      24     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.688000728,"data":"prAD       12     1.000    0.000      0.0\n"}
+,{"stream_name":"stdout","time":350.68800499500003,"data":"\n"}
+,{"stream_name":"stdout","time":350.688008975,"data":"Overall coverage 0.895 (target 0.90), mean over cell types 0.915, min cell type 0.500\n"}
+,{"stream_name":"stdout","time":350.688013119,"data":"set_type\n"}
+,{"stream_name":"stdout","time":350.688016894,"data":"senescent_like    111\n"}
+,{"stream_name":"stdout","time":350.688020769,"data":"control_like       66\n"}
+,{"stream_name":"stdout","time":350.688024658,"data":"both_abstain       13\n"}
+,{"stream_name":"stdout","time":355.963200565,"data":"============================================================================================\n"}
+,{"stream_name":"stdout","time":355.963246302,"data":"GSM8690089 | SenCat | BMMSC | Etoposide-induced senescence (8 days 50 µM)\n"}
+,{"stream_name":"stdout","time":355.963251545,"data":"[GEO observation] condition label: senescence-induced\n"}
+,{"stream_name":"stdout","time":355.96325457,"data":"[measured, log1p normalized counts] {'CDKN1A': 12.5, 'CDKN2A': 7.83, 'GDF15': 10.04, 'IL6': 8.63, 'LMNB1': 5.42, 'MKI67': 5.63, 'TOP2A': 7.42}\n"}
+,{"stream_name":"stdout","time":355.963257682,"data":"[measured, rank score] Hallmark E2F 0.869 | G2M 0.881\n"}
+,{"stream_name":"stdout","time":355.9632606,"data":"[inference] published SenCat score 13.08; weights were fit with this sample, so read it with care\n"}
+,{"stream_name":"stdout","time":355.96326344,"data":"[inference] logreg_l1 with this cell type held out: decision value 2.32, training-fold threshold -0.05, call senescent-like. Valid only for this induced-senescence setting.\n"}
+,{"stream_name":"stdout","time":355.963266805,"data":"[inference] conformal set at nominal 90%: senescent_like\n"}
+,{"stream_name":"stdout","time":356.055188399,"data":"Not a measure of potency, immune function or clinical safety.\n"}
+,{"stream_name":"stdout","time":356.05522823,"data":"============================================================================================\n"}
+,{"stream_name":"stdout","time":356.055234272,"data":"GSM9271435 | GSE309666 | adipose stromal cells, passage 10, donor D\n"}
+,{"stream_name":"stdout","time":356.05523908,"data":"[GEO observation] donor or id D, passage 10. No per-sample senescence label exists.\n"}
+,{"stream_name":"stdout","time":356.055244001,"data":"[measured, log1p normalized counts] {'CDKN1A': 8.95, 'CDKN2A': 6.22, 'GDF15': 6.42, 'IL6': 8.03, 'LMNB1': 4.0, 'MKI67': 4.47, 'TOP2A': 5.23}\n"}
+,{"stream_name":"stdout","time":356.055249432,"data":"[published, per donor] growth status: stopped_at_p10_right_censored\n"}
+,{"stream_name":"stdout","time":356.055253489,"data":"[inference] published SenCat score 7.56. No threshold is applied, because none can be justified across platforms.\n"}
+,{"stream_name":"stdout","time":356.112529422,"data":"Not a measure of potency, immune function or clinical safety.\n"}
+,{"stream_name":"stdout","time":356.184114543,"data":"# G5: research extension and ablations\n"}
+,{"stream_name":"stdout","time":356.184165413,"data":"\n"}
+,{"stream_name":"stdout","time":356.184172337,"data":"All choices come from development data. MSC results below selected nothing and are exploratory.\n"}
+,{"stream_name":"stdout","time":356.184177454,"data":"\n"}
+,{"stream_name":"stdout","time":356.184182027,"data":"## Normalization [measured]\n"}
+,{"stream_name":"stdout","time":356.184186568,"data":"               mean_auroc        ci_low        ci_high       min_auroc      \n"}
+,{"stream_name":"stdout","time":356.18419075,"data":"design               LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO LOCPO\n"}
+,{"stream_name":"stdout","time":356.18421016,"data":"candidate                                                                   \n"}
+,{"stream_name":"stdout","time":356.18421492,"data":"L2 genes, cpm       0.984  0.982  0.953  0.946     1.0   1.0     0.781   0.0\n"}
+,{"stream_name":"stdout","time":356.184219409,"data":"L2 genes, mor       0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":356.184223944,"data":"L2 genes, none      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":356.184228544,"data":"L2 genes, rank      0.982  0.982  0.946  0.946     1.0   1.0     0.750   0.0\n"}
+,{"stream_name":"stdout","time":356.184233309,"data":"\n"}
+,{"stream_name":"stdout","time":356.184237589,"data":"## Feature families and fusion [measured]\n"}
+,{"stream_name":"stdout","time":356.184242113,"data":"                                 mean_auroc        ci_low        ci_high       min_auroc       \n"}
+,{"stream_name":"stdout","time":356.184247051,"data":"design                                 LOCO  LOCPO   LOCO  LOCPO    LOCO LOCPO      LOCO  LOCPO\n"}
+,{"stream_name":"stdout","time":356.184251841,"data":"candidate                                                                                      \n"}
+,{"stream_name":"stdout","time":356.184261125,"data":"Hallmark E2F inverted (fixed)         0.967  0.967  0.901  0.901     1.0   1.0     0.539  0.000\n"}
+,{"stream_name":"stdout","time":356.184267215,"data":"Hallmark pathway LR                   0.982  0.978  0.946  0.938     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":356.184271664,"data":"L1 genes (k=2000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":356.184276446,"data":"L2 genes (k=5000)                     0.982  0.982  0.946  0.946     1.0   1.0     0.750  0.000\n"}
+,{"stream_name":"stdout","time":356.184281638,"data":"Late fusion: L2 + pathway + hUSI      0.997  0.989  0.992  0.967     1.0   1.0     0.961  0.375\n"}
+,{"stream_name":"stdout","time":356.184286204,"data":"SenMayo (fixed)                       0.974  0.974  0.939  0.939     1.0   1.0     0.781  0.562\n"}
+,{"stream_name":"stdout","time":356.1842906,"data":"hUSI raw (fixed)                      1.000  1.000  1.000  1.000     1.0   1.0     1.000  1.000\n"}
+,{"stream_name":"stdout","time":356.184295082,"data":"\n"}
+,{"stream_name":"stdout","time":356.184299156,"data":"Fusion minus L2 genes, mean over cell types: {'LOCO': 0.0151, 'LOCPO': 0.0067}.\n"}
+,{"stream_name":"stdout","time":356.184303658,"data":"\n"}
+,{"stream_name":"stdout","time":356.184308791,"data":"## Panel size [measured]\n"}
+,{"stream_name":"stdout","time":356.184313221,"data":"    method    k design  mean_auroc  ci_low  ci_high  min_auroc  jaccard_across_folds\n"}
+,{"stream_name":"stdout","time":356.1843181,"data":"        l1   10   LOCO       0.982   0.946      1.0      0.750                 0.458\n"}
+,{"stream_name":"stdout","time":356.184324613,"data":"        l1   20   LOCO       0.982   0.946      1.0      0.750                 0.395\n"}
+,{"stream_name":"stdout","time":356.184328973,"data":"        l1   30   LOCO       0.982   0.946      1.0      0.750                 0.409\n"}
+,{"stream_name":"stdout","time":356.184333709,"data":"        l1   10  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184338659,"data":"        l1   20  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184343204,"data":"        l1   30  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184347747,"data":"univariate   10   LOCO       0.972   0.915      1.0      0.602                 0.453\n"}
+,{"stream_name":"stdout","time":356.184359144,"data":"univariate   20   LOCO       0.978   0.935      1.0      0.695                 0.699\n"}
+,{"stream_name":"stdout","time":356.184364966,"data":"univariate   30   LOCO       0.973   0.922      1.0      0.656                 0.763\n"}
+,{"stream_name":"stdout","time":356.18436994,"data":"univariate  100   LOCO       0.982   0.946      1.0      0.750                 0.837\n"}
+,{"stream_name":"stdout","time":356.184374607,"data":"univariate  500   LOCO       0.982   0.946      1.0      0.750                 0.798\n"}
+,{"stream_name":"stdout","time":356.184379404,"data":"univariate 2000   LOCO       0.982   0.946      1.0      0.750                 0.822\n"}
+,{"stream_name":"stdout","time":356.184383825,"data":"univariate 5000   LOCO       0.982   0.946      1.0      0.750                 0.883\n"}
+,{"stream_name":"stdout","time":356.184388492,"data":"univariate   10  LOCPO       0.972   0.916      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.18439331,"data":"univariate   20  LOCPO       0.974   0.923      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184397596,"data":"univariate   30  LOCPO       0.972   0.917      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184401919,"data":"univariate  100  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184406519,"data":"univariate  500  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184411382,"data":"univariate 2000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.18441648,"data":"univariate 5000  LOCPO       0.982   0.946      1.0      0.000                   NaN\n"}
+,{"stream_name":"stdout","time":356.184420841,"data":"\n"}
+,{"stream_name":"stdout","time":356.184424648,"data":"## Frozen experimental panels\n"}
+,{"stream_name":"stdout","time":356.184428729,"data":"Top genes are in results/g5_panel_ranked.csv. These are hypotheses, not a validated assay, and no cost claim follows.\n"}
+,{"stream_name":"stdout","time":356.184433319,"data":"\n"}
+,{"stream_name":"stdout","time":356.184437435,"data":"## Exploratory MSC check of panels\n"}
+,{"stream_name":"stdout","time":356.184441757,"data":"   cohort  panel_size  genes_present  mean_slope  positive  donors  sign_flip_p  standardized_slope\n"}
+,{"stream_name":"stdout","time":356.184446031,"data":"GSE309666          10             10       1.765         5       5        0.062               0.307\n"}
+,{"stream_name":"stdout","time":356.184450725,"data":"GSE309666          20             19       1.861         5       5        0.062               0.312\n"}
+,{"stream_name":"stdout","time":356.184456929,"data":"GSE309666          30             28       2.282         5       5        0.062               0.312\n"}
+,{"stream_name":"stdout","time":356.184461874,"data":"GSE178514          10             10       0.326         3       3        0.250               0.193\n"}
+,{"stream_name":"stdout","time":356.184466921,"data":"GSE178514          20             18       0.501         3       3        0.250               0.225\n"}
+,{"stream_name":"stdout","time":356.184471882,"data":"GSE178514          30             27       0.636         3       3        0.250               0.234\n"}
+,{"stream_name":"stdout","time":356.184476748,"data":"\n"}
+,{"stream_name":"stdout","time":356.18448109,"data":"## Conformal sets on held-out cell types [measured]\n"}
+,{"stream_name":"stdout","time":356.184485806,"data":"Overall coverage 0.895 at target 0.90; lowest cell type 0.500. Sets: {'senescent_like': 111, 'control_like': 66, 'both_abstain': 13}. No sets are produced for MSC passage samples.\n"}
+,{"stream_name":"stdout","time":356.184495874,"data":"\n"}
+,{"stream_name":"stdout","time":356.189100133,"data":"                                           path   bytes\n"}
+,{"stream_name":"stdout","time":356.189132341,"data":"0        /results/g5_ablation_normalization.csv    7317\n"}
+,{"stream_name":"stdout","time":356.189137744,"data":"1             /results/g5_ablation_families.csv   14490\n"}
+,{"stream_name":"stdout","time":356.189141969,"data":"2                /results/g5_panels_by_fold.csv   16273\n"}
+,{"stream_name":"stdout","time":356.189146102,"data":"3                 /results/g5_panel_summary.csv    1561\n"}
+,{"stream_name":"stdout","time":356.189150084,"data":"4                  /results/g5_panel_ranked.csv    7258\n"}
+,{"stream_name":"stdout","time":356.189154041,"data":"5                /results/g5_panels_frozen.json    1298\n"}
+,{"stream_name":"stdout","time":356.189157873,"data":"6   /results/g5_panels_external_exploratory.csv     471\n"}
+,{"stream_name":"stdout","time":356.189162177,"data":"7      /results/g5_panel_gene_direction_asc.csv     907\n"}
+,{"stream_name":"stdout","time":356.189166036,"data":"8                /results/g5_conformal_sets.csv   12884\n"}
+,{"stream_name":"stdout","time":356.189169782,"data":"9         /figures/fig5_panels_and_families.png  222573\n"}
+,{"stream_name":"stdout","time":356.189173724,"data":"10                     /reports/G5_ABLATIONS.md    4717\n"}
+,{"stream_name":"stderr","time":360.181252838,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":360.18129412,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":360.420416523,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":360.420475732,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":361.526742052,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":361.649218263,"data":"[NbConvertApp] Writing 215719 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":365.002828588,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":365.881716897,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":365.881746723,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":365.88210485,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":365.88233302,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":365.882555724,"data":"[NbConvertApp] Writing 475133 bytes to __results__.html\n"}
+]

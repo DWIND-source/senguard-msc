@@ -1,0 +1,226 @@
+[{"stream_name":"stderr","time":9.459296083,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.459480863,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.459488452,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.459492782,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.258564529,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.258602286,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.258607728,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.258611951,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":19.805588818,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-a/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":24.057011159,"data":"All frozen artifacts verified: ['published_sencat', 'refit_all14', 'refit_no_BMMSC', 'refit_no_BMMSC_prAD', 'logreg_l1_all14', 'logreg_l1_no_BMMSC', 'logreg_l1_no_BMMSC_prAD']\n"}
+,{"stream_name":"stdout","time":24.057052639,"data":"Chosen model: logreg_l1 {'clf__C': 0.1, 'sel__k': 500} | frozen 2026-11-01T11:33:23.190183+00:00\n"}
+,{"stream_name":"stdout","time":24.664001762,"data":"AD-MSC (18, 13661) donors 5 | BM-MSC (9, 16832) putative donors 3\n"}
+,{"stream_name":"stdout","time":24.664045694,"data":"Symbol matrices (18, 13647) (9, 20413)\n"}
+,{"stream_name":"stdout","time":24.767264808,"data":"Published markers removed as E2F/G2M genes: 151\n"}
+,{"stream_name":"stdout","time":29.112124609,"data":"                                                  GSE309666  GSE178514\n"}
+,{"stream_name":"stdout","time":29.112157682,"data":"score                                                                 \n"}
+,{"stream_name":"stdout","time":29.112162845,"data":"SenCat published                                      0.969      0.968\n"}
+,{"stream_name":"stdout","time":29.112166852,"data":"SenCat refit all14                                    0.969      0.967\n"}
+,{"stream_name":"stdout","time":29.112171413,"data":"SenCat refit no_BMMSC                                 0.968      0.968\n"}
+,{"stream_name":"stdout","time":29.112175383,"data":"SenCat refit no_BMMSC_prAD                            0.968      0.969\n"}
+,{"stream_name":"stdout","time":29.112179609,"data":"SenCat published, no E2F/G2M genes                    0.968      0.967\n"}
+,{"stream_name":"stdout","time":29.11218345,"data":"hUSI raw                                              0.789      0.950\n"}
+,{"stream_name":"stdout","time":29.112187942,"data":"SenMayo                                               0.720      0.960\n"}
+,{"stream_name":"stdout","time":29.112191922,"data":"Hallmark E2F (inverted)                               1.000      0.995\n"}
+,{"stream_name":"stdout","time":29.112195769,"data":"Hallmark G2M (inverted)                               0.980      0.985\n"}
+,{"stream_name":"stdout","time":29.112199663,"data":"AD-MSC 40 biomarkers (up minus down)                  1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112203866,"data":"CDKN2A transcript                                     1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112207892,"data":"CDKN1A transcript                                     1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112231953,"data":"IL6 transcript                                        1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112236082,"data":"GDF15 transcript                                      1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112239832,"data":"LMNB1 transcript (inverted)                           1.000      1.000\n"}
+,{"stream_name":"stdout","time":29.112244125,"data":"Frozen logreg_l1 (no_BMMSC_prAD), decision value      0.967        NaN\n"}
+,{"stream_name":"stdout","time":29.112247951,"data":"Frozen logreg_l1 (no_BMMSC), decision value             NaN      0.968\n"}
+,{"stream_name":"stdout","time":29.112251652,"data":"external_predictions.csv rows 432\n"}
+,{"stream_name":"stdout","time":29.408085325,"data":"AD-MSC per donor, published SenCat:\n"}
+,{"stream_name":"stdout","time":29.408135332,"data":"donor  n_points  first_passage  last_passage  slope_per_passage  spearman_rho  last_minus_first\n"}
+,{"stream_name":"stdout","time":29.408139995,"data":"    A         3              1             7              2.557           1.0            14.931\n"}
+,{"stream_name":"stdout","time":29.408143052,"data":"    B         4              1             8              2.162           1.0            15.469\n"}
+,{"stream_name":"stdout","time":29.408145754,"data":"    C         3              1             9              1.831           1.0            13.918\n"}
+,{"stream_name":"stdout","time":29.408153625,"data":"    D         4              1            10              1.176           1.0            10.181\n"}
+,{"stream_name":"stdout","time":29.408156524,"data":"    E         4              1            10              1.908           1.0            17.154\n"}
+,{"stream_name":"stdout","time":29.408159202,"data":"\n"}
+,{"stream_name":"stdout","time":29.408161847,"data":"BM-MSC per suffix, published SenCat:\n"}
+,{"stream_name":"stdout","time":29.408164454,"data":"donor  n_points  first_passage  last_passage  slope_per_passage  spearman_rho  last_minus_first\n"}
+,{"stream_name":"stdout","time":29.40816729,"data":"  393         3              4            12              0.588           1.0             4.598\n"}
+,{"stream_name":"stdout","time":29.408169799,"data":"  411         3              4            12              0.478           1.0             3.554\n"}
+,{"stream_name":"stdout","time":29.408172315,"data":"  413         3              4            12              0.806           1.0             6.631\n"}
+,{"stream_name":"stdout","time":29.408174939,"data":"\n"}
+,{"stream_name":"stdout","time":29.40817727,"data":"All scores, AD-MSC:\n"}
+,{"stream_name":"stdout","time":29.408179917,"data":"                                           score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":29.408182827,"data":"                                SenCat published       1.927                5       5         1.0        0.062                 14.331               0.311\n"}
+,{"stream_name":"stdout","time":29.408185576,"data":"                              SenCat refit all14       1.915                5       5         1.0        0.062                 14.243               0.311\n"}
+,{"stream_name":"stdout","time":29.408188244,"data":"                           SenCat refit no_BMMSC       1.881                5       5         1.0        0.062                 13.976               0.310\n"}
+,{"stream_name":"stdout","time":29.408190973,"data":"                      SenCat refit no_BMMSC_prAD       1.828                5       5         1.0        0.062                 13.713               0.310\n"}
+,{"stream_name":"stdout","time":29.408206659,"data":"              SenCat published, no E2F/G2M genes       1.458                5       5         1.0        0.062                 11.022               0.306\n"}
+,{"stream_name":"stdout","time":29.408212199,"data":"                                        hUSI raw       0.029                5       5         1.0        0.062                  0.218               0.311\n"}
+,{"stream_name":"stdout","time":29.408216695,"data":"                                         SenMayo       0.012                5       5         1.0        0.062                  0.097               0.289\n"}
+,{"stream_name":"stdout","time":29.408220782,"data":"                         Hallmark E2F (inverted)       0.040                5       5         1.0        0.062                  0.290               0.303\n"}
+,{"stream_name":"stdout","time":29.408225053,"data":"                         Hallmark G2M (inverted)       0.036                5       5         1.0        0.062                  0.256               0.301\n"}
+,{"stream_name":"stdout","time":29.408229076,"data":"            AD-MSC 40 biomarkers (up minus down)       0.160                5       5         1.0        0.062                  1.170               0.312\n"}
+,{"stream_name":"stdout","time":29.408233129,"data":"                               CDKN2A transcript       0.182                5       5         1.0        0.062                  1.411               0.299\n"}
+,{"stream_name":"stdout","time":29.408237731,"data":"                               CDKN1A transcript       0.147                5       5         0.6        0.062                  0.907               0.250\n"}
+,{"stream_name":"stdout","time":29.408242090999998,"data":"                                  IL6 transcript       0.198                5       5         0.4        0.062                  1.793               0.192\n"}
+,{"stream_name":"stdout","time":29.408246338,"data":"                                GDF15 transcript       0.265                5       5         1.0        0.062                  1.963               0.278\n"}
+,{"stream_name":"stdout","time":29.408250558,"data":"                     LMNB1 transcript (inverted)       0.580                5       5         1.0        0.062                  4.005               0.301\n"}
+,{"stream_name":"stdout","time":29.408255096,"data":"Frozen logreg_l1 (no_BMMSC_prAD), decision value       0.673                5       5         1.0        0.062                  4.880               0.308\n"}
+,{"stream_name":"stdout","time":29.408259578,"data":"\n"}
+,{"stream_name":"stdout","time":29.408263115,"data":"All scores, BM-MSC:\n"}
+,{"stream_name":"stdout","time":29.408266711,"data":"                                      score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":29.408271091,"data":"                           SenCat published       0.624                3       3         1.0         0.25                  4.928               0.204\n"}
+,{"stream_name":"stdout","time":29.408276067,"data":"                         SenCat refit all14       0.620                3       3         1.0         0.25                  4.891               0.204\n"}
+,{"stream_name":"stdout","time":29.408292299,"data":"                      SenCat refit no_BMMSC       0.606                3       3         1.0         0.25                  4.785               0.202\n"}
+,{"stream_name":"stdout","time":29.408296558,"data":"                 SenCat refit no_BMMSC_prAD       0.624                3       3         1.0         0.25                  4.908               0.205\n"}
+,{"stream_name":"stdout","time":29.408301375,"data":"         SenCat published, no E2F/G2M genes       0.577                3       3         1.0         0.25                  4.613               0.203\n"}
+,{"stream_name":"stdout","time":29.40831129,"data":"                                   hUSI raw       0.005                3       3         1.0         0.25                  0.042               0.254\n"}
+,{"stream_name":"stdout","time":29.40831577,"data":"                                    SenMayo       0.003                3       3         1.0         0.25                  0.022               0.216\n"}
+,{"stream_name":"stdout","time":29.408320025,"data":"                    Hallmark E2F (inverted)       0.002                2       3         0.5         0.50                  0.011               0.104\n"}
+,{"stream_name":"stdout","time":29.408324243,"data":"                    Hallmark G2M (inverted)       0.001                2       3         0.5         0.75                  0.004               0.060\n"}
+,{"stream_name":"stdout","time":29.408328489,"data":"       AD-MSC 40 biomarkers (up minus down)       0.017                3       3         1.0         0.25                  0.132               0.225\n"}
+,{"stream_name":"stdout","time":29.408332542,"data":"                          CDKN2A transcript       0.020                2       3         0.5         0.75                  0.117               0.068\n"}
+,{"stream_name":"stdout","time":29.40833698,"data":"                          CDKN1A transcript       0.006                1       3        -0.5         1.00                  0.005               0.037\n"}
+,{"stream_name":"stdout","time":29.408341755,"data":"                             IL6 transcript       0.040                2       3         0.5         0.50                  0.470               0.076\n"}
+,{"stream_name":"stdout","time":29.40834629,"data":"                           GDF15 transcript      -0.009                2       3         0.5         1.00                 -0.053              -0.033\n"}
+,{"stream_name":"stdout","time":29.408350399,"data":"                LMNB1 transcript (inverted)       0.077                3       3         0.5         0.25                  0.567               0.203\n"}
+,{"stream_name":"stdout","time":29.408354568,"data":"Frozen logreg_l1 (no_BMMSC), decision value       0.154                3       3         1.0         0.25                  1.184               0.233\n"}
+,{"stream_name":"stdout","time":33.794735296,"data":"   cohort                      score    null  observed_mean_slope  null_mean  null_sd  empirical_two_sided_p       z\n"}
+,{"stream_name":"stdout","time":33.794768545,"data":"GSE309666           SenCat published weights               1.9266     0.0159   0.0658                  0.001 29.0427\n"}
+,{"stream_name":"stdout","time":33.794774596,"data":"GSE309666           SenCat published   genes               1.9266    -0.0006   0.0871                  0.001 22.1385\n"}
+,{"stream_name":"stdout","time":33.794778822,"data":"GSE309666 SenCat refit no_BMMSC_prAD weights               1.8283     0.0174   0.0674                  0.001 26.8792\n"}
+,{"stream_name":"stdout","time":33.794783326,"data":"GSE309666 SenCat refit no_BMMSC_prAD   genes               1.8283     0.0033   0.0868                  0.001 21.0166\n"}
+,{"stream_name":"stdout","time":33.794787579,"data":"GSE178514           SenCat published weights               0.6239     0.0043   0.0303                  0.001 20.4814\n"}
+,{"stream_name":"stdout","time":33.794791663,"data":"GSE178514           SenCat published   genes               0.6239    -0.0025   0.0321                  0.001 19.5184\n"}
+,{"stream_name":"stdout","time":33.794795743,"data":"GSE178514      SenCat refit no_BMMSC weights               0.6062     0.0038   0.0298                  0.001 20.2125\n"}
+,{"stream_name":"stdout","time":33.794799817,"data":"GSE178514      SenCat refit no_BMMSC   genes               0.6062    -0.0020   0.0319                  0.001 19.0604\n"}
+,{"stream_name":"stdout","time":34.221633004,"data":"                                        analysis  mean_slope  donors_positive  donors\n"}
+,{"stream_name":"stdout","time":34.221669266,"data":"                  GSE309666 excluding GSM9271440       1.945                5       5\n"}
+,{"stream_name":"stdout","time":34.22167528,"data":"         GSE309666 as deposited, no size factors       2.135                5       5\n"}
+,{"stream_name":"stdout","time":34.221679525,"data":"              GSE309666 scaled to 1e6 per sample       1.807                5       5\n"}
+,{"stream_name":"stdout","time":34.221683556,"data":"GSE309666 size factors from the SenCat reference       2.422                5       5\n"}
+,{"stream_name":"stdout","time":34.221687553,"data":"                     GSE178514 FPKM as deposited       0.572                3       3\n"}
+,{"stream_name":"stdout","time":34.221691521,"data":"\n"}
+,{"stream_name":"stdout","time":34.221695481,"data":"Published SenCat score by phase, per donor:\n"}
+,{"stream_name":"stdout","time":34.221699533,"data":"donor     p1     p3  final_passage  final  p1_to_p3  p3_to_final       published_growth_status\n"}
+,{"stream_name":"stdout","time":34.221703577,"data":"    A -1.783  1.284              7 13.148     3.067       11.865     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.221707916,"data":"    B -2.595  0.635              8 12.874     3.230       12.240     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.221711942,"data":"    C -1.433 -0.338              9 12.485     1.096       12.822     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.221716101,"data":"    D -2.619 -0.367             10  7.562     2.252        7.929 stopped_at_p10_right_censored\n"}
+,{"stream_name":"stdout","time":34.221719798,"data":"    E -4.468 -1.481             10 12.686     2.987       14.167 stopped_at_p10_right_censored\n"}
+,{"stream_name":"stdout","time":34.221723953,"data":"\n"}
+,{"stream_name":"stdout","time":34.221727004,"data":"SenMayo rank score by donor and passage. The paper reports GSVA SenMayo rising, with donor B as high at p3 as at p8; ours is a different scoring method:\n"}
+,{"stream_name":"stdout","time":34.221731255,"data":"passage   1.0    3.0    6.0    7.0    8.0    9.0    10.0\n"}
+,{"stream_name":"stdout","time":34.221735066,"data":"subject                                                 \n"}
+,{"stream_name":"stdout","time":34.221743595,"data":"A        0.531  0.594    NaN  0.636    NaN    NaN    NaN\n"}
+,{"stream_name":"stdout","time":34.221747472,"data":"B        0.527  0.579    NaN  0.592  0.598    NaN    NaN\n"}
+,{"stream_name":"stdout","time":34.221751303,"data":"C        0.537  0.555    NaN    NaN    NaN  0.646    NaN\n"}
+,{"stream_name":"stdout","time":34.221755615,"data":"D        0.508  0.546  0.589    NaN    NaN    NaN  0.583\n"}
+,{"stream_name":"stdout","time":34.221759842,"data":"E        0.506  0.539  0.573    NaN    NaN    NaN  0.628\n"}
+,{"stream_name":"stdout","time":34.308939506,"data":"{'GSE284666': 0, 'GSE309666': 0, 'GSE178514': 9}\n"}
+,{"stream_name":"stdout","time":34.308970341,"data":"         Data_id Study_name Project_name   Sample_id           Sample_title Tissue_type                              Cell_type_name              Cell_type Cell_type_id Stage                         Treatment Sene_type\n"}
+,{"stream_name":"stdout","time":34.308978494,"data":"168  SRR14867840  GSE178514  PRJNA739464  GSM5393148  MSC_P12_REP1 [P12393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.308983185,"data":"169  SRR14867841  GSE178514  PRJNA739464  GSM5393149  MSC_P12_REP2 [P12411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.309002802,"data":"170  SRR14867842  GSE178514  PRJNA739464  GSM5393150  MSC_P12_REP3 [P12413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.309007941,"data":"171  SRR14867834  GSE178514  PRJNA739464  GSM5393142    MSC_P4_REP1 [P4393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.309012946,"data":"172  SRR14867835  GSE178514  PRJNA739464  GSM5393143    MSC_P4_REP2 [P4411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.309017347,"data":"173  SRR14867836  GSE178514  PRJNA739464  GSM5393144    MSC_P4_REP3 [P4413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.30902178,"data":"174  SRR14867837  GSE178514  PRJNA739464  GSM5393145    MSC_P6_REP1 [P6393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.309026184,"data":"175  SRR14867838  GSE178514  PRJNA739464  GSM5393146    MSC_P6_REP2 [P6411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.309031983,"data":"176  SRR14867839  GSE178514  PRJNA739464  GSM5393147    MSC_P6_REP3 [P6413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.309036334,"data":"MSC-related training rows: 54 | studies: {'GSE110268': 12, 'GSE178514': 9, 'GSE98440': 8, 'GSE102004': 6, 'GSE84694': 6, 'GSE142761': 5, 'GSE124208': 4, 'GSE122654': 4}\n"}
+,{"stream_name":"stdout","time":34.30904053,"data":"hUSI training metadata lists 9 rows from GSE178514, so hUSI on GSE178514 is NOT an independent test. It lists 0 rows from GSE309666 and 0 from GSE284666, and 54 MSC-related rows overall.\n"}
+,{"stream_name":"stdout","time":35.633699416,"data":"   cohort  genes_shared  median_nn_distance  dev_held_out_type_p95  share_beyond_p95                      nearest_cell_types  spearman_gene_means_vs_BMMSC  spearman_gene_means_vs_prAD\n"}
+,{"stream_name":"stdout","time":35.633739642,"data":"GSE309666          4758              46.554                 96.701               0.0 {'Myoblasts': 11, 'BMMSC': 6, 'NHO': 1}                          0.77                        0.764\n"}
+,{"stream_name":"stdout","time":35.63374529,"data":"GSE178514          4758              66.982                 96.701               0.0                            {'PBMCs': 9}                          0.63                        0.597\n"}
+,{"stream_name":"stdout","time":35.633749582,"data":"\n"}
+,{"stream_name":"stdout","time":35.633753724,"data":"Published score in SenCat, by type (reference only; do not threshold across platforms):\n"}
+,{"stream_name":"stdout","time":35.633757346,"data":"y          control_mean  senescent_mean\n"}
+,{"stream_name":"stdout","time":35.633760706,"data":"cell_line                              \n"}
+,{"stream_name":"stdout","time":35.633764242,"data":"BMMSC            -10.35           12.31\n"}
+,{"stream_name":"stdout","time":35.633786903,"data":"prAD              -6.52           10.24\n"}
+,{"stream_name":"stdout","time":35.633790542,"data":"BJ                -5.30            7.64\n"}
+,{"stream_name":"stdout","time":35.633793857,"data":"WI-38             -9.93           10.64\n"}
+,{"stream_name":"stdout","time":35.633797278,"data":"\n"}
+,{"stream_name":"stdout","time":35.633800846,"data":"AD-MSC score range -4.47 to 13.15\n"}
+,{"stream_name":"stderr","time":38.114127663,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":38.114808413,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":38.114819107,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":38.114825365,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":38.114830362,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":38.114834749,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":38.114838596,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":38.114842833,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":38.114847491,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":38.114851784,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":38.114855869,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":38.114859934,"data":"Exception encountered at \"In [9]\":\n"}
+,{"stream_name":"stderr","time":38.114863938,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":38.114867918,"data":"KeyError                                  Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":38.114871886,"data":"/tmp/ipykernel_16/815906899.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":38.114875987,"data":"     28 def rho_frame(per):\n"}
+,{"stream_name":"stderr","time":38.114879935,"data":"     29     return pd.DataFrame({k: v.set_index('donor').spearman_rho for k, v in per.items()}).T.loc[order]\n"}
+,{"stream_name":"stderr","time":38.11488417,"data":"---\u003e 30 ra, rb = rho_frame(asc_per), rho_frame(bm_per)\n"}
+,{"stream_name":"stderr","time":38.114888122,"data":"     31 ra.columns = [f'AD {c}' for c in ra.columns]\n"}
+,{"stream_name":"stderr","time":38.114892045,"data":"     32 rb.columns = [f'BM {c}' for c in rb.columns]\n"}
+,{"stream_name":"stderr","time":38.114895842,"data":"\n"}
+,{"stream_name":"stderr","time":38.114899484,"data":"/tmp/ipykernel_16/815906899.py in rho_frame(per)\n"}
+,{"stream_name":"stderr","time":38.114903889,"data":"     27 order = [c for c in asc_scores.columns]\n"}
+,{"stream_name":"stderr","time":38.114925954,"data":"     28 def rho_frame(per):\n"}
+,{"stream_name":"stderr","time":38.114935768,"data":"---\u003e 29     return pd.DataFrame({k: v.set_index('donor').spearman_rho for k, v in per.items()}).T.loc[order]\n"}
+,{"stream_name":"stderr","time":38.114940353,"data":"     30 ra, rb = rho_frame(asc_per), rho_frame(bm_per)\n"}
+,{"stream_name":"stderr","time":38.114957115,"data":"     31 ra.columns = [f'AD {c}' for c in ra.columns]\n"}
+,{"stream_name":"stderr","time":38.114961327,"data":"\n"}
+,{"stream_name":"stderr","time":38.114964986,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexing.py in __getitem__(self, key)\n"}
+,{"stream_name":"stderr","time":38.114968986,"data":"   1190             maybe_callable = com.apply_if_callable(key, self.obj)\n"}
+,{"stream_name":"stderr","time":38.11497414,"data":"   1191             maybe_callable = self._check_deprecated_callable_usage(key, maybe_callable)\n"}
+,{"stream_name":"stderr","time":38.114978264,"data":"-\u003e 1192             return self._getitem_axis(maybe_callable, axis=axis)\n"}
+,{"stream_name":"stderr","time":38.114982377,"data":"   1193 \n"}
+,{"stream_name":"stderr","time":38.115021374,"data":"   1194     def _is_scalar_access(self, key: tuple):\n"}
+,{"stream_name":"stderr","time":38.115024329,"data":"\n"}
+,{"stream_name":"stderr","time":38.11502674,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexing.py in _getitem_axis(self, key, axis)\n"}
+,{"stream_name":"stderr","time":38.115029321,"data":"   1419                     raise ValueError(\"Cannot index with multidimensional key\")\n"}
+,{"stream_name":"stderr","time":38.11503222,"data":"   1420 \n"}
+,{"stream_name":"stderr","time":38.115034584,"data":"-\u003e 1421                 return self._getitem_iterable(key, axis=axis)\n"}
+,{"stream_name":"stderr","time":38.115037229,"data":"   1422 \n"}
+,{"stream_name":"stderr","time":38.115039557,"data":"   1423             # nested tuple slicing\n"}
+,{"stream_name":"stderr","time":38.115041981,"data":"\n"}
+,{"stream_name":"stderr","time":38.115044277,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexing.py in _getitem_iterable(self, key, axis)\n"}
+,{"stream_name":"stderr","time":38.115046949,"data":"   1359 \n"}
+,{"stream_name":"stderr","time":38.115049369,"data":"   1360         # A collection of keys\n"}
+,{"stream_name":"stderr","time":38.115051967,"data":"-\u003e 1361         keyarr, indexer = self._get_listlike_indexer(key, axis)\n"}
+,{"stream_name":"stderr","time":38.115054514,"data":"   1362         return self.obj._reindex_with_indexers(\n"}
+,{"stream_name":"stderr","time":38.115057038,"data":"   1363             {axis: [keyarr, indexer]}, copy=True, allow_dups=True\n"}
+,{"stream_name":"stderr","time":38.11505956,"data":"\n"}
+,{"stream_name":"stderr","time":38.11506184,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexing.py in _get_listlike_indexer(self, key, axis)\n"}
+,{"stream_name":"stderr","time":38.1150644,"data":"   1557         axis_name = self.obj._get_axis_name(axis)\n"}
+,{"stream_name":"stderr","time":38.115066947,"data":"   1558 \n"}
+,{"stream_name":"stderr","time":38.115069261,"data":"-\u003e 1559         keyarr, indexer = ax._get_indexer_strict(key, axis_name)\n"}
+,{"stream_name":"stderr","time":38.115072057,"data":"   1560 \n"}
+,{"stream_name":"stderr","time":38.115074407,"data":"   1561         return keyarr, indexer\n"}
+,{"stream_name":"stderr","time":38.115076864,"data":"\n"}
+,{"stream_name":"stderr","time":38.115079556,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py in _get_indexer_strict(self, key, axis_name)\n"}
+,{"stream_name":"stderr","time":38.115082214,"data":"   6210             keyarr, indexer, new_indexer = self._reindex_non_unique(keyarr)\n"}
+,{"stream_name":"stderr","time":38.11508474,"data":"   6211 \n"}
+,{"stream_name":"stderr","time":38.115087144,"data":"-\u003e 6212         self._raise_if_missing(keyarr, indexer, axis_name)\n"}
+,{"stream_name":"stderr","time":38.115093353,"data":"   6213 \n"}
+,{"stream_name":"stderr","time":38.115096094,"data":"   6214         keyarr = self.take(indexer)\n"}
+,{"stream_name":"stderr","time":38.115098556,"data":"\n"}
+,{"stream_name":"stderr","time":38.115100859,"data":"/usr/local/lib/python3.13/dist-packages/pandas/core/indexes/base.py in _raise_if_missing(self, key, indexer, axis_name)\n"}
+,{"stream_name":"stderr","time":38.115103454,"data":"   6262 \n"}
+,{"stream_name":"stderr","time":38.11510583,"data":"   6263             not_found = list(ensure_index(key)[missing_mask.nonzero()[0]].unique())\n"}
+,{"stream_name":"stderr","time":38.115108381,"data":"-\u003e 6264             raise KeyError(f\"{not_found} not in index\")\n"}
+,{"stream_name":"stderr","time":38.11511098,"data":"   6265 \n"}
+,{"stream_name":"stderr","time":38.115113303,"data":"   6266     @overload\n"}
+,{"stream_name":"stderr","time":38.115115999,"data":"\n"}
+,{"stream_name":"stderr","time":38.115118344,"data":"KeyError: \"['Frozen logreg_l1 (no_BMMSC_prAD), decision value'] not in index\"\n"}
+,{"stream_name":"stderr","time":38.115121048,"data":"\n"}
+,{"stream_name":"stderr","time":40.819900627,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":40.819955879,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":41.026764641,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":41.02679379,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":41.9675054,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":42.077635351,"data":"[NbConvertApp] Writing 188500 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":45.151889194,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":45.939364204,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":45.939398847,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":45.939740184,"data":"[NbConvertApp] Writing 445448 bytes to __results__.html\n"}
+]

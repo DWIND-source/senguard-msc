@@ -1,0 +1,6 @@
+analysis,mean_slope,donors_positive,donors
+GSE309666 excluding GSM9271440,1.9454315602306624,5,5
+"GSE309666 as deposited, no size factors",2.1346050984146148,5,5
+GSE309666 scaled to 1e6 per sample,1.8073451774388338,5,5
+GSE309666 size factors from the SenCat reference,2.422191820056873,5,5
+GSE178514 FPKM as deposited,0.5718502669780707,3,3

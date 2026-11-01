@@ -1,0 +1,160 @@
+{
+ "GSE309666": {
+  "accession": "GSE309666",
+  "n_genes": 78458,
+  "n_samples": 18,
+  "gene_id_type": "ensembl",
+  "duplicate_gene_ids": 0,
+  "na_share": 0.0,
+  "integer_share_nonzero": 0.6843,
+  "min": 0.0,
+  "max": 2304668.482,
+  "median_col_sum": 20736309.446500003,
+  "col_sum_cv": 0.0191,
+  "zero_share": 0.6842,
+  "scale_inferred": "non-integer, unequal column sums: estimated counts or FPKM; not separable from distribution alone",
+  "schema": {
+   "skipped_comment_lines": 0,
+   "separator": "'\\t'",
+   "n_rows": 78458,
+   "columns_first_40": [
+    "gene_id",
+    "gene_name",
+    "D_p1",
+    "D_p10",
+    "D_p3",
+    "D_p6",
+    "B_p1",
+    "B_p3",
+    "B_p7",
+    "B_p8",
+    "E_p1",
+    "E_p3",
+    "E_p6",
+    "E_p10",
+    "C_p1",
+    "C_p3",
+    "C_p9",
+    "A_p1",
+    "A_p3",
+    "A_p7"
+   ]
+  },
+  "mapping": {
+   "mapped": 18,
+   "expected": 18,
+   "ambiguous": 0,
+   "unmapped": 0,
+   "column_for_sample": {
+    "GSM9271434": "D_p1",
+    "GSM9271435": "D_p10",
+    "GSM9271436": "D_p3",
+    "GSM9271437": "D_p6",
+    "GSM9271438": "B_p1",
+    "GSM9271439": "B_p3",
+    "GSM9271440": "B_p7",
+    "GSM9271441": "B_p8",
+    "GSM9271442": "E_p1",
+    "GSM9271443": "E_p3",
+    "GSM9271444": "E_p6",
+    "GSM9271445": "E_p10",
+    "GSM9271446": "C_p1",
+    "GSM9271447": "C_p3",
+    "GSM9271448": "C_p9",
+    "GSM9271449": "A_p1",
+    "GSM9271450": "A_p3",
+    "GSM9271451": "A_p7"
+   },
+   "annotation_columns": [
+    "gene_id",
+    "gene_name"
+   ]
+  }
+ },
+ "GSE178514": {
+  "accession": "GSE178514",
+  "n_genes": 20438,
+  "n_samples": 9,
+  "gene_id_type": "entrez_like",
+  "duplicate_gene_ids": 0,
+  "na_share": 0.0,
+  "integer_share_nonzero": 0.0077,
+  "min": 0.0,
+  "max": 14014.79,
+  "median_col_sum": 330247.70999999996,
+  "col_sum_cv": 0.0586,
+  "zero_share": 0.1112,
+  "scale_inferred": "non-integer, unequal column sums: estimated counts or FPKM; not separable from distribution alone",
+  "schema": {
+   "skipped_comment_lines": 0,
+   "separator": "'\\t'",
+   "n_rows": 20438,
+   "columns_first_40": [
+    "GeneID",
+    "P6413-FPKM",
+    "P12411-FPKM",
+    "P4413-FPKM",
+    "P4393-FPKM",
+    "P12393-FPKM",
+    "P6393-FPKM",
+    "P6411-FPKM",
+    "P12413-FPKM",
+    "P4411-FPKM"
+   ]
+  },
+  "mapping": {
+   "mapped": 9,
+   "expected": 9,
+   "ambiguous": 0,
+   "unmapped": 0,
+   "column_for_sample": {
+    "GSM5393142": "P4393-FPKM",
+    "GSM5393143": "P4411-FPKM",
+    "GSM5393144": "P4413-FPKM",
+    "GSM5393145": "P6393-FPKM",
+    "GSM5393146": "P6411-FPKM",
+    "GSM5393147": "P6413-FPKM",
+    "GSM5393148": "P12393-FPKM",
+    "GSM5393149": "P12411-FPKM",
+    "GSM5393150": "P12413-FPKM"
+   },
+   "annotation_columns": [
+    "GeneID"
+   ]
+  }
+ },
+ "GSE284666": {
+  "accession": "GSE284666",
+  "n_genes": 60605,
+  "n_samples": 190,
+  "gene_id_type": "ensembl",
+  "duplicate_gene_ids": 0,
+  "na_share": 0.0,
+  "integer_share_nonzero": 1.0,
+  "min": 0.0,
+  "max": 30901523.0,
+  "median_col_sum": 164802364.5,
+  "col_sum_cv": 0.144,
+  "zero_share": 0.583,
+  "scale_inferred": "integer counts",
+  "schema": {
+   "member_schema_first": {
+    "n_cols": 2,
+    "header": [
+     "Gene_stable_ID",
+     "S_65_BJ_P_1_geneCOUNT"
+    ],
+    "nongene_rows_removed": 0,
+    "duplicate_ids": 0,
+    "na": 0
+   },
+   "distinct_gene_sets": 1
+  },
+  "mapping": {
+   "mapped": 190,
+   "expected": 190,
+   "ambiguous": 0,
+   "unmapped": 0
+  }
+ }
+}

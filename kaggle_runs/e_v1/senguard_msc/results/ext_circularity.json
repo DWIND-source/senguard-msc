@@ -1,0 +1,25 @@
+{
+ "husi_rows_by_accession": {
+  "GSE309666": 0,
+  "GSE178514": 9,
+  "GSE137186": 0,
+  "GSE275980": 0,
+  "GSE125632": 0,
+  "GSE194298": 0,
+  "GSE233634": 0,
+  "GSE269586": 0,
+  "GSE119987": 0,
+  "GSE48662": 0
+ },
+ "circular": {
+  "hUSI": [
+   "GSE178514"
+  ],
+  "AD-MSC 40 biomarkers": [
+   "GSE309666"
+  ],
+  "Yang 2023 7 genes": [
+   "GSE178514"
+  ]
+ }
+}

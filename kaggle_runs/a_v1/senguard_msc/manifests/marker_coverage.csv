@@ -1,0 +1,7 @@
+marker_set,accession,matched_via,gene_id_type,n_features,n_present,pct_present,pct_abs_weight_present,n_detected_any_sample
+SenCat_transcriptomics,GSE309666,ensembl,ensembl,5000,4985,99.7,99.3,4970
+SenCat_transcriptomics,GSE178514,"ensembl, via NCBI gene_info",entrez_like,5000,4838,96.8,95.8,4838
+SenCat_transcriptomics,GSE284666,ensembl,ensembl,5000,5000,100.0,100.0,5000
+hUSI_SenOCLR,GSE309666,symbol,ensembl,13346,13324,99.8,99.7,12847
+hUSI_SenOCLR,GSE178514,"symbol, via NCBI gene_info",entrez_like,13346,12680,95.0,92.7,12680
+hUSI_SenOCLR,GSE284666,"symbol, bridged from the GSE309666 annotation",ensembl,13346,13318,99.8,99.7,13296

@@ -1,0 +1,104 @@
+{
+ "frozen_utc": "2026-11-01T11:33:23.190183+00:00",
+ "chosen_model": "logreg_l1",
+ "params": {
+  "clf__C": 0.1,
+  "sel__k": 500
+ },
+ "selection": {
+  "best_mean_auroc": 0.9821428571428571,
+  "tied": [
+   "logreg_l1",
+   "elastic_net",
+   "linear_svm",
+   "rbf_svm",
+   "random_forest",
+   "xgboost"
+  ]
+ },
+ "protocol_sha256": "dc629ac244213258710d8e73d9b8e94f99e5731812defa6ce03fa8f1db36b533",
+ "artifacts": {
+  "published_sencat": {
+   "path": "/kaggle/working/senguard_msc/external/wf-ml-markers-senescence/analysis/transcriptomics_loose5000f_tuned_common_features.csv",
+   "sha256": "699dd16ee3b956b4b9442c22a36b03a82b483d80b93036d54fae1ea3589cb093"
+  },
+  "refit_all14": {
+   "path": "/kaggle/working/senguard_msc/results/frozen_weights_refit_all14.csv",
+   "sha256": "32ebc68c56ab0c5eddd6a6951f9106d6679aa5af15a25150141d797473e1ed25",
+   "n_train": 190,
+   "cell_types": [
+    "BJ",
+    "BMMSC",
+    "HCAEC",
+    "HEKn",
+    "HSAEC",
+    "HUVEC",
+    "HVSMC",
+    "HeMn",
+    "Myoblasts",
+    "NHA",
+    "NHO",
+    "PBMCs",
+    "WI-38",
+    "prAD"
+   ]
+  },
+  "refit_no_BMMSC": {
+   "path": "/kaggle/working/senguard_msc/results/frozen_weights_refit_no_BMMSC.csv",
+   "sha256": "2e8baf16af26157dc82d3badbe96fe01b0d5a3d8c55b6a7f5c615a7ca8f44278",
+   "n_train": 178,
+   "cell_types": [
+    "BJ",
+    "HCAEC",
+    "HEKn",
+    "HSAEC",
+    "HUVEC",
+    "HVSMC",
+    "HeMn",
+    "Myoblasts",
+    "NHA",
+    "NHO",
+    "PBMCs",
+    "WI-38",
+    "prAD"
+   ]
+  },
+  "refit_no_BMMSC_prAD": {
+   "path": "/kaggle/working/senguard_msc/results/frozen_weights_refit_no_BMMSC_prAD.csv",
+   "sha256": "d3b791f129ced10b80d22a47cfd4593223812311e961907077c7687e5f1615f1",
+   "n_train": 166,
+   "cell_types": [
+    "BJ",
+    "HCAEC",
+    "HEKn",
+    "HSAEC",
+    "HUVEC",
+    "HVSMC",
+    "HeMn",
+    "Myoblasts",
+    "NHA",
+    "NHO",
+    "PBMCs",
+    "WI-38"
+   ]
+  },
+  "logreg_l1_all14": {
+   "path": "/kaggle/working/senguard_msc/checkpoints/frozen_logreg_l1_all14.joblib",
+   "sha256": "1595576ecdaa6696c3641bd0e61ebb7c7075522cf38d5152c30fad14e4890276",
+   "n_train": 190
+  },
+  "logreg_l1_no_BMMSC": {
+   "path": "/kaggle/working/senguard_msc/checkpoints/frozen_logreg_l1_no_BMMSC.joblib",
+   "sha256": "0af1e0e61ab7409b1e98614fd0b0c25e0f0a153f02d6c50a376859d6c6b317bb",
+   "n_train": 178
+  },
+  "logreg_l1_no_BMMSC_prAD": {
+   "path": "/kaggle/working/senguard_msc/checkpoints/frozen_logreg_l1_no_BMMSC_prAD.joblib",
+   "sha256": "bef7eadbe2aa7862c930c5404842749978bac8b84f66360d818a4f09bd01e983",
+   "n_train": 166
+  }
+ },
+ "sklearn": "1.6.1",
+ "xgboost": "3.4.1",
+ "seed": 42
+}

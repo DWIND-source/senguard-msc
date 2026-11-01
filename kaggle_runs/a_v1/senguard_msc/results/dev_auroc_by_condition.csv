@@ -1,0 +1,193 @@
+model,cell_line,condition,n,auroc_vs_own_controls
+logreg_l1,BJ,Etoposide-induced senescence,4,1.0
+logreg_l1,BJ,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,BJ,Oxidative stress-induced senescence,4,1.0
+logreg_l1,BJ,RasV12,4,0.0
+logreg_l1,BMMSC,Etoposide-induced senescence,4,1.0
+logreg_l1,BMMSC,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,HCAEC,Doxorubicin-induced senescence,4,1.0
+logreg_l1,HCAEC,Ionizing radiation-induced senescence,3,1.0
+logreg_l1,HEKn,Etoposide-induced senescence,4,1.0
+logreg_l1,HEKn,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,HSAEC,Etoposide-induced senescence,4,1.0
+logreg_l1,HSAEC,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,HUVEC,Etoposide-induced senescence,3,1.0
+logreg_l1,HUVEC,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,HVSMC,Doxorubicin-induced senescence,4,1.0
+logreg_l1,HVSMC,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,HeMn,Etoposide-induced senescence,4,1.0
+logreg_l1,HeMn,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,Myoblasts,Etoposide-induced senescence,4,1.0
+logreg_l1,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,NHA,Etoposide-induced senescence,4,1.0
+logreg_l1,NHA,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,NHO,Etoposide-induced senescence,4,1.0
+logreg_l1,NHO,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,PBMCs,Etoposide-induced senescence,4,1.0
+logreg_l1,PBMCs,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,WI-38,Etoposide-induced senescence,4,1.0
+logreg_l1,WI-38,Ionizing radiation-induced senescence,4,1.0
+logreg_l1,WI-38,Oxidative stress-induced senescence,4,1.0
+logreg_l1,WI-38,RasV12,4,1.0
+logreg_l1,prAD,Etoposide-induced senescence,4,1.0
+logreg_l1,prAD,Ionizing radiation-induced senescence,4,1.0
+elastic_net,BJ,Etoposide-induced senescence,4,1.0
+elastic_net,BJ,Ionizing radiation-induced senescence,4,1.0
+elastic_net,BJ,Oxidative stress-induced senescence,4,1.0
+elastic_net,BJ,RasV12,4,0.0
+elastic_net,BMMSC,Etoposide-induced senescence,4,1.0
+elastic_net,BMMSC,Ionizing radiation-induced senescence,4,1.0
+elastic_net,HCAEC,Doxorubicin-induced senescence,4,1.0
+elastic_net,HCAEC,Ionizing radiation-induced senescence,3,1.0
+elastic_net,HEKn,Etoposide-induced senescence,4,1.0
+elastic_net,HEKn,Ionizing radiation-induced senescence,4,1.0
+elastic_net,HSAEC,Etoposide-induced senescence,4,1.0
+elastic_net,HSAEC,Ionizing radiation-induced senescence,4,1.0
+elastic_net,HUVEC,Etoposide-induced senescence,3,1.0
+elastic_net,HUVEC,Ionizing radiation-induced senescence,4,1.0
+elastic_net,HVSMC,Doxorubicin-induced senescence,4,1.0
+elastic_net,HVSMC,Ionizing radiation-induced senescence,4,1.0
+elastic_net,HeMn,Etoposide-induced senescence,4,1.0
+elastic_net,HeMn,Ionizing radiation-induced senescence,4,1.0
+elastic_net,Myoblasts,Etoposide-induced senescence,4,1.0
+elastic_net,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+elastic_net,NHA,Etoposide-induced senescence,4,1.0
+elastic_net,NHA,Ionizing radiation-induced senescence,4,1.0
+elastic_net,NHO,Etoposide-induced senescence,4,1.0
+elastic_net,NHO,Ionizing radiation-induced senescence,4,1.0
+elastic_net,PBMCs,Etoposide-induced senescence,4,1.0
+elastic_net,PBMCs,Ionizing radiation-induced senescence,4,1.0
+elastic_net,WI-38,Etoposide-induced senescence,4,1.0
+elastic_net,WI-38,Ionizing radiation-induced senescence,4,1.0
+elastic_net,WI-38,Oxidative stress-induced senescence,4,1.0
+elastic_net,WI-38,RasV12,4,1.0
+elastic_net,prAD,Etoposide-induced senescence,4,1.0
+elastic_net,prAD,Ionizing radiation-induced senescence,4,1.0
+linear_svm,BJ,Etoposide-induced senescence,4,1.0
+linear_svm,BJ,Ionizing radiation-induced senescence,4,1.0
+linear_svm,BJ,Oxidative stress-induced senescence,4,1.0
+linear_svm,BJ,RasV12,4,0.0
+linear_svm,BMMSC,Etoposide-induced senescence,4,1.0
+linear_svm,BMMSC,Ionizing radiation-induced senescence,4,1.0
+linear_svm,HCAEC,Doxorubicin-induced senescence,4,1.0
+linear_svm,HCAEC,Ionizing radiation-induced senescence,3,1.0
+linear_svm,HEKn,Etoposide-induced senescence,4,1.0
+linear_svm,HEKn,Ionizing radiation-induced senescence,4,1.0
+linear_svm,HSAEC,Etoposide-induced senescence,4,1.0
+linear_svm,HSAEC,Ionizing radiation-induced senescence,4,1.0
+linear_svm,HUVEC,Etoposide-induced senescence,3,1.0
+linear_svm,HUVEC,Ionizing radiation-induced senescence,4,1.0
+linear_svm,HVSMC,Doxorubicin-induced senescence,4,1.0
+linear_svm,HVSMC,Ionizing radiation-induced senescence,4,1.0
+linear_svm,HeMn,Etoposide-induced senescence,4,1.0
+linear_svm,HeMn,Ionizing radiation-induced senescence,4,1.0
+linear_svm,Myoblasts,Etoposide-induced senescence,4,1.0
+linear_svm,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+linear_svm,NHA,Etoposide-induced senescence,4,1.0
+linear_svm,NHA,Ionizing radiation-induced senescence,4,1.0
+linear_svm,NHO,Etoposide-induced senescence,4,1.0
+linear_svm,NHO,Ionizing radiation-induced senescence,4,1.0
+linear_svm,PBMCs,Etoposide-induced senescence,4,1.0
+linear_svm,PBMCs,Ionizing radiation-induced senescence,4,1.0
+linear_svm,WI-38,Etoposide-induced senescence,4,1.0
+linear_svm,WI-38,Ionizing radiation-induced senescence,4,1.0
+linear_svm,WI-38,Oxidative stress-induced senescence,4,1.0
+linear_svm,WI-38,RasV12,4,1.0
+linear_svm,prAD,Etoposide-induced senescence,4,1.0
+linear_svm,prAD,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,BJ,Etoposide-induced senescence,4,1.0
+rbf_svm,BJ,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,BJ,Oxidative stress-induced senescence,4,1.0
+rbf_svm,BJ,RasV12,4,0.0
+rbf_svm,BMMSC,Etoposide-induced senescence,4,1.0
+rbf_svm,BMMSC,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,HCAEC,Doxorubicin-induced senescence,4,1.0
+rbf_svm,HCAEC,Ionizing radiation-induced senescence,3,1.0
+rbf_svm,HEKn,Etoposide-induced senescence,4,1.0
+rbf_svm,HEKn,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,HSAEC,Etoposide-induced senescence,4,1.0
+rbf_svm,HSAEC,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,HUVEC,Etoposide-induced senescence,3,1.0
+rbf_svm,HUVEC,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,HVSMC,Doxorubicin-induced senescence,4,1.0
+rbf_svm,HVSMC,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,HeMn,Etoposide-induced senescence,4,1.0
+rbf_svm,HeMn,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,Myoblasts,Etoposide-induced senescence,4,1.0
+rbf_svm,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,NHA,Etoposide-induced senescence,4,1.0
+rbf_svm,NHA,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,NHO,Etoposide-induced senescence,4,1.0
+rbf_svm,NHO,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,PBMCs,Etoposide-induced senescence,4,1.0
+rbf_svm,PBMCs,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,WI-38,Etoposide-induced senescence,4,1.0
+rbf_svm,WI-38,Ionizing radiation-induced senescence,4,1.0
+rbf_svm,WI-38,Oxidative stress-induced senescence,4,1.0
+rbf_svm,WI-38,RasV12,4,1.0
+rbf_svm,prAD,Etoposide-induced senescence,4,1.0
+rbf_svm,prAD,Ionizing radiation-induced senescence,4,1.0
+random_forest,BJ,Etoposide-induced senescence,4,1.0
+random_forest,BJ,Ionizing radiation-induced senescence,4,1.0
+random_forest,BJ,Oxidative stress-induced senescence,4,1.0
+random_forest,BJ,RasV12,4,0.0
+random_forest,BMMSC,Etoposide-induced senescence,4,1.0
+random_forest,BMMSC,Ionizing radiation-induced senescence,4,1.0
+random_forest,HCAEC,Doxorubicin-induced senescence,4,1.0
+random_forest,HCAEC,Ionizing radiation-induced senescence,3,1.0
+random_forest,HEKn,Etoposide-induced senescence,4,1.0
+random_forest,HEKn,Ionizing radiation-induced senescence,4,1.0
+random_forest,HSAEC,Etoposide-induced senescence,4,1.0
+random_forest,HSAEC,Ionizing radiation-induced senescence,4,1.0
+random_forest,HUVEC,Etoposide-induced senescence,3,1.0
+random_forest,HUVEC,Ionizing radiation-induced senescence,4,1.0
+random_forest,HVSMC,Doxorubicin-induced senescence,4,1.0
+random_forest,HVSMC,Ionizing radiation-induced senescence,4,1.0
+random_forest,HeMn,Etoposide-induced senescence,4,1.0
+random_forest,HeMn,Ionizing radiation-induced senescence,4,1.0
+random_forest,Myoblasts,Etoposide-induced senescence,4,1.0
+random_forest,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+random_forest,NHA,Etoposide-induced senescence,4,1.0
+random_forest,NHA,Ionizing radiation-induced senescence,4,1.0
+random_forest,NHO,Etoposide-induced senescence,4,1.0
+random_forest,NHO,Ionizing radiation-induced senescence,4,1.0
+random_forest,PBMCs,Etoposide-induced senescence,4,1.0
+random_forest,PBMCs,Ionizing radiation-induced senescence,4,1.0
+random_forest,WI-38,Etoposide-induced senescence,4,1.0
+random_forest,WI-38,Ionizing radiation-induced senescence,4,1.0
+random_forest,WI-38,Oxidative stress-induced senescence,4,1.0
+random_forest,WI-38,RasV12,4,1.0
+random_forest,prAD,Etoposide-induced senescence,4,1.0
+random_forest,prAD,Ionizing radiation-induced senescence,4,1.0
+xgboost,BJ,Etoposide-induced senescence,4,1.0
+xgboost,BJ,Ionizing radiation-induced senescence,4,1.0
+xgboost,BJ,Oxidative stress-induced senescence,4,0.96875
+xgboost,BJ,RasV12,4,0.0
+xgboost,BMMSC,Etoposide-induced senescence,4,1.0
+xgboost,BMMSC,Ionizing radiation-induced senescence,4,1.0
+xgboost,HCAEC,Doxorubicin-induced senescence,4,1.0
+xgboost,HCAEC,Ionizing radiation-induced senescence,3,1.0
+xgboost,HEKn,Etoposide-induced senescence,4,1.0
+xgboost,HEKn,Ionizing radiation-induced senescence,4,1.0
+xgboost,HSAEC,Etoposide-induced senescence,4,1.0
+xgboost,HSAEC,Ionizing radiation-induced senescence,4,1.0
+xgboost,HUVEC,Etoposide-induced senescence,3,1.0
+xgboost,HUVEC,Ionizing radiation-induced senescence,4,1.0
+xgboost,HVSMC,Doxorubicin-induced senescence,4,1.0
+xgboost,HVSMC,Ionizing radiation-induced senescence,4,1.0
+xgboost,HeMn,Etoposide-induced senescence,4,1.0
+xgboost,HeMn,Ionizing radiation-induced senescence,4,1.0
+xgboost,Myoblasts,Etoposide-induced senescence,4,1.0
+xgboost,Myoblasts,Ionizing radiation-induced senescence,4,1.0
+xgboost,NHA,Etoposide-induced senescence,4,1.0
+xgboost,NHA,Ionizing radiation-induced senescence,4,1.0
+xgboost,NHO,Etoposide-induced senescence,4,1.0
+xgboost,NHO,Ionizing radiation-induced senescence,4,1.0
+xgboost,PBMCs,Etoposide-induced senescence,4,1.0
+xgboost,PBMCs,Ionizing radiation-induced senescence,4,1.0
+xgboost,WI-38,Etoposide-induced senescence,4,1.0
+xgboost,WI-38,Ionizing radiation-induced senescence,4,1.0
+xgboost,WI-38,Oxidative stress-induced senescence,4,1.0
+xgboost,WI-38,RasV12,4,1.0
+xgboost,prAD,Etoposide-induced senescence,4,1.0
+xgboost,prAD,Ionizing radiation-induced senescence,4,1.0

@@ -1,0 +1,15 @@
+cell_line,XIST,Y_mean,exploratory_call
+BJ,0.01,3.71,"{'Y-high, XIST-low': 24}"
+BMMSC,0.0,3.48,"{'Y-high, XIST-low': 12}"
+HCAEC,4.42,0.02,"{'XIST-high, Y-low': 11}"
+HEKn,0.0,3.3,"{'Y-high, XIST-low': 12}"
+HSAEC,2.33,0.0,"{'XIST-high, Y-low': 9, 'both low': 3}"
+HUVEC,0.0,3.71,"{'Y-high, XIST-low': 11}"
+HVSMC,0.02,3.5,"{'Y-high, XIST-low': 12}"
+HeMn,0.0,3.5,"{'Y-high, XIST-low': 12}"
+Myoblasts,3.94,0.0,"{'XIST-high, Y-low': 12}"
+NHA,0.0,3.68,"{'Y-high, XIST-low': 12}"
+NHO,0.0,3.6,"{'Y-high, XIST-low': 12}"
+PBMCs,2.88,3.5,{'both high': 12}
+WI-38,2.49,0.0,"{'XIST-high, Y-low': 21, 'both low': 3}"
+prAD,3.8,0.0,"{'XIST-high, Y-low': 12}"

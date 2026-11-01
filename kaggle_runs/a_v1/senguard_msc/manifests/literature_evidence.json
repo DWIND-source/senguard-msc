@@ -1,0 +1,171 @@
+{
+ "GSE309666": {
+  "pmid": "41791726",
+  "title": "Senescence profiling and biomarker identification in cell product based on adipose tissue-derived mesenchymal stromal cells.",
+  "journal": "Stem cells translational medicine",
+  "pubdate": "2026 Feb 25",
+  "doi": "10.1093/stcltm/szag011",
+  "pmcid": "PMC12965767",
+  "text_scope": "PMC full text, references removed",
+  "chars": 42389,
+  "quote_check": {
+   "The samples represented five donors at passage 1, five at passage 3, two at passage 6, and five at their final passage.": true,
+   "each of the 17 samples": true,
+   "as in its final passage (passage 8)": true,
+   "defined as cessation of population growth where fewer ASC were harvested than seeded": true,
+   "no PDT data for final passage of donor A-C since fewer ASC were harvested than seeded": true
+  },
+  "term_counts": {
+   "SA_beta_gal": 0,
+   "p16_CDKN2A": 0,
+   "p21_CDKN1A": 0,
+   "BrdU_EdU": 0,
+   "suffix_393_411_413": 1
+  },
+  "term_contexts": {
+   "SA_beta_gal": [],
+   "p16_CDKN2A": [],
+   "p21_CDKN1A": [],
+   "BrdU_EdU": [],
+   "suffix_393_411_413": [
+    " 249.00 1.5e-95 SERPINE2 5.5 0.90 28887.00 6.3e-30 PKMYT1 −5.9 0.95 170.00 1.1e-59 SLC43A2 4.3 0.92 393.00 9.7e-34 SKA3 −6.0 0.93 257.00 3.7e-85 SRGN 5.4 0.98 4831.00 1.6e-98 TNC −6.6 0.96 14292.00 5.6e-"
+   ]
+  }
+ },
+ "GSE178514": {
+  "pmid": "37831180",
+  "title": "Silencing circSERPINE2 restrains mesenchymal stem cell senescence via the YBX3/PCNA/p21 axis.",
+  "journal": "Cellular and molecular life sciences : CMLS",
+  "pubdate": "2023 Oct 13",
+  "doi": "10.1007/s00018-023-04975-6",
+  "pmcid": "PMC10575817",
+  "text_scope": "PMC full text, references removed",
+  "chars": 78470,
+  "quote_check": {},
+  "term_counts": {
+   "SA_beta_gal": 19,
+   "p16_CDKN2A": 5,
+   "p21_CDKN1A": 67,
+   "BrdU_EdU": 12,
+   "suffix_393_411_413": 0
+  },
+  "term_contexts": {
+   "SA_beta_gal": [
+    "a are presented as the mean ± SD; n = 6 biological replicates. *** P < 0.001 (two-tailed t test). B β-gal staining and p21 immunofluorescence staining of MSCs transfected with NC siRNA or si-circSERPINE2 f",
+    "ence staining of MSCs transfected with NC siRNA or si-circSERPINE2 for 48 h. Scale bar = 50 µm. The SA-β-gal- and p21-positive cell rates were determined by ImageJ. The data are presented as the mean ± SD",
+    "a are presented as the mean ± SD; n = 6 biological replicates. *** P < 0.001 (two-tailed t test). E β-gal staining and p21 immunofluorescence staining of MSCs transfected with LV vector or LV-circSERPINE2 ",
+    "ence staining of MSCs transfected with LV vector or LV-circSERPINE2 for 7 d. Scale bar = 50 µm. The SA-β-gal- and p21-positive cell rates were determined by ImageJ. The data are presented as the mean ± SD"
+   ],
+   "p16_CDKN2A": [
+    "6 biological replicates. *** P < 0.001 (two-tailed t test). F western blot analysis of p53, p21 and p16 protein expression in MSCs with silencing or overexpression of circSERPINE2. β-Tubulin was used as ",
+    "LV-circSERPINE2 and examined the expression of the cell cycle arrest-related proteins p53, p21, and p16 by western blot analysis. The results showed that knockdown of circSERPINE2 dramatically decreased ",
+    "down of circSERPINE2 dramatically decreased p21 protein expression, while the expression of p53 and p16 was modestly downregulated. Consistent with this finding, the protein expression of p53, p21, and p",
+    "6 was modestly downregulated. Consistent with this finding, the protein expression of p53, p21, and p16 was upregulated after LV-circSERPINE2 transfection (Fig. 2 F and Fig. S1 H). In addition, flow cyto"
+   ],
+   "p21_CDKN1A": [
+    "riginal Article Silencing circSERPINE2 restrains mesenchymal stem cell senescence via the YBX3/PCNA/p21 axis Chen Fenglei 1 Wang Shan 2 Zeng Chenying 2 Tang Su’an 3 Gu Huimin 2 Wang Ziming 1 Li Jinteng 1",
+    "n the cytoplasm, inhibiting the association of YBX3 with the PCNA promoter and eventually affecting p21 ubiquitin-mediated degradation. In addition, our results demonstrated that senescence-related downr",
+    "together, our findings provide strong evidence for a regulatory role for the circSERPINE2/YBX3/PCNA/p21 axis in MSC senescence and the therapeutic potential of si-circSERPINE2 in alleviating aging-associ",
+    "tration of YBX3 in the cytoplasm, thus inhibiting its transcriptional regulation of PCNA to inhibit p21 degradation. Of crucial importance, knockdown of circSerpine2 alleviated cellular senescence, signi"
+   ],
+   "BrdU_EdU": [
+    "u’an 3 Gu Huimin 2 Wang Ziming 1 Li Jinteng 1 Feng Pei 2 Zhang Yunhui 1 Wang Peng wangp57@mail.sysu.edu.cn 1 Wu Yanfeng wuyf@mail.sysu.edu.cn 2 http://orcid.org/0000-0002-4317-3468 Shen Huiyong shenhuiy@",
+    " Jinteng 1 Feng Pei 2 Zhang Yunhui 1 Wang Peng wangp57@mail.sysu.edu.cn 1 Wu Yanfeng wuyf@mail.sysu.edu.cn 2 http://orcid.org/0000-0002-4317-3468 Shen Huiyong shenhuiy@mail.sysu.edu.cn 1 1 https://ror.or",
+    "anfeng wuyf@mail.sysu.edu.cn 2 http://orcid.org/0000-0002-4317-3468 Shen Huiyong shenhuiy@mail.sysu.edu.cn 1 1 https://ror.org/00xjwyj62 Department of Orthopedics, Eighth Affiliated Hospital of Sun Yat-s",
+    "2) phases was analyzed by FlowJo. n = 6 biological replicates. *** P < 0.001 (two-tailed t test). H EdU staining of MSCs transfected with NC siRNA, si-circSERPINE2, LV vector, or LV-circSERPINE2 for diff"
+   ],
+   "suffix_393_411_413": []
+  }
+ },
+ "GSE178514_prior_ref27": {
+  "pmid": "34631285",
+  "title": "Effects of long-term culture on the biological characteristics and RNA profiles of human bone-marrow-derived mesenchymal stem cells.",
+  "journal": "Molecular therapy. Nucleic acids",
+  "pubdate": "2021 Dec 3",
+  "doi": "10.1016/j.omtn.2021.08.013",
+  "pmcid": "PMC8479280",
+  "text_scope": "PMC full text, references removed",
+  "chars": 60141,
+  "quote_check": {
+   "in MSCs from three donors were used for the subsequent analyses": true,
+   "A total of 20 healthy donors": true,
+   "Percent of SA-β-gal staining in (C)": true,
+   "CCK-8 assay of MSCs at P4, P6, P8, P10, and P12": true
+  },
+  "term_counts": {
+   "SA_beta_gal": 7,
+   "p16_CDKN2A": 0,
+   "p21_CDKN1A": 0,
+   "BrdU_EdU": 5,
+   "suffix_393_411_413": 0
+  },
+  "term_contexts": {
+   "SA_beta_gal": [
+    "as much more dramatic than that in adipogenesis. Similarly, the percentage of senescence-associated β-galactosidase (SA-β-gal) positive cells and the staining intensity increased in the last passages of MS",
+    "atic than that in adipogenesis. Similarly, the percentage of senescence-associated β-galactosidase (SA-β-gal) positive cells and the staining intensity increased in the last passages of MSCs ( Figures 2 C",
+    "(A–C) Adipogenic differentiation (ORO staining) (A); osteogenic differentiation (ARS staining) (B); SA-β-gal staining (C) of MSCs at P4, P6, P8, P10, and P12. Scale bars, 50 μm in (A) and (C), 100 μm in (",
+    "D) Quantification of ORO staining in (A). (E) Quantification of ARS staining in (B). (F) Percent of SA-β-gal staining in (C). (G) Relative telomere length detection of MSCs in P4, P6, and P12. Data are pr"
+   ],
+   "p16_CDKN2A": [],
+   "p21_CDKN1A": [],
+   "BrdU_EdU": [
+    "ong 5 Mi Rujia 1 Wu Xiaohua 3 Deng Wen 3 Feng Pei 3 Zeng Chenying 1 Shen Huiyong shenhuiy@mail.sysu.edu.cn 2 4 ∗∗ Wu Yanfeng wuyf@mail.sysu.edu.cn 1 ∗ 1 Center for Biotherapy, Eighth Affiliated Hospital ",
+    " Feng Pei 3 Zeng Chenying 1 Shen Huiyong shenhuiy@mail.sysu.edu.cn 2 4 ∗∗ Wu Yanfeng wuyf@mail.sysu.edu.cn 1 ∗ 1 Center for Biotherapy, Eighth Affiliated Hospital of Sun Yat-sen University, Shenzhen 5180",
+    ", Eighth Affiliated Hospital of Sun Yat-sen University, Shenzhen 518033, P.R. China. wuyf@mail.sysu.edu.cn ∗∗ Corresponding author: Huiyong Shen, Department of Orthopaedics, Eighth Affiliated Hospital of",
+    "ghth Affiliated Hospital of Sun Yat-sen University, Shenzhen 518033, P.R. China. shenhuiy@mail.sysu.edu.cn 6 These authors contributed equally 03 12 2021 19 8 2021 26 389140 557 574 23 11 2020 12 8 2021 "
+   ],
+   "suffix_393_411_413": []
+  }
+ },
+ "GSE284666": {
+  "pmid": "42276073",
+  "title": "SenCat: Cataloging human cell senescence through multi-omic profiling of multiple senescent primary cell types.",
+  "journal": "Molecular cell",
+  "pubdate": "2026 Jul 2",
+  "doi": "10.1016/j.molcel.2026.05.017",
+  "pmcid": "PMC13267859",
+  "text_scope": "PMC full text, references removed",
+  "chars": 85505,
+  "quote_check": {
+   "The senescent state was confirmed by measuring BrdU incorporation": true,
+   "the top 1000 features were selected using SelectKBest": true,
+   "features with absolute weight >0.05 were extracted": true,
+   "training 14 independent binary classifiers": true,
+   "BMMSC bone marrow mesenchymal cells (ATCC": true
+  },
+  "term_counts": {
+   "SA_beta_gal": 5,
+   "p16_CDKN2A": 7,
+   "p21_CDKN1A": 11,
+   "BrdU_EdU": 4,
+   "suffix_393_411_413": 0
+  },
+  "term_contexts": {
+   "SA_beta_gal": [
+    " of damage response such as apoptosis. 21 – 23 Second, the treatments induced senescence-associated beta-galactosidase (SA-β-gal) activity in all senescence models, even if with different intensities and dynamics ( Fig",
+    "such as apoptosis. 21 – 23 Second, the treatments induced senescence-associated beta-galactosidase (SA-β-gal) activity in all senescence models, even if with different intensities and dynamics ( Figure S1",
+    "easuring BrdU incorporation to assess proliferation (Cell Signaling Technology, 6813) and increased SA-β-gal activity (Cell Signaling Technology, 9860) following the manufacturer instructions. A ‘cell typ",
+    "aled Z-scores of relative expression values across the indicated conditions. BrdU incorporation and SA-β-gal activity were quantified following the manufacturer’s instructions and were used to validate se"
+   ],
+   "p16_CDKN2A": [
+    "ynamics ( Figure S1B ). Third, the treatments altered the levels of traditional senescence markers, p16 , p21 , IL6 , GDF15 , and LMNB1 mRNAs. While multiple aspects of the senescence phenotype were indu",
+    "triggers ( Figure 3C and D ; Figure S6 ). Importantly, while traditional senescence markers such as p16, p21, IL6, GDF15, and LMNB1 showed variable performance depending on cell type and condition, the M",
+    "pecific biases provides an orthogonal, data-driven method to complement traditional markers such as CDKN2A, CDKN1A, or LMNB1, which showed relatively low generalizability ( Figure 3C and D ). Of note, altho",
+    "GCACAGAGCCTCGCCTT and GTTGTCGACGACGAGCG for ACTB mRNA; GTTACGGTCGGAGGCCG, and GTGAGAGTGGCGGGGTC for p16/CDKN2A mRNA; AGTCAGTTCCTTGTGGAGCC and CATGGGTTCTGACGGACAT for CDKN1A mRNA; AGTGAGGAACAAGCCAGAGC and"
+   ],
+   "p21_CDKN1A": [
+    "s ( Figure S1B ). Third, the treatments altered the levels of traditional senescence markers, p16 , p21 , IL6 , GDF15 , and LMNB1 mRNAs. While multiple aspects of the senescence phenotype were induced in",
+    "in all models of senescence ( Table S3 ). Canonical markers often increasing in senescence, such as CDKN1A ( p21 ) and GDF15 mRNAs, were among the top 20 most shared markers upregulated by all senescence mo",
+    "dels of senescence ( Table S3 ). Canonical markers often increasing in senescence, such as CDKN1A ( p21 ) and GDF15 mRNAs, were among the top 20 most shared markers upregulated by all senescence models i",
+    "shared markers upregulated by all senescence models in our analysis ( Figure 1E ), but, remarkably, CDKN1A/p21 and GDF15 proteins were not among the top 20 shared elevated markers ( Figure 1F ). Among the d"
+   ],
+   "BrdU_EdU": [
+    "ell types following senescence-triggering treatments, with a marked reduction in bromodeoxyuridine (BrdU) incorporation ( Figure S1A ); we set the strict requirement that minimal or no cell death was seen",
+    "million cells/mL of medium for senescence induction. The senescent state was confirmed by measuring BrdU incorporation to assess proliferation (Cell Signaling Technology, 6813) and increased SA-β-gal acti",
+    "Heatmaps display row-scaled Z-scores of relative expression values across the indicated conditions. BrdU incorporation and SA-β-gal activity were quantified following the manufacturer’s instructions and w",
+    "# 20020598 AMPure XP beads Beckman Coulter Cat# A63881 SPRIselect beads Beckman Coulter Cat# B23318 BrdU Cell Proliferation Assay Kit Cell Signaling Technology Cat# 6813 Senescence β-Galactosidase Stainin"
+   ],
+   "suffix_393_411_413": []
+  }
+ }
+}

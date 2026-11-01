@@ -1,0 +1,250 @@
+[{"stream_name":"stderr","time":8.699153927,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.699256927,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.699265127,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.699270073,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.499420786,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.499458781,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.499465849,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.499469624,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":20.566485676,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-a/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":24.031273788,"data":"All frozen artifacts verified: ['published_sencat', 'refit_all14', 'refit_no_BMMSC', 'refit_no_BMMSC_prAD', 'logreg_l1_all14', 'logreg_l1_no_BMMSC', 'logreg_l1_no_BMMSC_prAD']\n"}
+,{"stream_name":"stdout","time":24.031314843,"data":"Chosen model: logreg_l1 {'clf__C': 0.1, 'sel__k': 500} | frozen 2026-11-01T11:33:23.190183+00:00\n"}
+,{"stream_name":"stdout","time":24.573783433,"data":"AD-MSC (18, 13661) donors 5 | BM-MSC (9, 16832) putative donors 3\n"}
+,{"stream_name":"stdout","time":24.573836613,"data":"Symbol matrices (18, 13647) (9, 20413)\n"}
+,{"stream_name":"stdout","time":24.685227763,"data":"Published markers removed as E2F/G2M genes: 151\n"}
+,{"stream_name":"stdout","time":28.94270644,"data":"                                                           GSE309666  GSE178514\n"}
+,{"stream_name":"stdout","time":28.94274526,"data":"score                                                                          \n"}
+,{"stream_name":"stdout","time":28.942751753,"data":"SenCat published                                               0.969      0.968\n"}
+,{"stream_name":"stdout","time":28.942757127,"data":"SenCat refit all14                                             0.969      0.967\n"}
+,{"stream_name":"stdout","time":28.942762366,"data":"SenCat refit no_BMMSC                                          0.968      0.968\n"}
+,{"stream_name":"stdout","time":28.942767189,"data":"SenCat refit no_BMMSC_prAD                                     0.968      0.969\n"}
+,{"stream_name":"stdout","time":28.942772031,"data":"SenCat published, no E2F/G2M genes                             0.968      0.967\n"}
+,{"stream_name":"stdout","time":28.942776444,"data":"hUSI raw                                                       0.789      0.950\n"}
+,{"stream_name":"stdout","time":28.94278149,"data":"SenMayo                                                        0.720      0.960\n"}
+,{"stream_name":"stdout","time":28.942786163,"data":"Hallmark E2F (inverted)                                        1.000      0.995\n"}
+,{"stream_name":"stdout","time":28.942791138,"data":"Hallmark G2M (inverted)                                        0.980      0.985\n"}
+,{"stream_name":"stdout","time":28.942795945,"data":"AD-MSC 40 biomarkers (up minus down)                           1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942819655,"data":"CDKN2A transcript                                              1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942845208,"data":"CDKN1A transcript                                              1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942853184,"data":"IL6 transcript                                                 1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942858198,"data":"GDF15 transcript                                               1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942863245,"data":"LMNB1 transcript (inverted)                                    1.000      1.000\n"}
+,{"stream_name":"stdout","time":28.942868116,"data":"Frozen logreg_l1, target lineage excluded, decision value      0.967      0.968\n"}
+,{"stream_name":"stdout","time":28.942872947,"data":"external_predictions.csv rows 432\n"}
+,{"stream_name":"stdout","time":29.250696284,"data":"AD-MSC per donor, published SenCat:\n"}
+,{"stream_name":"stdout","time":29.250734219,"data":"donor  n_points  first_passage  last_passage  slope_per_passage  spearman_rho  last_minus_first\n"}
+,{"stream_name":"stdout","time":29.250741136,"data":"    A         3              1             7              2.557           1.0            14.931\n"}
+,{"stream_name":"stdout","time":29.250746097,"data":"    B         4              1             8              2.162           1.0            15.469\n"}
+,{"stream_name":"stdout","time":29.250751035,"data":"    C         3              1             9              1.831           1.0            13.918\n"}
+,{"stream_name":"stdout","time":29.250756036,"data":"    D         4              1            10              1.176           1.0            10.181\n"}
+,{"stream_name":"stdout","time":29.250760854,"data":"    E         4              1            10              1.908           1.0            17.154\n"}
+,{"stream_name":"stdout","time":29.250770909,"data":"\n"}
+,{"stream_name":"stdout","time":29.250775592,"data":"BM-MSC per suffix, published SenCat:\n"}
+,{"stream_name":"stdout","time":29.250779866,"data":"donor  n_points  first_passage  last_passage  slope_per_passage  spearman_rho  last_minus_first\n"}
+,{"stream_name":"stdout","time":29.250784238,"data":"  393         3              4            12              0.588           1.0             4.598\n"}
+,{"stream_name":"stdout","time":29.250788726,"data":"  411         3              4            12              0.478           1.0             3.554\n"}
+,{"stream_name":"stdout","time":29.250793311,"data":"  413         3              4            12              0.806           1.0             6.631\n"}
+,{"stream_name":"stdout","time":29.250798022,"data":"\n"}
+,{"stream_name":"stdout","time":29.250829696,"data":"All scores, AD-MSC:\n"}
+,{"stream_name":"stdout","time":29.250834775,"data":"                                                    score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":29.25084016,"data":"                                         SenCat published       1.927                5       5         1.0        0.062                 14.331               0.311\n"}
+,{"stream_name":"stdout","time":29.250845733,"data":"                                       SenCat refit all14       1.915                5       5         1.0        0.062                 14.243               0.311\n"}
+,{"stream_name":"stdout","time":29.250850902,"data":"                                    SenCat refit no_BMMSC       1.881                5       5         1.0        0.062                 13.976               0.310\n"}
+,{"stream_name":"stdout","time":29.25085569,"data":"                               SenCat refit no_BMMSC_prAD       1.828                5       5         1.0        0.062                 13.713               0.310\n"}
+,{"stream_name":"stdout","time":29.250875775,"data":"                       SenCat published, no E2F/G2M genes       1.458                5       5         1.0        0.062                 11.022               0.306\n"}
+,{"stream_name":"stdout","time":29.250882885,"data":"                                                 hUSI raw       0.029                5       5         1.0        0.062                  0.218               0.311\n"}
+,{"stream_name":"stdout","time":29.250887995,"data":"                                                  SenMayo       0.012                5       5         1.0        0.062                  0.097               0.289\n"}
+,{"stream_name":"stdout","time":29.250892827,"data":"                                  Hallmark E2F (inverted)       0.040                5       5         1.0        0.062                  0.290               0.303\n"}
+,{"stream_name":"stdout","time":29.250897542,"data":"                                  Hallmark G2M (inverted)       0.036                5       5         1.0        0.062                  0.256               0.301\n"}
+,{"stream_name":"stdout","time":29.250902165,"data":"                     AD-MSC 40 biomarkers (up minus down)       0.160                5       5         1.0        0.062                  1.170               0.312\n"}
+,{"stream_name":"stdout","time":29.250907228,"data":"                                        CDKN2A transcript       0.182                5       5         1.0        0.062                  1.411               0.299\n"}
+,{"stream_name":"stdout","time":29.250911435,"data":"                                        CDKN1A transcript       0.147                5       5         0.6        0.062                  0.907               0.250\n"}
+,{"stream_name":"stdout","time":29.250914602,"data":"                                           IL6 transcript       0.198                5       5         0.4        0.062                  1.793               0.192\n"}
+,{"stream_name":"stdout","time":29.250917753,"data":"                                         GDF15 transcript       0.265                5       5         1.0        0.062                  1.963               0.278\n"}
+,{"stream_name":"stdout","time":29.250920859,"data":"                              LMNB1 transcript (inverted)       0.580                5       5         1.0        0.062                  4.005               0.301\n"}
+,{"stream_name":"stdout","time":29.25092413,"data":"Frozen logreg_l1, target lineage excluded, decision value       0.673                5       5         1.0        0.062                  4.880               0.308\n"}
+,{"stream_name":"stdout","time":29.250927399,"data":"\n"}
+,{"stream_name":"stdout","time":29.25093023,"data":"All scores, BM-MSC:\n"}
+,{"stream_name":"stdout","time":29.25093411,"data":"                                                    score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":29.250939972,"data":"                                         SenCat published       0.624                3       3         1.0         0.25                  4.928               0.204\n"}
+,{"stream_name":"stdout","time":29.250945122,"data":"                                       SenCat refit all14       0.620                3       3         1.0         0.25                  4.891               0.204\n"}
+,{"stream_name":"stdout","time":29.250979523,"data":"                                    SenCat refit no_BMMSC       0.606                3       3         1.0         0.25                  4.785               0.202\n"}
+,{"stream_name":"stdout","time":29.250985852,"data":"                               SenCat refit no_BMMSC_prAD       0.624                3       3         1.0         0.25                  4.908               0.205\n"}
+,{"stream_name":"stdout","time":29.250996882,"data":"                       SenCat published, no E2F/G2M genes       0.577                3       3         1.0         0.25                  4.613               0.203\n"}
+,{"stream_name":"stdout","time":29.251001943,"data":"                                                 hUSI raw       0.005                3       3         1.0         0.25                  0.042               0.254\n"}
+,{"stream_name":"stdout","time":29.251006874,"data":"                                                  SenMayo       0.003                3       3         1.0         0.25                  0.022               0.216\n"}
+,{"stream_name":"stdout","time":29.25101163,"data":"                                  Hallmark E2F (inverted)       0.002                2       3         0.5         0.50                  0.011               0.104\n"}
+,{"stream_name":"stdout","time":29.251016077,"data":"                                  Hallmark G2M (inverted)       0.001                2       3         0.5         0.75                  0.004               0.060\n"}
+,{"stream_name":"stdout","time":29.251020805,"data":"                     AD-MSC 40 biomarkers (up minus down)       0.017                3       3         1.0         0.25                  0.132               0.225\n"}
+,{"stream_name":"stdout","time":29.251025942,"data":"                                        CDKN2A transcript       0.020                2       3         0.5         0.75                  0.117               0.068\n"}
+,{"stream_name":"stdout","time":29.251031521,"data":"                                        CDKN1A transcript       0.006                1       3        -0.5         1.00                  0.005               0.037\n"}
+,{"stream_name":"stdout","time":29.251036773,"data":"                                           IL6 transcript       0.040                2       3         0.5         0.50                  0.470               0.076\n"}
+,{"stream_name":"stdout","time":29.251042492,"data":"                                         GDF15 transcript      -0.009                2       3         0.5         1.00                 -0.053              -0.033\n"}
+,{"stream_name":"stdout","time":29.251047472,"data":"                              LMNB1 transcript (inverted)       0.077                3       3         0.5         0.25                  0.567               0.203\n"}
+,{"stream_name":"stdout","time":29.251052605,"data":"Frozen logreg_l1, target lineage excluded, decision value       0.154                3       3         1.0         0.25                  1.184               0.233\n"}
+,{"stream_name":"stdout","time":33.743088904,"data":"   cohort                      score    null  observed_mean_slope  null_mean  null_sd  empirical_two_sided_p       z\n"}
+,{"stream_name":"stdout","time":33.743125596,"data":"GSE309666           SenCat published weights               1.9266     0.0159   0.0658                  0.001 29.0427\n"}
+,{"stream_name":"stdout","time":33.743132133,"data":"GSE309666           SenCat published   genes               1.9266    -0.0006   0.0871                  0.001 22.1385\n"}
+,{"stream_name":"stdout","time":33.743137172,"data":"GSE309666 SenCat refit no_BMMSC_prAD weights               1.8283     0.0174   0.0674                  0.001 26.8792\n"}
+,{"stream_name":"stdout","time":33.743142209,"data":"GSE309666 SenCat refit no_BMMSC_prAD   genes               1.8283     0.0033   0.0868                  0.001 21.0166\n"}
+,{"stream_name":"stdout","time":33.743147144,"data":"GSE178514           SenCat published weights               0.6239     0.0043   0.0303                  0.001 20.4814\n"}
+,{"stream_name":"stdout","time":33.743152174,"data":"GSE178514           SenCat published   genes               0.6239    -0.0025   0.0321                  0.001 19.5184\n"}
+,{"stream_name":"stdout","time":33.743175533,"data":"GSE178514      SenCat refit no_BMMSC weights               0.6062     0.0038   0.0298                  0.001 20.2125\n"}
+,{"stream_name":"stdout","time":33.743179346,"data":"GSE178514      SenCat refit no_BMMSC   genes               0.6062    -0.0020   0.0319                  0.001 19.0604\n"}
+,{"stream_name":"stdout","time":34.276906495,"data":"                                        analysis  mean_slope  donors_positive  donors\n"}
+,{"stream_name":"stdout","time":34.276946944,"data":"                  GSE309666 excluding GSM9271440       1.945                5       5\n"}
+,{"stream_name":"stdout","time":34.276953406,"data":"         GSE309666 as deposited, no size factors       2.135                5       5\n"}
+,{"stream_name":"stdout","time":34.276958243,"data":"              GSE309666 scaled to 1e6 per sample       1.807                5       5\n"}
+,{"stream_name":"stdout","time":34.27696299,"data":"GSE309666 size factors from the SenCat reference       2.422                5       5\n"}
+,{"stream_name":"stdout","time":34.276967697,"data":"                     GSE178514 FPKM as deposited       0.572                3       3\n"}
+,{"stream_name":"stdout","time":34.27697258,"data":"\n"}
+,{"stream_name":"stdout","time":34.27697705,"data":"Published SenCat score by phase, per donor:\n"}
+,{"stream_name":"stdout","time":34.276981874,"data":"donor     p1     p3  final_passage  final  p1_to_p3  p3_to_final       published_growth_status\n"}
+,{"stream_name":"stdout","time":34.276986275,"data":"    A -1.783  1.284              7 13.148     3.067       11.865     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.276990985,"data":"    B -2.595  0.635              8 12.874     3.230       12.240     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.276995823,"data":"    C -1.433 -0.338              9 12.485     1.096       12.822     growth_cessation_at_final\n"}
+,{"stream_name":"stdout","time":34.277000821,"data":"    D -2.619 -0.367             10  7.562     2.252        7.929 stopped_at_p10_right_censored\n"}
+,{"stream_name":"stdout","time":34.277006249,"data":"    E -4.468 -1.481             10 12.686     2.987       14.167 stopped_at_p10_right_censored\n"}
+,{"stream_name":"stdout","time":34.277011109,"data":"\n"}
+,{"stream_name":"stdout","time":34.277015645,"data":"SenMayo rank score by donor and passage. The paper reports GSVA SenMayo rising, with donor B as high at p3 as at p8; ours is a different scoring method:\n"}
+,{"stream_name":"stdout","time":34.277020798,"data":"passage   1.0    3.0    6.0    7.0    8.0    9.0    10.0\n"}
+,{"stream_name":"stdout","time":34.277025528,"data":"subject                                                 \n"}
+,{"stream_name":"stdout","time":34.277031169,"data":"A        0.531  0.594    NaN  0.636    NaN    NaN    NaN\n"}
+,{"stream_name":"stdout","time":34.277034534,"data":"B        0.527  0.579    NaN  0.592  0.598    NaN    NaN\n"}
+,{"stream_name":"stdout","time":34.277037528,"data":"C        0.537  0.555    NaN    NaN    NaN  0.646    NaN\n"}
+,{"stream_name":"stdout","time":34.277040509,"data":"D        0.508  0.546  0.589    NaN    NaN    NaN  0.583\n"}
+,{"stream_name":"stdout","time":34.27704355,"data":"E        0.506  0.539  0.573    NaN    NaN    NaN  0.628\n"}
+,{"stream_name":"stdout","time":34.372040116,"data":"{'GSE284666': 0, 'GSE309666': 0, 'GSE178514': 9}\n"}
+,{"stream_name":"stdout","time":34.372072663,"data":"         Data_id Study_name Project_name   Sample_id           Sample_title Tissue_type                              Cell_type_name              Cell_type Cell_type_id Stage                         Treatment Sene_type\n"}
+,{"stream_name":"stdout","time":34.372093796,"data":"168  SRR14867840  GSE178514  PRJNA739464  GSM5393148  MSC_P12_REP1 [P12393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.372100269,"data":"169  SRR14867841  GSE178514  PRJNA739464  GSM5393149  MSC_P12_REP2 [P12411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.372105587,"data":"170  SRR14867842  GSE178514  PRJNA739464  GSM5393150  MSC_P12_REP3 [P12413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC  Sene  Expansion in vitro to passage 12        RS\n"}
+,{"stream_name":"stdout","time":34.3721109,"data":"171  SRR14867834  GSE178514  PRJNA739464  GSM5393142    MSC_P4_REP1 [P4393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.372116298,"data":"172  SRR14867835  GSE178514  PRJNA739464  GSM5393143    MSC_P4_REP2 [P4411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.372121792,"data":"173  SRR14867836  GSE178514  PRJNA739464  GSM5393144    MSC_P4_REP3 [P4413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.372127087,"data":"174  SRR14867837  GSE178514  PRJNA739464  GSM5393145    MSC_P6_REP1 [P6393]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.372132513,"data":"175  SRR14867838  GSE178514  PRJNA739464  GSM5393146    MSC_P6_REP2 [P6411]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.372139623,"data":"176  SRR14867839  GSE178514  PRJNA739464  GSM5393147    MSC_P6_REP3 [P6413]      Normal  Bone marrow-derived mesenchymal stem cells  Mesenchymal stem cell       BM-MSC   Pro                               NaN       NaN\n"}
+,{"stream_name":"stdout","time":34.373486309,"data":"MSC-related training rows: 54 | studies: {'GSE110268': 12, 'GSE178514': 9, 'GSE98440': 8, 'GSE102004': 6, 'GSE84694': 6, 'GSE142761': 5, 'GSE124208': 4, 'GSE122654': 4}\n"}
+,{"stream_name":"stdout","time":34.37350909,"data":"hUSI training metadata lists 9 rows from GSE178514, so hUSI on GSE178514 is NOT an independent test. It lists 0 rows from GSE309666 and 0 from GSE284666, and 54 MSC-related rows overall.\n"}
+,{"stream_name":"stdout","time":35.586055702,"data":"   cohort  genes_shared  median_nn_distance  dev_held_out_type_p95  share_beyond_p95                      nearest_cell_types  spearman_gene_means_vs_BMMSC  spearman_gene_means_vs_prAD\n"}
+,{"stream_name":"stdout","time":35.58609419,"data":"GSE309666          4758              46.554                 96.701               0.0 {'Myoblasts': 11, 'BMMSC': 6, 'NHO': 1}                          0.77                        0.764\n"}
+,{"stream_name":"stdout","time":35.586100339,"data":"GSE178514          4758              66.982                 96.701               0.0                            {'PBMCs': 9}                          0.63                        0.597\n"}
+,{"stream_name":"stdout","time":35.586105821,"data":"\n"}
+,{"stream_name":"stdout","time":35.586110493,"data":"Published score in SenCat, by type (reference only; do not threshold across platforms):\n"}
+,{"stream_name":"stdout","time":35.586132444,"data":"y          control_mean  senescent_mean\n"}
+,{"stream_name":"stdout","time":35.586137276,"data":"cell_line                              \n"}
+,{"stream_name":"stdout","time":35.586141785,"data":"BMMSC            -10.35           12.31\n"}
+,{"stream_name":"stdout","time":35.586146343,"data":"prAD              -6.52           10.24\n"}
+,{"stream_name":"stdout","time":35.586150957,"data":"BJ                -5.30            7.64\n"}
+,{"stream_name":"stdout","time":35.586155463,"data":"WI-38             -9.93           10.64\n"}
+,{"stream_name":"stdout","time":35.586160023,"data":"\n"}
+,{"stream_name":"stdout","time":35.586164405,"data":"AD-MSC score range -4.47 to 13.15\n"}
+,{"stream_name":"stdout","time":39.930649897,"data":"# G3: external MSC evaluation\n"}
+,{"stream_name":"stdout","time":39.930694247,"data":"\n"}
+,{"stream_name":"stdout","time":39.930701659,"data":"Scores frozen in notebook 02 (frozen 2026-11-01T11:33:23.190183+00:00), hashes verified at load. No labels exist for these cohorts, so no classification metric was computed.\n"}
+,{"stream_name":"stdout","time":39.930708125,"data":"\n"}
+,{"stream_name":"stdout","time":39.930713758,"data":"## Primary: published SenCat score, GSE309666 [measured]\n"}
+,{"stream_name":"stdout","time":39.930719239,"data":"Mean slope +1.927 per passage; 5/5 donors positive; median rho 1.00; exact sign-flip p 0.0625 (smallest possible 0.0625).\n"}
+,{"stream_name":"stdout","time":39.930724823,"data":"\n"}
+,{"stream_name":"stdout","time":39.930730136,"data":"## Supporting: GSE178514 [measured]\n"}
+,{"stream_name":"stdout","time":39.93073568,"data":"Mean slope +0.624 per passage; 3/3 ids positive; median rho 1.00; exact sign-flip p 0.2500 (smallest possible 0.25).\n"}
+,{"stream_name":"stdout","time":39.930741975,"data":"\n"}
+,{"stream_name":"stdout","time":39.930747405,"data":"## Competitive null [measured]\n"}
+,{"stream_name":"stdout","time":39.930753072,"data":"   cohort                      score    null  observed_mean_slope  null_mean  null_sd  empirical_two_sided_p       z\n"}
+,{"stream_name":"stdout","time":39.930759149,"data":"GSE309666           SenCat published weights               1.9266     0.0159   0.0658                  0.001 29.0427\n"}
+,{"stream_name":"stdout","time":39.930768593,"data":"GSE309666           SenCat published   genes               1.9266    -0.0006   0.0871                  0.001 22.1385\n"}
+,{"stream_name":"stdout","time":39.930774719,"data":"GSE309666 SenCat refit no_BMMSC_prAD weights               1.8283     0.0174   0.0674                  0.001 26.8792\n"}
+,{"stream_name":"stdout","time":39.930780734,"data":"GSE309666 SenCat refit no_BMMSC_prAD   genes               1.8283     0.0033   0.0868                  0.001 21.0166\n"}
+,{"stream_name":"stdout","time":39.930786296,"data":"GSE178514           SenCat published weights               0.6239     0.0043   0.0303                  0.001 20.4814\n"}
+,{"stream_name":"stdout","time":39.930792097,"data":"GSE178514           SenCat published   genes               0.6239    -0.0025   0.0321                  0.001 19.5184\n"}
+,{"stream_name":"stdout","time":39.930797669,"data":"GSE178514      SenCat refit no_BMMSC weights               0.6062     0.0038   0.0298                  0.001 20.2125\n"}
+,{"stream_name":"stdout","time":39.930825112,"data":"GSE178514      SenCat refit no_BMMSC   genes               0.6062    -0.0020   0.0319                  0.001 19.0604\n"}
+,{"stream_name":"stdout","time":39.930831579,"data":"\n"}
+,{"stream_name":"stdout","time":39.930837009,"data":"## All scores [measured]\n"}
+,{"stream_name":"stdout","time":39.930857169,"data":"AD-MSC:\n"}
+,{"stream_name":"stdout","time":39.930862229,"data":"                                                    score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":39.93086736,"data":"                                         SenCat published       1.927                5       5         1.0        0.062                 14.331               0.311\n"}
+,{"stream_name":"stdout","time":39.930874347,"data":"                                       SenCat refit all14       1.915                5       5         1.0        0.062                 14.243               0.311\n"}
+,{"stream_name":"stdout","time":39.930879419,"data":"                                    SenCat refit no_BMMSC       1.881                5       5         1.0        0.062                 13.976               0.310\n"}
+,{"stream_name":"stdout","time":39.930884444,"data":"                               SenCat refit no_BMMSC_prAD       1.828                5       5         1.0        0.062                 13.713               0.310\n"}
+,{"stream_name":"stdout","time":39.930889414,"data":"                       SenCat published, no E2F/G2M genes       1.458                5       5         1.0        0.062                 11.022               0.306\n"}
+,{"stream_name":"stdout","time":39.93089454,"data":"                                                 hUSI raw       0.029                5       5         1.0        0.062                  0.218               0.311\n"}
+,{"stream_name":"stdout","time":39.930899482,"data":"                                                  SenMayo       0.012                5       5         1.0        0.062                  0.097               0.289\n"}
+,{"stream_name":"stdout","time":39.93090431,"data":"                                  Hallmark E2F (inverted)       0.040                5       5         1.0        0.062                  0.290               0.303\n"}
+,{"stream_name":"stdout","time":39.930909314,"data":"                                  Hallmark G2M (inverted)       0.036                5       5         1.0        0.062                  0.256               0.301\n"}
+,{"stream_name":"stdout","time":39.930914426,"data":"                     AD-MSC 40 biomarkers (up minus down)       0.160                5       5         1.0        0.062                  1.170               0.312\n"}
+,{"stream_name":"stdout","time":39.930919551,"data":"                                        CDKN2A transcript       0.182                5       5         1.0        0.062                  1.411               0.299\n"}
+,{"stream_name":"stdout","time":39.930924767,"data":"                                        CDKN1A transcript       0.147                5       5         0.6        0.062                  0.907               0.250\n"}
+,{"stream_name":"stdout","time":39.930929639,"data":"                                           IL6 transcript       0.198                5       5         0.4        0.062                  1.793               0.192\n"}
+,{"stream_name":"stdout","time":39.930935381,"data":"                                         GDF15 transcript       0.265                5       5         1.0        0.062                  1.963               0.278\n"}
+,{"stream_name":"stdout","time":39.930940127,"data":"                              LMNB1 transcript (inverted)       0.580                5       5         1.0        0.062                  4.005               0.301\n"}
+,{"stream_name":"stdout","time":39.930945239,"data":"Frozen logreg_l1, target lineage excluded, decision value       0.673                5       5         1.0        0.062                  4.880               0.308\n"}
+,{"stream_name":"stdout","time":39.930950433,"data":"\n"}
+,{"stream_name":"stdout","time":39.930958699,"data":"BM-MSC:\n"}
+,{"stream_name":"stdout","time":39.93096291,"data":"                                                    score  mean_slope  donors_positive  donors  median_rho  sign_flip_p  mean_last_minus_first  standardized_slope\n"}
+,{"stream_name":"stdout","time":39.930968094,"data":"                                         SenCat published       0.624                3       3         1.0         0.25                  4.928               0.204\n"}
+,{"stream_name":"stdout","time":39.930973001,"data":"                                       SenCat refit all14       0.620                3       3         1.0         0.25                  4.891               0.204\n"}
+,{"stream_name":"stdout","time":39.930978142,"data":"                                    SenCat refit no_BMMSC       0.606                3       3         1.0         0.25                  4.785               0.202\n"}
+,{"stream_name":"stdout","time":39.930983267,"data":"                               SenCat refit no_BMMSC_prAD       0.624                3       3         1.0         0.25                  4.908               0.205\n"}
+,{"stream_name":"stdout","time":39.930988294,"data":"                       SenCat published, no E2F/G2M genes       0.577                3       3         1.0         0.25                  4.613               0.203\n"}
+,{"stream_name":"stdout","time":39.930993376,"data":"                                                 hUSI raw       0.005                3       3         1.0         0.25                  0.042               0.254\n"}
+,{"stream_name":"stdout","time":39.930998422,"data":"                                                  SenMayo       0.003                3       3         1.0         0.25                  0.022               0.216\n"}
+,{"stream_name":"stdout","time":39.931003589,"data":"                                  Hallmark E2F (inverted)       0.002                2       3         0.5         0.50                  0.011               0.104\n"}
+,{"stream_name":"stdout","time":39.931008562,"data":"                                  Hallmark G2M (inverted)       0.001                2       3         0.5         0.75                  0.004               0.060\n"}
+,{"stream_name":"stdout","time":39.931014384,"data":"                     AD-MSC 40 biomarkers (up minus down)       0.017                3       3         1.0         0.25                  0.132               0.225\n"}
+,{"stream_name":"stdout","time":39.931019261,"data":"                                        CDKN2A transcript       0.020                2       3         0.5         0.75                  0.117               0.068\n"}
+,{"stream_name":"stdout","time":39.931024208,"data":"                                        CDKN1A transcript       0.006                1       3        -0.5         1.00                  0.005               0.037\n"}
+,{"stream_name":"stdout","time":39.931029072,"data":"                                           IL6 transcript       0.040                2       3         0.5         0.50                  0.470               0.076\n"}
+,{"stream_name":"stdout","time":39.931033941,"data":"                                         GDF15 transcript      -0.009                2       3         0.5         1.00                 -0.053              -0.033\n"}
+,{"stream_name":"stdout","time":39.931039208,"data":"                              LMNB1 transcript (inverted)       0.077                3       3         0.5         0.25                  0.567               0.203\n"}
+,{"stream_name":"stdout","time":39.931044547,"data":"Frozen logreg_l1, target lineage excluded, decision value       0.154                3       3         1.0         0.25                  1.184               0.233\n"}
+,{"stream_name":"stdout","time":39.931049649,"data":"\n"}
+,{"stream_name":"stdout","time":39.931058051,"data":"## Sensitivity [measured]\n"}
+,{"stream_name":"stdout","time":39.931062819,"data":"                                        analysis  mean_slope  donors_positive  donors\n"}
+,{"stream_name":"stdout","time":39.931067645,"data":"                  GSE309666 excluding GSM9271440       1.945                5       5\n"}
+,{"stream_name":"stdout","time":39.931072445,"data":"         GSE309666 as deposited, no size factors       2.135                5       5\n"}
+,{"stream_name":"stdout","time":39.931077159,"data":"              GSE309666 scaled to 1e6 per sample       1.807                5       5\n"}
+,{"stream_name":"stdout","time":39.931081986,"data":"GSE309666 size factors from the SenCat reference       2.422                5       5\n"}
+,{"stream_name":"stdout","time":39.931086664,"data":"                     GSE178514 FPKM as deposited       0.572                3       3\n"}
+,{"stream_name":"stdout","time":39.931091372,"data":"\n"}
+,{"stream_name":"stdout","time":39.931095569,"data":"## Domain shift [measured]\n"}
+,{"stream_name":"stdout","time":39.931099965,"data":"   cohort  genes_shared  median_nn_distance  dev_held_out_type_p95  share_beyond_p95                      nearest_cell_types  spearman_gene_means_vs_BMMSC  spearman_gene_means_vs_prAD\n"}
+,{"stream_name":"stdout","time":39.931104928,"data":"GSE309666          4758              46.554                 96.701               0.0 {'Myoblasts': 11, 'BMMSC': 6, 'NHO': 1}                          0.77                        0.764\n"}
+,{"stream_name":"stdout","time":39.931110725,"data":"GSE178514          4758              66.982                 96.701               0.0                            {'PBMCs': 9}                          0.63                        0.597\n"}
+,{"stream_name":"stdout","time":39.931115554,"data":"\n"}
+,{"stream_name":"stdout","time":39.93111971,"data":"## Limits\n"}
+,{"stream_name":"stdout","time":39.931124186,"data":"- Passage and donor are observations; every score is inference. Growth-arrest status exists only per donor at final passage, and D and E are censored at passage 10.\n"}
+,{"stream_name":"stdout","time":39.931128759,"data":"- Published weights were fit with BMMSC in the data. The refit no_BMMSC and no_BMMSC_prAD rows are the cell-type-independent versions.\n"}
+,{"stream_name":"stdout","time":39.931133159,"data":"- hUSI training metadata lists 9 rows from GSE178514, so hUSI on GSE178514 is NOT an independent test. It lists 0 rows from GSE309666 and 0 from GSE284666, and 54 MSC-related rows overall.\n"}
+,{"stream_name":"stdout","time":39.931139602,"data":"- GSE178514 is FPKM and its donor mapping is inferred. Culture systems differ (platelet lysate vs FBS), and so do library types (polyA vs rRNA-depleted).\n"}
+,{"stream_name":"stdout","time":39.931144201,"data":"- The 40 AD-MSC biomarkers came from GSE309666, so their result there is circular; GSE178514 is their only independent test here.\n"}
+,{"stream_name":"stdout","time":39.931148845,"data":"- No conclusion on potency, immune function or clinical safety follows from these data.\n"}
+,{"stream_name":"stdout","time":39.931153154,"data":"\n"}
+,{"stream_name":"stdout","time":39.931157337,"data":"                                             path   bytes\n"}
+,{"stream_name":"stdout","time":39.931161847,"data":"0               /results/external_predictions.csv   59513\n"}
+,{"stream_name":"stdout","time":39.931166226,"data":"1            /results/external_score_coverage.csv     568\n"}
+,{"stream_name":"stdout","time":39.931170481,"data":"2          /results/external_trends_GSE309666.csv    1682\n"}
+,{"stream_name":"stdout","time":39.931174998,"data":"3          /results/external_trends_GSE178514.csv    1644\n"}
+,{"stream_name":"stdout","time":39.931183501,"data":"4          /results/external_competitive_null.csv    1181\n"}
+,{"stream_name":"stdout","time":39.931187821,"data":"5               /results/external_sensitivity.csv     342\n"}
+,{"stream_name":"stdout","time":39.93119226,"data":"6   /results/external_phase_changes_GSE309666.csv     715\n"}
+,{"stream_name":"stdout","time":39.931196881,"data":"7              /results/external_domain_shift.csv     396\n"}
+,{"stream_name":"stdout","time":39.931201425,"data":"8          /results/external_rho_heatmap_data.csv    1084\n"}
+,{"stream_name":"stdout","time":39.931206005,"data":"9            /figures/fig2_donor_trajectories.png  292087\n"}
+,{"stream_name":"stdout","time":39.931210226,"data":"10           /figures/fig3_direction_by_score.png  337367\n"}
+,{"stream_name":"stdout","time":39.931214862,"data":"11             /figures/fig4_competitive_null.png  120634\n"}
+,{"stream_name":"stdout","time":39.931218956,"data":"12             /reports/G3_EXTERNAL_VALIDATION.md    9204\n"}
+,{"stream_name":"stderr","time":43.586838614,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":43.586876999,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":43.798379272,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":43.798406803,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":44.709284231,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":44.825912373,"data":"[NbConvertApp] Writing 365068 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":48.12777301,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":48.95201628,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":48.952045085,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":48.952331822,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":48.952537441,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":48.95277639,"data":"[NbConvertApp] Writing 443937 bytes to __results__.html\n"}
+]

@@ -1,0 +1,276 @@
+{
+ "headline": {
+  "ok": {
+   "donors_rising": 19,
+   "donors": 22,
+   "share": 0.8636363636363636,
+   "ci_low": 0.6508779027425919,
+   "ci_high": 0.9709441488712534,
+   "binom_p": 0.0008554458618164062,
+   "cohorts_positive": 5,
+   "cohorts": 6
+  },
+  "registered": {
+   "donors_rising": 21,
+   "donors": 27,
+   "share": 0.7777777777777778,
+   "ci_low": 0.5774169399556212,
+   "ci_high": 0.9137830600524457,
+   "binom_p": 0.005924612283706665,
+   "cohorts_positive": 5,
+   "cohorts": 7
+  }
+ },
+ "clock": {
+  "rising": 35,
+  "n": 35,
+  "median_rho": 1.0,
+  "shuffled": 0.13,
+  "genes": 7845,
+  "passes": true
+ },
+ "headToHead": [
+  {
+   "label": "hUSI",
+   "share": 0.925925925925926,
+   "low": 0.7571016531543728,
+   "high": 0.9908999270576936,
+   "up": 25,
+   "n": 27,
+   "rho": 1.0,
+   "highlight": false
+  },
+  {
+   "label": "SenCat published",
+   "share": 0.9,
+   "low": 0.7347115495257919,
+   "high": 0.9788828629702774,
+   "up": 27,
+   "n": 30,
+   "rho": 1.0,
+   "highlight": true
+  },
+  {
+   "label": "CDKN2A",
+   "share": 0.9,
+   "low": 0.7347115495257919,
+   "high": 0.9788828629702774,
+   "up": 27,
+   "n": 30,
+   "rho": 0.93,
+   "highlight": false
+  },
+  {
+   "label": "SenMayo",
+   "share": 0.9,
+   "low": 0.7347115495257919,
+   "high": 0.9788828629702774,
+   "up": 27,
+   "n": 30,
+   "rho": 0.8,
+   "highlight": false
+  },
+  {
+   "label": "IL6",
+   "share": 0.9,
+   "low": 0.7347115495257919,
+   "high": 0.9788828629702774,
+   "up": 27,
+   "n": 30,
+   "rho": 0.5,
+   "highlight": false
+  },
+  {
+   "label": "Yang 2023 7 genes",
+   "share": 0.8888888888888888,
+   "low": 0.7084130757264333,
+   "high": 0.9764725456192734,
+   "up": 24,
+   "n": 27,
+   "rho": 0.8,
+   "highlight": false
+  },
+  {
+   "label": "AD-MSC 40 biomarkers",
+   "share": 0.88,
+   "low": 0.6878096927142153,
+   "high": 0.9745346033522668,
+   "up": 22,
+   "n": 25,
+   "rho": 0.8,
+   "highlight": false
+  },
+  {
+   "label": "LMNB1 (inverted)",
+   "share": 0.8666666666666667,
+   "low": 0.6927816497238732,
+   "high": 0.9624465036616628,
+   "up": 26,
+   "n": 30,
+   "rho": 0.8,
+   "highlight": false
+  },
+  {
+   "label": "CDKN1A",
+   "share": 0.8666666666666667,
+   "low": 0.6927816497238732,
+   "high": 0.9624465036616628,
+   "up": 26,
+   "n": 30,
+   "rho": 0.5,
+   "highlight": false
+  },
+  {
+   "label": "Hallmark E2F (inverted)",
+   "share": 0.8333333333333334,
+   "low": 0.6527883011658562,
+   "high": 0.9435783035316984,
+   "up": 25,
+   "n": 30,
+   "rho": 0.8,
+   "highlight": false
+  },
+  {
+   "label": "Hallmark G2M (inverted)",
+   "share": 0.8,
+   "low": 0.6143334890033935,
+   "high": 0.9228644879991978,
+   "up": 24,
+   "n": 30,
+   "rho": 0.7,
+   "highlight": false
+  },
+  {
+   "label": "GDF15",
+   "share": 0.6,
+   "low": 0.4060349300518187,
+   "high": 0.7734423511714232,
+   "up": 18,
+   "n": 30,
+   "rho": 0.5,
+   "highlight": false
+  }
+ ],
+ "cohorts": [
+  {
+   "accession": "GSE309666",
+   "tissue": "Adipose",
+   "role": "Reference; used first",
+   "design": "Passage 1 to 10",
+   "rising": "5/5"
+  },
+  {
+   "accession": "GSE178514",
+   "tissue": "Bone marrow",
+   "role": "Reference; used first; donors inferred",
+   "design": "P4, P6, P12",
+   "rising": "3/3"
+  },
+  {
+   "accession": "GSE137186",
+   "tissue": "Bone marrow",
+   "role": "New",
+   "design": "P1 to P15",
+   "rising": "3/4"
+  },
+  {
+   "accession": "GSE275980",
+   "tissue": "Not stated in abstract",
+   "role": "New",
+   "design": "P2, P6, P10",
+   "rising": "3/3"
+  },
+  {
+   "accession": "GSE194298",
+   "tissue": "Bone marrow",
+   "role": "New; FBS and hPL",
+   "design": "p1 and p4/5",
+   "rising": "3/4"
+  },
+  {
+   "accession": "GSE119987",
+   "tissue": "Umbilical cord",
+   "role": "New; array; to replicative senescence",
+   "design": "P1 to P16",
+   "rising": "4/4"
+  },
+  {
+   "accession": "GSE56362",
+   "tissue": "Bone marrow",
+   "role": "New; array; technical triplicates",
+   "design": "P3, P5, P7",
+   "rising": "6/6"
+  },
+  {
+   "accession": "GSE233634",
+   "tissue": "Umbilical cord",
+   "role": "New; no donor stated, one unit",
+   "design": "P3 to P12",
+   "rising": "0/1"
+  },
+  {
+   "accession": "GSE125632",
+   "tissue": "Bone marrow",
+   "role": "Failed identity check; excluded from the headline",
+   "design": "P2 and P11",
+   "rising": "2/5"
+  },
+  {
+   "accession": "GSE269586",
+   "tissue": "Wharton's jelly",
+   "role": "GMP production; short expansion; not pooled",
+   "design": "Master bank to P3",
+   "rising": "9/11"
+  },
+  {
+   "accession": "GSE48662",
+   "tissue": "Bone marrow",
+   "role": "Irradiated vs control; GVHD groups",
+   "design": "Not a passage series",
+   "rising": "See findings"
+  }
+ ],
+ "facts": {
+  "devAuroc": 0.982,
+  "devLow": 0.946,
+  "devHigh": 1.0,
+  "leak": 0.0006,
+  "reproSpearman": 0.99997,
+  "irradiatedAuroc": 1.0,
+  "irradiatedRefit": 0.938,
+  "irradiatedSenMayo": 0.625,
+  "irradiatedYang": 0.5,
+  "gvhdP": 0.625,
+  "gvhdDiff": -0.006,
+  "gmpRising": 9,
+  "gmpN": 11,
+  "gmpSlope": 1.42,
+  "absMin": -5.6,
+  "absMax": 11.4,
+  "absN": 4,
+  "mediumLate": -3.5,
+  "retestA": 0.06,
+  "retestB": 0.26,
+  "mdc": 0.4,
+  "depth3m": 0.91,
+  "depth1m": 0.79,
+  "depth1mB": 0.87,
+  "depth02": 0.4,
+  "depth02B": 0.23,
+  "g137rising": 3,
+  "g137n": 4,
+  "g233slope": -0.11,
+  "donorE": 12.7,
+  "arrestedLow": 12.5,
+  "arrestedHigh": 13.1,
+  "donorD": 7.6,
+  "bfAuroc": 0.991,
+  "bfLow": 0.973,
+  "bfHigh": 1.0,
+  "bfGb": 1.6,
+  "confCov": 0.895
+ },
+ "guidance": {
+  "minimumChange": "In re-sequenced samples the score differed by 0.06 and 0.26, so treat changes under about 0.4 as possibly technical. This rests on two pairs from one cohort."
+ }
+}

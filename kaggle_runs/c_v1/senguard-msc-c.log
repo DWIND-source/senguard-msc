@@ -1,0 +1,136 @@
+[{"stream_name":"stderr","time":5.922384631,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":5.922421631,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":5.922427882,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":5.922432067,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":6.478158384,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":6.478186442,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":6.478190852,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":6.47819587,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":15.02540258,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-a/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":17.328108025,"data":"repo commit not a git checkout\n"}
+,{"stream_name":"stdout","time":29.154279716,"data":"{'version': '2.11.0+cu128', 'cuda': '12.8', 'gpu': True, 'name': 'Tesla T4', 'vram_gb': 15.64, 'bf16': True}\n"}
+,{"stream_name":"stdout","time":38.682026646,"data":"verified model.pt 406165934\n"}
+,{"stream_name":"stdout","time":40.902578802,"data":"verified model_config.json 1079\n"}
+,{"stream_name":"stdout","time":42.78328488,"data":"verified gene_vocab.csv 704213\n"}
+,{"stream_name":"stdout","time":45.002187934,"data":"verified edge_index.pt 10739627\n"}
+,{"stream_name":"stdout","time":47.376207131,"data":"verified edge_weight.pt 2685808\n"}
+,{"stream_name":"stdout","time":49.232568137,"data":"verified manifest.json 1623\n"}
+,{"stream_name":"stdout","time":70.016180344,"data":"  dataset  samples  vocab_genes_present  vocab_size  coverage  meets_90pct\n"}
+,{"stream_name":"stdout","time":70.016209078,"data":"GSE284666      190                19915       19973    0.9971         True\n"}
+,{"stream_name":"stdout","time":70.016215322,"data":"GSE309666       18                19935       19973    0.9981         True\n"}
+,{"stream_name":"stdout","time":70.016219909,"data":"GSE178514        9                16679       19973    0.8351        False\n"}
+,{"stream_name":"stdout","time":74.991120841,"data":"{'seconds': 2.33, 'peak_gpu_gb': 1.571309568, 'amp': 'bf16', 'device': 'cuda:0', 'shape': [1, 768]}\n"}
+,{"stream_name":"stdout","time":468.784493768,"data":"GSE284666: (190, 768) in 6.6 min\n"}
+,{"stream_name":"stdout","time":506.286510157,"data":"GSE309666: (18, 768) in 0.6 min\n"}
+,{"stream_name":"stdout","time":506.286551979,"data":"GSE178514 coverage 0.835 is below the recommended 90%; not extracted\n"}
+,{"stream_name":"stdout","time":525.065405938,"data":" held_out  n  n_pos  auroc  auprc     C\n"}
+,{"stream_name":"stdout","time":525.06545637,"data":"       BJ 24     16  0.875  0.946 0.001\n"}
+,{"stream_name":"stdout","time":525.065465534,"data":"    BMMSC 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065472578,"data":"    HCAEC 11      7  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065482335,"data":"     HEKn 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065489158,"data":"    HSAEC 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065496011,"data":"    HUVEC 11      7  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065520359,"data":"    HVSMC 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065525996,"data":"     HeMn 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065531909,"data":"Myoblasts 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065538775,"data":"      NHA 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065544125,"data":"      NHO 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065549553,"data":"    PBMCs 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065554985,"data":"    WI-38 24     16  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065559858,"data":"     prAD 12      8  1.000  1.000 0.001\n"}
+,{"stream_name":"stdout","time":525.065565298,"data":"Frozen embeddings + L2 logistic: mean within-type AUROC 0.991 [0.973, 1.000]\n"}
+,{"stream_name":"stdout","time":525.065584738,"data":"Baselines from notebook 02:\n"}
+,{"stream_name":"stdout","time":525.065589585,"data":"        model  mean_auroc  ci_low  ci_high\n"}
+,{"stream_name":"stdout","time":525.06559478,"data":"    logreg_l1       0.982   0.946      1.0\n"}
+,{"stream_name":"stdout","time":525.065599823,"data":"  elastic_net       0.982   0.946      1.0\n"}
+,{"stream_name":"stdout","time":525.065604733,"data":"   linear_svm       0.982   0.946      1.0\n"}
+,{"stream_name":"stdout","time":525.065609501,"data":"      rbf_svm       0.982   0.946      1.0\n"}
+,{"stream_name":"stdout","time":525.06561458,"data":"random_forest       0.982   0.946      1.0\n"}
+,{"stream_name":"stdout","time":525.065619462,"data":"      xgboost       0.982   0.945      1.0\n"}
+,{"stream_name":"stdout","time":526.049818476,"data":"GSE309666: head trained without ['BMMSC', 'prAD']; mean slope +0.434, positive 5/5, sign-flip p 0.0625\n"}
+,{"stream_name":"stdout","time":526.04984664,"data":"{\n"}
+,{"stream_name":"stdout","time":526.049851397,"data":" \"gate\": \"G4\",\n"}
+,{"stream_name":"stdout","time":526.049854817,"data":" \"repo_commit\": \"not a git checkout\",\n"}
+,{"stream_name":"stdout","time":526.049858671,"data":" \"outcome\": \"completed\",\n"}
+,{"stream_name":"stdout","time":526.049861925,"data":" \"steps\": {\n"}
+,{"stream_name":"stdout","time":526.049869604,"data":"  \"pip\": {\n"}
+,{"stream_name":"stdout","time":526.049873053,"data":"   \"returncode\": 0,\n"}
+,{"stream_name":"stdout","time":526.049876075,"data":"   \"stderr_tail\": \"\"\n"}
+,{"stream_name":"stdout","time":526.049879866,"data":"  },\n"}
+,{"stream_name":"stdout","time":526.049883798,"data":"  \"torch\": {\n"}
+,{"stream_name":"stdout","time":526.04988733,"data":"   \"version\": \"2.11.0+cu128\",\n"}
+,{"stream_name":"stdout","time":526.049890906,"data":"   \"cuda\": \"12.8\",\n"}
+,{"stream_name":"stdout","time":526.049894816,"data":"   \"gpu\": true,\n"}
+,{"stream_name":"stdout","time":526.049898297,"data":"   \"name\": \"Tesla T4\",\n"}
+,{"stream_name":"stdout","time":526.049901766,"data":"   \"vram_gb\": 15.64,\n"}
+,{"stream_name":"stdout","time":526.049905292,"data":"   \"bf16\": true\n"}
+,{"stream_name":"stdout","time":526.049909391,"data":"  },\n"}
+,{"stream_name":"stdout","time":526.049912602,"data":"  \"bundle\": {\n"}
+,{"stream_name":"stdout","time":526.049916129,"data":"   \"path\": \"/kaggle/working/senguard_msc/checkpoints/bulkformer-latest\",\n"}
+,{"stream_name":"stdout","time":526.049919673,"data":"   \"checkpoint_id\": \"v1plus-stage1-epoch17-update126055\",\n"}
+,{"stream_name":"stdout","time":526.049923382,"data":"   \"model_sha256\": \"0fb65ec123386ef753651cfcc43e2a64728c719307fe565a5ffe16f5d8cf3cfa\"\n"}
+,{"stream_name":"stdout","time":526.049937071,"data":"  },\n"}
+,{"stream_name":"stdout","time":526.049940575,"data":"  \"coverage\": [\n"}
+,{"stream_name":"stdout","time":526.049943933,"data":"   {\n"}
+,{"stream_name":"stdout","time":526.049947134,"data":"    \"dataset\": \"GSE284666\",\n"}
+,{"stream_name":"stdout","time":526.049951471,"data":"    \"samples\": 190,\n"}
+,{"stream_name":"stdout","time":526.049955061,"data":"    \"vocab_genes_present\": 19915,\n"}
+,{"stream_name":"stdout","time":526.049958996,"data":"    \"vocab_size\": 19973,\n"}
+,{"stream_name":"stdout","time":526.049962949,"data":"    \"coverage\": 0.9970960797076053,\n"}
+,{"stream_name":"stdout","time":526.049966543,"data":"    \"meets_90pct\": true\n"}
+,{"stream_name":"stdout","time":526.049970076,"data":"   },\n"}
+,{"stream_name":"stdout","time":526.049973314,"data":"   {\n"}
+,{"stream_name":"stdout","time":526.049986683,"data":"    \"dataset\": \"GSE309666\",\n"}
+,{"stream_name":"stdout","time":526.049990406,"data":"    \"samples\": 18,\n"}
+,{"stream_name":"stdout","time":526.049993877,"data":"    \"vocab_genes_present\": 19935,\n"}
+,{"stream_name":"stdout","time":526.04999729,"data":"    \"vocab_size\": 19973,\n"}
+,{"stream_name":"stdout","time":526.050000577,"data":"    \"coverage\": 0.9980974315325689,\n"}
+,{"stream_name":"stdout","time":526.050004123,"data":"    \"meets_90pct\": true\n"}
+,{"stream_name":"stdout","time":526.050007662,"data":"   },\n"}
+,{"stream_name":"stdout","time":526.050010854,"data":"   {\n"}
+,{"stream_name":"stdout","time":526.050013902,"data":"    \"dataset\": \"GSE178514\",\n"}
+,{"stream_name":"stdout","time":526.050017197,"data":"    \"samples\": 9,\n"}
+,{"stream_name":"stdout","time":526.050020437,"data":"    \"vocab_genes_present\": 16679,\n"}
+,{"stream_name":"stdout","time":526.050024025,"data":"    \"vocab_size\": 19973,\n"}
+,{"stream_name":"stdout","time":526.050027535,"data":"    \"coverage\": 0.8350773544284784,\n"}
+,{"stream_name":"stdout","time":526.050030822,"data":"    \"meets_90pct\": false\n"}
+,{"stream_name":"stdout","time":526.050034126,"data":"   }\n"}
+,{"stream_name":"stdout","time":526.050037038,"data":"  ],\n"}
+,{"stream_name":"stdout","time":526.050040047,"data":"  \"first_sample\": {\n"}
+,{"stream_name":"stdout","time":526.050043301,"data":"   \"seconds\": 2.33,\n"}
+,{"stream_name":"stdout","time":526.050046661,"data":"   \"peak_gpu_gb\": 1.571309568,\n"}
+,{"stream_name":"stdout","time":526.050049821,"data":"   \"amp\": \"bf16\",\n"}
+,{"stream_name":"stdout","time":526.050052907,"data":"   \"device\": \"cuda:0\",\n"}
+,{"stream_name":"stdout","time":526.050056158,"data":"   \"shape\": [\n"}
+,{"stream_name":"stdout","time":526.050059511,"data":"    1,\n"}
+,{"stream_name":"stdout","time":526.050062867,"data":"    768\n"}
+,{"stream_name":"stdout","time":526.050066119,"data":"   ]\n"}
+,{"stream_name":"stdout","time":526.050069334,"data":"  },\n"}
+,{"stream_name":"stdout","time":526.050073053,"data":"  \"GSE178514_skipped\": \"coverage 0.835 is below the recommended 90%; not extracted\",\n"}
+,{"stream_name":"stdout","time":526.050076361,"data":"  \"extraction\": {\n"}
+,{"stream_name":"stdout","time":526.050079461,"data":"   \"peak_gpu_gb\": 1.63273216,\n"}
+,{"stream_name":"stdout","time":526.050082656,"data":"   \"batch_size\": 1,\n"}
+,{"stream_name":"stdout","time":526.050086094,"data":"   \"amp\": \"bf16\",\n"}
+,{"stream_name":"stdout","time":526.050089446,"data":"   \"finished\": [\n"}
+,{"stream_name":"stdout","time":526.050098127,"data":"    \"GSE284666\",\n"}
+,{"stream_name":"stdout","time":526.05010153,"data":"    \"GSE309666\"\n"}
+,{"stream_name":"stdout","time":526.05010461,"data":"   ]\n"}
+,{"stream_name":"stdout","time":526.050107996,"data":"  }\n"}
+,{"stream_name":"stdout","time":526.050111065,"data":" },\n"}
+,{"stream_name":"stdout","time":526.05011391,"data":" \"dev_mean_auroc\": {\n"}
+,{"stream_name":"stdout","time":526.05011704,"data":"  \"mean\": 0.9910714285714286,\n"}
+,{"stream_name":"stdout","time":526.050120322,"data":"  \"ci\": [\n"}
+,{"stream_name":"stdout","time":526.050123431,"data":"   0.9732142857142857,\n"}
+,{"stream_name":"stdout","time":526.050126928,"data":"   1.0\n"}
+,{"stream_name":"stdout","time":526.050130188,"data":"  ]\n"}
+,{"stream_name":"stdout","time":526.050133505,"data":" }\n"}
+,{"stream_name":"stdout","time":526.05013665,"data":"}\n"}
+,{"stream_name":"stderr","time":531.105498989,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":531.105540049,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":531.249605114,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":531.249635039,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":531.962307646,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":532.040497517,"data":"[NbConvertApp] Writing 27753 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":534.495548445,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":535.031769186,"data":"[NbConvertApp] Writing 352299 bytes to __results__.html\n"}
+]
