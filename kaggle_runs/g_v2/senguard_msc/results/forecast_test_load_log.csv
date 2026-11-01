@@ -1,0 +1,4 @@
+cohort,status,samples,genes,donors,kind,note
+GSE39035,loaded,16,34949,8,log_array,Platform GPL13607
+GSE139073,loaded,12,55079,6,counts,Resting samples
+GSE9593,loaded,13,20848,3,array,Platform GPL570

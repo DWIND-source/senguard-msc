@@ -5,6 +5,7 @@ import { OrbitControls } from '../vendor/OrbitControls.js';
 const LOW = new THREE.Color('#2f6db5');
 const HIGH = new THREE.Color('#bfe0ff');
 const PICK = new THREE.Color('#ff9a62');
+const GHOST = new THREE.Color('#ff9a62');
 const INK = '#dbe6f3';
 const MUTE = '#8ea2b8';
 
@@ -132,8 +133,8 @@ export class CultureTwin {
     this.wake(20);
   }
 
-  // data: { trends, state, passages, scoreRange }
-  setData(result) {
+  // result: trends and expression space; fc: forecast from each donor's earliest sample
+  setData(result, fc) {
     this.clear();
     const trends = result.trends;
     const all = trends.flatMap((t) => t.points);
@@ -152,7 +153,7 @@ export class CultureTwin {
         const color = LOW.clone().lerp(HIGH, heat);
         const land = new THREE.Vector3(-5.6 + (11.2 * (p.passage - p0)) / (p1 - p0 || 1), 0.25 + 5 * heat, lane(i));
         const mesh = new THREE.Mesh(this.sphereGeo, new THREE.MeshStandardMaterial({ color, roughness: 0.3, metalness: 0.1, emissive: color, emissiveIntensity: 0.32, transparent: true }));
-        const node = { mesh, point: p, donor: t.donor, land, space: toSpace(p.id), shown: 0, target: 1, passage: p.passage };
+        const node = { mesh, point: p, donor: t.donor, land, space: toSpace(p.id), fore: land.clone(), shown: 0, target: 1, passage: p.passage };
         mesh.userData.node = node;
         mesh.position.copy(land);
         this.world.add(mesh);
@@ -169,8 +170,11 @@ export class CultureTwin {
       });
     });
     this.buildAxes({ trends, lane, p0, p1, passages, lo, hi, varExplained: result.state?.varExplained ?? [] });
+    this.buildForecast(fc, trends, lane);
     this.view = 'landscape';
-    this.mix = 0;
+    this.fromKey = 'land';
+    this.toKey = 'land';
+    this.mix = 1;
     this.applyView();
     this.setPassage(p1, false);
     this.controls.autoRotate = !this.reduce;
@@ -218,12 +222,52 @@ export class CultureTwin {
     this.world.add(land, space);
   }
 
+  buildForecast(fc, trends, lane) {
+    this.ghost = new THREE.Group();
+    this.world.add(this.ghost);
+    this.axes.fore = new THREE.Group();
+    this.world.add(this.axes.fore);
+    if (!fc || fc.skipped) { this.hasForecast = false; return; }
+    this.hasForecast = true;
+    const vals = fc.donors.flatMap((d) => [...d.curve.map((c) => c.score), ...d.actual.map((a) => a.score)]);
+    const [lo, hi] = [Math.min(...vals), Math.max(...vals)];
+    const top = Math.max(...fc.donors.flatMap((d) => d.curve.map((c) => c.passage)));
+    const start = Math.min(...fc.donors.map((d) => d.startPassage));
+    const sx = (p) => -5.6 + (11.2 * (p - start)) / (top - start || 1);
+    const sy = (v) => 0.25 + 5 * ((v - lo) / (hi - lo || 1));
+    const laneOf = new Map(trends.map((t, i) => [t.donor, lane(i)]));
+    const ghostGeo = new THREE.SphereGeometry(0.075, 14, 10);
+    const ghostMat = new THREE.MeshBasicMaterial({ color: GHOST, transparent: true, opacity: 0.85 });
+    fc.donors.forEach((d) => {
+      const z = laneOf.get(d.donor) ?? 0;
+      const pts = d.curve.map((c) => new THREE.Vector3(sx(c.passage), sy(c.score), z));
+      this.ghost.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(pts), new THREE.LineBasicMaterial({ color: GHOST, transparent: true, opacity: 0.75 })));
+      pts.forEach((pt) => { const m = new THREE.Mesh(ghostGeo, ghostMat); m.position.copy(pt); this.ghost.add(m); });
+      for (const a of d.actual) {
+        const n = this.nodes.find((x) => x.point.id === a.id);
+        if (n) n.fore = new THREE.Vector3(sx(a.passage), sy(a.score), z);
+      }
+    });
+    const ax = this.axes.fore;
+    const ticks = [...new Set([start, ...[5, 10, 15].filter((p) => p > start && p <= top), top])];
+    ticks.forEach((p) => { const s = textSprite(`P${p}`, { color: MUTE, size: 24 }); s.position.set(sx(p), 0.05, 4.55); ax.add(s); });
+    const title = textSprite('Passage', { size: 28, weight: 600 });
+    title.position.set(0, 0.05, 5.5);
+    ax.add(title);
+    trends.forEach((t, i) => { const s = textSprite(String(t.donor), { size: 26, weight: 600 }); s.position.set(-6.9, 0.25, lane(i)); ax.add(s); });
+    [[0, lo], [0.5, (lo + hi) / 2], [1, hi]].forEach(([f, v]) => { const s = textSprite(v.toFixed(2), { color: MUTE, size: 24 }); s.position.set(-6.75, 0.25 + 5 * f, -4.6); ax.add(s); });
+    const yt = textSprite('SenCat rank score', { size: 28, weight: 600 });
+    yt.position.set(-5.9, 5.95, -4.6);
+    ax.add(yt);
+    ax.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(-6.2, 0, -4.6), new THREE.Vector3(-6.2, 5.3, -4.6)]), new THREE.LineBasicMaterial({ color: '#4d6885' })));
+  }
+
   applyView() {
     if (!this.axes) return;
     const m = this.mix;
     const v = new THREE.Vector3();
     for (const n of this.nodes) {
-      v.copy(n.land).lerp(n.space, m);
+      v.copy(n[this.fromKey]).lerp(n[this.toKey], m);
       n.mesh.position.copy(v);
       const s = Math.max(n.shown, 0.0001);
       n.mesh.scale.setScalar(s);
@@ -232,8 +276,9 @@ export class CultureTwin {
       pos.setXYZ(0, v.x, v.y, v.z);
       pos.setXYZ(1, v.x, 0, v.z);
       pos.needsUpdate = true;
-      n.stem.material.opacity = 0.55 * (1 - m) * n.shown * (this.dim(n.donor) ? 0.25 : 1);
-      n.stem.visible = m < 0.98 && n.mesh.visible;
+      const stemK = this.toKey === 'space' ? 1 - m : this.fromKey === 'space' ? m : 1;
+      n.stem.material.opacity = 0.55 * stemK * n.shown * (this.dim(n.donor) ? 0.25 : 1);
+      n.stem.visible = stemK > 0.02 && n.mesh.visible;
       const op = this.dim(n.donor) ? 0.16 : 1;
       n.mesh.material.opacity = op;
     }
@@ -250,8 +295,12 @@ export class CultureTwin {
       s.mesh.scale.set(1, 1, a.distanceTo(b));
       s.mesh.material.opacity = this.dim(s.donor) ? 0.12 : 0.92;
     }
-    this.axes.land.visible = m < 0.5;
-    this.axes.space.visible = m >= 0.5;
+    const onKey = m >= 0.5 ? this.toKey : this.fromKey;
+    this.axes.land.visible = onKey === 'land';
+    this.axes.space.visible = onKey === 'space';
+    this.axes.fore.visible = onKey === 'fore';
+    this.ghost.visible = onKey === 'fore';
+    if (this.ghost.visible) this.ghost.children.forEach((c) => { if (c.isLine) c.material.opacity = this.focusDonor ? 0.35 : 0.75; });
     if (this.selected) { this.ring.position.copy(this.selected.mesh.position); this.ring.visible = this.selected.mesh.visible; }
   }
 
@@ -261,10 +310,13 @@ export class CultureTwin {
 
   setView(view) {
     if (view === this.view) return;
+    const key = { landscape: 'land', space: 'space', forecast: 'fore' }[view];
+    this.fromKey = this.toKey;
+    this.toKey = key;
     this.view = view;
-    const from = this.mix, to = view === 'space' ? 1 : 0;
-    if (this.reduce) { this.mix = to; this.applyView(); this.wake(5); return; }
-    this.tween = { from, to, start: performance.now(), dur: 1100 };
+    if (this.reduce) { this.mix = 1; this.applyView(); this.wake(5); return; }
+    this.mix = 0;
+    this.tween = { from: 0, to: 1, start: performance.now(), dur: 1100 };
     this.wake(90);
   }
 

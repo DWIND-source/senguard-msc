@@ -8,6 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="css/app.css">
 <script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
 </head>
@@ -28,9 +30,9 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">Research prototype · AMIM 2026 Track 3</p>
-      <h1>A data twin of an MSC culture series, from the first passage to the last.</h1>
-      <p class="lede">It checks the data, follows a published senescence signature donor by donor, and refuses to answer when the data can't support one. Your data stays in this browser.</p>
+      <p class="kicker">For research use · AMIM 2026 Track 3</p>
+      <h1>See where an MSC culture's senescence signature is heading, before you expand it.</h1>
+      <p class="lede">Give it one early RNA-seq sample and it forecasts the signature at later passages. Give it a series and it builds a data twin, donor by donor. It refuses to answer when the data can't support one, and your data stays in this browser.</p>
     </div>
     <dl class="hero-stats" id="hero-stats" aria-label="Key results"></dl>
   </div>
@@ -42,6 +44,7 @@
     <div class="scenarios" role="group" aria-label="Choose data">
       <button type="button" class="scenario" data-scenario="adipose"><b>Adipose MSC</b><small>GSE309666 · 5 donors</small></button>
       <button type="button" class="scenario" data-scenario="marrow"><b>Bone-marrow MSC</b><small>GSE178514 · 3 inferred donors</small></button>
+      <button type="button" class="scenario" data-scenario="early"><b>Early sample only</b><small>Passage 1 only, forecast the rest</small></button>
       <button type="button" class="scenario bad" data-scenario="logged"><b>Already logged</b><small>Bad input, on purpose</small></button>
       <button type="button" class="scenario bad" data-scenario="entrez"><b>Wrong gene ids</b><small>Bad input, on purpose</small></button>
       <button type="button" class="scenario bad" data-scenario="mislabelled"><b>Real labelling error</b><small>GSE125632, as on GEO</small></button>
@@ -49,10 +52,14 @@
     </div>
 
     <form id="upload" class="upload" hidden>
-      <div class="field"><label for="f-table">Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id, one column per sample</small></div>
-      <div class="field"><label for="f-sheet">Sample sheet</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt" required><small>Columns: sample_id, donor, passage</small></div>
-      <div class="field"><label for="f-scale">Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small>Untransformed values only</small></div>
-      <button type="submit" class="primary">Check and build twin</button>
+      <div class="field"><label for="f-table">1. Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id or gene symbol, one column per sample. .tsv, .csv or .gz</small></div>
+      <div class="field"><label for="f-scale">2. Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small>Untransformed values only</small></div>
+      <div class="field"><label for="f-sheet">Sample sheet (optional)</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt"><small>Columns sample_id, donor, passage, or fill in the table below</small></div>
+      <div class="sheet" id="sheet-box" hidden>
+        <p class="sheet-title"><b>3. Tell us about each sample</b> <span id="sheet-note"></span></p>
+        <div class="table-wrap sheet-scroll"><table><thead><tr><th>Use</th><th>Column</th><th>Donor</th><th>Passage</th></tr></thead><tbody id="sheet-rows"></tbody></table></div>
+      </div>
+      <div class="upload-actions"><button type="submit" class="primary">Check and build twin</button><a class="secondary" href="data/example_sample_sheet.csv" download>Example sheet</a></div>
     </form>
 
     <ol class="rail" id="rail" aria-label="Input checks"></ol>
@@ -63,6 +70,7 @@
         <div class="canvas" id="canvas"></div>
         <div class="stage-top">
           <div class="seg" role="group" aria-label="View">
+            <button type="button" id="v-fore" aria-pressed="false">Forecast vs measured</button>
             <button type="button" id="v-land" aria-pressed="true">Score landscape</button>
             <button type="button" id="v-space" aria-pressed="false">Expression space</button>
           </div>
@@ -112,11 +120,11 @@
       <li><span>2</span><b>Normalize</b><p>Median of ratios for counts, verified against PyDESeq2. FPKM is rescaled to TPM.</p></li>
       <li><span>3</span><b>Score</b><p>Published SenCat weights, fetched at a pinned commit and checksum-verified on load.</p></li>
       <li><span>4</span><b>Follow each donor</b><p>Slope and rank correlation against passage, never pooled onto one absolute scale.</p></li>
-      <li><span>5</span><b>Challenge it</b><p>Random signatures as a control, plus a drift clock trained with each cohort held out.</p></li>
+      <li><span>5</span><b>Forecast and challenge</b><p>A drift model learned across cohorts forecasts later passages. Random signatures and a held-out clock act as controls.</p></li>
     </ol>
     <div class="twin-explain">
-      <div><h3>What "twin" means here</h3><p>A digital record of one culture series, built only from its measured expression. You can move through its passages, inspect any sample, and see where it sits in expression space.</p></div>
-      <div><h3>What it doesn't do</h3><p>It doesn't simulate cells or predict potency. We also tested forecasting the next passage, and it didn't pass, so <span id="forecast-note">it is switched off</span>.</p></div>
+      <div><h3>What "twin" means here</h3><p>A digital counterpart of one culture series, built from its measured expression. It forecasts how the senescence signature should move with passage, then lets you compare that with what was measured, sample by sample.</p></div>
+      <div><h3>What it doesn't do</h3><p>It doesn't copy or simulate cells, and transcript data couldn't support that. It doesn't forecast individual genes or a donor's personal rate, because both failed their tests. It says nothing about potency or growth arrest.</p></div>
     </div>
     <p class="note">The same analysis runs in the validated Python pipeline, and automated tests compare the two: scores agree within 1e-13. <a href="https://github.com/DWIND-source/senguard-msc">Code, protocols and result tables</a>.</p>
   </section>

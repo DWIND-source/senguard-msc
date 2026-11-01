@@ -1,0 +1,200 @@
+[{"stream_name":"stderr","time":9.484600055,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.48465645,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.484663886,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.484668962,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":10.325803646,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.325846141,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.325852401,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.325857691,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":45.624487773,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-e/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":49.120085227,"data":"0\n"}
+,{"stream_name":"stdout","time":52.739614607,"data":"Frozen artifacts verified. Model weights and published SenCat weights are unchanged.\n"}
+,{"stream_name":"stdout","time":52.739649852,"data":"Amendment sha256 ec0e7a44bd0e09b48b9074631c0ebcb6e5db7e25310692c578a90a9dfac4c75f\n"}
+,{"stream_name":"stdout","time":53.539967547,"data":"GSE309666: (18, 13661) subjects 5 units 5 passages [np.float64(1.0), np.float64(3.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind normalized\n"}
+,{"stream_name":"stdout","time":53.540023609,"data":"GSE178514: (9, 16832) subjects 3 units 3 passages [np.float64(4.0), np.float64(6.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":54.195958805,"data":"GSE137186: (18, 33119) subjects 4 units 4 passages [np.float64(1.0), np.float64(5.0), np.float64(10.0), np.float64(15.0)] kind counts\n"}
+,{"stream_name":"stdout","time":56.89677094,"data":"GSE275980: (9, 16038) subjects 3 units 3 passages [np.float64(2.0), np.float64(6.0), np.float64(10.0)] kind counts\n"}
+,{"stream_name":"stdout","time":61.908429442,"data":"  GSE125632 column order check: RPS4Y1 agrees with GEO sex in 65% of samples\n"}
+,{"stream_name":"stdout","time":61.90846807,"data":"GSE125632: (10, 58038) subjects 5 units 5 passages [np.float64(2.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":61.908474599,"data":"GSE125632_iMSC: (10, 58038) subjects 5 units 5 passages [np.float64(5.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":63.963144148,"data":"GSE194298: (20, 58233) subjects 12 units 4 passages [np.float64(1.0), np.float64(4.5)] kind normcounts\n"}
+,{"stream_name":"stdout","time":64.551558418,"data":"GSE233634: (12, 58735) subjects 1 units 1 passages [np.float64(3.0), np.float64(6.0), np.float64(9.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":67.481047667,"data":"GSE269586: (23, 36485) subjects 11 units 11 passages [np.float64(0.0), np.float64(2.0), np.float64(3.0)] kind counts\n"}
+,{"stream_name":"stdout","time":69.080896744,"data":"GSE119987: (57, 12502) subjects 5 units 4 passages [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":71.205148166,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":75.532387779,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":83.939828289,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stderr","time":96.20085218,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":96.403927456,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":96.403969461,"data":"\n"}
+,{"stream_name":"stderr","time":96.403976733,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":96.455517545,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":112.54584736,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":112.748848422,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":112.748887149,"data":"\n"}
+,{"stream_name":"stderr","time":112.748894524,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":112.771319521,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":133.39975871,"data":"GSE56362: (54, 21543) subjects 6 units 6 passages [np.float64(3.0), np.float64(5.0), np.float64(7.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":134.043400735,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":138.360688866,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":146.675453789,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stderr","time":158.764087543,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":158.96746568,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":158.967506735,"data":"\n"}
+,{"stream_name":"stderr","time":158.967514057,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":158.992183708,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":175.174185259,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":175.380727179,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":175.380761353,"data":"\n"}
+,{"stream_name":"stderr","time":175.380813979,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":175.407575198,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":195.77311375,"data":"GSE48662 (16, 21754) {'G1': 5, 'WT': 4, 'SEN': 4, 'G2': 3}\n"}
+,{"stream_name":"stdout","time":195.773154737,"data":"        cohort status  samples  genes  subjects  units       kind\n"}
+,{"stream_name":"stdout","time":195.773160303,"data":"     GSE309666 loaded       18  13661       5.0    5.0 normalized\n"}
+,{"stream_name":"stdout","time":195.773180367,"data":"     GSE178514 loaded        9  16832       3.0    3.0       fpkm\n"}
+,{"stream_name":"stdout","time":195.77318388,"data":"     GSE137186 loaded       18  33119       4.0    4.0     counts\n"}
+,{"stream_name":"stdout","time":195.773187017,"data":"     GSE275980 loaded        9  16038       3.0    3.0     counts\n"}
+,{"stream_name":"stdout","time":195.773190205,"data":"     GSE125632 loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":195.773193388,"data":"GSE125632_iMSC loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":195.773196661,"data":"     GSE194298 loaded       20  58233      12.0    4.0 normcounts\n"}
+,{"stream_name":"stdout","time":195.773199922,"data":"     GSE233634 loaded       12  58735       1.0    1.0       fpkm\n"}
+,{"stream_name":"stdout","time":195.773203454,"data":"     GSE269586 loaded       23  36485      11.0   11.0     counts\n"}
+,{"stream_name":"stdout","time":195.773208052,"data":"     GSE119987 loaded       57  12502       5.0    4.0  log_array\n"}
+,{"stream_name":"stdout","time":195.773212825,"data":"      GSE56362 loaded       54  21543       6.0    6.0  log_array\n"}
+,{"stream_name":"stdout","time":195.773216239,"data":"      GSE48662 loaded       16  21754       NaN    NaN  log_array\n"}
+,{"stream_name":"stdout","time":230.425397909,"data":"score           Hallmark E2F (inverted)  Hallmark G2M (inverted)  SenCat published  SenMayo  Yang 2023 7 genes  hUSI\n"}
+,{"stream_name":"stdout","time":230.425444257,"data":"cohort                                                                                                              \n"}
+,{"stream_name":"stdout","time":230.425451838,"data":"GSE119987                          91.5                     93.5              77.9     96.8              100.0  67.4\n"}
+,{"stream_name":"stdout","time":230.425457515,"data":"GSE125632                         100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":230.425463387,"data":"GSE125632_iMSC                    100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":230.425469995,"data":"GSE137186                          97.5                     95.0              90.1     97.6              100.0  95.1\n"}
+,{"stream_name":"stdout","time":230.425475882,"data":"GSE178514                         100.0                     99.0              96.8     95.2              100.0  95.7\n"}
+,{"stream_name":"stdout","time":230.425481825,"data":"GSE194298                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":230.4254877,"data":"GSE233634                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":230.425493827,"data":"GSE269586                         100.0                     99.0              97.1     91.2              100.0  95.3\n"}
+,{"stream_name":"stdout","time":230.425499724,"data":"GSE275980                          99.5                     99.5              95.9     78.4              100.0  85.8\n"}
+,{"stream_name":"stdout","time":230.425505767,"data":"GSE309666                         100.0                     98.0              96.9     72.0               85.7  78.9\n"}
+,{"stream_name":"stdout","time":230.425511461,"data":"GSE48662                           97.0                     95.0              88.5     96.0              100.0  89.7\n"}
+,{"stream_name":"stdout","time":230.425517469,"data":"GSE56362                           97.0                     95.0              88.2     96.8              100.0  89.5\n"}
+,{"stream_name":"stdout","time":230.425537178,"data":"hUSI training rows by cohort accession: {'GSE309666': 0, 'GSE178514': 9, 'GSE137186': 0, 'GSE275980': 0, 'GSE125632': 0, 'GSE194298': 0, 'GSE233634': 0, 'GSE269586': 0, 'GSE119987': 0, 'GSE56362': 0, 'GSE48662': 0}\n"}
+,{"stream_name":"stdout","time":230.560960425,"data":"Amendment 2 sha256 8ed4073d170c13a3a2971b9f622435929e6c5c8b30b5f517648e6d7424fc7b72\n"}
+,{"stream_name":"stdout","time":230.56101385,"data":"Missing cohorts: []\n"}
+,{"stream_name":"stdout","time":230.710601316,"data":"Shared genes 7845\n"}
+,{"stream_name":"stdout","time":230.710637239,"data":"GSE309666 subjects 5\n"}
+,{"stream_name":"stdout","time":230.710641713,"data":"GSE178514 subjects 3\n"}
+,{"stream_name":"stdout","time":230.762249288,"data":"GSE137186 subjects 4\n"}
+,{"stream_name":"stdout","time":230.762285447,"data":"GSE275980 subjects 3\n"}
+,{"stream_name":"stdout","time":230.954126128,"data":"GSE194298 subjects 8\n"}
+,{"stream_name":"stdout","time":230.954164963,"data":"GSE233634 subjects 1\n"}
+,{"stream_name":"stdout","time":231.399983083,"data":"GSE119987 subjects 5\n"}
+,{"stream_name":"stdout","time":231.734372441,"data":"GSE56362 subjects 6\n"}
+,{"stream_name":"stdout","time":232.00421138,"data":"SenCat genes among shared 3695\n"}
+,{"stream_name":"stdout","time":232.287538538,"data":"   cohort     unit  from   to  rmse_carry  rmse_model  corr_change  err_score_carry  err_score_model  model_better  score_better\n"}
+,{"stream_name":"stdout","time":232.287578921,"data":"GSE119987       F1   2.0 13.0       0.096       0.087        0.504            0.090            0.052          True          True\n"}
+,{"stream_name":"stdout","time":232.287585563,"data":"GSE119987       F2   3.0 13.5       0.115       0.100        0.508            0.131            0.009          True          True\n"}
+,{"stream_name":"stdout","time":232.28759049,"data":"GSE119987       M1   1.0 12.0       0.108       0.115        0.345            0.074            0.078         False         False\n"}
+,{"stream_name":"stdout","time":232.287595712,"data":"GSE119987       M2   2.0 12.0       0.071       0.084        0.313            0.056            0.075         False         False\n"}
+,{"stream_name":"stdout","time":232.287601062,"data":"GSE137186    PN241   1.0 15.0       0.115       0.142        0.166            0.027            0.143         False         False\n"}
+,{"stream_name":"stdout","time":232.287606404,"data":"GSE137186    PN242   1.0 15.0       0.121       0.147        0.155            0.007            0.168         False         False\n"}
+,{"stream_name":"stdout","time":232.287610875,"data":"GSE137186    PN251   1.0 15.0       0.090       0.106        0.409            0.126            0.053         False          True\n"}
+,{"stream_name":"stdout","time":232.287615905,"data":"GSE137186    PN264   1.0 15.0       0.116       0.133        0.281            0.105            0.062         False          True\n"}
+,{"stream_name":"stdout","time":232.287620794,"data":"GSE178514      393   4.0 12.0       0.100       0.102        0.186            0.080            0.001         False          True\n"}
+,{"stream_name":"stdout","time":232.287625654,"data":"GSE178514      411   4.0 12.0       0.059       0.065        0.257            0.048            0.036         False          True\n"}
+,{"stream_name":"stdout","time":232.287630209,"data":"GSE178514      413   4.0 12.0       0.081       0.081        0.281            0.080            0.000         False          True\n"}
+,{"stream_name":"stdout","time":232.287634751,"data":"GSE194298        1   1.0  4.5       0.101       0.107        0.103            0.080            0.075         False          True\n"}
+,{"stream_name":"stdout","time":232.28765575,"data":"GSE194298        2   1.0  4.5       0.074       0.085        0.098            0.019            0.110         False         False\n"}
+,{"stream_name":"stdout","time":232.287660874,"data":"GSE194298        3   1.0  4.5       0.088       0.089        0.276            0.100            0.023         False          True\n"}
+,{"stream_name":"stdout","time":232.287668019,"data":"GSE194298        4   1.0  4.5       0.086       0.080        0.412            0.082            0.024          True          True\n"}
+,{"stream_name":"stdout","time":232.287673079,"data":"GSE233634  lineage   3.0 12.0       0.113       0.146       -0.307            0.022            0.134         False         False\n"}
+,{"stream_name":"stdout","time":232.287678196,"data":"GSE275980       C1   2.0 10.0       0.113       0.108        0.335            0.097            0.037          True          True\n"}
+,{"stream_name":"stdout","time":232.287683182,"data":"GSE275980       C2   2.0 10.0       0.147       0.143        0.274            0.222            0.090          True          True\n"}
+,{"stream_name":"stdout","time":232.287688272,"data":"GSE275980       C3   2.0 10.0       0.151       0.143        0.321            0.159            0.028          True          True\n"}
+,{"stream_name":"stdout","time":232.287693178,"data":"GSE309666        A   1.0  7.0       0.171       0.149        0.519            0.267            0.143          True          True\n"}
+,{"stream_name":"stdout","time":232.287698203,"data":"GSE309666        B   1.0  8.0       0.183       0.159        0.524            0.277            0.143          True          True\n"}
+,{"stream_name":"stdout","time":232.287703111,"data":"GSE309666        C   1.0  9.0       0.168       0.147        0.493            0.235            0.092          True          True\n"}
+,{"stream_name":"stdout","time":232.287708031,"data":"GSE309666        D   1.0 10.0       0.161       0.145        0.433            0.180            0.026          True          True\n"}
+,{"stream_name":"stdout","time":232.28771296,"data":"GSE309666        E   1.0 10.0       0.158       0.129        0.594            0.297            0.146          True          True\n"}
+,{"stream_name":"stdout","time":232.287718025,"data":" GSE56362   110877   3.0  7.0       0.228       0.228        0.051            0.086            0.049         False          True\n"}
+,{"stream_name":"stdout","time":232.287723076,"data":" GSE56362   167696   3.0  7.0       0.241       0.236        0.238            0.100            0.061          True          True\n"}
+,{"stream_name":"stdout","time":232.287728131,"data":" GSE56362   8F3560   3.0  7.0       0.194       0.194        0.076            0.043            0.009          True          True\n"}
+,{"stream_name":"stdout","time":232.287733362,"data":" GSE56362 PCBM1632   3.0  7.0       0.304       0.294        0.454            0.460            0.425          True          True\n"}
+,{"stream_name":"stdout","time":232.287738328,"data":" GSE56362 PCBM1641   3.0  7.0       0.227       0.220        0.332            0.215            0.181          True          True\n"}
+,{"stream_name":"stdout","time":232.287743287,"data":" GSE56362 PCBM1662   3.0  7.0       0.172       0.168        0.236            0.111            0.078          True          True\n"}
+,{"stream_name":"stdout","time":232.287747993,"data":"           donors  rmse_carry  rmse_model   corr  better  score_better  err_carry  err_model\n"}
+,{"stream_name":"stdout","time":232.287753284,"data":"cohort                                                                                      \n"}
+,{"stream_name":"stdout","time":232.287758245,"data":"GSE119987       4       0.102       0.093  0.424       2             2      0.082      0.064\n"}
+,{"stream_name":"stdout","time":232.287766645,"data":"GSE137186       4       0.116       0.137  0.224       0             2      0.066      0.102\n"}
+,{"stream_name":"stdout","time":232.287771721,"data":"GSE178514       3       0.081       0.081  0.257       0             3      0.080      0.001\n"}
+,{"stream_name":"stdout","time":232.287776589,"data":"GSE194298       4       0.087       0.087  0.190       1             3      0.081      0.050\n"}
+,{"stream_name":"stdout","time":232.287781453,"data":"GSE233634       1       0.113       0.146 -0.307       0             0      0.022      0.134\n"}
+,{"stream_name":"stdout","time":232.287786246,"data":"GSE275980       3       0.147       0.143  0.321       3             3      0.159      0.037\n"}
+,{"stream_name":"stdout","time":232.287791067,"data":"GSE309666       5       0.168       0.147  0.519       5             5      0.267      0.143\n"}
+,{"stream_name":"stdout","time":232.287796061,"data":"GSE56362        6       0.227       0.224  0.237       5             6      0.106      0.070\n"}
+,{"stream_name":"stdout","time":234.605588862,"data":"   cohort     unit  gamma_early  gamma_late  rmse_carry  rmse_population  rmse_personal\n"}
+,{"stream_name":"stdout","time":234.605630588,"data":"GSE119987       F1       0.9902      0.5578      0.0755           0.0725         0.0723\n"}
+,{"stream_name":"stdout","time":234.605636377,"data":"GSE119987       F2       3.1558      0.4277      0.0929           0.0931         0.1631\n"}
+,{"stream_name":"stdout","time":234.605641681,"data":"GSE119987       M1       0.0000      0.5894      0.1096           0.1053         0.1096\n"}
+,{"stream_name":"stdout","time":234.6056465,"data":"GSE119987       M2       1.1769      0.0937      0.0605           0.0800         0.0870\n"}
+,{"stream_name":"stdout","time":234.60565109,"data":"GSE137186    PN241       0.0260      0.3585      0.0937           0.0973         0.0935\n"}
+,{"stream_name":"stdout","time":234.605654324,"data":"GSE137186    PN242       0.2909      0.0541      0.0793           0.0920         0.0801\n"}
+,{"stream_name":"stdout","time":234.605657573,"data":"GSE137186    PN251       0.1747      0.5494      0.0680           0.0662         0.0651\n"}
+,{"stream_name":"stdout","time":234.605661325,"data":"GSE137186    PN264       0.0563      0.6012      0.0931           0.0904         0.0923\n"}
+,{"stream_name":"stdout","time":234.605664439,"data":"GSE178514      393       0.3296      0.4377      0.0635           0.0644         0.0623\n"}
+,{"stream_name":"stdout","time":234.605667561,"data":"GSE178514      411       0.1741      0.4130      0.0539           0.0553         0.0529\n"}
+,{"stream_name":"stdout","time":234.605670706,"data":"GSE178514      413       0.5268      0.4716      0.0415           0.0421         0.0390\n"}
+,{"stream_name":"stdout","time":234.605673894,"data":"GSE233634  lineage       0.0455     -1.0815      0.0836           0.1025         0.0842\n"}
+,{"stream_name":"stdout","time":234.605677175,"data":"GSE275980       C1       0.7269      0.4657      0.0390           0.0394         0.0382\n"}
+,{"stream_name":"stdout","time":234.605680312,"data":"GSE275980       C2       0.7824      0.4923      0.0785           0.0785         0.0781\n"}
+,{"stream_name":"stdout","time":234.605683419,"data":"GSE275980       C3       0.9536      0.5622      0.0454           0.0449         0.0447\n"}
+,{"stream_name":"stdout","time":234.60568663,"data":"GSE309666        A       0.8060      2.1647      0.1348           0.1233         0.1251\n"}
+,{"stream_name":"stdout","time":234.605690205,"data":"GSE309666        B       0.9166      1.9695      0.1493           0.1368         0.1375\n"}
+,{"stream_name":"stdout","time":234.605693357,"data":"GSE309666        C       0.4955      1.7356      0.1403           0.1259         0.1319\n"}
+,{"stream_name":"stdout","time":234.605713561,"data":"GSE309666        D       0.6269      1.1759      0.1439           0.1347         0.1366\n"}
+,{"stream_name":"stdout","time":234.605717074,"data":"GSE309666        E       0.7955      1.6110      0.1334           0.1166         0.1189\n"}
+,{"stream_name":"stdout","time":234.605720213,"data":" GSE56362   110877       1.6386     -1.1626      0.2313           0.2320         0.2327\n"}
+,{"stream_name":"stdout","time":234.605723344,"data":" GSE56362   167696       0.2082      5.3077      0.2535           0.2515         0.2531\n"}
+,{"stream_name":"stdout","time":234.605728102,"data":" GSE56362   8F3560       0.0000      4.6312      0.2186           0.2166         0.2186\n"}
+,{"stream_name":"stdout","time":234.60573137,"data":" GSE56362 PCBM1632       5.0000      5.7243      0.2191           0.2166         0.2113\n"}
+,{"stream_name":"stdout","time":234.605734484,"data":" GSE56362 PCBM1641       4.2547      1.3869      0.1608           0.1603         0.1629\n"}
+,{"stream_name":"stdout","time":234.605737594,"data":" GSE56362 PCBM1662       0.7458      2.9173      0.1901           0.1888         0.1890\n"}
+,{"stream_name":"stdout","time":234.60574085,"data":"{\n"}
+,{"stream_name":"stdout","time":234.60574419,"data":" \"donors\": 30,\n"}
+,{"stream_name":"stdout","time":234.605747475,"data":" \"share_rmse_better\": 0.5333333333333333,\n"}
+,{"stream_name":"stdout","time":234.605750824,"data":" \"cohorts_better\": 4,\n"}
+,{"stream_name":"stdout","time":234.605753948,"data":" \"cohorts\": 8,\n"}
+,{"stream_name":"stdout","time":234.605757028,"data":" \"share_score_better\": 0.8,\n"}
+,{"stream_name":"stdout","time":234.605760251,"data":" \"median_corr_change\": 0.2969183979829918,\n"}
+,{"stream_name":"stdout","time":234.605763531,"data":" \"negative_control_share\": 0.2771428571428571,\n"}
+,{"stream_name":"stdout","time":234.605766665,"data":" \"median_rmse_reduction\": 0.010419243832535452,\n"}
+,{"stream_name":"stdout","time":234.605769894,"data":" \"median_err_score_model\": 0.06832494902363173,\n"}
+,{"stream_name":"stdout","time":234.605773015,"data":" \"median_err_score_carry\": 0.09828212991038535,\n"}
+,{"stream_name":"stdout","time":234.605776181,"data":" \"personal_share_better\": 0.46153846153846156,\n"}
+,{"stream_name":"stdout","time":234.605779348,"data":" \"personal_donors\": 26,\n"}
+,{"stream_name":"stdout","time":234.605782432,"data":" \"rate_persistence_spearman\": 0.09163959785156152,\n"}
+,{"stream_name":"stdout","time":234.605785598,"data":" \"population_better_than_carry_later_step\": 0.5769230769230769,\n"}
+,{"stream_name":"stdout","time":234.605788822,"data":" \"passes\": false,\n"}
+,{"stream_name":"stdout","time":234.605791933,"data":" \"personal_passes\": false\n"}
+,{"stream_name":"stdout","time":234.605795017,"data":"}\n"}
+,{"stream_name":"stdout","time":234.6057979,"data":"          n    rmse  score_err  score_err_p90\n"}
+,{"stream_name":"stdout","time":234.605801018,"data":"dt_bin                                       \n"}
+,{"stream_name":"stdout","time":234.605804097,"data":"under 1   6  0.2240     0.0699         0.3031\n"}
+,{"stream_name":"stdout","time":234.605807147,"data":"1 to 2   12  0.1047     0.0366         0.1313\n"}
+,{"stream_name":"stdout","time":234.605810141,"data":"over 2   12  0.1308     0.0766         0.1461\n"}
+,{"stream_name":"stdout","time":234.60581329,"data":"Falling with passage: ['CDC20', 'MKI67', 'LMNB1', 'KIF20A', 'PRC1', 'TOP2A', 'TK1', 'CENPF', 'HMGB3', 'PLK1', 'MARCKSL1', 'NDN', 'DLGAP5', 'RRM2', 'CCNA2', 'FOXM1', 'LBR', 'KIF11', 'BUB1B', 'BUB1', 'CRISPLD2', 'HAS1', 'UBE2C', 'CEP55', 'CXCL12']\n"}
+,{"stream_name":"stdout","time":234.60582098,"data":"Rising with passage: ['TNFRSF11B', 'MASP1', 'TNFAIP3', 'ANGPT1', 'CD36', 'PCOLCE2', 'KRT18', 'ARHGAP29', 'USP53', 'IL6', 'PLAT', 'SERPINB2', 'PDE5A', 'NIPAL3', 'ABLIM3', 'BDNF', 'BST1', 'TFPI', 'MOXD1', 'MMP1', 'DRAM1', 'SLC1A1', 'DMD', 'PAMR1', 'DKK1']\n"}
+,{"stream_name":"stdout","time":234.605824662,"data":"Share of top 100 falling genes in E2F/G2M: 0.53 | rising: 0.02\n"}
+,{"stream_name":"stdout","time":234.605827786,"data":"donor         status  last_passage  gamma_early\n"}
+,{"stream_name":"stdout","time":234.605830849,"data":"    A       arrested           7.0        0.806\n"}
+,{"stream_name":"stdout","time":234.60583396,"data":"    B       arrested           8.0        0.917\n"}
+,{"stream_name":"stdout","time":234.605837247,"data":"    C       arrested           9.0        0.496\n"}
+,{"stream_name":"stdout","time":234.605840324,"data":"    D stopped at p10          10.0        0.627\n"}
+,{"stream_name":"stdout","time":234.605843379,"data":"    E stopped at p10          10.0        0.795\n"}
+,{"stream_name":"stderr","time":238.553505717,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":238.553543383,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":238.763837871,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":238.763869557,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":239.695676733,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":239.808221124,"data":"[NbConvertApp] Writing 68177 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":243.207620196,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":244.112325461,"data":"[NbConvertApp] Writing 512255 bytes to __results__.html\n"}
+]

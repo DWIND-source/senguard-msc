@@ -269,11 +269,50 @@
   "bfHigh": 1.0,
   "bfGb": 1.6,
   "confCov": 0.895,
+  "testBeat": 13,
+  "testN": 17,
+  "testP": 0.049,
+  "testErr": 0.01,
+  "testCarry": 0.04,
+  "testNeg": 0.33,
+  "testRange": 0.14,
+  "testRose": 17,
+  "tieErr": 0.026,
+  "tieCarry": 0.029,
+  "midErrMax": 0.033,
+  "vpRmse": 0.53,
+  "vpCohorts": 4,
+  "vpN": 8,
+  "vpPersonal": 0.46,
+  "vpPersist": 0.09,
   "forecastBetter": 0.625,
   "forecastDonors": 16,
   "forecastDirection": 15,
   "forecastError": 2.2
  },
+ "forecastCohorts": [
+  {
+   "cohort": "GSE139073",
+   "donors": 6,
+   "better": 3,
+   "err_forecast": 0.026,
+   "err_carry": 0.029
+  },
+  {
+   "cohort": "GSE39035",
+   "donors": 8,
+   "better": 7,
+   "err_forecast": 0.009,
+   "err_carry": 0.043
+  },
+  {
+   "cohort": "GSE9593",
+   "donors": 3,
+   "better": 3,
+   "err_forecast": 0.0,
+   "err_carry": 0.09
+  }
+ ],
  "guidance": {
   "minimumChange": "In re-sequenced samples the score differed by 0.06 and 0.26, so treat changes under about 0.4 as possibly technical. This rests on two pairs from one cohort."
  }

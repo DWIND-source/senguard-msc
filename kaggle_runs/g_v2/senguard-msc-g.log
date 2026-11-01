@@ -1,0 +1,175 @@
+[{"stream_name":"stderr","time":8.268597146,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.268665089,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.268670102,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.268673413,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":9.039256207,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":9.039292457,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":9.039298544,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":9.039303519,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":44.598648132,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-f/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":47.74750006,"data":"0\n"}
+,{"stream_name":"stdout","time":51.05303902,"data":"Frozen artifacts verified. Model weights and published SenCat weights are unchanged.\n"}
+,{"stream_name":"stdout","time":51.053118189,"data":"Amendment sha256 ec0e7a44bd0e09b48b9074631c0ebcb6e5db7e25310692c578a90a9dfac4c75f\n"}
+,{"stream_name":"stdout","time":51.761891784,"data":"GSE309666: (18, 13661) subjects 5 units 5 passages [np.float64(1.0), np.float64(3.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind normalized\n"}
+,{"stream_name":"stdout","time":51.76196491,"data":"GSE178514: (9, 16832) subjects 3 units 3 passages [np.float64(4.0), np.float64(6.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":52.419022696,"data":"GSE137186: (18, 33119) subjects 4 units 4 passages [np.float64(1.0), np.float64(5.0), np.float64(10.0), np.float64(15.0)] kind counts\n"}
+,{"stream_name":"stdout","time":55.073698725,"data":"GSE275980: (9, 16038) subjects 3 units 3 passages [np.float64(2.0), np.float64(6.0), np.float64(10.0)] kind counts\n"}
+,{"stream_name":"stdout","time":58.618225308,"data":"  GSE125632 column order check: RPS4Y1 agrees with GEO sex in 65% of samples\n"}
+,{"stream_name":"stdout","time":58.618262333,"data":"GSE125632: (10, 58038) subjects 5 units 5 passages [np.float64(2.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":58.618269439,"data":"GSE125632_iMSC: (10, 58038) subjects 5 units 5 passages [np.float64(5.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":60.135292952,"data":"GSE194298: (20, 58233) subjects 12 units 4 passages [np.float64(1.0), np.float64(4.5)] kind normcounts\n"}
+,{"stream_name":"stdout","time":60.693870141,"data":"GSE233634: (12, 58735) subjects 1 units 1 passages [np.float64(3.0), np.float64(6.0), np.float64(9.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":63.345588966,"data":"GSE269586: (23, 36485) subjects 11 units 11 passages [np.float64(0.0), np.float64(2.0), np.float64(3.0)] kind counts\n"}
+,{"stream_name":"stdout","time":64.912245114,"data":"GSE119987: (57, 12502) subjects 5 units 4 passages [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":66.625989524,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":70.690099436,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":78.751960779,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stderr","time":90.751118509,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":90.958170807,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":90.958211597,"data":"\n"}
+,{"stream_name":"stderr","time":90.958222465,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":90.969144325,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":106.823136564,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":107.026682103,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":107.026722204,"data":"\n"}
+,{"stream_name":"stderr","time":107.026729127,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":107.033122302,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":127.611846605,"data":"GSE56362: (54, 21543) subjects 6 units 6 passages [np.float64(3.0), np.float64(5.0), np.float64(7.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":127.993373918,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":132.046653657,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":140.100097863,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stderr","time":151.955304966,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":152.158274797,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":152.158314205,"data":"\n"}
+,{"stream_name":"stderr","time":152.158320737,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":152.16582208,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":168.02013182,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":168.226170995,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":168.22620084,"data":"\n"}
+,{"stream_name":"stderr","time":168.226206015,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":168.230374541,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":188.573528419,"data":"GSE48662 (16, 21754) {'G1': 5, 'WT': 4, 'SEN': 4, 'G2': 3}\n"}
+,{"stream_name":"stdout","time":188.573568566,"data":"        cohort status  samples  genes  subjects  units       kind\n"}
+,{"stream_name":"stdout","time":188.573576457,"data":"     GSE309666 loaded       18  13661       5.0    5.0 normalized\n"}
+,{"stream_name":"stdout","time":188.573601762,"data":"     GSE178514 loaded        9  16832       3.0    3.0       fpkm\n"}
+,{"stream_name":"stdout","time":188.573606912,"data":"     GSE137186 loaded       18  33119       4.0    4.0     counts\n"}
+,{"stream_name":"stdout","time":188.573611526,"data":"     GSE275980 loaded        9  16038       3.0    3.0     counts\n"}
+,{"stream_name":"stdout","time":188.573616092,"data":"     GSE125632 loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":188.573620784,"data":"GSE125632_iMSC loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":188.573625889,"data":"     GSE194298 loaded       20  58233      12.0    4.0 normcounts\n"}
+,{"stream_name":"stdout","time":188.573630416,"data":"     GSE233634 loaded       12  58735       1.0    1.0       fpkm\n"}
+,{"stream_name":"stdout","time":188.573635041,"data":"     GSE269586 loaded       23  36485      11.0   11.0     counts\n"}
+,{"stream_name":"stdout","time":188.57363948,"data":"     GSE119987 loaded       57  12502       5.0    4.0  log_array\n"}
+,{"stream_name":"stdout","time":188.573644125,"data":"      GSE56362 loaded       54  21543       6.0    6.0  log_array\n"}
+,{"stream_name":"stdout","time":188.573648781,"data":"      GSE48662 loaded       16  21754       NaN    NaN  log_array\n"}
+,{"stream_name":"stdout","time":222.530842325,"data":"score           Hallmark E2F (inverted)  Hallmark G2M (inverted)  SenCat published  SenMayo  Yang 2023 7 genes  hUSI\n"}
+,{"stream_name":"stdout","time":222.530876465,"data":"cohort                                                                                                              \n"}
+,{"stream_name":"stdout","time":222.530883872,"data":"GSE119987                          91.5                     93.5              77.9     96.8              100.0  67.4\n"}
+,{"stream_name":"stdout","time":222.530890417,"data":"GSE125632                         100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":222.530896143,"data":"GSE125632_iMSC                    100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":222.530919395,"data":"GSE137186                          97.5                     95.0              90.1     97.6              100.0  95.1\n"}
+,{"stream_name":"stdout","time":222.530925645,"data":"GSE178514                         100.0                     99.0              96.8     95.2              100.0  95.7\n"}
+,{"stream_name":"stdout","time":222.530931712,"data":"GSE194298                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":222.530937765,"data":"GSE233634                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":222.530943768,"data":"GSE269586                         100.0                     99.0              97.1     91.2              100.0  95.3\n"}
+,{"stream_name":"stdout","time":222.530949847,"data":"GSE275980                          99.5                     99.5              95.9     78.4              100.0  85.8\n"}
+,{"stream_name":"stdout","time":222.530955641,"data":"GSE309666                         100.0                     98.0              96.9     72.0               85.7  78.9\n"}
+,{"stream_name":"stdout","time":222.530961705,"data":"GSE48662                           97.0                     95.0              88.5     96.0              100.0  89.7\n"}
+,{"stream_name":"stdout","time":222.530967928,"data":"GSE56362                           97.0                     95.0              88.2     96.8              100.0  89.5\n"}
+,{"stream_name":"stdout","time":222.530983893,"data":"hUSI training rows by cohort accession: {'GSE309666': 0, 'GSE178514': 9, 'GSE137186': 0, 'GSE275980': 0, 'GSE125632': 0, 'GSE194298': 0, 'GSE233634': 0, 'GSE269586': 0, 'GSE119987': 0, 'GSE56362': 0, 'GSE48662': 0}\n"}
+,{"stream_name":"stdout","time":222.577208511,"data":"Amendment 3 sha256 dc8d0819a793886b2df1cd6433502b814b0cc5faa337f804748790152433fa57\n"}
+,{"stream_name":"stdout","time":222.577241089,"data":"Frozen model sha256 eab353e1d1be50393e38faf4355fd94fba353fd294e6f675cad0b7077cb2c46c\n"}
+,{"stream_name":"stdout","time":222.577246787,"data":"80% error range from leave-one-cohort-out: 0.1425 on 30 donors\n"}
+,{"stream_name":"stdout","time":227.875156399,"data":"  retry GSE39035_series_matrix.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 4417650 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":233.030726061,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":237.090267768,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":245.148090864,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stderr","time":257.003234585,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":257.20972849,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":257.209770241,"data":"\n"}
+,{"stream_name":"stderr","time":257.209777358,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":257.214581174,"data":"  retry GPL13607.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":273.069822178,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":273.272797321,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":273.272847721,"data":"\n"}
+,{"stream_name":"stderr","time":273.272854498,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":273.279288758,"data":"  retry GPL13607.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":359.35395438,"data":"GSE39035 (16, 34949) donors 8 [np.float64(4.0), np.float64(8.0)]\n"}
+,{"stream_name":"stdout","time":364.405417707,"data":"  retry GSE139073_raw_counts.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2238169 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":373.470967176,"data":"  retry GSE139073_raw_counts.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2238169 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":381.907489482,"data":"  columns ['S1207', 'S1208', 'S1209', 'S1210', 'S1211', 'S1212'] | first ids [0, 3]\n"}
+,{"stream_name":"stdout","time":384.536978786,"data":"  selected [['BM126', 'P3', 'S5529'], ['BM127', 'P3', 'S5541'], ['BM285', 'P3', 'S5533'], ['BM293', 'P3', 'S5673'], ['BM324', 'P3', 'S5674'], ['BM784', 'P3', 'S5537'], ['BM126', 'P6', 'S5547'], ['BM127', 'P6', 'S5546'], ['BM285', 'P6', 'S5548'], ['BM293', 'P6', 'S5681'], ['BM324', 'P6', 'S5682'], ['BM784', 'P6', 'S5545']]\n"}
+,{"stream_name":"stdout","time":384.537024169,"data":"  gene ids ['ENSG00000223972', 'ENSG00000227232', 'ENSG00000278267'] | rows 58233\n"}
+,{"stream_name":"stdout","time":384.537046257,"data":"GSE139073 (12, 55079) donors 6 [np.float64(3.0), np.float64(6.0)]\n"}
+,{"stream_name":"stdout","time":389.800513502,"data":"  retry GSE9593_series_matrix.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2852274 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":398.857168929,"data":"  retry GSE9593_series_matrix.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2852274 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":412.688593932,"data":"  retry GPL570.annot.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 8471521 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":428.971384593,"data":"GSE9593 (13, 20848) donors 3 [np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(10.0), np.float64(11.0)]\n"}
+,{"stream_name":"stdout","time":428.971424402,"data":"   cohort status  samples  genes  donors      kind              note\n"}
+,{"stream_name":"stdout","time":428.971429393,"data":" GSE39035 loaded       16  34949       8 log_array Platform GPL13607\n"}
+,{"stream_name":"stdout","time":428.971433713,"data":"GSE139073 loaded       12  55079       6    counts   Resting samples\n"}
+,{"stream_name":"stdout","time":428.971439446,"data":"  GSE9593 loaded       13  20848       3     array   Platform GPL570\n"}
+,{"stream_name":"stdout","time":431.162136247,"data":"   cohort  donor  from   to  score_start  score_actual  score_forecast  err_forecast  err_carry  genes  signature_genes  forecast_better  in_range  actual_rose\n"}
+,{"stream_name":"stdout","time":431.162192584,"data":" GSE39035    164   4.0  8.0       0.0111        0.0695          0.0597        0.0098     0.0584   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162200053,"data":" GSE39035    172   4.0  8.0       0.0420        0.0821          0.0894        0.0073     0.0401   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162206233,"data":" GSE39035    194   4.0  8.0       0.0260        0.0784          0.0730        0.0054     0.0524   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162212707,"data":" GSE39035    271   4.0  8.0      -0.0015        0.0520          0.0474        0.0046     0.0535   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162218778,"data":" GSE39035     88   4.0  8.0       0.0211        0.0391          0.0683        0.0292     0.0180   7654             3614            False      True         True\n"}
+,{"stream_name":"stdout","time":431.162225227,"data":" GSE39035     89   4.0  8.0       0.0348        0.0715          0.0817        0.0102     0.0367   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162231198,"data":" GSE39035     91   4.0  8.0       0.0493        0.0778          0.0958        0.0180     0.0284   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162237273,"data":" GSE39035     92   4.0  8.0       0.0065        0.0519          0.0548        0.0028     0.0455   7654             3614             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162243263,"data":"GSE139073  BM126   3.0  6.0      -0.1437       -0.1123         -0.0903        0.0220     0.0315   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162249223,"data":"GSE139073  BM127   3.0  6.0      -0.1490       -0.1184         -0.0940        0.0244     0.0307   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162267842,"data":"GSE139073  BM285   3.0  6.0      -0.0903       -0.0899         -0.0356        0.0544     0.0003   7845             3695            False      True         True\n"}
+,{"stream_name":"stdout","time":431.162274924,"data":"GSE139073  BM293   3.0  6.0      -0.1103       -0.0837         -0.0558        0.0278     0.0267   7845             3695            False      True         True\n"}
+,{"stream_name":"stdout","time":431.162280161,"data":"GSE139073  BM324   3.0  6.0      -0.1101       -0.0874         -0.0570        0.0304     0.0226   7845             3695            False      True         True\n"}
+,{"stream_name":"stdout","time":431.162285151,"data":"GSE139073  BM784   3.0  6.0      -0.1369       -0.0964         -0.0834        0.0131     0.0405   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162290109,"data":"  GSE9593 donor1   2.0 11.0       0.0320        0.1497          0.1497        0.0000     0.1177   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162295205,"data":"  GSE9593 donor2   2.0  7.0       0.0608        0.1450          0.1449        0.0001     0.0842   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162300195,"data":"  GSE9593 donor3   2.0  8.0       0.0635        0.1537          0.1487        0.0050     0.0902   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":431.162305415,"data":"Test cohorts also used in training: []\n"}
+,{"stream_name":"stdout","time":431.378675967,"data":"GSE39035 correlation of each sample with the training drift vector, spread: {'min': -6.6, 'max': 4.8}\n"}
+,{"stream_name":"stdout","time":431.378715116,"data":"GSE39035 smallest change between two samples of one donor, mean absolute rank: 0.0298\n"}
+,{"stream_name":"stdout","time":431.378721585,"data":"GSE139073 correlation of each sample with the training drift vector, spread: {'min': -4.9, 'max': 4.8}\n"}
+,{"stream_name":"stdout","time":431.37872675,"data":"GSE139073 smallest change between two samples of one donor, mean absolute rank: 0.0293\n"}
+,{"stream_name":"stdout","time":431.691822177,"data":"GSE9593 correlation of each sample with the training drift vector, spread: {'min': -11.7, 'max': 7.2}\n"}
+,{"stream_name":"stdout","time":431.691860773,"data":"GSE9593 smallest change between two samples of one donor, mean absolute rank: 0.0389\n"}
+,{"stream_name":"stdout","time":431.691866648,"data":"           donors  err_forecast  err_carry  better  in_range  rose\n"}
+,{"stream_name":"stdout","time":431.691871583,"data":"cohort                                                            \n"}
+,{"stream_name":"stdout","time":431.691876586,"data":"GSE139073       6         0.026      0.029       3         6     6\n"}
+,{"stream_name":"stdout","time":431.691881269,"data":"GSE39035        8         0.009      0.043       7         8     8\n"}
+,{"stream_name":"stdout","time":431.691886102,"data":"GSE9593         3         0.000      0.090       3         3     3\n"}
+,{"stream_name":"stdout","time":433.013163117,"data":"Relearned drift vs frozen drift, correlation: 1.0\n"}
+,{"stream_name":"stdout","time":482.697422877,"data":"{\n"}
+,{"stream_name":"stdout","time":482.697470072,"data":" \"donors\": 17,\n"}
+,{"stream_name":"stdout","time":482.69747726,"data":" \"cohorts_loaded\": 3,\n"}
+,{"stream_name":"stdout","time":482.697483364,"data":" \"share_better\": 0.7647058823529411,\n"}
+,{"stream_name":"stdout","time":482.697489374,"data":" \"cohorts_better\": 3,\n"}
+,{"stream_name":"stdout","time":482.697509436,"data":" \"negative_control_share\": 0.32941176470588235,\n"}
+,{"stream_name":"stdout","time":482.697514655,"data":" \"range80\": 0.142547643668227,\n"}
+,{"stream_name":"stdout","time":482.697519298,"data":" \"coverage\": 1.0,\n"}
+,{"stream_name":"stdout","time":482.697523802,"data":" \"median_err_forecast\": 0.010196683486605518,\n"}
+,{"stream_name":"stdout","time":482.697528542,"data":" \"median_err_carry\": 0.0400589937286539,\n"}
+,{"stream_name":"stdout","time":482.697533184,"data":" \"actual_rose\": 17,\n"}
+,{"stream_name":"stdout","time":482.697537714,"data":" \"binom_better_p\": 0.049041748046875,\n"}
+,{"stream_name":"stdout","time":482.697542354,"data":" \"passes\": true\n"}
+,{"stream_name":"stdout","time":482.697546884,"data":"}\n"}
+,{"stream_name":"stdout","time":483.043003701,"data":" passage  actual  forecast  carry\n"}
+,{"stream_name":"stdout","time":483.043036698,"data":"     2.0   0.032     0.032  0.032\n"}
+,{"stream_name":"stdout","time":483.043042682,"data":"     3.0   0.041     0.058  0.032\n"}
+,{"stream_name":"stdout","time":483.043047454,"data":"     4.0   0.060     0.078  0.032\n"}
+,{"stream_name":"stdout","time":483.04305212,"data":"     5.0   0.063     0.093  0.032\n"}
+,{"stream_name":"stdout","time":483.043056991,"data":"     6.0   0.073     0.106  0.032\n"}
+,{"stream_name":"stdout","time":483.04306183,"data":"     7.0   0.099     0.117  0.032\n"}
+,{"stream_name":"stdout","time":483.04306643,"data":"     8.0   0.113     0.127  0.032\n"}
+,{"stream_name":"stdout","time":483.043071082,"data":"    10.0   0.131     0.143  0.032\n"}
+,{"stream_name":"stdout","time":483.043075999,"data":"    11.0   0.150     0.150  0.032\n"}
+,{"stream_name":"stderr","time":487.462304457,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":487.462404576,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":487.697100428,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":487.697139362,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":488.635895551,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":488.758494363,"data":"[NbConvertApp] Writing 69368 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":492.117960973,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":493.048542285,"data":"[NbConvertApp] Writing 524319 bytes to __results__.html\n"}
+]

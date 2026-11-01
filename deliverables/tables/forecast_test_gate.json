@@ -1,0 +1,14 @@
+{
+ "donors": 17,
+ "cohorts_loaded": 3,
+ "share_better": 0.7647058823529411,
+ "cohorts_better": 3,
+ "negative_control_share": 0.32941176470588235,
+ "range80": 0.142547643668227,
+ "coverage": 1.0,
+ "median_err_forecast": 0.010196683486605518,
+ "median_err_carry": 0.0400589937286539,
+ "actual_rose": 17,
+ "binom_better_p": 0.049041748046875,
+ "passes": true
+}

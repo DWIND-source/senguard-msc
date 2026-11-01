@@ -14,8 +14,21 @@
 - **Absolute values do not travel.** Earliest-passage means ranged from -5.6 to 11.4 across count-based cohorts, and medium shifted scores by 3.5 at the same donor and passage.
 - **RNA-seq alone is weaker.** New RNA-seq cohorts passing the identity check gave 9 of 12 donors (p = 0.15); arrays contribute much of the pooled power, in a rank form and with lower signature coverage.
 
-## The twin is a record, not a simulation
-It shows measured samples and inference from them. It doesn't model cell behaviour and it doesn't forecast: a next-passage forecast was tested and failed its preset rule (better than carrying the last value forward in 63% of donors, against 70% required).
+## The twin is not a copy of cells
+It is built from transcripts. It doesn't model cell behaviour, morphology, division or function.
+
+## Limits of the forecast
+- It forecasts one signature's rank score, not genes, growth, senescence status or potency.
+- The independent test barely clears conventional significance (13 of 17, p = 0.049). GSE139073 was nearly a tie (0.026 vs 0.029).
+- Every test donor rose, so it is untested on cultures that stay stable, and a model that always predicts a rise would look good here.
+- It can undershoot badly: in the held-out adipose cohort, forecast error at the last passage was about half the no-change error but still large.
+- Its 80% range (plus or minus 0.14) is wider than typical change, so its 100% coverage says little.
+- It applies population drift only. A donor's early rate didn't predict its later rate (Spearman 0.09), so it can't say a given culture will drift faster than others.
+- Failed and left out: gene-by-gene forecasting, per-donor rates, and extrapolating a donor's own passages.
+- Growth capacity wasn't tested, because too few lineages have a growth endpoint.
+
+## Not yet used by a lab
+All validation is retrospective on public data. Nobody outside the project has used the tool, and no decision has been tested against it.
 
 ## Choices made after seeing results
 Excluding GSE125632 was not planned. The identity check is independent of any score, but it ran after the cohort's result was seen, so both numbers are always reported. The clock's gate was first failed with that cohort included.

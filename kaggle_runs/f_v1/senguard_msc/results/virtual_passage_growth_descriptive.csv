@@ -1,0 +1,6 @@
+donor,status,last_passage,gamma_early
+A,arrested,7.0,0.8059592462835601
+B,arrested,8.0,0.9165868020909899
+C,arrested,9.0,0.4955182005667795
+D,stopped at p10,10.0,0.6269302724859384
+E,stopped at p10,10.0,0.7954639233749633

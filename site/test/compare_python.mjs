@@ -2,7 +2,7 @@
 // Usage: node site/test/compare_python.mjs   (from the project root)
 import { readFileSync } from 'node:fs';
 import { gunzipSync } from 'node:zlib';
-import { analyze, applyClock, parseSampleSheet, parseTable } from '../js/core.js';
+import { analyze, applyClock, forecast, guessSheet, idType, parseSampleSheet, parseTable, symbolsToEnsembl } from '../js/core.js';
 
 const IN = 'site/data/';
 const text = (f) => (f.endsWith('.gz') ? gunzipSync(readFileSync(f)).toString('utf8') : readFileSync(f, 'utf8'));
@@ -71,6 +71,47 @@ for (const [label, acc, table, sheet, model] of [['Adipose MSC', 'GSE309666', 'a
   check(`${label}: clock slopes match held-out Python`, worst < 2e-3, `max difference ${worst.toExponential(2)}; coverage ${(c.coverage * 100).toFixed(1)}%`);
   check(`${label}: clock rises in all donors`, c.rising === c.trends.length, `${c.rising}/${c.trends.length}`);
 }
+
+const symMap = JSON.parse(gunzipSync(readFileSync('site/data/symbol_to_ensembl.json.gz')).toString('utf8'));
+const ens2sym = Object.fromEntries(Object.entries(symMap).map(([s, e]) => [e, s]));
+const adText = text(IN + 'adipose_msc_counts.tsv.gz');
+const asSymbols = adText.split('\n').map((l, i) => { if (i === 0 || !l) return l; const at = l.indexOf('\t'); const e = l.slice(0, at); return (ens2sym[e] ?? e) + l.slice(at); }).join('\n');
+check('Detects gene symbols', idType(asSymbols) === 'symbol', idType(asSymbols));
+check('Detects Ensembl and numeric ids', idType(adText) === 'ensembl' && idType(text(IN + 'bone_marrow_msc_entrez_ids.tsv.gz')) === 'numeric');
+const conv = symbolsToEnsembl(asSymbols, symMap);
+const adSheet = parseSampleSheet(text(IN + 'adipose_msc_samples.csv')).samples;
+const fromSym = analyze(parseTable(conv.text, adSheet), adSheet, 'counts', markers);
+const direct = analyze(parseTable(adText, adSheet), adSheet, 'counts', markers);
+let symWorst = 0;
+for (const id of Object.keys(direct.scores)) symWorst = Math.max(symWorst, Math.abs(direct.scores[id] - fromSym.scores[id]));
+check('Symbol table gives the same scores as the Ensembl table', symWorst < 1e-9 && fromSym.status === 'REPORT', `max difference ${symWorst.toExponential(2)}; ${(conv.share * 100).toFixed(1)}% of ids mapped`);
+const guess = guessSheet(['id', 'D_p1', 'D_p10', 'P2-C1', 'PN241_p5', 'Passage 3 donor A', 'P4393', 'GSM123', 'name'], ['x', '1', '2', '3', '4', '5', '6', '7', 'abc']);
+const g = Object.fromEntries(guess.map((r) => [r.id, r]));
+check('Guesses sample sheets only when clear', g.D_p10?.donor === 'D' && g.D_p10?.passage === 10 && g['P2-C1']?.donor === 'C1' && g['P2-C1']?.passage === 2 && g.PN241_p5?.donor === 'PN241' && g.P4393?.donor === '' && g.GSM123?.passage === '' && !g.name, JSON.stringify(g.PN241_p5));
+
+const fcModel = JSON.parse(readFileSync('site/data/forecast.json', 'utf8'));
+const fcCsv = text('deliverables/tables/virtual_passage_units.csv').trim().split(/\r?\n/);
+const fh = fcCsv[0].split(',');
+const fcRows = fcCsv.slice(1).map((l) => Object.fromEntries(l.split(',').map((v, i) => [fh[i], v])));
+for (const [label, acc, table, sheet, model] of [['Adipose MSC', 'GSE309666', 'adipose_msc_counts.tsv.gz', 'adipose_msc_samples.csv', 'without_GSE309666'], ['Bone-marrow MSC', 'GSE178514', 'bone_marrow_msc_tpm.tsv.gz', 'bone_marrow_msc_samples.csv', 'without_GSE178514']]) {
+  const { samples } = parseSampleSheet(text(IN + sheet));
+  const fc = forecast(parseTable(text(IN + table), samples), samples, fcModel, model);
+  let worstF = 0, worstT = 0;
+  for (const d of fc.donors) {
+    const r = fcRows.find((x) => x.cohort === acc && x.unit === d.donor);
+    worstF = Math.max(worstF, Math.abs(d.lastForecast - Number(r.score_model)));
+    worstT = Math.max(worstT, Math.abs(d.lastActual - Number(r.score_true)));
+  }
+  check(`${label}: held-out forecast matches Python`, worstF < 3e-3, `max difference ${worstF.toExponential(2)}`);
+  check(`${label}: actual rank score matches Python`, worstT < 3e-3, `max difference ${worstT.toExponential(2)}; forecast beat no-change in ${fc.beat}/${fc.tested}`);
+}
+const earlySheet = parseSampleSheet(text(IN + 'adipose_msc_samples.csv')).samples.filter((s) => s.passage === 1);
+const earlyTable = parseTable(text(IN + 'adipose_msc_counts.tsv.gz'), earlySheet);
+const early = analyze(earlyTable, earlySheet, 'counts', markers, { allowForecastOnly: true });
+const earlyFc = forecast(earlyTable, earlySheet, fcModel, 'without_GSE309666');
+check('One early sample per donor gives a forecast', early.status === 'FORECAST_ONLY' && earlyFc.donors.length === 5 && earlyFc.donors.every((d) => d.predictAt(10) > d.startScore), `${early.status}; ${earlyFc.donors.length} donors`);
+const stillBad = analyze(parseTable(text(IN + 'mislabelled_gse125632_fpkm.tsv.gz'), parseSampleSheet(text(IN + 'mislabelled_gse125632_samples.csv')).samples), parseSampleSheet(text(IN + 'mislabelled_gse125632_samples.csv')).samples, 'fpkm', markers, { allowForecastOnly: true });
+check('Forecast mode does not bypass the identity check', stillBad.status === 'REFUSED', stillBad.status);
 
 const pca = JSON.parse(readFileSync('deliverables/tables/pca_check_adipose.json', 'utf8'));
 const adipose = run('adipose_msc_counts.tsv.gz', 'adipose_msc_samples.csv', 'counts');

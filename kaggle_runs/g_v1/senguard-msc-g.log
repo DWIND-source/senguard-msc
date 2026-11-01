@@ -1,0 +1,290 @@
+[{"stream_name":"stderr","time":11.33144457,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.33149965,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.331504776,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.331507763,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.239723421,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.239762616,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.239775009,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.239778362,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":82.559488092,"data":"Restored /kaggle/input/notebooks/phongnguyendinh/senguard-msc-f/senguard_msc -\u003e /kaggle/working/senguard_msc | ['checkpoints', 'data', 'external', 'figures', 'logs', 'manifests', 'reports', 'results', 'src']\n"}
+,{"stream_name":"stdout","time":86.723380842,"data":"0\n"}
+,{"stream_name":"stdout","time":91.31833082,"data":"Frozen artifacts verified. Model weights and published SenCat weights are unchanged.\n"}
+,{"stream_name":"stdout","time":91.318370933,"data":"Amendment sha256 ec0e7a44bd0e09b48b9074631c0ebcb6e5db7e25310692c578a90a9dfac4c75f\n"}
+,{"stream_name":"stdout","time":92.075549217,"data":"GSE309666: (18, 13661) subjects 5 units 5 passages [np.float64(1.0), np.float64(3.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind normalized\n"}
+,{"stream_name":"stdout","time":92.075591328,"data":"GSE178514: (9, 16832) subjects 3 units 3 passages [np.float64(4.0), np.float64(6.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":92.718292602,"data":"GSE137186: (18, 33119) subjects 4 units 4 passages [np.float64(1.0), np.float64(5.0), np.float64(10.0), np.float64(15.0)] kind counts\n"}
+,{"stream_name":"stdout","time":95.420842167,"data":"GSE275980: (9, 16038) subjects 3 units 3 passages [np.float64(2.0), np.float64(6.0), np.float64(10.0)] kind counts\n"}
+,{"stream_name":"stdout","time":99.205102657,"data":"  GSE125632 column order check: RPS4Y1 agrees with GEO sex in 65% of samples\n"}
+,{"stream_name":"stdout","time":99.205138784,"data":"GSE125632: (10, 58038) subjects 5 units 5 passages [np.float64(2.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":99.205159435,"data":"GSE125632_iMSC: (10, 58038) subjects 5 units 5 passages [np.float64(5.0), np.float64(11.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":101.005688573,"data":"GSE194298: (20, 58233) subjects 12 units 4 passages [np.float64(1.0), np.float64(4.5)] kind normcounts\n"}
+,{"stream_name":"stdout","time":101.661095869,"data":"GSE233634: (12, 58735) subjects 1 units 1 passages [np.float64(3.0), np.float64(6.0), np.float64(9.0), np.float64(12.0)] kind fpkm\n"}
+,{"stream_name":"stdout","time":104.653014225,"data":"GSE269586: (23, 36485) subjects 11 units 11 passages [np.float64(0.0), np.float64(2.0), np.float64(3.0)] kind counts\n"}
+,{"stream_name":"stdout","time":106.692009692,"data":"GSE119987: (57, 12502) subjects 5 units 4 passages [np.float64(1.0), np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(9.0), np.float64(10.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":108.848603152,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":113.069769625,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stdout","time":121.288636437,"data":"  retry GPL18503.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL18nnn/G\n"}
+,{"stream_name":"stderr","time":133.426919527,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":133.634080546,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":133.634115647,"data":"\n"}
+,{"stream_name":"stderr","time":133.634122445,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":133.660360614,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":149.652348876,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":149.85601318,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":149.85605522,"data":"\n"}
+,{"stream_name":"stderr","time":149.856059669,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":149.877092027,"data":"  retry GPL18503.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":170.48705802,"data":"GSE56362: (54, 21543) subjects 6 units 6 passages [np.float64(3.0), np.float64(5.0), np.float64(7.0)] kind log_array\n"}
+,{"stream_name":"stdout","time":171.235720381,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":175.455331622,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":183.678932858,"data":"  retry GPL13497.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stderr","time":195.672165942,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":195.874817545,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":195.874848814,"data":"\n"}
+,{"stream_name":"stderr","time":195.87485323800001,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":195.896572452,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":211.892163727,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":212.099045508,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":212.099081365,"data":"\n"}
+,{"stream_name":"stderr","time":212.099088645,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":212.112992424,"data":"  retry GPL13497.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":232.631557748,"data":"GSE48662 (16, 21754) {'G1': 5, 'WT': 4, 'SEN': 4, 'G2': 3}\n"}
+,{"stream_name":"stdout","time":232.631596258,"data":"        cohort status  samples  genes  subjects  units       kind\n"}
+,{"stream_name":"stdout","time":232.631601693,"data":"     GSE309666 loaded       18  13661       5.0    5.0 normalized\n"}
+,{"stream_name":"stdout","time":232.631624015,"data":"     GSE178514 loaded        9  16832       3.0    3.0       fpkm\n"}
+,{"stream_name":"stdout","time":232.63162721,"data":"     GSE137186 loaded       18  33119       4.0    4.0     counts\n"}
+,{"stream_name":"stdout","time":232.631629977,"data":"     GSE275980 loaded        9  16038       3.0    3.0     counts\n"}
+,{"stream_name":"stdout","time":232.631632623,"data":"     GSE125632 loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":232.63163525,"data":"GSE125632_iMSC loaded       10  58038       5.0    5.0       fpkm\n"}
+,{"stream_name":"stdout","time":232.631638226,"data":"     GSE194298 loaded       20  58233      12.0    4.0 normcounts\n"}
+,{"stream_name":"stdout","time":232.631640854,"data":"     GSE233634 loaded       12  58735       1.0    1.0       fpkm\n"}
+,{"stream_name":"stdout","time":232.631643569,"data":"     GSE269586 loaded       23  36485      11.0   11.0     counts\n"}
+,{"stream_name":"stdout","time":232.631646793,"data":"     GSE119987 loaded       57  12502       5.0    4.0  log_array\n"}
+,{"stream_name":"stdout","time":232.631675505,"data":"      GSE56362 loaded       54  21543       6.0    6.0  log_array\n"}
+,{"stream_name":"stdout","time":232.631680695,"data":"      GSE48662 loaded       16  21754       NaN    NaN  log_array\n"}
+,{"stream_name":"stdout","time":280.830975274,"data":"score           Hallmark E2F (inverted)  Hallmark G2M (inverted)  SenCat published  SenMayo  Yang 2023 7 genes  hUSI\n"}
+,{"stream_name":"stdout","time":280.831016652,"data":"cohort                                                                                                              \n"}
+,{"stream_name":"stdout","time":280.831025741,"data":"GSE119987                          91.5                     93.5              77.9     96.8              100.0  67.4\n"}
+,{"stream_name":"stdout","time":280.831032902,"data":"GSE125632                         100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":280.831040255,"data":"GSE125632_iMSC                    100.0                     99.0              99.9     98.4              100.0  99.6\n"}
+,{"stream_name":"stdout","time":280.831047554,"data":"GSE137186                          97.5                     95.0              90.1     97.6              100.0  95.1\n"}
+,{"stream_name":"stdout","time":280.831053632,"data":"GSE178514                         100.0                     99.0              96.8     95.2              100.0  95.7\n"}
+,{"stream_name":"stdout","time":280.831059544,"data":"GSE194298                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":280.831065227,"data":"GSE233634                         100.0                     99.5              99.9     99.2              100.0  99.7\n"}
+,{"stream_name":"stdout","time":280.831070895,"data":"GSE269586                         100.0                     99.0              97.1     91.2              100.0  95.3\n"}
+,{"stream_name":"stdout","time":280.831076673,"data":"GSE275980                          99.5                     99.5              95.9     78.4              100.0  85.8\n"}
+,{"stream_name":"stdout","time":280.831082305,"data":"GSE309666                         100.0                     98.0              96.9     72.0               85.7  78.9\n"}
+,{"stream_name":"stdout","time":280.831087947,"data":"GSE48662                           97.0                     95.0              88.5     96.0              100.0  89.7\n"}
+,{"stream_name":"stdout","time":280.831093865,"data":"GSE56362                           97.0                     95.0              88.2     96.8              100.0  89.5\n"}
+,{"stream_name":"stdout","time":280.831131766,"data":"hUSI training rows by cohort accession: {'GSE309666': 0, 'GSE178514': 9, 'GSE137186': 0, 'GSE275980': 0, 'GSE125632': 0, 'GSE194298': 0, 'GSE233634': 0, 'GSE269586': 0, 'GSE119987': 0, 'GSE56362': 0, 'GSE48662': 0}\n"}
+,{"stream_name":"stdout","time":280.881342465,"data":"Amendment 3 sha256 dc8d0819a793886b2df1cd6433502b814b0cc5faa337f804748790152433fa57\n"}
+,{"stream_name":"stdout","time":280.881383729,"data":"Frozen model sha256 eab353e1d1be50393e38faf4355fd94fba353fd294e6f675cad0b7077cb2c46c\n"}
+,{"stream_name":"stdout","time":280.881390347,"data":"80% error range from leave-one-cohort-out: 0.1425 on 30 donors\n"}
+,{"stream_name":"stdout","time":286.370722525,"data":"  retry GSE39035_series_matrix.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 4417650 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":292.355355481,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":296.576413096,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stdout","time":304.798470109,"data":"  retry GPL13607.annot.gz HTTPError 404 Client Error: Not Found for url: https://ftp.ncbi.nlm.nih.gov/geo/platforms/GPL13nnn/G\n"}
+,{"stream_name":"stderr","time":316.790165386,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":316.997292266,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":316.997329594,"data":"\n"}
+,{"stream_name":"stderr","time":316.997334123,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":317.016276528,"data":"  retry GPL13607.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stderr","time":333.008638948,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":333.21285776,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stderr","time":333.212900968,"data":"\n"}
+,{"stream_name":"stderr","time":333.212911441,"data":"curl: (22) The requested URL returned error: 404\n"}
+,{"stream_name":"stdout","time":333.232271009,"data":"  retry GPL13607.annot.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":390.8448587,"data":"GSE39035 FAILED RuntimeError GPL13607: no symbol column in ['ID', 'ProbeName', 'GB_ACC', 'ControlType', 'accessions', 'GeneName', 'Description', 'chr_coord', 'SEQUENCE', 'SPOT_ID']\n"}
+,{"stream_name":"stdout","time":396.121503466,"data":"  retry GSE139073_raw_counts.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2238169 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":405.363101658,"data":"  retry GSE139073_raw_counts.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2238169 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":418.589713099,"data":"  retry GSE139073_raw_counts.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2238169 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stderr","time":435.61654909599997,"data":"curl: (18) transfer closed with 2238169 bytes remaining to read\n"}
+,{"stream_name":"stderr","time":435.828246545,"data":"curl: (18) transfer closed with 2238169 bytes remaining to read\n"}
+,{"stream_name":"stderr","time":435.828358295,"data":"\n"}
+,{"stream_name":"stderr","time":435.828384001,"data":"curl: (18) transfer closed with 2238169 bytes remaining to read\n"}
+,{"stream_name":"stdout","time":435.834259212,"data":"  retry GSE139073_raw_counts.txt.gz CalledProcessError Command '['curl', '-fsSL', '--http1.1', '-A', 'SenGuard-MSC-audit/1.0', '-o', '/kaggle/wor\n"}
+,{"stream_name":"stdout","time":452.981739677,"data":"  columns ['S1207', 'S1208', 'S1209', 'S1210', 'S1211', 'S1212'] | first ids [0, 3]\n"}
+,{"stream_name":"stdout","time":455.258826103,"data":"  selected [['BM126', 'P3', 'S5529'], ['BM127', 'P3', 'S5541'], ['BM285', 'P3', 'S5533'], ['BM293', 'P3', 'S5673'], ['BM324', 'P3', 'S5674'], ['BM784', 'P3', 'S5537'], ['BM126', 'P6', 'S5547'], ['BM127', 'P6', 'S5546'], ['BM285', 'P6', 'S5548'], ['BM293', 'P6', 'S5681'], ['BM324', 'P6', 'S5682'], ['BM784', 'P6', 'S5545']]\n"}
+,{"stream_name":"stdout","time":455.258881982,"data":"GSE139073 (12, 5297) donors 6 [np.float64(3.0), np.float64(6.0)]\n"}
+,{"stream_name":"stdout","time":460.536951013,"data":"  retry GSE9593_series_matrix.txt.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 2852274 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":471.510024411,"data":"  retry GPL570.annot.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 8471521 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":480.734526889,"data":"  retry GPL570.annot.gz ChunkedEncodingError ('Connection broken: IncompleteRead(0 bytes read, 8471521 more expected)', IncompleteRead(\n"}
+,{"stream_name":"stdout","time":502.783002042,"data":"GSE9593 (13, 20848) donors 3 [np.float64(2.0), np.float64(3.0), np.float64(4.0), np.float64(5.0), np.float64(6.0), np.float64(7.0), np.float64(8.0), np.float64(10.0), np.float64(11.0)]\n"}
+,{"stream_name":"stdout","time":502.783041742,"data":"   cohort                                                                                     status  samples   genes  donors   kind            note\n"}
+,{"stream_name":"stdout","time":502.783048904,"data":" GSE39035 failed: RuntimeError: GPL13607: no symbol column in ['ID', 'ProbeName', 'GB_ACC', 'Cont...      NaN     NaN     NaN    NaN             NaN\n"}
+,{"stream_name":"stdout","time":502.783055559,"data":"GSE139073                                                                                     loaded     12.0  5297.0     6.0 counts Resting samples\n"}
+,{"stream_name":"stdout","time":502.783062209,"data":"  GSE9593                                                                                     loaded     13.0 20848.0     3.0  array Platform GPL570\n"}
+,{"stream_name":"stderr","time":503.089275411,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089316725,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089323348,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089329267,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089334366,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089340283,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.08934512,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089351119,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089356344,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089390583,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089395469,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089399767,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.08940382,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089407719,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089411909,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089416323,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089420326,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089424371,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089428242,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089432292,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089436288,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089440718,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.08944496,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089449236,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.08945313,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089457329,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089462914,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089467285,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089471057,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089475089,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.08947892,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.08948308,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089486982,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089491464,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089495391,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089499529,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089507825,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089511916,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089516069,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089520697,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089524576,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089528626,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089532497,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089536646,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.08954038,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089544423,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.08954833,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.08955236,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089556252,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089560711,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089564525,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089568365,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.08957289,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089577015,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089580891,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089584709,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089589044,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.0895933,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.08959726,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089601106,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089605057,"data":"\n"}
+,{"stream_name":"stderr","time":503.089608867,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089613056,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089617011,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089624946,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089628735,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089633186,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089637157,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089641243,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089645463,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089649575,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089653663,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089657505,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.08966136,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089665709,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089669754,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089673824,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089677694,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089681931,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089685856,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089690291,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089694146,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089698076,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089702036,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089706618,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.08971052,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089714754,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089718501,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089722592,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089726239,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089730562,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089737957,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089742296,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089745997,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089750079,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089753903,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089758137,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089761949,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089766243,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089770147,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089774302,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089778103,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089782725,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089786601,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089790711,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089794869,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089799247,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089803215,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089807457,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089811191,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089815499,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089819288,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:562: RuntimeWarning: Mean of empty slice.\n"}
+,{"stream_name":"stderr","time":503.089823397,"data":"  avg = a.mean(axis, **keepdims_kw)\n"}
+,{"stream_name":"stderr","time":503.089827286,"data":"/usr/local/lib/python3.13/dist-packages/numpy/_core/_methods.py:139: RuntimeWarning: invalid value encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089831334,"data":"  ret = um.true_divide(\n"}
+,{"stream_name":"stderr","time":503.089835106,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2991: RuntimeWarning: Degrees of freedom \u003c= 0 for slice\n"}
+,{"stream_name":"stderr","time":503.089839462,"data":"  c = cov(x, y, rowvar, dtype=dtype)\n"}
+,{"stream_name":"stderr","time":503.089843343,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: divide by zero encountered in divide\n"}
+,{"stream_name":"stderr","time":503.089847328,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stderr","time":503.089854511,"data":"/usr/local/lib/python3.13/dist-packages/numpy/lib/_function_base_impl.py:2848: RuntimeWarning: invalid value encountered in multiply\n"}
+,{"stream_name":"stderr","time":503.089858671,"data":"  c *= np.true_divide(1, fact)\n"}
+,{"stream_name":"stdout","time":503.737140275,"data":"   cohort  donor  from   to  score_start  score_actual  score_forecast  err_forecast  err_carry  genes  signature_genes  forecast_better  in_range  actual_rose\n"}
+,{"stream_name":"stdout","time":503.737188462,"data":"GSE139073  BM126   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737227086,"data":"GSE139073  BM127   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737235545,"data":"GSE139073  BM285   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737241008,"data":"GSE139073  BM293   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737246184,"data":"GSE139073  BM324   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737251074,"data":"GSE139073  BM784   3.0  6.0          NaN           NaN             NaN           NaN        NaN      0                0            False     False        False\n"}
+,{"stream_name":"stdout","time":503.737256128,"data":"  GSE9593 donor1   2.0 11.0        0.032         0.150           0.150         0.000      0.118   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":503.737261261,"data":"  GSE9593 donor2   2.0  7.0        0.061         0.145           0.145         0.000      0.084   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":503.737266676,"data":"  GSE9593 donor3   2.0  8.0        0.064         0.154           0.149         0.005      0.090   7845             3695             True      True         True\n"}
+,{"stream_name":"stdout","time":503.737271696,"data":"           donors  err_forecast  err_carry  better  in_range  rose\n"}
+,{"stream_name":"stdout","time":503.737281918,"data":"cohort                                                            \n"}
+,{"stream_name":"stdout","time":503.737287007,"data":"GSE139073       6           NaN        NaN       0         0     0\n"}
+,{"stream_name":"stdout","time":503.737291609,"data":"GSE9593         3           0.0       0.09       3         3     3\n"}
+,{"stream_name":"stderr","time":506.34349717,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":506.344815792,"data":"  File \"\u003cstring\u003e\", line 1, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":506.344844891,"data":"    import sys;import papermill as pm;pm.execute_notebook(\"__notebook__.ipynb\",\"__notebook__.ipynb\",progress_bar=False,log_output=True,stdout_file=sys.stdout,stderr_file=sys.stderr,allow_errors=False,timeout=43200)\n"}
+,{"stream_name":"stderr","time":506.34485261,"data":"                                      ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":506.344858585,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 131, in execute_notebook\n"}
+,{"stream_name":"stderr","time":506.344883649,"data":"    raise_for_execution_errors(nb, output_path)\n"}
+,{"stream_name":"stderr","time":506.344888161,"data":"    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":506.344892366,"data":"  File \"/usr/local/lib/python3.13/dist-packages/papermill/execute.py\", line 251, in raise_for_execution_errors\n"}
+,{"stream_name":"stderr","time":506.344904147,"data":"    raise error\n"}
+,{"stream_name":"stderr","time":506.344906972,"data":"papermill.exceptions.PapermillExecutionError: \n"}
+,{"stream_name":"stderr","time":506.344909718,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":506.344912541,"data":"Exception encountered at \"In [8]\":\n"}
+,{"stream_name":"stderr","time":506.344915234,"data":"---------------------------------------------------------------------------\n"}
+,{"stream_name":"stderr","time":506.344917845,"data":"AttributeError                            Traceback (most recent call last)\n"}
+,{"stream_name":"stderr","time":506.344920872,"data":"/tmp/ipykernel_16/1292954926.py in \u003ccell line: 0\u003e()\n"}
+,{"stream_name":"stderr","time":506.344923668,"data":"     58         per.append(np.mean(bs, axis=0))\n"}
+,{"stream_name":"stderr","time":506.344926325,"data":"     59     return np.mean(per, axis=0)\n"}
+,{"stream_name":"stderr","time":506.344928918,"data":"---\u003e 60 check = learn(False)\n"}
+,{"stream_name":"stderr","time":506.344931875,"data":"     61 print('Relearned drift vs frozen drift, correlation:', round(float(np.corrcoef(check, BETA)[0, 1]), 5))\n"}
+,{"stream_name":"stderr","time":506.344950492,"data":"     62 neg = []\n"}
+,{"stream_name":"stderr","time":506.344955162,"data":"\n"}
+,{"stream_name":"stderr","time":506.344959441,"data":"/tmp/ipykernel_16/1292954926.py in learn(shuffle)\n"}
+,{"stream_name":"stderr","time":506.344964188,"data":"     52         bs = []\n"}
+,{"stream_name":"stderr","time":506.344968814,"data":"     53         for t, X in subs:\n"}
+,{"stream_name":"stderr","time":506.34497332,"data":"---\u003e 54             tt = rng.permutation(t.to_numpy()) if shuffle else t.to_numpy()\n"}
+,{"stream_name":"stderr","time":506.344977415,"data":"     55             tc = tt - tt.mean()\n"}
+,{"stream_name":"stderr","time":506.344981366,"data":"     56             if (tc ** 2).sum() \u003e 0:\n"}
+,{"stream_name":"stderr","time":506.344985361,"data":"\n"}
+,{"stream_name":"stderr","time":506.344989084,"data":"AttributeError: 'numpy.ndarray' object has no attribute 'to_numpy'\n"}
+,{"stream_name":"stderr","time":506.344993231,"data":"\n"}
+,{"stream_name":"stderr","time":509.637684158,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":509.637735978,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":509.912913995,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":509.912976085,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":510.980328002,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":511.100395584,"data":"[NbConvertApp] Writing 75762 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":514.500714237,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":515.476949008,"data":"[NbConvertApp] Writing 526715 bytes to __results__.html\n"}
+]

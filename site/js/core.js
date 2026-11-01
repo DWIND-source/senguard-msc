@@ -49,6 +49,46 @@ export function parseTable(text, samples) {
   return { genes, values: values.map((v) => Float64Array.from(v)), ensShare: rows.length ? ens / rows.length : 0, nonNumericShare: total ? nonNumeric / total : 1, duplicates: dup, rowCount: rows.length };
 }
 
+// Real count tables often use gene symbols. Numeric ids are left alone so they are refused, never guessed.
+export function idType(text) {
+  const ids = text.split(/\r?\n/).slice(1, 400).filter(Boolean).map((l) => l.split(/[\t,]/)[0].replace(/^"|"$/g, ''));
+  if (!ids.length) return 'unknown';
+  const share = (re) => ids.filter((i) => re.test(i)).length / ids.length;
+  if (share(/^ENSG\d+/) > 0.5) return 'ensembl';
+  if (share(/^\d+$/) > 0.5) return 'numeric';
+  if (share(/^[A-Za-z][A-Za-z0-9.-]*$/) > 0.7) return 'symbol';
+  return 'unknown';
+}
+
+export function symbolsToEnsembl(text, map) {
+  const lines = text.split(/\r?\n/);
+  const sep = lines[0].includes('\t') ? '\t' : ',';
+  let mapped = 0, total = 0;
+  const out = lines.map((line, i) => {
+    if (i === 0 || !line) return line;
+    total++;
+    const at = line.indexOf(sep);
+    const id = line.slice(0, at).replace(/^"|"$/g, '');
+    const e = map[id];
+    if (!e) return line;
+    mapped++;
+    return e + line.slice(at);
+  });
+  return { text: out.join('\n'), mapped, total, share: total ? mapped / total : 0 };
+}
+
+// Fills in a sample sheet from column names when they are clear, and leaves the rest for the user.
+export function guessSheet(header, firstRow) {
+  const cols = header.slice(1).filter((_, i) => { const v = firstRow?.[i + 1]; return v === undefined || v === '' || Number.isFinite(Number(v)); });
+  return cols.map((id) => {
+    const m = id.match(/^(.*?)[\s_.-]*(?:passage|p)[\s_.-]*(\d{1,2})$/i) || null;
+    const n = id.match(/^(?:passage|p)[\s_.-]*(\d{1,2})[\s_.-]+(.+)$/i) || null;
+    if (m && m[1]) return { id, donor: m[1], passage: Number(m[2]) };
+    if (n) return { id, donor: n[2], passage: Number(n[1]) };
+    return { id, donor: '', passage: '' };
+  });
+}
+
 export function median(arr) {
   const a = Array.from(arr).filter((v) => Number.isFinite(v)).sort((x, y) => x - y);
   if (!a.length) return NaN;
@@ -210,6 +250,13 @@ export function exactSignFlipP(values) {
 export function analyze(table, samples, scale, markers, opts = {}) {
   const nDraws = opts.nDraws ?? LIMITS.nullDraws;
   const guard = checkInputs(table, samples, scale, markers);
+  const stops = guard.checks.filter((c) => c.status === 'stop');
+  // An early sample alone can't show a trend, but it can still be forecast.
+  if (opts.allowForecastOnly && stops.length === 1 && stops[0].id === 'design') {
+    stops[0].status = 'warn';
+    stops[0].detail = `Trends need ${LIMITS.minPassages} passages per donor, so this shows the forecast only.`;
+    return { status: 'FORECAST_ONLY', checks: guard.checks, facts: guard.facts ?? {}, scale, trends: [] };
+  }
   const out = { status: guard.refused ? 'REFUSED' : 'REPORT', checks: guard.checks, facts: guard.facts ?? {}, scale };
   if (guard.refused) return out;
   const norm = normalize(table, scale);
@@ -239,6 +286,67 @@ export function analyze(table, samples, scale, markers, opts = {}) {
   out.state = stateSpace(norm, samples);
   out.records = Object.fromEntries(samples.map((s, j) => [s.id, { genes: Object.fromEntries(Object.entries(RECORD_GENES).filter(([, e]) => pos.has(e)).map(([g, e]) => [g, Math.log1p(norm.values[j][pos.get(e)])])) }]));
   return out;
+}
+
+// Forecast: earliest profile + per-gene drift x change in log2(passage + 1), then the SenCat rank score.
+// Frozen before an independent test on 17 donors (notebook 08). It forecasts this signature only.
+export function forecast(table, samples, model, name, horizon = 15) {
+  const pos = new Map(table.genes.map((g, i) => [g, i]));
+  const n = table.values.length;
+  const cols = [], beta = [], sigW = [], sigAt = [];
+  model.genes.forEach((sym, gi) => {
+    let best = -1, bestMean = -Infinity;
+    for (const e of model.ensembl_by_symbol[sym] ?? []) {
+      const k = pos.get(e);
+      if (k === undefined) continue;
+      let m = 0;
+      for (let j = 0; j < n; j++) m += table.values[j][k];
+      if (m > bestMean) { bestMean = m; best = k; }
+    }
+    if (best < 0) return;
+    if (model.signature[sym] !== undefined) { sigAt.push(cols.length); sigW.push(model.signature[sym]); }
+    cols.push(best);
+    beta.push(model.beta[name][gi]);
+  });
+  const coverage = cols.length / model.genes.length;
+  if (coverage < LIMITS.minWeightCoverage) return { skipped: `Only ${(100 * coverage).toFixed(0)}% of forecast genes are in this table, under the ${(100 * LIMITS.minWeightCoverage).toFixed(0)}% minimum.` };
+  const wr = ranks(sigW);
+  const mw = wr.reduce((a, b) => a + b, 0) / wr.length;
+  const denomW = Math.sqrt(wr.reduce((a, b) => a + (b - mw) ** 2, 0));
+  const score = (x) => {
+    const r = ranks(sigAt.map((i) => x[i]));
+    const mr = r.reduce((a, b) => a + b, 0) / r.length;
+    let num = 0, d = 0;
+    for (let i = 0; i < r.length; i++) { num += (r[i] - mr) * (wr[i] - mw); d += (r[i] - mr) ** 2; }
+    return num / (Math.sqrt(d) * denomW);
+  };
+  const t = (p) => Math.log2(p + 1);
+  const profile = (j) => { const col = table.values[j]; const r = ranks(cols.map((k) => col[k])); return r.map((v) => v / r.length); };
+  const donors = [];
+  for (const [donor, idx] of groupDonors(samples)) {
+    const order = [...idx].sort((a, b) => samples[a].passage - samples[b].passage);
+    const start = order[0];
+    const x0 = profile(start);
+    const p0 = samples[start].passage;
+    const actual = order.map((j) => ({ passage: samples[j].passage, id: samples[j].id, score: j === start ? score(x0) : score(profile(j)) }));
+    const predictAt = (p) => { const dt = t(p) - t(p0); return score(x0.map((v, i) => v + beta[i] * dt)); };
+    const top = Math.max(horizon, samples[order[order.length - 1]].passage);
+    const curve = [];
+    for (let p = p0; p <= top; p++) curve.push({ passage: p, score: predictAt(p) });
+    const lastObs = actual[actual.length - 1];
+    const row = { donor, startPassage: p0, startId: samples[start].id, startScore: actual[0].score, actual, curve, predictAt };
+    if (actual.length > 1) {
+      row.lastPassage = lastObs.passage;
+      row.lastActual = lastObs.score;
+      row.lastForecast = predictAt(lastObs.passage);
+      row.errForecast = Math.abs(row.lastForecast - lastObs.score);
+      row.errCarry = Math.abs(actual[0].score - lastObs.score);
+    }
+    donors.push(row);
+  }
+  donors.sort((a, b) => (a.donor < b.donor ? -1 : 1));
+  const tested = donors.filter((d) => d.errForecast !== undefined);
+  return { coverage, model: name, donors, tested: tested.length, beat: tested.filter((d) => d.errForecast < d.errCarry).length };
 }
 
 // Measured expression space: PCA of the most variable genes, oriented so PC1 increases with passage.

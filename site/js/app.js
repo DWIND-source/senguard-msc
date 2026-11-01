@@ -1,4 +1,4 @@
-import { analyze, applyClock, parseSampleSheet, parseTable } from './core.js';
+import { analyze, applyClock, forecast, guessSheet, idType, parseDelimited, parseSampleSheet, parseTable, symbolsToEnsembl } from './core.js';
 import { donorPanel, histogram, tooltipLayer } from './charts.js';
 import { renderEvidence } from './evidence.js';
 
@@ -10,10 +10,12 @@ const SCENARIOS = {
   adipose: { label: 'Adipose MSC · GSE309666', table: 'data/adipose_msc_counts.tsv.gz', sheet: 'data/adipose_msc_samples.csv', scale: 'counts', clock: 'without_GSE309666', geo: true },
   marrow: { label: 'Bone-marrow MSC · GSE178514', table: 'data/bone_marrow_msc_tpm.tsv.gz', sheet: 'data/bone_marrow_msc_samples.csv', scale: 'tpm', clock: 'without_GSE178514', geo: true },
   mislabelled: { label: 'GSE125632, as deposited', table: 'data/mislabelled_gse125632_fpkm.tsv.gz', sheet: 'data/mislabelled_gse125632_samples.csv', scale: 'fpkm' },
+  early: { label: 'Adipose MSC, passage 1 only · GSE309666', table: 'data/adipose_msc_counts.tsv.gz', sheet: 'data/adipose_msc_samples.csv', scale: 'counts', clock: 'without_GSE309666', geo: true, onlyPassage: 1 },
   logged: { label: 'Adipose MSC, log-transformed on purpose', table: 'data/adipose_msc_counts.tsv.gz', sheet: 'data/adipose_msc_samples.csv', scale: 'counts', transform: 'log1p' },
   entrez: { label: 'Bone-marrow table with Entrez ids', table: 'data/bone_marrow_msc_entrez_ids.tsv.gz', sheet: 'data/bone_marrow_msc_samples.csv', scale: 'fpkm' },
 };
 const VIEW_NOTES = {
+  forecast: 'Orange is the forecast from each donor\'s earliest sample. Blue spheres are what was measured. Press play to reveal them.',
   landscape: 'Each sphere is a measured sample. Height is its SenCat score, and each lane is one donor. Drag to rotate; click a sphere.',
   space: 'The same samples, placed by their measured expression (PCA of the 500 most variable genes). Lines join each donor in passage order.',
 };
@@ -24,7 +26,7 @@ const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const say = (t) => { $('status').textContent = t; };
 const signed = (v, d = 2) => `${v >= 0 ? '+' : ''}${v.toFixed(d)}`;
-let markers = null, clock = null, signatureInfo = '', guidance = null, last = null, twin = null, timer = null, currentGeo = false, current = null;
+let markers = null, clock = null, fcModel = null, lastFc = null, signatureInfo = '', guidance = null, last = null, twin = null, timer = null, currentGeo = false, current = null;
 
 async function ungzip(buf) {
   const head = new Uint8Array(buf.slice(0, 2));
@@ -82,25 +84,45 @@ async function runScenario(name) {
     const [tb, sb] = await Promise.all([fetchBuffer(s.table), fetchBuffer(s.sheet)]);
     let text = await ungzip(tb);
     if (s.transform === 'log1p') text = logTransform(text);
-    await compute(text, new TextDecoder().decode(sb), s.scale, s.label, s.clock ?? 'final', !!s.geo);
+    let sheetText = new TextDecoder().decode(sb);
+    if (s.onlyPassage !== undefined) {
+      const lines = sheetText.trim().split(/\r?\n/);
+      const col = lines[0].split(',').indexOf('passage');
+      sheetText = [lines[0], ...lines.slice(1).filter((l) => Number(l.split(',')[col]) === s.onlyPassage)].join('\n');
+    }
+    await compute(text, sheetText, s.scale, s.label, s.clock ?? 'final', !!s.geo);
   } catch (e) { setHead(s.label, 'Could not load', e.message); }
 }
 
-async function compute(tableText, sheetText, scale, label, clockModel = 'final', geo = false) {
+async function compute(tableTextIn, sheetText, scale, label, clockModel = 'final', geo = false) {
   if (!markers) { setHead(label, 'Signature not loaded', 'Nothing can be scored. Check the connection and reload.'); return; }
   say('Checking and scoring...');
   await new Promise((r) => setTimeout(r, 20));
   const t0 = performance.now();
+  let tableText = tableTextIn;
+  let symbolNote = null;
+  if (idType(tableText) === 'symbol') {
+    const map = JSON.parse(await ungzip(await fetchBuffer('data/symbol_to_ensembl.json.gz')));
+    const conv = symbolsToEnsembl(tableText, map);
+    if (conv.share >= 0.5) {
+      tableText = conv.text;
+      symbolNote = { id: 'symbols', status: conv.share >= 0.8 ? 'ok' : 'warn', label: 'Gene symbols converted', detail: `${(100 * conv.share).toFixed(1)}% of gene symbols were matched to Ensembl (release 113 annotation).` };
+    }
+  }
   const sheet = parseSampleSheet(sheetText);
   if (sheet.error) { renderRefusal({ checks: [{ id: 'samples', status: 'stop', label: 'Sample sheet', detail: sheet.error }] }, label); return; }
   const table = parseTable(tableText, sheet.samples);
-  const res = analyze(table, sheet.samples, scale, markers);
+  const res = analyze(table, sheet.samples, scale, markers, { allowForecastOnly: true });
+  if (symbolNote) res.checks.unshift(symbolNote);
   const drift = res.status === 'REPORT' && clock ? applyClock(table, sheet.samples, clock, clockModel) : null;
-  last = { res, drift, label, scale, when: new Date().toISOString() };
+  lastFc = res.status !== 'REFUSED' && fcModel ? forecast(table, sheet.samples, fcModel, clockModel) : null;
+  last = { res, drift, fc: lastFc, label, scale, when: new Date().toISOString() };
   currentGeo = geo;
   current = res;
   renderRail(res.checks);
-  if (res.status === 'REFUSED') renderRefusal(res, label); else renderReport(res, label, drift);
+  if (res.status === 'REFUSED') renderRefusal(res, label);
+  else if (res.status === 'FORECAST_ONLY') renderForecastOnly(res, label, lastFc);
+  else renderReport(res, label, drift, lastFc);
   say(`Done in ${((performance.now() - t0) / 1000).toFixed(1)} s, in this browser. Signature: ${signatureInfo}.`);
 }
 
@@ -141,27 +163,81 @@ function renderRefusal(res, label) {
 const PILL = { ok: '✓ pass', warn: '! caution', stop: '✕ stop' };
 const checksHtml = (checks) => `<ul class="checks">${checks.map((c) => `<li class="check"><span class="pill ${c.status}">${PILL[c.status]}</span><div><b>${esc(c.label)}</b><span class="d">${esc(c.detail)}</span></div></li>`).join('')}</ul>`;
 
-function renderReport(r, label, drift) {
+function renderForecastOnly(r, label, fc) {
+  if (!fc || fc.skipped) { renderRefusal({ checks: [...r.checks, { id: 'forecast', status: 'stop', label: 'Forecast', detail: fc?.skipped ?? 'The forecast model did not load.' }] }, label); return; }
   $('refusal').hidden = true;
   $('timeline').hidden = false;
-  setHead(label, `Score rose in ${r.donorsRising} of ${r.trends.length} donors`, `Mean slope ${signed(r.meanSlope)} per passage. No pass or fail call is made, because no threshold has been validated.`);
+  r.trends = fc.donors.map((d) => ({ donor: d.donor, points: d.actual.map((a) => ({ id: a.id, passage: a.passage, score: a.score })), first: d.startPassage, last: d.startPassage, slope: 0, rho: NaN, change: 0 }));
+  const p10 = fc.donors.map((d) => d.predictAt(10) - d.startScore);
+  setHead(label, `Forecast for ${fc.donors.length} donors`, `By passage 10 the signature is forecast to rise by ${signed(p10.reduce((a, b) => a + b, 0) / p10.length)} on average. This is a forecast from one sample, not a measurement.`);
   buildDonorChips(r);
-  renderDetails(r, drift);
+  $('results').innerHTML = `<div class="card wide">${forecastHtml(fc)}</div><div class="card wide"><h3>All input checks</h3>${checksHtml(r.checks)}</div>`;
+  wirePlanner(fc);
+  showStage(r, fc, 'forecast');
+  $('record').innerHTML = '<h4>What you can do with this</h4><p class="fix">Plan an expansion, then sequence a later passage and load both. The twin will compare the forecast with what you measured.</p>';
+}
+
+function showStage(r, fc, view) {
+  if (!twin) return;
+  const passages = twin.setData(r, fc);
+  window.__passages = passages;
+  const slider = $('slider');
+  slider.min = 0;
+  slider.max = Math.max(passages.length - 1, 0);
+  slider.value = passages.length - 1;
+  slider.oninput = () => { stopPlay(); twin.setPassage(passages[+slider.value]); };
+  $('slider-out').textContent = `P${passages[passages.length - 1]}`;
+  const params = new URLSearchParams(location.search);
+  const asked = params.get('view');
+  const want = ['forecast', 'landscape', 'space'].includes(asked) ? asked : view;
+  const usable = twin.hasForecast ? want : 'landscape';
+  $('v-fore').hidden = !twin.hasForecast;
+  $('v-land').hidden = r.status === 'FORECAST_ONLY';
+  $('v-space').hidden = r.status === 'FORECAST_ONLY';
+  twin.setView(usable);
+  setViewButtons(usable);
+  const end = r.trends[0].points[r.trends[0].points.length - 1];
+  twin.selectById(end.id);
+  if (r.status !== 'FORECAST_ONLY' && !matchMedia('(prefers-reduced-motion: reduce)').matches && !params.has('still')) startPlay(true);
+}
+
+function forecastHtml(fc) {
+  if (!fc) return '<h3>Forecast</h3><p class="note">The forecast model did not load.</p>';
+  if (fc.skipped) return `<h3>Forecast</h3><p class="note">Not run. ${esc(fc.skipped)}</p>`;
+  const trained = fc.model === 'final' ? 'The model was trained on 8 public cohorts.' : 'For this example, the model was trained without this cohort, so these are genuine held-out forecasts.';
+  const compare = fc.tested ? `<p class="note">At each donor's last measured passage, the forecast was closer than assuming no change in <b>${fc.beat} of ${fc.tested}</b> donors.</p>` : '';
+  return `<h3>Forecast from the earliest sample <span class="tag">model inference</span></h3>
+    <p class="note">${trained} It forecasts the SenCat rank score, a measure of how closely a sample's gene ranks match the signature. Read it as a change from the starting value.</p>
+    <div class="planner"><label for="plan-p">If this culture is expanded to passage</label><input type="number" id="plan-p" min="1" max="30" step="1" value="10"></div>
+    <div class="table-wrap"><table><thead><tr><th>Donor</th><th>From</th><th class="num">Start</th><th class="num">Forecast</th><th class="num">Change</th>${fc.tested ? '<th class="num">Measured at last passage</th><th class="num">Forecast there</th><th class="num">No-change error</th><th class="num">Forecast error</th>' : ''}</tr></thead><tbody id="plan-rows"></tbody></table></div>
+    ${compare}
+    <div class="drift-lists"><div><b>Expected to fall with passage</b><span>${esc(fcModel.falling.join(' '))}</span></div><div><b>Expected to rise with passage</b><span>${esc(fcModel.rising.join(' '))}</span></div></div>`;
+}
+
+function wirePlanner(fc) {
+  if (!fc || fc.skipped || !$('plan-p')) return;
+  const draw = () => {
+    const p = Number($('plan-p').value);
+    $('plan-rows').innerHTML = fc.donors.map((d) => {
+      const past = p < d.startPassage;
+      const f = past ? NaN : d.predictAt(p);
+      return `<tr><td>${esc(d.donor)}</td><td>P${d.startPassage}</td><td class="num">${d.startScore.toFixed(3)}</td><td class="num">${past ? '-' : f.toFixed(3)}</td><td class="num">${past ? '-' : signed(f - d.startScore, 3)}</td>${fc.tested ? (d.errForecast === undefined ? '<td class="num">-</td><td class="num">-</td><td class="num">-</td><td class="num">-</td>' : `<td class="num">P${d.lastPassage}: ${d.lastActual.toFixed(3)}</td><td class="num">${d.lastForecast.toFixed(3)}</td><td class="num">${d.errCarry.toFixed(3)}</td><td class="num">${d.errForecast.toFixed(3)}</td>`) : ''}</tr>`;
+    }).join('');
+  };
+  $('plan-p').addEventListener('input', draw);
+  draw();
+}
+
+function renderReport(r, label, drift, fc) {
+  $('refusal').hidden = true;
+  $('timeline').hidden = false;
+  const fcLine = fc && !fc.skipped && fc.tested ? ` Forecast from the earliest sample beat assuming no change in ${fc.beat} of ${fc.tested} donors.` : '';
+  setHead(label, `Score rose in ${r.donorsRising} of ${r.trends.length} donors`, `Mean slope ${signed(r.meanSlope)} per passage.${fcLine} No pass or fail call is made.`);
+  buildDonorChips(r);
+  renderDetails(r, drift, fc);
+  wirePlanner(fc);
   if (twin) {
-    const passages = twin.setData(r);
-    window.__passages = passages;
-    const slider = $('slider');
-    slider.min = 0;
-    slider.max = passages.length - 1;
-    slider.value = passages.length - 1;
-    slider.oninput = () => { stopPlay(); twin.setPassage(passages[+slider.value]); };
-    setViewButtons('landscape');
-    $('slider-out').textContent = `P${passages[passages.length - 1]}`;
-    const end = r.trends[0].points[r.trends[0].points.length - 1];
-    twin.selectById(end.id);
-    const params = new URLSearchParams(location.search);
-    if (!matchMedia('(prefers-reduced-motion: reduce)').matches && !params.has('still')) startPlay(true);
-    if (params.get('view') === 'space') { twin.setView('space'); setViewButtons('space'); }
+    showStage(r, fc, 'forecast');
   } else if (r.trends.length) {
     showRecord({ ...r.trends[0].points[r.trends[0].points.length - 1], donor: r.trends[0].donor });
   }
@@ -200,13 +276,14 @@ function showRecord(p) {
     <small>Measured transcripts, log1p scale. Arrows compare with this donor's first passage. Score is model inference. Not a senescence call.</small>`;
 }
 
-function renderDetails(r, drift) {
+function renderDetails(r, drift, fc) {
   const lo = Math.min(...r.trends.flatMap((t) => t.points.map((p) => p.score)));
   const hi = Math.max(...r.trends.flatMap((t) => t.points.map((p) => p.score)));
   const pad = (hi - lo) * 0.08 || 1;
   const floorNote = r.signFlipP <= r.signFlipFloor + 1e-9 ? ', the smallest possible with this many donors' : '';
   const mdc = guidance?.minimumChange;
   $('results').innerHTML = `
+    <div class="card wide">${forecastHtml(fc)}</div>
     <div class="card wide"><h3>Trajectories by donor <span class="tag">model inference on measured expression</span></h3>
       <div class="panels">${r.trends.map((t) => `<div class="panel"><h4>Donor ${esc(t.donor)}</h4><small>${signed(t.slope)} per passage</small>${donorPanel(t, lo - pad, hi + pad)}</div>`).join('')}</div>
       <p class="note">Exact sign-flip p = ${r.signFlipP.toFixed(4)}${floorNote}.</p>
@@ -220,11 +297,13 @@ function renderDetails(r, drift) {
       <li>Passage and donor come from your sheet. Scores are inference.</li>
       <li>Read each donor against itself. Absolute scores aren't comparable across labs or media.</li>
       ${mdc ? `<li>${esc(mdc)}</li>` : ''}
+      <li>A forecast isn't a measurement. Sequence the later passage to check it.</li>
       <li>A rising score doesn't mean a lot has failed, and a flat one doesn't mean it is fine.</li>
       <li>This says nothing about potency, immune function or clinical safety.</li></ul>
-      <div class="actions"><button type="button" class="secondary" id="dl">Download report (.json)</button><button type="button" class="secondary" id="print">Print</button></div></div>
+      <div class="actions"><button type="button" class="secondary" id="dl-csv">Scores (.csv)</button><button type="button" class="secondary" id="dl">Full report (.json)</button><button type="button" class="secondary" id="print">Print or save as PDF</button></div></div>
     <div class="card"><h3>All input checks</h3>${checksHtml(r.checks)}</div>`;
   $('dl').onclick = download;
+  $('dl-csv').onclick = downloadCsv;
   $('print').onclick = () => window.print();
 }
 
@@ -238,14 +317,25 @@ function driftHtml(d) {
     ${d.trends.map((t) => `<tr><td>${esc(t.donor)}</td><td class="num">${t.slope.toFixed(3)}</td><td class="num">${t.rho.toFixed(2)}</td></tr>`).join('')}</tbody></table></div>`;
 }
 
-function download() {
-  const { res, drift, label, scale, when } = last;
-  const copy = { tool: 'SenGuard-MSC research prototype', label, scale, when, signature: signatureInfo, status: res.status, driftClock: drift && !drift.skipped ? { model: drift.model, trends: drift.trends } : null, checks: res.checks, trends: res.trends, scores: res.scores, records: res.records, stateSpace: res.state, meanSlope: res.meanSlope, donorsRising: res.donorsRising, signFlipP: res.signFlipP, random: { ...res.random, draws: undefined }, disclaimer: 'Not a release test. Says nothing about potency, immune function or clinical safety.' };
+function saveFile(name, text, type) {
   const a = document.createElement('a');
-  a.href = URL.createObjectURL(new Blob([JSON.stringify(copy, null, 1)], { type: 'application/json' }));
-  a.download = 'senguard_msc_report.json';
+  a.href = URL.createObjectURL(new Blob([text], { type }));
+  a.download = name;
   a.click();
-  URL.revokeObjectURL(a.href);
+  setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+
+function downloadCsv() {
+  const { res, drift } = last;
+  const rows = ['donor,passage,sample_id,sencat_score,change_since_first_passage,drift_clock'];
+  for (const t of res.trends) for (const p of t.points) rows.push([t.donor, p.passage, p.id, p.score.toFixed(4), (p.score - t.points[0].score).toFixed(4), drift?.scores?.[p.id]?.toFixed(4) ?? ''].join(','));
+  saveFile('senguard_msc_scores.csv', `${rows.join('\n')}\n`, 'text/csv');
+}
+
+function download() {
+  const { res, drift, fc, label, scale, when } = last;
+  const copy = { tool: 'SenGuard-MSC, for research use', label, scale, when, signature: signatureInfo, status: res.status, forecast: fc && !fc.skipped ? { model: fc.model, beat: fc.beat, tested: fc.tested, donors: fc.donors.map(({ predictAt, ...d }) => d) } : null, driftClock: drift && !drift.skipped ? { model: drift.model, trends: drift.trends } : null, checks: res.checks, trends: res.trends, scores: res.scores, records: res.records, stateSpace: res.state, meanSlope: res.meanSlope, donorsRising: res.donorsRising, signFlipP: res.signFlipP, random: { ...res.random, draws: undefined }, disclaimer: 'Not a release test. Says nothing about potency, immune function or clinical safety.' };
+  saveFile('senguard_msc_report.json', JSON.stringify(copy, null, 1), 'application/json');
 }
 
 function stopPlay() {
@@ -272,20 +362,56 @@ function startPlay(fromStart = false) {
   timer = setInterval(tick, 900);
 }
 function setViewButtons(view) {
+  $('v-fore').setAttribute('aria-pressed', String(view === 'forecast'));
   $('v-land').setAttribute('aria-pressed', String(view === 'landscape'));
   $('v-space').setAttribute('aria-pressed', String(view === 'space'));
   $('view-note').textContent = VIEW_NOTES[view];
 }
 
+let uploaded = null;
+$('f-table').addEventListener('change', async () => {
+  const f = $('f-table').files[0];
+  if (!f) return;
+  try {
+    uploaded = await ungzip(await f.arrayBuffer());
+    const { header, rows, clean } = parseDelimited(uploaded.slice(0, 200000));
+    const guess = guessSheet(header, rows[0]?.map(clean));
+    $('sheet-rows').innerHTML = guess.map((g, i) => `<tr><td><input type="checkbox" id="s-use-${i}" checked aria-label="Use ${esc(g.id)}"></td><td class="name">${esc(g.id)}</td><td><input type="text" id="s-donor-${i}" value="${esc(g.donor)}" aria-label="Donor for ${esc(g.id)}"></td><td><input type="number" min="0" step="any" id="s-pass-${i}" value="${g.passage}" aria-label="Passage for ${esc(g.id)}"></td></tr>`).join('');
+    $('sheet-rows').dataset.ids = JSON.stringify(guess.map((g) => g.id));
+    const filled = guess.filter((g) => g.donor !== '').length;
+    $('sheet-note').textContent = `${guess.length} sample columns found; filled in ${filled} from their names. Check them, and fill in the rest.`;
+    $('sheet-box').hidden = false;
+  } catch (err) { setHead('Your data', 'Could not read this table', err.message); }
+});
+function sheetFromForm() {
+  const ids = JSON.parse($('sheet-rows').dataset.ids ?? '[]');
+  const rows = [];
+  const gaps = [];
+  ids.forEach((id, i) => {
+    if (!$(`s-use-${i}`).checked) return;
+    const donor = $(`s-donor-${i}`).value.trim(), passage = $(`s-pass-${i}`).value.trim();
+    if (!donor || passage === '') gaps.push(id);
+    rows.push(`${id},${donor.replace(/,/g, ' ')},${passage}`);
+  });
+  return { text: `sample_id,donor,passage\n${rows.join('\n')}`, gaps };
+}
 $('upload').addEventListener('submit', async (e) => {
   e.preventDefault();
   try {
-    const text = await ungzip(await $('f-table').files[0].arrayBuffer());
-    const sheet = await ungzip(await $('f-sheet').files[0].arrayBuffer());
-    await compute(text, sheet, $('f-scale').value, $('f-table').files[0].name, 'final', false);
+    if (!uploaded) uploaded = await ungzip(await $('f-table').files[0].arrayBuffer());
+    let sheet;
+    if ($('f-sheet').files[0]) sheet = await ungzip(await $('f-sheet').files[0].arrayBuffer());
+    else {
+      const built = sheetFromForm();
+      if (built.gaps.length) { setHead('Your data', 'A few samples need details', `Add a donor and passage for ${built.gaps.slice(0, 3).join(', ')}${built.gaps.length > 3 ? ` and ${built.gaps.length - 3} more` : ''}, or untick them.`); return; }
+      sheet = built.text;
+    }
+    await compute(uploaded, sheet, $('f-scale').value, $('f-table').files[0].name, 'final', false);
   } catch (err) { setHead('Your data', 'Could not read these files', err.message); }
 });
+if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('sw.js').catch(() => {});
 document.querySelectorAll('.scenario').forEach((b) => b.addEventListener('click', () => runScenario(b.dataset.scenario)));
+$('v-fore').addEventListener('click', () => { twin?.setView('forecast'); setViewButtons('forecast'); });
 $('v-land').addEventListener('click', () => { twin?.setView('landscape'); setViewButtons('landscape'); });
 $('v-space').addEventListener('click', () => { twin?.setView('space'); setViewButtons('space'); });
 $('play').addEventListener('click', () => (timer ? stopPlay() : startPlay()));
@@ -295,7 +421,7 @@ function renderHero(ev) {
   const { ok } = ev.headline;
   $('hero-stats').innerHTML = [
     [`${ok.donors_rising}/${ok.donors}`, 'donors in new cohorts with a rising score'],
-    [`${ev.clock.rising}/${ev.clock.n}`, 'held-out donors rising on the drift clock'],
+    [`${ev.facts.testBeat}/${ev.facts.testN}`, 'never-used donors where the forecast beat assuming no change'],
     ['8', 'input checks before any number appears'],
   ].map(([a, b]) => `<div><dt>${a}</dt><dd>${b}</dd></div>`).join('');
 }
@@ -303,8 +429,10 @@ function renderHero(ev) {
 (async () => {
   try {
     const { CultureTwin, webglAvailable } = await import('./twin.js');
-    if (webglAvailable()) twin = new CultureTwin($('canvas'), { onSelect: (p) => showRecord(p), onPassage: (p) => { $('slider-out').textContent = `P${p}`; } });
-    else $('no-webgl').hidden = false;
+    if (webglAvailable()) {
+      twin = new CultureTwin($('canvas'), { onSelect: (p) => showRecord(p), onPassage: (p) => { $('slider-out').textContent = `P${p}`; } });
+      window.__twin = twin;
+    } else $('no-webgl').hidden = false;
   } catch (e) { $('no-webgl').hidden = false; console.error(e); }
   try {
     const ev = await (await fetch('data/evidence.json')).json();
@@ -312,6 +440,7 @@ function renderHero(ev) {
     renderHero(ev);
     renderEvidence($('evidence-body'), ev);
     clock = await (await fetch('data/clock.json')).json();
+    fcModel = await (await fetch('data/forecast.json')).json();
   } catch (e) { $('evidence-body').innerHTML = `<p class="status">Could not load the evidence summary: ${esc(e.message)}</p>`; }
   try {
     await loadSignature();

@@ -6,31 +6,31 @@ Live demo: https://dwind-source.github.io/senguard-msc/
 Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled` or `?demo=entrez` to the address. Add `&still=1` to skip the opening animation, or `&view=space` to open in expression space.
 
 ## Script
-**0:00-1:00 Problem.** MSC therapies are expanded in culture to make more doses, and expansion can push cells toward senescence. New transcriptomic senescence scores keep appearing, but they are dangerous in a specific way: give one the wrong table and it still returns a number that looks fine.
+**0:00-1:00 Problem.** MSC therapies are expanded in culture to make more doses, and expansion can push cells toward senescence. A lab wants to know: if I keep expanding this culture, where is it heading? Today's scores only describe the sample in hand, and give them the wrong table and they still return a number that looks fine.
 
-**1:00-1:40 Solution.** SenGuard-MSC checks the data first, refuses what it can't score validly, and reports how a published senescence signature moves within each donor. It runs in the browser, so data never leaves the lab's machine. It deliberately gives no pass or fail, because no threshold has been validated.
+**1:00-1:40 Solution.** SenGuard-MSC takes RNA-seq from a culture. From one early sample it forecasts how a senescence signature moves at later passages. From a series it builds a data twin and compares forecast with measurement. It refuses data it can't score validly, and data never leaves the lab's machine.
 
 **1:40-3:30 Live demo.**
-1. **Adipose MSC.** The checks light up, then the 3D twin: press play to walk through the passages, switch to Expression space, and click a sample to open its record. 5 of 5 donors rising.
-2. **Already-logged table.** It refuses, and explains that the table would otherwise be logged twice.
+1. **Early sample only.** Give it passage 1 alone. Type a target passage and read the forecast.
+2. **Forecast vs measured.** Open the adipose cohort, held out of training. The orange line is the forecast from passage 1. Press play and the measured samples appear. Say what the screen shows: it beat assuming no change, and it still undershot the real rise.
 3. **Real labelling error.** This one is a public dataset exactly as deposited on GEO. Y-linked expression contradicts its donor labels, and the tool stops. We found this while building it: this cohort first dragged our headline number down, and the check independent of any score showed why.
 
-**3:30-4:10 Technology.** We reproduced the published signature from raw counts. We added a culture-drift clock, a ridge model trained across cohorts, as a second readout. Guard thresholds come from measurement: we thinned reads, dropped genes and used technical replicates. The browser and Python pipelines agree to 13 decimal places, and tests run automatically on each change.
+**3:30-4:10 Technology.** A drift model learned across 8 cohorts makes the forecast, working on gene ranks. We reproduced the published signature from raw counts, and added a culture-drift clock as a second readout. Guard thresholds come from measurement: we thinned reads, dropped genes and used technical replicates. The browser and Python pipelines agree to 13 decimal places, and tests run automatically on each change.
 
 **4:10-5:50 Evidence.** Show the Evidence section.
-- Plans were written and hashed before scoring.
-- New cohorts: 19 of 22 donors rising, p < 0.001. Including the failed cohort: 21 of 27, p = 0.006.
-- Clock: 35 of 35 donors rising, each cohort held out.
+- Plans were fixed and hashed before each test.
+- Forecast, frozen, then tested on 17 donors in cohorts we had never touched: closer than assuming no change in 13, in all 3 cohorts. Shuffled labels won 33%.
+- The signature rose in 19 of 22 donors in other new cohorts. Including the failed cohort: 21 of 27.
 - Then what went against us, stated plainly:
-  - No signature clearly wins; CDKN2A alone does about as well.
-  - No link to clinical response in 8 GVHD lots.
-  - The score rises even in short GMP expansion, and while published potency is retained.
+  - Three forecasting ideas failed, including gene-by-gene prediction, and they aren't in the tool.
+  - The forecast's p-value is close to the line, and one cohort was nearly a tie.
+  - No link to clinical response in 8 GVHD lots, and the score rises while published potency is retained.
 
-  So this isn't a potency test, and the tool says so.
+  So this forecasts a signature. It isn't a potency test, and the tool says so.
 
-**5:50-6:40 Implementation.** It sits beside existing checks in process development. It is not a release test. Absolute scores differed by about 17 units across labs, so any threshold has to be set locally. The next step is a pilot: serial passages of one product with RNA-seq, SA-beta-gal and growth data on every sample. That is the data needed to test a threshold. [Add a partner here only if one is confirmed.]
+**5:50-6:40 Implementation.** A lab sequences one early passage, records the forecast, and later compares it with what it measures. It sits beside existing checks in process development, and it isn't a release test. It needs no install or server, works offline, and exports reports. The next step is a pilot: serial passages of one product with RNA-seq, SA-beta-gal and growth data on every sample. That tests whether the forecast is useful for a real decision. [Add a partner here only if one is confirmed.]
 
-**6:40-7:00 Close.** Anyone can open it now, on real data. It tells you what the data supports, and refuses when the data can't support an answer.
+**6:40-7:00 Close.** Anyone can open it now and load real data. It tells you where the signature is heading, shows how right it was, and refuses when the data can't support an answer.
 
 ## Before going on stage
 - Open the page once while online. The signature is fetched from the authors' repository, so test the venue network, and keep the saved reports in `demo/` plus a screen recording as a fallback.
@@ -49,4 +49,7 @@ Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled`
 | What does it cost? | Compute is negligible. RNA-seq cost and turnaround haven't been measured in a lab. |
 | Who is your user? | MSC process-development labs. We have yet to validate this with one. [Update if a partner is confirmed.] |
 | What about regulation? | No regulatory work has been done. It's a research tool at this stage. |
-| Why call it a twin if it can't predict? | It is a data twin: a faithful record of a culture you can inspect. We tested forecasting, it failed our preset rule, and we turned it off rather than show a guess. |
+| Is it a copy of the cells? | No, and RNA-seq can't support that. It's a digital counterpart of a culture's expression that forecasts one signature and checks itself against later measurement. |
+| How good is the forecast? | Closer than assuming no change in 13 of 17 never-used donors, median error 0.010 vs 0.040. It can undershoot, as the adipose example shows, and its 80% range of 0.14 is wide. Read it as a direction and rough size. |
+| All test donors rose. Isn't that easy? | Yes, partly, and it hasn't been tested on cultures that don't rise. The test was whether it beat assuming no change, which is the fair baseline. A pilot needs to include stable cultures. |
+| Can you predict when a culture stops growing? | No. Too few lineages have a growth endpoint, and early rate didn't predict later rate. It's the first thing a pilot should collect. |

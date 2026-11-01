@@ -1,0 +1,18 @@
+{
+ "donors": 30,
+ "share_rmse_better": 0.5333333333333333,
+ "cohorts_better": 4,
+ "cohorts": 8,
+ "share_score_better": 0.8,
+ "median_corr_change": 0.2969183979829918,
+ "negative_control_share": 0.2771428571428571,
+ "median_rmse_reduction": 0.010419243832535452,
+ "median_err_score_model": 0.06832494902363173,
+ "median_err_score_carry": 0.09828212991038535,
+ "personal_share_better": 0.46153846153846156,
+ "personal_donors": 26,
+ "rate_persistence_spearman": 0.09163959785156152,
+ "population_better_than_carry_later_step": 0.5769230769230769,
+ "passes": false,
+ "personal_passes": false
+}

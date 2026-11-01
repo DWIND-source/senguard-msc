@@ -5,7 +5,7 @@ from pathlib import Path
 import numpy as np, pandas as pd, requests
 
 P = Path('.')
-A, B, C, D, E = (P / 'kaggle_runs' / r / 'senguard_msc' for r in ['a_v1', 'b_v3', 'c_v1', 'd_v2', 'e_v3'])
+A, B, C, D, E, F, G = (P / 'kaggle_runs' / r / 'senguard_msc' for r in ['a_v1', 'b_v3', 'c_v1', 'd_v2', 'e_v3', 'f_v1', 'g_v2'])
 OUT = P / 'site/data'
 OUT.mkdir(parents=True, exist_ok=True)
 INP = P / 'deliverables/demo/input'
@@ -38,6 +38,9 @@ clock = json.load(open(E / 'results/drift_clock_models.json'))
 keep = {k: v for k, v in clock['models'].items() if k in ('final', 'without_GSE309666', 'without_GSE178514')}
 (OUT / 'clock.json').write_text(json.dumps({'genes': clock['genes'], 'ensembl_by_symbol': clock['ensembl_by_symbol'], 'models': {k: [float(f'{x:.5g}') for x in v] for k, v in keep.items()}}, separators=(',', ':')))
 
+vp = json.load(open(F / 'results/virtual_passage_model.json'))
+top = pd.Series(vp['beta']['final'], index=vp['genes']).sort_values()
+(OUT / 'forecast.json').write_text(json.dumps({'genes': vp['genes'], 'ensembl_by_symbol': vp['ensembl_by_symbol'], 'beta': {k: vp['beta'][k] for k in ['final', 'without_GSE309666', 'without_GSE178514']}, 'signature': vp['signature'], 'rising': top.tail(10).index[::-1].tolist(), 'falling': top.head(10).index.tolist()}, separators=(',', ':')))
 prim_reg = None
 report = (E / 'reports/AMENDMENT1_RESULTS.md').read_text(encoding='utf-8')
 blocks = re.findall(r'\{\n "score".*?\n\}', report, flags=re.S)
@@ -69,6 +72,10 @@ leak = pd.read_csv(A / 'results/dev_feature_selection_leakage.csv')
 conf = pd.read_csv(D / 'results/g5_conformal_sets.csv')
 load = pd.read_csv(E / 'results/ext_cohort_load_log.csv')
 fc = json.load(open(P / 'deliverables/tables/forecast_backtest.json'))
+vg = json.load(open(F / 'results/virtual_passage_gate.json'))
+tg = json.load(open(G / 'results/forecast_test_gate.json'))
+tby = pd.read_csv(G / 'results/forecast_test_donors.csv').groupby('cohort').agg(donors=('donor', 'size'), err_forecast=('err_forecast', 'median'), err_carry=('err_carry', 'median'), better=('forecast_better', 'sum'))
+long_series = pd.read_csv(G / 'results/forecast_test_long_series.csv')
 
 COHORT_INFO = {
     'GSE309666': ('Adipose', 'Reference; used first', 'Passage 1 to 10'),
@@ -119,8 +126,12 @@ evidence = {
         'g137rising': int((g137.slope > 0).sum()), 'g137n': len(g137), 'g233slope': g(g233.slope.iloc[0]), 'donorE': g(phase.loc['E', 'final'], 1), 'arrestedLow': g(phase.loc[['A', 'B', 'C'], 'final'].min(), 1), 'arrestedHigh': g(phase.loc[['A', 'B', 'C'], 'final'].max(), 1), 'donorD': g(phase.loc['D', 'final'], 1),
         'bfAuroc': g(bf['dev_mean_auroc']['mean'], 3), 'bfLow': g(bf['dev_mean_auroc']['ci'][0], 3), 'bfHigh': g(bf['dev_mean_auroc']['ci'][1], 3), 'bfGb': g(bf['steps']['extraction']['peak_gpu_gb'], 1),
         'confCov': g(conf.covered.mean(), 3),
+        'testBeat': int(round(tg['share_better'] * tg['donors'])), 'testN': tg['donors'], 'testP': g(tg['binom_better_p'], 3), 'testErr': g(tg['median_err_forecast'], 3), 'testCarry': g(tg['median_err_carry'], 3), 'testNeg': g(tg['negative_control_share'], 2), 'testRange': g(tg['range80'], 2), 'testRose': tg['actual_rose'],
+        'tieErr': g(tby.loc['GSE139073', 'err_forecast'], 3), 'tieCarry': g(tby.loc['GSE139073', 'err_carry'], 3), 'midErrMax': g((long_series.forecast - long_series.actual).abs().max(), 3),
+        'vpRmse': g(vg['share_rmse_better'], 2), 'vpCohorts': vg['cohorts_better'], 'vpN': vg['cohorts'], 'vpPersonal': g(vg['personal_share_better'], 2), 'vpPersist': g(vg['rate_persistence_spearman'], 2),
         'forecastBetter': g(fc['share_better'], 3), 'forecastDonors': fc['donors'], 'forecastDirection': fc['direction_right'], 'forecastError': g(fc['median_error_forecast'], 1),
     },
+    'forecastCohorts': [{'cohort': k, 'donors': int(r.donors), 'better': int(r.better), 'err_forecast': g(r.err_forecast, 3), 'err_carry': g(r.err_carry, 3)} for k, r in tby.iterrows()],
     'guidance': {'minimumChange': f'In re-sequenced samples the score differed by {g(rt.difference.min())} and {g(rt.difference.max())}, so treat changes under about {g(mdc, 1)} as possibly technical. This rests on two pairs from one cohort.'},
 }
 (OUT / 'evidence.json').write_text(json.dumps(evidence, indent=1), encoding='utf-8')

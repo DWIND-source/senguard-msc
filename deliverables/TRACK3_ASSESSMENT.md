@@ -14,10 +14,10 @@ Internal planning note, assessed against the published track text. Ratings are o
 | Criterion | Rating | Evidence | Main gap |
 |---|---|---|---|
 | Healthcare problem | Moderate | Published MSC work describes the need to expand products without inducing senescence | No statement yet from a lab on how it decides today or what failure costs |
-| Innovation and technology | Moderate to strong | 3D data twin of each culture series; tool refuses invalid data and caught a real labelling error; data stays in the browser; thresholds set by measurement; cross-cohort clock | Core score is published work; a single gene matches it on direction |
-| Evidence | Strong for this stage | Two analyses with plans fixed and hashed in advance (not on an external registry), 19/22 donors in new cohorts, held-out clock, 42 automated tests, negative results reported | Retrospective; no per-sample assay; no prospective use |
+| Innovation and technology | Strong for this stage | Forecasts a signature from one early sample, shown against measurement in a 3D twin; tool refuses invalid data and caught a real labelling error; data stays in the browser; thresholds set by measurement; cross-cohort clock | Core score is published work; a single gene matches it on direction |
+| Evidence | Strong for this stage | Two analyses with plans fixed and hashed in advance (not on an external registry), 19/22 donors in new cohorts, held-out clock, forecast frozen and tested on 17 never-used donors, automated and real-browser tests, negative results reported | Retrospective; no per-sample assay; no prospective use |
 | Feasibility | Strong technically | Runs in a browser with no install or server | RNA-seq cost and turnaround not measured |
-| Implementation | Weak | Report format and pilot design exist | No pilot site, no validated threshold, no regulatory plan |
+| Implementation | Weak | Software is usable today: upload, symbols, exports, offline. A pilot design exists | No pilot site, no validated threshold, no regulatory plan |
 | Communication | Open | 7-minute script and Q&A drafted | Needs rehearsal and someone ready for biology questions |
 
 ## Conclusion

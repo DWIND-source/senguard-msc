@@ -12,6 +12,7 @@ export function renderEvidence(el, ev) {
     <div class="tiles">
       <div class="tile"><b>${ok.donors_rising}/${ok.donors}</b><span>donors in new cohorts with a rising score (${pct(ok.share)}, 95% CI ${pct(ok.ci_low)} to ${pct(ok.ci_high)}, ${fmtP(ok.binom_p)})</span></div>
       <div class="tile"><b>${registered.donors_rising}/${registered.donors}</b><span>the same as planned, with one cohort that failed the identity check (${fmtP(registered.binom_p)})</span></div>
+      <div class="tile"><b>${f.testBeat}/${f.testN}</b><span>never-used donors where the frozen forecast beat assuming no change (${fmtP(f.testP)}). Median error ${f.testErr} vs ${f.testCarry}.</span></div>
       <div class="tile"><b>${c.rising}/${c.n}</b><span>held-out donors rising on the drift clock. It estimates passage-like drift, not senescence.</span></div>
       <div class="tile"><b>p = ${f.gvhdP}</b><span>for higher scores in GVHD non-responders. The clinical-response hypothesis was not supported.</span></div>
     </div>
@@ -27,6 +28,7 @@ export function renderEvidence(el, ev) {
 
     <div class="columns">
       <div class="col-card for"><h3><i>+</i>What holds up</h3>
+        ${finding('measured', 'The forecast passed on cohorts never used', `Frozen first, then tested on GSE39035, GSE139073 and GSE9593: closer than assuming no change in ${f.testBeat} of ${f.testN} donors, and in all three cohorts. With shuffled training labels it won ${pct(f.testNeg)} of the time.`)}
         ${finding('measured', 'Reproduced from public counts', `Published coefficients were recovered with Spearman ${f.reproSpearman}.`)}
         ${finding('measured', 'Induced senescence is detected in MSC', `Irradiated vs control bone-marrow MSC: AUROC ${f.irradiatedAuroc} (4 vs 4), and ${f.irradiatedRefit} with weights trained without MSC lineages. SenMayo reached ${f.irradiatedSenMayo} and the 7-gene passage signature ${f.irradiatedYang}.`)}
         ${finding('measured', 'The guards catch real errors', `GSE125632 lists one male donor, but Y-linked expression contradicts its donor pairing. Try "Real labelling error" above. The check doesn't depend on any score.`)}
@@ -38,7 +40,8 @@ export function renderEvidence(el, ev) {
         ${finding('measured', 'It moves early in culture', `In GMP production of Wharton's jelly MSC, reported as transcriptomically stable, it rose in ${f.gmpRising} of ${f.gmpN} donors from master bank to passage 2 or 3. It partly reflects adaptation to culture.`)}
         ${finding('measured', 'Absolute scores do not travel', `Earliest-passage means ran from ${f.absMin} to ${f.absMax} across count-based cohorts, and platelet lysate scored ${Math.abs(f.mediumLate)} lower than FBS for the same donor at passage 4 to 5. So the twin reads each donor against itself and offers no threshold.`)}
         ${finding('measured', 'Not every series rises', `Serum-free GSE233634 fell overall (slope ${f.g233slope} per passage). Adipose donor E reached ${f.donorE} without reported arrest, in the range of arrested donors (${f.arrestedLow} to ${f.arrestedHigh}), while donor D reached ${f.donorD}.`)}
-        ${finding('measured', 'Forecasting did not pass', `Extrapolating a donor's earlier passages beat carrying the last value forward in ${pct(f.forecastBetter)} of ${f.forecastDonors} donors, under the 70% we required. Direction was right in ${f.forecastDirection}, but size errors were large (median ${f.forecastError}), so the twin shows no forecast.`)}
+        ${finding('measured', 'The forecast has real limits', `Its 80% range (plus or minus ${f.testRange}) is wider than typical change, so don't read single values precisely. GSE139073 was nearly a tie (${f.tieErr} vs ${f.tieCarry}), errors reached ${f.midErrMax} at mid passages in the long series, and p = ${f.testP} is close to the line. Every test donor rose, so it hasn't been tested on cultures that don't.`)}
+        ${finding('measured', 'Three forecasting ideas failed', `Gene-by-gene prediction beat no change in only ${pct(f.vpRmse)} of donors and ${f.vpCohorts} of ${f.vpN} cohorts. A donor's early rate didn't predict its later rate (Spearman ${f.vpPersist}), so personal drift is off. Extrapolating a donor's own passages won ${pct(f.forecastBetter)} of ${f.forecastDonors}. None of these are in the tool.`)}
         ${finding('measured', 'Complex models added nothing measurable', `Six regularized models tied at AUROC ${f.devAuroc} (${f.devLow} to ${f.devHigh}) on held-out cell types, an easy contrast. BulkFormer embeddings reached ${f.bfAuroc} (${f.bfLow} to ${f.bfHigh}), with overlapping intervals.`)}
         ${finding('measured', 'One score was trained on a test cohort', `hUSI's training metadata lists 9 samples of GSE178514, labelled by passage, so its result there is excluded above.`)}
       </div>

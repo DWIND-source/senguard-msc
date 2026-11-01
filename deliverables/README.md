@@ -11,8 +11,9 @@ Cross-dataset evaluation of senescence-associated transcriptomic signatures in m
 | G3 MSC evaluation | PASS, trend-only | No labels exist, so no classification metric |
 | G4 BulkFormer | PASS, one cohort skipped | GSE178514 under the coverage target |
 | G5 Ablations | PASS | Includes null results |
-| Amendment 1 | DONE, with deviations | 19/22 donors in new cohorts passing the identity check; 21/27 as registered |
-| G6 Deliverables | DRAFT | Live demo with 3D culture twin; 28 browser and 14 Python tests pass; pilot partner and author review pending |
+| Amendment 1 | DONE, with deviations | 19/22 donors in new cohorts passing the identity check; 21/27 as planned |
+| Amendments 2 and 3 | DONE, with deviations | Gene-level forecast failed; score forecast passed on 17 never-used donors (13/17) |
+| G6 Deliverables | DRAFT | Live tool with forecast and 3D twin; core, Python and real-browser tests pass; pilot partner and author review pending |
 
 ## Contents
 - `ABSTRACT_DRAFT.md`, `PITCH_7MIN.md`, `TRACK3_ASSESSMENT.md`, `METHODS.md`, `LIMITATIONS.md`

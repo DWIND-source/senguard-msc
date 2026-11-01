@@ -36,12 +36,18 @@ Written and hashed before any added cohort was scored (`reports/ANALYSIS_AMENDME
 Ridge regression of within-donor log2(passage + 1) on within-sample gene ranks over 7,845 shared genes, validated leaving out each cohort, with strength chosen by inner cohort hold-out. Negative control: passages shuffled within donors. It estimates passage-like drift, not senescence or potency. It entered the demo through a gate set in advance: median rho of at least 0.8, at least 90% of donors rising, shuffled median rho under 0.3.
 
 ## Prototype
-A browser tool (`site/`) and a Python command-line tool (`senguard_msc/src/senguard_qc.py`). Depth thresholds come from read thinning of two cohorts, and the identity check from the GSE125632 finding. Automated tests compare browser and Python outputs: 28 browser tests and 14 Python tests pass. The tests were written by the project team on retrospective data; no external user has tried the tool.
+A browser tool (`site/`) and a Python command-line tool (`senguard_msc/src/senguard_qc.py`). Depth thresholds come from read thinning of two cohorts, and the identity check from the GSE125632 finding. Automated tests compare browser and Python outputs: 38 core tests, 14 Python tests and a real-browser test of each user flow pass. The tests were written by the project team on retrospective data; no external user has tried the tool.
 
 ## Culture twin interface
 A 3D view built only from measured data: score against passage by donor, and PCA of the 500 most variable genes (verified against numpy). It doesn't simulate cells.
 
-## Forecast back-test
+## Score forecast
+Per-gene drift is the mean within-donor slope of gene rank on log2(passage + 1), averaged within and then across 8 cohorts. Forecast rank profile = earliest profile + drift x change in log2(passage + 1), and the SenCat rank score is computed from it. Gene-level prediction failed its gate in notebook 07 (53% of donors, 4 of 8 cohorts), and so did per-donor rates (46%). The score forecast was then frozen and tested on GSE39035, GSE139073 and GSE9593, chosen from metadata before scoring (amendment 3): better than carry-forward in 13 of 17 donors and 3 of 3 cohorts, negative control 33%, median error 0.010 vs 0.040. Details: `reports/FORECAST_TEST_RESULTS.md`, `reports/AMENDMENT3_DEVIATIONS.md`.
+
+## User flows
+Accepts Ensembl ids or gene symbols (converted with Ensembl 113 annotation), builds a sample sheet from column names, exports CSV and JSON, and works offline after the first visit. `site/test/e2e.py` drives each flow in a real browser.
+
+## Earlier forecast back-test
 Each donor's last passage was predicted from its earlier ones, in 16 donors across 5 RNA-seq cohorts (`tables/forecast_backtest.csv`). The rule set beforehand: beat carrying the last value forward in at least 70% of donors and in at least 4 of 5 cohorts. Result: 63% of donors and 4 of 5 cohorts, direction right in 15 of 16, so it failed and the interface shows no forecast.
 
 ## Runtime
