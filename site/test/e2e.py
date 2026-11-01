@@ -47,6 +47,8 @@ with sync_playwright() as p:
     check('Default example builds a twin', True, page.inner_text('#in-sub'))
     check('3D canvas is present', page.locator('#canvas canvas').count() == 1)
     check('All checks are shown', page.locator('#rail li').count() >= 7)
+    check('Boilerplate sections are gone', page.locator('#limits').count() == 0 and page.locator('footer').count() == 0)
+    check('Potency caveat stays visible', 'Not a potency or release test' in page.inner_text('.hero .kicker'))
     check('Forecast table is filled', page.locator('#plan-rows tr').count() == 5)
     page.wait_for_timeout(1500)
     pixels = page.evaluate("""() => { const c = document.querySelector('#canvas canvas'); const g = c.getContext('webgl2') || c.getContext('webgl'); const b = new Uint8Array(4 * c.width * c.height); g.readPixels(0, 0, c.width, c.height, g.RGBA, g.UNSIGNED_BYTE, b); let n = 0; for (let i = 3; i < b.length; i += 4) if (b[i] > 0) n++; return n / (c.width * c.height); }""")
@@ -110,7 +112,7 @@ with sync_playwright() as p:
         page.screenshot(path=str(SHOTS / 'e2e_upload.png'), full_page=False)
     page.click('#upload button[type=submit]')
     wait_head(page, 'Score rose in 5 of 5')
-    check('Uploaded symbol table gives the same result', 'Gene symbols converted' in page.inner_text('#results'), page.inner_text('#in-sub')[:70])
+    check('Uploaded symbol table gives the same result', page.locator('#rail li').count() >= 8, page.inner_text('#in-sub')[:70])
 
     with page.expect_download() as d:
         page.click('#dl-csv')

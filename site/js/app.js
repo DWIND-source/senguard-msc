@@ -123,7 +123,7 @@ async function compute(tableTextIn, sheetText, scale, label, clockModel = 'final
   if (res.status === 'REFUSED') renderRefusal(res, label);
   else if (res.status === 'FORECAST_ONLY') renderForecastOnly(res, label, lastFc);
   else renderReport(res, label, drift, lastFc);
-  say(`Done in ${((performance.now() - t0) / 1000).toFixed(1)} s, in this browser. Signature: ${signatureInfo}.`);
+  say(`Done in ${((performance.now() - t0) / 1000).toFixed(1)} s, in this browser.`);
 }
 
 function renderRail(checks) {
@@ -157,11 +157,8 @@ function renderRefusal(res, label) {
   setHead(label, 'Refused', `${stops.length} of ${res.checks.length} checks stopped this input.`);
   $('donors').innerHTML = '';
   $('record').innerHTML = `<h4>What to fix</h4>${stops.map((c) => `<p class="fix"><b>${esc(c.label)}</b>${esc(c.detail)}</p>`).join('')}<small>Correct the input and run it again. Nothing was scored, so there is no partial result to reuse.</small>`;
-  $('results').innerHTML = `<div class="card wide"><h3>All input checks</h3>${checksHtml(res.checks)}</div>`;
+  $('results').innerHTML = '';
 }
-
-const PILL = { ok: '✓ pass', warn: '! caution', stop: '✕ stop' };
-const checksHtml = (checks) => `<ul class="checks">${checks.map((c) => `<li class="check"><span class="pill ${c.status}">${PILL[c.status]}</span><div><b>${esc(c.label)}</b><span class="d">${esc(c.detail)}</span></div></li>`).join('')}</ul>`;
 
 function renderForecastOnly(r, label, fc) {
   if (!fc || fc.skipped) { renderRefusal({ checks: [...r.checks, { id: 'forecast', status: 'stop', label: 'Forecast', detail: fc?.skipped ?? 'The forecast model did not load.' }] }, label); return; }
@@ -171,7 +168,7 @@ function renderForecastOnly(r, label, fc) {
   const p10 = fc.donors.map((d) => d.predictAt(10) - d.startScore);
   setHead(label, `Forecast for ${fc.donors.length} donors`, `By passage 10 the signature is forecast to rise by ${signed(p10.reduce((a, b) => a + b, 0) / p10.length)} on average. This is a forecast from one sample, not a measurement.`);
   buildDonorChips(r);
-  $('results').innerHTML = `<div class="card wide">${forecastHtml(fc)}</div><div class="card wide"><h3>All input checks</h3>${checksHtml(r.checks)}</div>`;
+  $('results').innerHTML = `<div class="card wide">${forecastHtml(fc)}</div>`;
   wirePlanner(fc);
   showStage(r, fc, 'forecast');
   $('record').innerHTML = '<h4>What you can do with this</h4><p class="fix">Plan an expansion, then sequence a later passage and load both. The twin will compare the forecast with what you measured.</p>';
@@ -293,15 +290,11 @@ function renderDetails(r, drift, fc) {
     <div class="card"><h3>Could a random signature do this?</h3>${histogram(r.random.draws, r.meanSlope)}
       <p class="note">${r.random.n} random gene sets of the same size and weights: mean ${r.random.mean.toFixed(3)}, SD ${r.random.sd.toFixed(3)}. This signature sits at z = ${r.random.z.toFixed(1)}, empirical p = ${r.random.p.toFixed(3)}, a figure limited by the number of draws.</p></div>
     <div class="card">${driftHtml(drift)}</div>
-    <div class="card"><h3>How to read this</h3><ul class="reading">
-      <li>Passage and donor come from your sheet. Scores are inference.</li>
+    <div class="card wide"><h3>How to read this</h3><ul class="reading">
       <li>Read each donor against itself. Absolute scores aren't comparable across labs or media.</li>
       ${mdc ? `<li>${esc(mdc)}</li>` : ''}
-      <li>A forecast isn't a measurement. Sequence the later passage to check it.</li>
-      <li>A rising score doesn't mean a lot has failed, and a flat one doesn't mean it is fine.</li>
-      <li>This says nothing about potency, immune function or clinical safety.</li></ul>
-      <div class="actions"><button type="button" class="secondary" id="dl-csv">Scores (.csv)</button><button type="button" class="secondary" id="dl">Full report (.json)</button><button type="button" class="secondary" id="print">Print or save as PDF</button></div></div>
-    <div class="card"><h3>All input checks</h3>${checksHtml(r.checks)}</div>`;
+      <li>A forecast isn't a measurement, and a rising score doesn't mean a lot has failed.</li></ul>
+      <div class="actions"><button type="button" class="secondary" id="dl-csv">Scores (.csv)</button><button type="button" class="secondary" id="dl">Full report (.json)</button><button type="button" class="secondary" id="print">Print or save as PDF</button></div></div>`;
   $('dl').onclick = download;
   $('dl-csv').onclick = downloadCsv;
   $('print').onclick = () => window.print();

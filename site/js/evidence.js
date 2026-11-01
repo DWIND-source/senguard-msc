@@ -6,17 +6,15 @@ const fmtP = (p) => (p < 0.001 ? 'p < 0.001' : `p = ${p.toFixed(p < 0.01 ? 4 : 3
 export function renderEvidence(el, ev) {
   const { ok, registered } = ev.headline;
   const f = ev.facts;
-  const c = ev.clock;
   const finding = (tag, title, body) => `<div class="finding"><h4>${title} <span class="tag">${tag}</span></h4><p>${body}</p></div>`;
   el.innerHTML = `
     <div class="tiles">
       <div class="tile"><b>${ok.donors_rising}/${ok.donors}</b><span>donors in new cohorts with a rising score (${pct(ok.share)}, 95% CI ${pct(ok.ci_low)} to ${pct(ok.ci_high)}, ${fmtP(ok.binom_p)})</span></div>
       <div class="tile"><b>${registered.donors_rising}/${registered.donors}</b><span>the same as planned, with one cohort that failed the identity check (${fmtP(registered.binom_p)})</span></div>
       <div class="tile"><b>${f.testBeat}/${f.testN}</b><span>never-used donors where the frozen forecast beat assuming no change (${fmtP(f.testP)}). Median error ${f.testErr} vs ${f.testCarry}.</span></div>
-      <div class="tile"><b>${c.rising}/${c.n}</b><span>held-out donors rising on the drift clock. It estimates passage-like drift, not senescence.</span></div>
       <div class="tile"><b>p = ${f.gvhdP}</b><span>for higher scores in GVHD non-responders. The clinical-response hypothesis was not supported.</span></div>
     </div>
-    <p class="note">The analysis plan was written and hashed before these cohorts were scored. Cohorts differ in tissue, medium and platform. Passage is not a senescence label, so these are trends and not accuracy.</p>
+    <p class="note">Plans were fixed and hashed before each test. Passage isn't a senescence label, so these are trends and not accuracy.</p>
 
     <div class="evidence-chart"><h3>Signatures compared head to head <span class="tag">measured</span></h3>
       ${shareDots(ev.headToHead)}
@@ -47,9 +45,9 @@ export function renderEvidence(el, ev) {
       </div>
     </div>
 
-    <div class="evidence-chart"><h3>Cohorts</h3>
+    <div class="evidence-chart"><details><summary>Cohorts used</summary>
       <div class="table-wrap"><table><thead><tr><th>GEO series</th><th>Tissue</th><th>Passages</th><th>Role</th><th class="num">Rising</th></tr></thead><tbody>
       ${ev.cohorts.map((r) => `<tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${r.accession}">${r.accession}</a></td><td>${r.tissue}</td><td>${r.design}</td><td>${r.role}</td><td class="num">${r.rising}</td></tr>`).join('')}
-      </tbody></table></div>
+      </tbody></table></div></details>
     </div>`;
 }
