@@ -1,6 +1,6 @@
 # SenGuard-MSC
 
-Tracks a published senescence signature across passages of mesenchymal stromal cell (MSC) cultures, donor by donor, and refuses to answer when the data can't support one.
+A 3D data twin of mesenchymal stromal cell (MSC) culture series. It follows a published senescence signature across passages, donor by donor, and refuses to answer when the data can't support one.
 
 **Live demo: https://dwind-source.github.io/senguard-msc/**
 
@@ -9,6 +9,7 @@ Research prototype for AMIM 2026, Track 3. **Not a release test.** It does not m
 ## What it does
 - Checks gene identifiers, data scale, transformation, signature coverage, sequencing depth, donor identity and passage design, and stops when a check fails.
 - Scores the published SenCat signature and a culture-drift clock, and reports each donor against itself.
+- Shows every measured sample in 3D, by score and by expression, with a record for each sample.
 - Compares the result with random signatures.
 - Runs entirely in the browser. Uploaded data never leaves your machine.
 
@@ -19,12 +20,12 @@ All from public GEO data. Plans were written and hashed before scoring.
 |---|---|
 | Published weights reproduced from public counts | Spearman 0.99997 |
 | Score rises with passage, new cohorts passing the identity check | 19/22 donors, p < 0.001 |
-| The same, as registered, with a cohort that failed the check | 21/27 donors, p = 0.006 |
+| The same, as planned, with a cohort that failed the check | 21/27 donors, p = 0.006 |
 | Drift clock, each cohort held out | 35/35 donors rising |
 | One signature clearly better than the others | No; CDKN2A alone matches it on direction |
 | Higher score in GVHD non-responders | Not supported, p = 0.63, 8 lots |
 
-The score also rose during short GMP expansion and while published potency was retained, and absolute values differ widely across labs and media. See [limitations](deliverables/LIMITATIONS.md).
+A next-passage forecast failed its back-test and is switched off. The score also rose during short GMP expansion and while published potency was retained, and absolute values differ widely across labs and media. See [limitations](deliverables/LIMITATIONS.md).
 
 ## Repository
 | Path | Contents |

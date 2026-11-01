@@ -14,6 +14,9 @@
 - **Absolute values do not travel.** Earliest-passage means ranged from -5.6 to 11.4 across count-based cohorts, and medium shifted scores by 3.5 at the same donor and passage.
 - **RNA-seq alone is weaker.** New RNA-seq cohorts passing the identity check gave 9 of 12 donors (p = 0.15); arrays contribute much of the pooled power, in a rank form and with lower signature coverage.
 
+## The twin is a record, not a simulation
+It shows measured samples and inference from them. It doesn't model cell behaviour and it doesn't forecast: a next-passage forecast was tested and failed its preset rule (better than carrying the last value forward in 63% of donors, against 70% required).
+
 ## Choices made after seeing results
 Excluding GSE125632 was not planned. The identity check is independent of any score, but it ran after the cohort's result was seen, so both numbers are always reported. The clock's gate was first failed with that cohort included.
 

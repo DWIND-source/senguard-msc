@@ -3,6 +3,7 @@
 
 export const LIMITS = { minPassages: 3, minWeightCoverage: 0.9, nullDraws: 200, depthWarn: 3e6, depthStop: 0.25e6, yHigh: 2.5, yLow: 1.0 };
 const Y_GENE = 'ENSG00000129824'; // RPS4Y1
+const RECORD_GENES = { CDKN1A: 'ENSG00000124762', CDKN2A: 'ENSG00000147889', LMNB1: 'ENSG00000113368', GDF15: 'ENSG00000130513', IL6: 'ENSG00000136244', MKI67: 'ENSG00000148773', TOP2A: 'ENSG00000131747' };
 
 export function parseDelimited(text) {
   const lines = text.split(/\r?\n/).filter((l) => l.length > 0);
@@ -235,7 +236,56 @@ export function analyze(table, samples, scale, markers, opts = {}) {
   out.signFlipP = exactSignFlipP(trends.map((t) => t.slope));
   out.signFlipFloor = 2 / 2 ** trends.length;
   out.random = randomSignature(norm, samples, used, eligible, nDraws, out.meanSlope);
+  out.state = stateSpace(norm, samples);
+  out.records = Object.fromEntries(samples.map((s, j) => [s.id, { genes: Object.fromEntries(Object.entries(RECORD_GENES).filter(([, e]) => pos.has(e)).map(([g, e]) => [g, Math.log1p(norm.values[j][pos.get(e)])])) }]));
   return out;
+}
+
+// Measured expression space: PCA of the most variable genes, oriented so PC1 increases with passage.
+export function stateSpace(norm, samples, nGenes = 500) {
+  const n = norm.values.length, g = norm.genes.length;
+  const scored = [];
+  for (let k = 0; k < g; k++) {
+    let m = 0, m2 = 0;
+    for (let j = 0; j < n; j++) { const v = Math.log1p(norm.values[j][k]); m += v; m2 += v * v; }
+    m /= n;
+    if (m > 1) scored.push([k, m2 / n - m * m, m]);
+  }
+  scored.sort((a, b) => b[1] - a[1] || a[0] - b[0]);
+  const top = scored.slice(0, nGenes);
+  const X = norm.values.map((col) => Float64Array.from(top, ([k, , m]) => Math.log1p(col[k]) - m));
+  const G = Array.from({ length: n }, () => new Float64Array(n));
+  for (let a = 0; a < n; a++) for (let b = a; b < n; b++) { let s = 0; for (let k = 0; k < top.length; k++) s += X[a][k] * X[b][k]; G[a][b] = s; G[b][a] = s; }
+  const { values, vectors } = jacobiEigen(G);
+  const order = values.map((v, i) => [v, i]).sort((a, b) => b[0] - a[0]);
+  const trace = values.reduce((a, b) => a + Math.max(b, 0), 0);
+  const pcs = order.slice(0, 3).map(([v, i]) => vectors.map((row) => row[i] * Math.sqrt(Math.max(v, 0))));
+  const passage = samples.map((s) => s.passage);
+  pcs.forEach((pc) => { let c = 0; const mp = passage.reduce((a, b) => a + b, 0) / n; pc.forEach((v, i) => { c += v * (passage[i] - mp); }); if (c < 0) pc.forEach((v, i) => { pc[i] = -v; }); });
+  return { coords: Object.fromEntries(samples.map((s, i) => [s.id, pcs.map((pc) => pc[i] ?? 0)])), varExplained: order.slice(0, 3).map(([v]) => (trace ? v / trace : 0)), genes: top.length };
+}
+
+function jacobiEigen(M) {
+  const n = M.length;
+  const A = M.map((r) => Float64Array.from(r));
+  const V = Array.from({ length: n }, (_, i) => { const r = new Float64Array(n); r[i] = 1; return r; });
+  for (let sweep = 0; sweep < 60; sweep++) {
+    let off = 0;
+    for (let p = 0; p < n; p++) for (let q = p + 1; q < n; q++) off += A[p][q] ** 2;
+    if (off < 1e-18) break;
+    for (let p = 0; p < n; p++) {
+      for (let q = p + 1; q < n; q++) {
+        if (Math.abs(A[p][q]) < 1e-14) continue;
+        const theta = (A[q][q] - A[p][p]) / (2 * A[p][q]);
+        const t = Math.sign(theta || 1) / (Math.abs(theta) + Math.sqrt(theta * theta + 1));
+        const c = 1 / Math.sqrt(t * t + 1), s = t * c;
+        for (let k = 0; k < n; k++) { const a = A[k][p], b = A[k][q]; A[k][p] = c * a - s * b; A[k][q] = s * a + c * b; }
+        for (let k = 0; k < n; k++) { const a = A[p][k], b = A[q][k]; A[p][k] = c * a - s * b; A[q][k] = s * a + c * b; }
+        for (let k = 0; k < n; k++) { const a = V[k][p], b = V[k][q]; V[k][p] = c * a - s * b; V[k][q] = s * a + c * b; }
+      }
+    }
+  }
+  return { values: Array.from({ length: n }, (_, i) => A[i][i]), vectors: V };
 }
 
 // Culture-drift clock: ridge weights over within-sample gene ranks. Estimates passage-like drift, not senescence.

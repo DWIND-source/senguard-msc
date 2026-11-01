@@ -72,6 +72,16 @@ for (const [label, acc, table, sheet, model] of [['Adipose MSC', 'GSE309666', 'a
   check(`${label}: clock rises in all donors`, c.rising === c.trends.length, `${c.rising}/${c.trends.length}`);
 }
 
+const pca = JSON.parse(readFileSync('deliverables/tables/pca_check_adipose.json', 'utf8'));
+const adipose = run('adipose_msc_counts.tsv.gz', 'adipose_msc_samples.csv', 'counts');
+const evr = Math.max(...adipose.state.varExplained.map((v, i) => Math.abs(v - pca.var_explained[i])));
+check('Expression space: variance explained matches numpy', evr < 1e-6, `max difference ${evr.toExponential(2)}`);
+let worstPc = 0;
+pca.samples.forEach((id, i) => { for (let c = 0; c < 3; c++) worstPc = Math.max(worstPc, Math.abs(Math.abs(adipose.state.coords[id][c]) - Math.abs(pca.coords[i][c]))); });
+check('Expression space: coordinates match numpy', worstPc < 1e-5, `max difference ${worstPc.toExponential(2)}`);
+const rec = adipose.records[pca.samples[0]];
+check('Sample records hold measured transcripts', Object.keys(rec.genes).length >= 5 && Object.values(rec.genes).every(Number.isFinite), Object.keys(rec.genes).join(' '));
+
 const failed = results.filter((r) => !r.ok).length;
 console.log(`\n${results.length - failed} of ${results.length} passed`);
 process.exit(failed ? 1 : 0);

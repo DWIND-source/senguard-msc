@@ -36,7 +36,13 @@ Written and hashed before any added cohort was scored (`reports/ANALYSIS_AMENDME
 Ridge regression of within-donor log2(passage + 1) on within-sample gene ranks over 7,845 shared genes, validated leaving out each cohort, with strength chosen by inner cohort hold-out. Negative control: passages shuffled within donors. It estimates passage-like drift, not senescence or potency. It entered the demo through a gate set in advance: median rho of at least 0.8, at least 90% of donors rising, shuffled median rho under 0.3.
 
 ## Prototype
-A browser tool (`site/`) and a Python command-line tool (`senguard_msc/src/senguard_qc.py`). Depth thresholds come from read thinning of two cohorts, and the identity check from the GSE125632 finding. Automated tests compare browser and Python outputs: 25 browser tests and 14 Python tests pass. The tests were written by the project team on retrospective data; no external user has tried the tool.
+A browser tool (`site/`) and a Python command-line tool (`senguard_msc/src/senguard_qc.py`). Depth thresholds come from read thinning of two cohorts, and the identity check from the GSE125632 finding. Automated tests compare browser and Python outputs: 28 browser tests and 14 Python tests pass. The tests were written by the project team on retrospective data; no external user has tried the tool.
+
+## Culture twin interface
+A 3D view built only from measured data: score against passage by donor, and PCA of the 500 most variable genes (verified against numpy). It doesn't simulate cells.
+
+## Forecast back-test
+Each donor's last passage was predicted from its earlier ones, in 16 donors across 5 RNA-seq cohorts (`tables/forecast_backtest.csv`). The rule set beforehand: beat carrying the last value forward in at least 70% of donors and in at least 4 of 5 cohorts. Result: 63% of donors and 4 of 5 cohorts, direction right in 15 of 16, so it failed and the interface shows no forecast.
 
 ## Runtime
 Kaggle Notebooks with Tesla T4 for kernels A and C, CPU for B and D. Python 3.13.15, scikit-learn 1.6.1, xgboost 3.4.1, torch 2.11.0+cu128. Seed 42. XGBoost ran on GPU, while scikit-learn models ran on CPU; cuML was compared on one fold and was slower for logistic and RBF SVM at this data size.

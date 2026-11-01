@@ -268,7 +268,11 @@
   "bfLow": 0.973,
   "bfHigh": 1.0,
   "bfGb": 1.6,
-  "confCov": 0.895
+  "confCov": 0.895,
+  "forecastBetter": 0.625,
+  "forecastDonors": 16,
+  "forecastDirection": 15,
+  "forecastError": 2.2
  },
  "guidance": {
   "minimumChange": "In re-sequenced samples the score differed by 0.06 and 0.26, so treat changes under about 0.4 as possibly technical. This rests on two pairs from one cohort."

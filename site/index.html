@@ -4,85 +4,137 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SenGuard-MSC</title>
-<meta name="description" content="Track a senescence signature across passages of mesenchymal stromal cell cultures, with checks that refuse invalid data. Research prototype.">
+<meta name="description" content="A data twin of mesenchymal stromal cell culture series. Checks the data, tracks a senescence signature across passages, and refuses to answer when the data can't support one. Research prototype.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/app.css">
+<script type="importmap">{ "imports": { "three": "./vendor/three.module.min.js" } }</script>
 </head>
 <body>
 <header class="top">
   <div class="wrap top-row">
-    <a class="brand" href="#analyze">SenGuard<span>-MSC</span></a>
+    <a class="brand" href="#twin">SenGuard<span>-MSC</span></a>
     <nav aria-label="Sections">
-      <a href="#analyze">Analyze</a>
+      <a href="#twin">Culture twin</a>
       <a href="#evidence">Evidence</a>
       <a href="#method">How it works</a>
       <a href="#limits">Limits</a>
+      <a href="https://github.com/DWIND-source/senguard-msc">Code</a>
     </nav>
   </div>
 </header>
 
-<main class="wrap">
-  <section id="intro" class="intro">
-    <h1>Is a culture drifting toward senescence as it is expanded? Check it, and refuse to answer when the data can't support it.</h1>
-    <p class="lede">SenGuard-MSC tracks a published senescence signature across passages, donor by donor. Your data stays in this browser. It is a research prototype: it does not measure potency, immune function or clinical safety, and it makes no pass or fail call.</p>
-  </section>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="kicker">Research prototype · AMIM 2026 Track 3</p>
+      <h1>A data twin of an MSC culture series, from the first passage to the last.</h1>
+      <p class="lede">It checks the data, follows a published senescence signature donor by donor, and refuses to answer when the data can't support one. Your data stays in this browser.</p>
+    </div>
+    <dl class="hero-stats" id="hero-stats" aria-label="Key results"></dl>
+  </div>
+</section>
 
-  <section id="analyze" aria-labelledby="analyze-h">
-    <h2 id="analyze-h">Analyze a passage series</h2>
+<main>
+  <section id="twin" class="wrap" aria-labelledby="twin-h">
+    <h2 id="twin-h" class="sr">Culture twin</h2>
     <div class="scenarios" role="group" aria-label="Choose data">
-      <button type="button" class="scenario" data-scenario="adipose"><b>Adipose MSC</b><small>GSE309666, 5 donors</small></button>
-      <button type="button" class="scenario" data-scenario="marrow"><b>Bone-marrow MSC</b><small>GSE178514, 3 inferred donors</small></button>
-      <button type="button" class="scenario bad" data-scenario="logged"><b>Bad input: already logged</b><small>Same adipose data, log-transformed</small></button>
-      <button type="button" class="scenario bad" data-scenario="entrez"><b>Bad input: wrong gene ids</b><small>Bone-marrow table with Entrez ids</small></button>
-      <button type="button" class="scenario bad" data-scenario="mislabelled"><b>Real labelling error</b><small>GSE125632, as deposited on GEO</small></button>
-      <button type="button" class="scenario" data-scenario="upload"><b>Use my own data</b><small>Stays in this browser</small></button>
+      <button type="button" class="scenario" data-scenario="adipose"><b>Adipose MSC</b><small>GSE309666 · 5 donors</small></button>
+      <button type="button" class="scenario" data-scenario="marrow"><b>Bone-marrow MSC</b><small>GSE178514 · 3 inferred donors</small></button>
+      <button type="button" class="scenario bad" data-scenario="logged"><b>Already logged</b><small>Bad input, on purpose</small></button>
+      <button type="button" class="scenario bad" data-scenario="entrez"><b>Wrong gene ids</b><small>Bad input, on purpose</small></button>
+      <button type="button" class="scenario bad" data-scenario="mislabelled"><b>Real labelling error</b><small>GSE125632, as on GEO</small></button>
+      <button type="button" class="scenario own" data-scenario="upload"><b>Use my own data</b><small>Stays in this browser</small></button>
     </div>
 
     <form id="upload" class="upload" hidden>
-      <div class="field"><label for="f-table">Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id, one column per sample. .tsv, .csv or .gz</small></div>
+      <div class="field"><label for="f-table">Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id, one column per sample</small></div>
       <div class="field"><label for="f-sheet">Sample sheet</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt" required><small>Columns: sample_id, donor, passage</small></div>
       <div class="field"><label for="f-scale">Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small>Untransformed values only</small></div>
-      <button type="submit" class="primary">Check and analyze</button>
+      <button type="submit" class="primary">Check and build twin</button>
     </form>
 
-    <p id="status" class="status" role="status" aria-live="polite">Loading the signature...</p>
+    <ol class="rail" id="rail" aria-label="Input checks"></ol>
+    <p class="rail-detail" id="rail-detail" role="status" aria-live="polite"></p>
+
+    <div class="stage" id="stage">
+      <div class="canvas-wrap">
+        <div class="canvas" id="canvas"></div>
+        <div class="stage-top">
+          <div class="seg" role="group" aria-label="View">
+            <button type="button" id="v-land" aria-pressed="true">Score landscape</button>
+            <button type="button" id="v-space" aria-pressed="false">Expression space</button>
+          </div>
+          <p class="view-note" id="view-note"></p>
+        </div>
+        <div class="stage-bottom" id="timeline">
+          <button type="button" class="play" id="play" aria-label="Play through passages">&#9654;</button>
+          <label class="sr" for="slider">Show samples up to passage</label>
+          <input type="range" id="slider" min="0" max="1" step="1" value="1">
+          <output id="slider-out" for="slider">P1</output>
+          <div class="scale" aria-hidden="true"><span>Low</span><i></i><span>High score</span></div>
+        </div>
+        <div class="refusal" id="refusal" hidden>
+          <span class="big-x" aria-hidden="true">&#10005;</span>
+          <h3 id="refusal-title"></h3>
+          <p id="refusal-body"></p>
+          <p class="refusal-foot">A number from this input would look valid and be wrong, so no twin is built.</p>
+        </div>
+        <p class="no-webgl" id="no-webgl" hidden>3D isn't available in this browser. All results are in the charts below.</p>
+      </div>
+      <aside class="inspector" aria-label="Twin details">
+        <div class="verdict-block">
+          <p class="eyebrow" id="in-label">Loading...</p>
+          <p class="headline" id="in-headline"></p>
+          <p class="sub" id="in-sub"></p>
+        </div>
+        <div class="donors" id="donors" role="group" aria-label="Focus on a donor"></div>
+        <div class="record" id="record"></div>
+        <p class="status" id="status" role="status" aria-live="polite"></p>
+      </aside>
+    </div>
+
     <div id="results" class="results"></div>
   </section>
 
-  <section id="evidence" aria-labelledby="evidence-h">
-    <h2 id="evidence-h">What supports this</h2>
-    <div id="evidence-body"><p class="status">Loading results...</p></div>
+  <section id="evidence" class="band" aria-labelledby="evidence-h">
+    <div class="wrap">
+      <h2 id="evidence-h">What supports this, and what doesn't</h2>
+      <div id="evidence-body"><p class="status">Loading results...</p></div>
+    </div>
   </section>
 
-  <section id="method" aria-labelledby="method-h">
+  <section id="method" class="wrap" aria-labelledby="method-h">
     <h2 id="method-h">How it works</h2>
-    <ol class="steps">
-      <li><b>Check.</b> Gene identifiers, data scale, transformation, signature coverage, sequencing depth, sample identity and passage design. Each check exists because of a failure we met in public data.</li>
-      <li><b>Normalize.</b> Median-of-ratios for counts, verified against PyDESeq2 to 1e-14, using the published filters. FPKM is rescaled to TPM.</li>
-      <li><b>Score.</b> Published SenCat weights: log1p applied once, then a weighted sum with no intercept. The weights are fetched from the authors' repository at a pinned commit and their SHA-256 is verified on load.</li>
-      <li><b>Trend, within each donor.</b> Slope and rank correlation against passage. Donors are never pooled into one absolute scale, because absolute scores shift between labs and media.</li>
-      <li><b>Control.</b> Random gene sets of the same size and weights show whether a rise is specific to this signature.</li>
-      <li><b>Second readout.</b> A culture-drift clock, a ridge model we trained on within-donor gene ranks across MSC cohorts and tested by leaving out each cohort in turn. It estimates passage-like drift and is not a senescence measure.</li>
+    <ol class="pipeline">
+      <li><span>1</span><b>Check</b><p>Ids, scale, transformation, coverage, depth, identity and design. Each check exists because of a failure met in public data.</p></li>
+      <li><span>2</span><b>Normalize</b><p>Median of ratios for counts, verified against PyDESeq2. FPKM is rescaled to TPM.</p></li>
+      <li><span>3</span><b>Score</b><p>Published SenCat weights, fetched at a pinned commit and checksum-verified on load.</p></li>
+      <li><span>4</span><b>Follow each donor</b><p>Slope and rank correlation against passage, never pooled onto one absolute scale.</p></li>
+      <li><span>5</span><b>Challenge it</b><p>Random signatures as a control, plus a drift clock trained with each cohort held out.</p></li>
     </ol>
-    <p class="note">This page runs the same analysis as the validated Python pipeline. Automated tests compare the two: scores agree within 1e-13. <a href="https://github.com/DWIND-source/senguard-msc">Code, protocols and result tables</a>.</p>
+    <div class="twin-explain">
+      <div><h3>What "twin" means here</h3><p>A digital record of one culture series, built only from its measured expression. You can move through its passages, inspect any sample, and see where it sits in expression space.</p></div>
+      <div><h3>What it doesn't do</h3><p>It doesn't simulate cells or predict potency. We also tested forecasting the next passage, and it didn't pass, so <span id="forecast-note">it is switched off</span>.</p></div>
+    </div>
+    <p class="note">The same analysis runs in the validated Python pipeline, and automated tests compare the two: scores agree within 1e-13. <a href="https://github.com/DWIND-source/senguard-msc">Code, protocols and result tables</a>.</p>
   </section>
 
-  <section id="limits" aria-labelledby="limits-h">
+  <section id="limits" class="wrap" aria-labelledby="limits-h">
     <h2 id="limits-h">What it cannot tell you</h2>
-    <ul class="limits">
-      <li><b>Not potency.</b> Nothing here measures T-cell suppression, immune function, therapeutic effect or safety.</li>
-      <li><b>Not a release test.</b> No threshold has been validated, so a rising score doesn't mean a lot has failed and a flat one doesn't mean it is fine.</li>
-      <li><b>Not a substitute for assays.</b> Public MSC cohorts rarely have per-sample senescence assays, so this reports trends and not accuracy.</li>
-      <li><b>Partly time in culture.</b> Passage, culture time and possibly batch move together in these datasets.</li>
+    <ul class="limit-grid">
+      <li><b>Not potency</b>Nothing here measures T-cell suppression, immune function, therapeutic effect or safety.</li>
+      <li><b>Not a release test</b>No threshold has been validated. A rising score doesn't mean a lot has failed, and a flat one doesn't mean it is fine.</li>
+      <li><b>Not an assay</b>Public MSC cohorts rarely have per-sample senescence assays, so this reports trends and not accuracy.</li>
+      <li><b>Partly time in culture</b>Passage, culture time and possibly batch move together in these datasets.</li>
     </ul>
   </section>
 </main>
 
-<footer class="wrap foot">
-  <p>Research prototype for AMIM 2026 Track 3. Signature: SenCat, Anerillas et al., Molecular Cell 2026. Data: NCBI GEO. Not for clinical or manufacturing decisions.</p>
-</footer>
+<footer class="foot"><div class="wrap">
+  <p>Signature: SenCat, Anerillas et al., Molecular Cell 2026. Data: NCBI GEO. 3D: three.js. Not for clinical or manufacturing decisions.</p>
+</div></footer>
 <div id="tip" class="tip" role="tooltip" hidden></div>
 <script type="module" src="js/app.js"></script>
 </body>

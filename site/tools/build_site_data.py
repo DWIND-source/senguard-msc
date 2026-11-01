@@ -68,6 +68,7 @@ phase = pd.read_csv(B / 'results/external_phase_changes_GSE309666.csv').set_inde
 leak = pd.read_csv(A / 'results/dev_feature_selection_leakage.csv')
 conf = pd.read_csv(D / 'results/g5_conformal_sets.csv')
 load = pd.read_csv(E / 'results/ext_cohort_load_log.csv')
+fc = json.load(open(P / 'deliverables/tables/forecast_backtest.json'))
 
 COHORT_INFO = {
     'GSE309666': ('Adipose', 'Reference; used first', 'Passage 1 to 10'),
@@ -118,6 +119,7 @@ evidence = {
         'g137rising': int((g137.slope > 0).sum()), 'g137n': len(g137), 'g233slope': g(g233.slope.iloc[0]), 'donorE': g(phase.loc['E', 'final'], 1), 'arrestedLow': g(phase.loc[['A', 'B', 'C'], 'final'].min(), 1), 'arrestedHigh': g(phase.loc[['A', 'B', 'C'], 'final'].max(), 1), 'donorD': g(phase.loc['D', 'final'], 1),
         'bfAuroc': g(bf['dev_mean_auroc']['mean'], 3), 'bfLow': g(bf['dev_mean_auroc']['ci'][0], 3), 'bfHigh': g(bf['dev_mean_auroc']['ci'][1], 3), 'bfGb': g(bf['steps']['extraction']['peak_gpu_gb'], 1),
         'confCov': g(conf.covered.mean(), 3),
+        'forecastBetter': g(fc['share_better'], 3), 'forecastDonors': fc['donors'], 'forecastDirection': fc['direction_right'], 'forecastError': g(fc['median_error_forecast'], 1),
     },
     'guidance': {'minimumChange': f'In re-sequenced samples the score differed by {g(rt.difference.min())} and {g(rt.difference.max())}, so treat changes under about {g(mdc, 1)} as possibly technical. This rests on two pairs from one cohort.'},
 }

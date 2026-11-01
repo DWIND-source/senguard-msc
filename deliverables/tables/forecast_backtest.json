@@ -1,0 +1,11 @@
+{
+ "donors": 16,
+ "share_better": 0.625,
+ "cohorts_better": 4,
+ "cohorts": 5,
+ "direction_right": 15,
+ "median_error_per_step": 0.5656812791467657,
+ "median_error_forecast": 2.245976957627901,
+ "median_error_carry": 3.679729122581152,
+ "passes": false
+}

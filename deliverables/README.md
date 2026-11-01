@@ -12,7 +12,7 @@ Cross-dataset evaluation of senescence-associated transcriptomic signatures in m
 | G4 BulkFormer | PASS, one cohort skipped | GSE178514 under the coverage target |
 | G5 Ablations | PASS | Includes null results |
 | Amendment 1 | DONE, with deviations | 19/22 donors in new cohorts passing the identity check; 21/27 as registered |
-| G6 Deliverables | DRAFT | Live demo; 25 browser and 14 Python tests pass; pilot partner and author review pending |
+| G6 Deliverables | DRAFT | Live demo with 3D culture twin; 28 browser and 14 Python tests pass; pilot partner and author review pending |
 
 ## Contents
 - `ABSTRACT_DRAFT.md`, `PITCH_7MIN.md`, `TRACK3_ASSESSMENT.md`, `METHODS.md`, `LIMITATIONS.md`

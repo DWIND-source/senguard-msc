@@ -3,7 +3,7 @@
 Track 3 asks for Problem → Solution → Technology → Evidence → Implementation. All numbers below are measured results from this project.
 
 Live demo: https://dwind-source.github.io/senguard-msc/  
-Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled` or `?demo=entrez` to the address.
+Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled` or `?demo=entrez` to the address. Add `&still=1` to skip the opening animation, or `&view=space` to open in expression space.
 
 ## Script
 **0:00-1:00 Problem.** MSC therapies are expanded in culture to make more doses, and expansion can push cells toward senescence. New transcriptomic senescence scores keep appearing, but they are dangerous in a specific way: give one the wrong table and it still returns a number that looks fine.
@@ -11,7 +11,7 @@ Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled`
 **1:00-1:40 Solution.** SenGuard-MSC checks the data first, refuses what it can't score validly, and reports how a published senescence signature moves within each donor. It runs in the browser, so data never leaves the lab's machine. It deliberately gives no pass or fail, because no threshold has been validated.
 
 **1:40-3:30 Live demo.**
-1. **Adipose MSC.** Every check, then 5 of 5 donors rising, the trajectories, and the random-signature control.
+1. **Adipose MSC.** The checks light up, then the 3D twin: press play to walk through the passages, switch to Expression space, and click a sample to open its record. 5 of 5 donors rising.
 2. **Already-logged table.** It refuses, and explains that the table would otherwise be logged twice.
 3. **Real labelling error.** This one is a public dataset exactly as deposited on GEO. Y-linked expression contradicts its donor labels, and the tool stops. We found this while building it: this cohort first dragged our headline number down, and the check independent of any score showed why.
 
@@ -49,3 +49,4 @@ Direct links for stage: add `?demo=adipose`, `?demo=logged`, `?demo=mislabelled`
 | What does it cost? | Compute is negligible. RNA-seq cost and turnaround haven't been measured in a lab. |
 | Who is your user? | MSC process-development labs. We have yet to validate this with one. [Update if a partner is confirmed.] |
 | What about regulation? | No regulatory work has been done. It's a research tool at this stage. |
+| Why call it a twin if it can't predict? | It is a data twin: a faithful record of a culture you can inspect. We tested forecasting, it failed our preset rule, and we turned it off rather than show a guess. |
