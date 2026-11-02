@@ -1,0 +1,17 @@
+{
+  "id": "phongnguyendinh/senguard-msc-i",
+  "title": "SenGuard-MSC I",
+  "code_file": "senguard-msc-i.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [
+    "phongnguyendinh/senguard-msc-h"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}
