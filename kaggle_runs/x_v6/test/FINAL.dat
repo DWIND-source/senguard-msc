@@ -1,0 +1,109 @@
+| Run on Mon Nov  2 09:29:42 2026
+|
+|gmx_MMPBSA Version=1.7.1 based on MMPBSA.py v.14.0, AmberTools 23.6, GROMACS 2026.3-conda_forge
+|Complex (GROMACS) topology file:                                      topol.top
+|Complex Structure file:                                               whole.pdb
+|Complex (AMBER) topology file:                                       COM.prmtop
+|Receptor (AMBER) topology file:                                      REC.prmtop
+|Ligand (AMBER) topology file:                                        LIG.prmtop
+|Initial trajectories:                                            COM_traj_0.xtc
+|
+|Receptor mask:                  ":1-294"
+|Ligand mask:                    ":295-421"
+|
+|Calculations performed using 1 complex frames
+|
+|Generalized Born ESURF calculated using 'LCPO' surface areas
+|
+|Using temperature = 298.15 K
+|All units are reported in kcal/mol
+|
+|SD - Population standard deviation of the frames (ddof=0), SEM - SD / sqrt(number of frames)
+|SD(Prop.), SEM(Prop.) - SD and SEM obtained with propagation of uncertainty formula
+|Block SD, Block SEM - sample SD and SEM of deterministic nonoverlapping block means; Block SEM is used for primary estimates
+|https://en.wikipedia.org/wiki/Propagation_of_uncertainty#Example_formulae
+|
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+
+GENERALIZED BORN:
+
+Complex:
+Energy Component       Average     SD(Prop.)         SD   SEM(Prop.)        SEM   Block SD  Block SEM
+-----------------------------------------------------------------------------------------------------
+BOND                   1291.38          0.00       0.00         0.00       0.00        nan        nan
+ANGLE                  3521.29          0.00       0.00         0.00       0.00        nan        nan
+DIHED                  4439.87          0.00       0.00         0.00       0.00        nan        nan
+VDWAALS               -3365.54          0.00       0.00         0.00       0.00        nan        nan
+EEL                  -27916.84          0.00       0.00         0.00       0.00        nan        nan
+1-4 VDW                1582.67          0.00       0.00         0.00       0.00        nan        nan
+1-4 EEL               13427.45          0.00       0.00         0.00       0.00        nan        nan
+EGB                   -3852.10          0.00       0.00         0.00       0.00        nan        nan
+ESURF                   134.49          0.00       0.00         0.00       0.00        nan        nan
+
+GGAS                  -7019.73          0.00       0.00         0.00       0.00        nan        nan
+GSOLV                 -3717.62          0.00       0.00         0.00       0.00        nan        nan
+
+TOTAL                -10737.34          0.00       0.00         0.00       0.00        nan        nan
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+Receptor:
+Energy Component       Average     SD(Prop.)         SD   SEM(Prop.)        SEM   Block SD  Block SEM
+-----------------------------------------------------------------------------------------------------
+BOND                    898.94          0.00       0.00         0.00       0.00        nan        nan
+ANGLE                  2469.75          0.00       0.00         0.00       0.00        nan        nan
+DIHED                  3111.86          0.00       0.00         0.00       0.00        nan        nan
+VDWAALS               -2296.70          0.00       0.00         0.00       0.00        nan        nan
+EEL                  -20105.20          0.00       0.00         0.00       0.00        nan        nan
+1-4 VDW                1136.09          0.00       0.00         0.00       0.00        nan        nan
+1-4 EEL               10607.65          0.00       0.00         0.00       0.00        nan        nan
+EGB                   -2960.07          0.00       0.00         0.00       0.00        nan        nan
+ESURF                   103.07          0.00       0.00         0.00       0.00        nan        nan
+
+GGAS                  -4177.62          0.00       0.00         0.00       0.00        nan        nan
+GSOLV                 -2856.99          0.00       0.00         0.00       0.00        nan        nan
+
+TOTAL                 -7034.62          0.00       0.00         0.00       0.00        nan        nan
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+Ligand:
+Energy Component       Average     SD(Prop.)         SD   SEM(Prop.)        SEM   Block SD  Block SEM
+-----------------------------------------------------------------------------------------------------
+BOND                    392.44          0.00       0.00         0.00       0.00        nan        nan
+ANGLE                  1051.53          0.00       0.00         0.00       0.00        nan        nan
+DIHED                  1328.01          0.00       0.00         0.00       0.00        nan        nan
+VDWAALS                -925.36          0.00       0.00         0.00       0.00        nan        nan
+EEL                   -7460.33          0.00       0.00         0.00       0.00        nan        nan
+1-4 VDW                 446.58          0.00       0.00         0.00       0.00        nan        nan
+1-4 EEL                2819.80          0.00       0.00         0.00       0.00        nan        nan
+EGB                   -1414.97          0.00       0.00         0.00       0.00        nan        nan
+ESURF                    52.12          0.00       0.00         0.00       0.00        nan        nan
+
+GGAS                  -2347.32          0.00       0.00         0.00       0.00        nan        nan
+GSOLV                 -1362.84          0.00       0.00         0.00       0.00        nan        nan
+
+TOTAL                 -3710.16          0.00       0.00         0.00       0.00        nan        nan
+
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------
+Delta (Complex - Receptor - Ligand):
+Energy Component       Average     SD(Prop.)         SD   SEM(Prop.)        SEM   Block SD  Block SEM
+-----------------------------------------------------------------------------------------------------
+ΔBOND                     0.00          0.00       0.00         0.00       0.00        nan        nan
+ΔANGLE                    0.00          0.00       0.00         0.00       0.00        nan        nan
+ΔDIHED                    0.00          0.00       0.00         0.00       0.00        nan        nan
+ΔVDWAALS               -143.48          0.00       0.00         0.00       0.00        nan        nan
+ΔEEL                   -351.31          0.00       0.00         0.00       0.00        nan        nan
+Δ1-4 VDW                  0.00          0.00       0.00         0.00       0.00        nan        nan
+Δ1-4 EEL                  0.00          0.00       0.00         0.00       0.00        nan        nan
+ΔEGB                    522.93          0.00       0.00         0.00       0.00        nan        nan
+ΔESURF                  -20.71          0.00       0.00         0.00       0.00        nan        nan
+
+ΔGGAS                  -494.79          0.00       0.00         0.00       0.00        nan        nan
+ΔGSOLV                  502.22          0.00       0.00         0.00       0.00        nan        nan
+
+ΔTOTAL                    7.44          0.00       0.00         0.00       0.00        nan        nan
+-----------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------

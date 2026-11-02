@@ -1,0 +1,1 @@
+MM/GBSA smoke test completed; equilibration frame only, not a production result

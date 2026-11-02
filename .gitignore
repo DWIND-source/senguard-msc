@@ -12,3 +12,4 @@ senguard_msc/figures/
 senguard_msc/.venv_check/
 deliverables/demo/input/
 kaggle_runs/*/senguard_msc/figures/*.svg
+kaggle_runs/md_watch/
