@@ -1,12 +1,13 @@
 """Browser checks for the real, single-frame molecular preview.
-Usage: python site/test/md_preview.py URL [SCREENSHOT_DIR]
+Usage: python site/test/md_preview.py URL [SCREENSHOT_DIR] [--offline]
 """
 import sys
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
-base = sys.argv[1].rstrip('/')
-shots = Path(sys.argv[2]) if len(sys.argv) > 2 else None
+arguments = [a for a in sys.argv[1:] if a != '--offline']
+base = arguments[0].rstrip('/')
+shots = Path(arguments[1]) if len(arguments) > 1 else None
 if shots:
     shots.mkdir(parents=True, exist_ok=True)
 
@@ -63,7 +64,18 @@ with sync_playwright() as p:
     assert not errors, errors
     print('PASS: mobile layout and no uncaught errors')
 
-    broken = context.new_page()
+    if '--offline' in sys.argv:
+        page.wait_for_function('navigator.serviceWorker.controller !== null')
+        context.set_offline(True)
+        page.reload(wait_until='load')
+        page.locator('#molecular').scroll_into_view_if_needed()
+        page.wait_for_function('window.__mol?.data?.nca === 417')
+        page.click('#md-preview-views [data-mode="water"]')
+        assert page.evaluate('window.__mol.water.visible')
+        context.set_offline(False)
+        print('PASS: molecular geometry and solvent work offline')
+
+    broken = browser.new_context(service_workers='block').new_page()
     broken.route('**/data/md/preview.json.gz', lambda r: r.fulfill(status=503, body='unavailable'))
     broken.goto(base + '/#molecular', wait_until='load')
     broken.locator('#molecular').scroll_into_view_if_needed()

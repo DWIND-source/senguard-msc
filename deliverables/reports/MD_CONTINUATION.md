@@ -43,6 +43,8 @@ are in `deliverables/qa/md_preview/`.
 
 The live preview passed all molecular browser checks and all 28 existing
 browser tests including offline operation after deployment of `ac01cca`.
+The molecular geometry and solvent controls also passed a dedicated offline
+reload test on the deployed site.
 
 ## Automated follow-through
 
