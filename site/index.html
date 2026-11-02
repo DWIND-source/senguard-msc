@@ -19,6 +19,7 @@
     <a class="brand" href="#twin">SenGuard<span>-MSC</span></a>
     <nav aria-label="Sections">
       <a href="#twin">Culture twin</a>
+      <a href="#molecular">Molecular view</a>
       <a href="#evidence">Evidence</a>
       <a href="#method">How it works</a>
       <a href="https://github.com/DWIND-source/senguard-msc">Code</a>
@@ -105,6 +106,40 @@
     <div id="results" class="results"></div>
   </section>
 
+  <section id="molecular" class="wrap" aria-labelledby="molecular-h">
+    <p class="kicker">From gene expression to a molecular structure</p>
+    <h2 id="molecular-h">Explore the p16–CDK6 complex</h2>
+    <p class="note">p16 is encoded by CDKN2A, one of the markers studied here. This independent molecular model illustrates the complex; it does not represent an uploaded sample or change its forecast.</p>
+    <div class="md-preview-layout">
+      <div class="md-preview-stage">
+        <div id="md-canvas" role="img" aria-label="Interactive molecular structure: CDK6 in blue, p16 in orange"></div>
+        <p id="md-loading" class="md-loading" role="status">Loading the recorded structure...</p>
+        <div id="md-preview-controls" class="md-preview-controls" hidden>
+          <div id="md-preview-views" class="seg" role="group" aria-label="Molecular view">
+            <button type="button" data-mode="chain" aria-pressed="true">Complex</button>
+            <button type="button" data-mode="interface" aria-pressed="false">Interface</button>
+            <button type="button" data-mode="water" aria-pressed="false">Water &amp; ions</button>
+          </div>
+          <button type="button" id="md-rotate" aria-pressed="false">Rotate view</button>
+        </div>
+        <p id="md-preview-note" class="md-preview-note"></p>
+      </div>
+      <aside class="md-preview-info">
+        <p class="eyebrow">Recorded equilibration frame · WT</p>
+        <h3>Structure preview</h3>
+        <p id="md-source-status">One real frame from the GROMACS build and equilibration run.</p>
+        <p id="md-snapshot-info" class="md-counts"></p>
+        <div class="md-pending"><b>Production analysis pending</b><p>The planned comparison is WT, R24P, D84N and H123Q, with three replicas each. RMSD, flexibility and binding-energy results are not available in this preview.</p></div>
+        <details><summary>Model and source</summary>
+          <p>Starting complex: PDB <a href="https://www.rcsb.org/structure/1BI7">1BI7</a>. CDK6 residues 49–71 were modelled from <a href="https://www.rcsb.org/structure/1BLX">1BLX</a>. The backbone is drawn through C-alpha atoms; selected side chains are shown as sticks.</p>
+          <p>Snapshot: <a href="https://www.kaggle.com/code/phongnguyendinh/senguard-msc-h">kernel H</a>, <code>systems/wt/npt.gro</code>. Protein chains are brought into the same periodic image. No synthetic motion is added.</p>
+          <p>Source SHA-256: <code id="md-source-hash" class="md-hash"></code></p>
+        </details>
+        <div class="actions"><a href="data/md/preview.json.gz" download>Download coordinates</a><a href="https://github.com/DWIND-source/senguard-msc/blob/main/deliverables/reports/ANALYSIS_AMENDMENT_4_MD.md">Analysis protocol</a></div>
+      </aside>
+    </div>
+  </section>
+
   <section id="evidence" class="band" aria-labelledby="evidence-h">
     <div class="wrap">
       <h2 id="evidence-h">What supports this, and what doesn't</h2>
@@ -125,5 +160,6 @@
 </main>
 <div id="tip" class="tip" role="tooltip" hidden></div>
 <script type="module" src="js/app.js"></script>
+<script type="module" src="js/md-preview.js"></script>
 </body>
 </html>

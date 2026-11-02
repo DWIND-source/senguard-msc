@@ -14,6 +14,7 @@ For research use. Built for AMIM 2026, Track 3. **Not a release test.** It does 
 - Accepts Ensembl ids or gene symbols, builds the sample sheet from column names, exports CSV and JSON, and works offline after the first visit.
 - Compares the result with random signatures.
 - Runs entirely in the browser. Uploaded data never leaves your machine.
+- Shows a real p16–CDK6 equilibration frame in 3D, including the interface and solvent. Production MD comparisons are pending; the preview is independent of RNA scores.
 
 ## Main results
 All from public GEO data. Plans were written and hashed before scoring.
@@ -45,6 +46,7 @@ The forecast can undershoot, and every test donor rose, so it is untested on sta
 ```
 node site/test/compare_python.mjs          # numeric tests, from the repository root
 python site/test/e2e.py http://127.0.0.1:8000   # drives each user flow in Edge; needs playwright
+python site/test/md_preview.py http://127.0.0.1:8000  # structure, controls, mobile and missing-data checks
 python -m http.server --directory site     # local copy of the app
 ```
 
