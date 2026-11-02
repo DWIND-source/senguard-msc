@@ -3,7 +3,7 @@
 
 export const LIMITS = { minPassages: 3, minWeightCoverage: 0.9, nullDraws: 200, depthWarn: 3e6, depthStop: 0.25e6, yHigh: 2.5, yLow: 1.0 };
 const Y_GENE = 'ENSG00000129824'; // RPS4Y1
-const RECORD_GENES = { CDKN1A: 'ENSG00000124762', CDKN2A: 'ENSG00000147889', LMNB1: 'ENSG00000113368', GDF15: 'ENSG00000130513', IL6: 'ENSG00000136244', MKI67: 'ENSG00000148773', TOP2A: 'ENSG00000131747' };
+const RECORD_GENES = {"CDKN1A": "ENSG00000124762", "CDKN2A": "ENSG00000147889", "LMNB1": "ENSG00000113368", "GDF15": "ENSG00000130513", "IL6": "ENSG00000136244", "MKI67": "ENSG00000148773", "TOP2A": "ENSG00000131747", "CCNA1": "ENSG00000133101", "CCNA2": "ENSG00000145386", "CCNB1": "ENSG00000134057", "CCND1": "ENSG00000110092", "CDK1": "ENSG00000170312", "CDK2": "ENSG00000123374", "CDK4": "ENSG00000135446", "CDK6": "ENSG00000105810", "E2F1": "ENSG00000101412", "RB1": "ENSG00000139687", "TP53": "ENSG00000141510", "MYC": "ENSG00000136997", "CXCL8": "ENSG00000169429", "CCL2": "ENSG00000108691", "CXCL1": "ENSG00000163739", "MMP1": "ENSG00000196611", "MMP3": "ENSG00000149968", "IGFBP7": "ENSG00000163453"};
 
 export function parseDelimited(text) {
   const lines = text.split(/\r?\n/).filter((l) => l.length > 0);
@@ -284,6 +284,7 @@ export function analyze(table, samples, scale, markers, opts = {}) {
   out.signFlipFloor = 2 / 2 ** trends.length;
   out.random = randomSignature(norm, samples, used, eligible, nDraws, out.meanSlope);
   out.state = stateSpace(norm, samples);
+  out.sampleMeta = samples.map(({id, donor, passage}) => ({id, donor, passage}));
   out.records = Object.fromEntries(samples.map((s, j) => [s.id, { genes: Object.fromEntries(Object.entries(RECORD_GENES).filter(([, e]) => pos.has(e)).map(([g, e]) => [g, Math.log1p(norm.values[j][pos.get(e)])])) }]));
   return out;
 }

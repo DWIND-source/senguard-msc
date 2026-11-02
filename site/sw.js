@@ -1,8 +1,8 @@
 // Keeps the app usable offline once it has been opened, including on a venue network that drops.
-const CACHE = 'senguard-v7';
+const CACHE = 'senguard-v8';
 const CORE = ['./', './index.html', './css/app.css', './js/app.js', './js/core.js', './js/charts.js', './js/evidence.js', './js/twin.js', './vendor/three.module.min.js', './vendor/OrbitControls.js', './icon.svg', './manifest.webmanifest',
   './data/evidence.json', './data/clock.json', './data/forecast.json', './data/signature.json', './data/symbol_to_ensembl.json.gz', './data/adipose_msc_counts.tsv.gz', './data/adipose_msc_samples.csv', './data/bone_marrow_msc_tpm.tsv.gz', './data/bone_marrow_msc_samples.csv', './data/bone_marrow_msc_entrez_ids.tsv.gz', './data/mislabelled_gse125632_fpkm.tsv.gz', './data/mislabelled_gse125632_samples.csv'];
-CORE.push('./js/md-preview.js', './js/molecule.js', './data/md/preview.json.gz');
+CORE.push('./js/atlas.js', './js/md-preview.js', './js/molecule.js', './data/md/preview.json.gz');
 self.addEventListener('install', (e) => e.waitUntil(caches.open(CACHE).then((c) => c.addAll(CORE)).then(() => self.skipWaiting())));
 self.addEventListener('activate', (e) => e.waitUntil(caches.keys().then((ks) => Promise.all(ks.filter((k) => k !== CACHE).map((k) => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', (e) => {

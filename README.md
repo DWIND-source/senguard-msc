@@ -13,6 +13,7 @@ For research use. Built for AMIM 2026, Track 3. **Not a release test.** It does 
 - Shows every sample in 3D: forecast against measured, by score and by expression, with a record for each sample.
 - Accepts Ensembl ids or gene symbols, builds the sample sheet from column names, exports CSV and JSON, and works offline after the first visit.
 - Compares the result with random signatures.
+- Links a gene-expression heatmap, sample PCA, gene trajectories and passage dot plots. Forecast curves and drift bars replace the primary numeric tables; exact values and full validation remain expandable.
 - Runs entirely in the browser. Uploaded data never leaves your machine.
 - Shows a real p16–CDK6 equilibration frame in 3D, including the interface and solvent. Production MD comparisons are pending; the preview is independent of RNA scores.
 

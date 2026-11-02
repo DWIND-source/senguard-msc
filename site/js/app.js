@@ -1,3 +1,4 @@
+import { renderAtlas, selectAtlasSample, forecastChart, slopeChart } from './atlas.js';
 import { analyze, applyClock, forecast, guessSheet, idType, parseDelimited, parseSampleSheet, parseTable, symbolsToEnsembl } from './core.js';
 import { donorPanel, histogram, tooltipLayer } from './charts.js';
 import { renderEvidence } from './evidence.js';
@@ -206,8 +207,9 @@ function forecastHtml(fc) {
   return `<h3>Forecast from the earliest sample <span class="tag">model inference</span></h3>
     <p class="note">${trained} It forecasts the SenCat rank score, a measure of how closely a sample's gene ranks match the signature. Read it as a change from the starting value.</p>
     <div class="planner"><label for="plan-p">If this culture is expanded to passage</label><input type="number" id="plan-p" min="1" max="30" step="1" value="10"></div>
-    <div class="table-wrap"><table><thead><tr><th>Donor</th><th>From</th><th class="num">Start</th><th class="num">Forecast</th><th class="num">Change</th>${fc.tested ? '<th class="num">Measured at last passage</th><th class="num">Forecast there</th><th class="num">No-change error</th><th class="num">Forecast error</th>' : ''}</tr></thead><tbody id="plan-rows"></tbody></table></div>
-    ${compare}
+    <div id="forecast-chart"></div>
+    <details><summary>Exact values and validation details</summary><div class="table-wrap"><table><thead><tr><th>Donor</th><th>From</th><th class="num">Start</th><th class="num">Forecast</th><th class="num">Change</th>${fc.tested ? '<th class="num">Measured at last passage</th><th class="num">Forecast there</th><th class="num">No-change error</th><th class="num">Forecast error</th>' : ''}</tr></thead><tbody id="plan-rows"></tbody></table></div>
+    ${compare}</details>
     <div class="drift-lists"><div><b>Expected to fall with passage</b><span>${esc(fcModel.falling.join(' '))}</span></div><div><b>Expected to rise with passage</b><span>${esc(fcModel.rising.join(' '))}</span></div></div>`;
 }
 
@@ -215,6 +217,8 @@ function wirePlanner(fc) {
   if (!fc || fc.skipped || !$('plan-p')) return;
   const draw = () => {
     const p = Number($('plan-p').value);
+    if (!Number.isFinite(p) || p < 1 || p > 30) return;
+    $('forecast-chart').innerHTML = forecastChart(fc, p);
     $('plan-rows').innerHTML = fc.donors.map((d) => {
       const past = p < d.startPassage;
       const f = past ? NaN : d.predictAt(p);
@@ -229,9 +233,13 @@ function renderReport(r, label, drift, fc) {
   $('refusal').hidden = true;
   $('timeline').hidden = false;
   const fcLine = fc && !fc.skipped && fc.tested ? ` Forecast from the earliest sample beat assuming no change in ${fc.beat} of ${fc.tested} donors.` : '';
-  setHead(label, `Score rose in ${r.donorsRising} of ${r.trends.length} donors`, `Mean slope ${signed(r.meanSlope)} per passage.${fcLine} No pass or fail call is made.`);
+  setHead(label, `Score rose in ${r.donorsRising} of ${r.trends.length} donors`, `Mean slope ${signed(r.meanSlope)} per passage.${fcLine}`);
   buildDonorChips(r);
   renderDetails(r, drift, fc);
+  renderAtlas($('expression-atlas'), r, (sample) => {
+    if (twin) twin.selectById(sample.id);
+    else showRecord({ ...sample, score: r.scores[sample.id] });
+  });
   wirePlanner(fc);
   if (twin) {
     showStage(r, fc, 'forecast');
@@ -257,11 +265,13 @@ function buildDonorChips(r) {
 function showRecord(p) {
   if (!p || !current?.records) { $('record').innerHTML = ''; return; }
   const rec = current.records[p.id];
+  if (!rec) return;
+  selectAtlasSample(p.id);
   const t = current.trends.find((x) => x.donor === p.donor);
   const base = t?.points[0];
   const change = base ? p.score - base.score : 0;
   const maxV = Math.max(1, ...Object.values(current.records).flatMap((x) => Object.values(x.genes).filter(Number.isFinite)));
-  const genes = Object.entries(rec.genes).filter(([, v]) => Number.isFinite(v));
+  const genes = Object.entries(rec.genes).filter(([, v]) => Number.isFinite(v)).slice(0, 7);
   const baseRec = base ? current.records[base.id] : null;
   const link = currentGeo && /^GSM/.test(p.id) ? `<a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${esc(p.id)}">${esc(p.id)}</a>` : `<span style="font:500 12.5px var(--mono)">${esc(p.id)}</span>`;
   $('record').innerHTML = `<h4>Sample record</h4>${link}
@@ -270,7 +280,7 @@ function showRecord(p) {
       <div><b>${p.score.toFixed(2)}</b><span>SenCat score</span></div><div><b>${signed(change)}</b><span>Since P${base?.passage}</span></div>
     </div>
     <div class="genes" role="list" aria-label="Measured transcripts">${genes.map(([g, v]) => { const d = baseRec ? v - baseRec.genes[g] : 0; return `<span role="listitem">${g}</span><span class="bar"><i style="width:${(100 * v) / maxV}%"></i></span><span class="n">${v.toFixed(1)} ${d >= 0.05 ? '↑' : d <= -0.05 ? '↓' : '·'}</span>`; }).join('')}</div>
-    <small>Measured transcripts, log1p scale. Arrows compare with this donor's first passage. Score is model inference. Not a senescence call.</small>`;
+    <small>Measured transcripts, log1p scale. Arrows compare with this donor's first passage. Score is model inference.</small>`;
 }
 
 function renderDetails(r, drift, fc) {
@@ -280,20 +290,21 @@ function renderDetails(r, drift, fc) {
   const floorNote = r.signFlipP <= r.signFlipFloor + 1e-9 ? ', the smallest possible with this many donors' : '';
   const mdc = guidance?.minimumChange;
   $('results').innerHTML = `
+    <div id="expression-atlas" class="atlas-wide"></div>
     <div class="card wide">${forecastHtml(fc)}</div>
     <div class="card wide"><h3>Trajectories by donor <span class="tag">model inference on measured expression</span></h3>
       <div class="panels">${r.trends.map((t) => `<div class="panel"><h4>Donor ${esc(t.donor)}</h4><small>${signed(t.slope)} per passage</small>${donorPanel(t, lo - pad, hi + pad)}</div>`).join('')}</div>
-      <p class="note">Exact sign-flip p = ${r.signFlipP.toFixed(4)}${floorNote}.</p>
+      <details><summary>Statistical details</summary><p class="note">Exact sign-flip p = ${r.signFlipP.toFixed(4)}${floorNote}.</p></details>
       <details><summary>Show the table</summary><div class="table-wrap"><table><thead><tr><th>Donor</th><th>Passages</th><th class="num">Points</th><th class="num">Slope per passage</th><th class="num">Last minus first</th><th class="num">Spearman rho</th></tr></thead><tbody>
       ${r.trends.map((t) => `<tr><td>${esc(t.donor)}</td><td>${t.first} to ${t.last}</td><td class="num">${t.points.length}</td><td class="num">${t.slope.toFixed(2)}</td><td class="num">${t.change.toFixed(2)}</td><td class="num">${t.rho.toFixed(2)}</td></tr>`).join('')}
       </tbody></table></div></details></div>
     <div class="card"><h3>Could a random signature do this?</h3>${histogram(r.random.draws, r.meanSlope)}
-      <p class="note">${r.random.n} random gene sets of the same size and weights: mean ${r.random.mean.toFixed(3)}, SD ${r.random.sd.toFixed(3)}. This signature sits at z = ${r.random.z.toFixed(1)}, empirical p = ${r.random.p.toFixed(3)}, a figure limited by the number of draws.</p></div>
+      <details><summary>Comparison statistics</summary><p class="note">${r.random.n} random gene sets of the same size and weights: mean ${r.random.mean.toFixed(3)}, SD ${r.random.sd.toFixed(3)}. This signature sits at z = ${r.random.z.toFixed(1)}, empirical p = ${r.random.p.toFixed(3)}, a figure limited by the number of draws.</p></details></div>
     <div class="card">${driftHtml(drift)}</div>
-    <div class="card wide"><h3>How to read this</h3><ul class="reading">
+    <div class="card wide"><details><summary>Methods and interpretation</summary><ul class="reading">
       <li>Read each donor against itself. Absolute scores aren't comparable across labs or media.</li>
       ${mdc ? `<li>${esc(mdc)}</li>` : ''}
-      <li>A forecast isn't a measurement, and a rising score doesn't mean a lot has failed.</li></ul>
+      <li>A forecast isn't a measurement, and a rising score doesn't mean a lot has failed.</li></ul></details>
       <div class="actions"><button type="button" class="secondary" id="dl-csv">Scores (.csv)</button><button type="button" class="secondary" id="dl">Full report (.json)</button><button type="button" class="secondary" id="print">Print or save as PDF</button></div></div>`;
   $('dl').onclick = download;
   $('dl-csv').onclick = downloadCsv;
@@ -305,9 +316,9 @@ function driftHtml(d) {
   if (d.skipped) return `<h3>Culture-drift clock</h3><p class="note">Not run. ${esc(d.skipped)}</p>`;
   const trained = d.model === 'final' ? 'The model was trained on the public cohorts listed under Evidence.' : 'For this example, the model was trained without this cohort.';
   return `<h3>Culture-drift clock <span class="tag">${d.model === 'final' ? 'trained model' : 'trained model, cohort held out'}</span></h3>
-    <p class="note">Rose in ${d.rising} of ${d.trends.length} donors. ${trained} It estimates passage-like drift, and is not a senescence or potency measure.</p>
+    ${slopeChart(d.trends)}<details><summary>Clock values and methods</summary><p class="note">${trained} It estimates passage-like drift.</p>
     <div class="table-wrap"><table><thead><tr><th>Donor</th><th class="num">Slope per passage</th><th class="num">Spearman rho</th></tr></thead><tbody>
-    ${d.trends.map((t) => `<tr><td>${esc(t.donor)}</td><td class="num">${t.slope.toFixed(3)}</td><td class="num">${t.rho.toFixed(2)}</td></tr>`).join('')}</tbody></table></div>`;
+    ${d.trends.map((t) => `<tr><td>${esc(t.donor)}</td><td class="num">${t.slope.toFixed(3)}</td><td class="num">${t.rho.toFixed(2)}</td></tr>`).join('')}</tbody></table></div></details>`;
 }
 
 function saveFile(name, text, type) {

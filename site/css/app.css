@@ -197,6 +197,46 @@ details summary { cursor: pointer; font-size: 14px; color: var(--accent); margin
 @media (max-width: 980px) { .md-preview-layout { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 560px) { .md-preview-stage { min-height: 420px; } .md-preview-info { padding: 18px; } .md-preview-controls { left: 10px; right: 10px; } }
 
+/* Linked expression atlas */
+.atlas-wide { grid-column: 1 / -1; min-width: 0; }
+.atlas-heading { display: flex; justify-content: space-between; gap: 20px; align-items: end; margin: 24px 0 18px; }
+.atlas-heading h2 { margin: 0 0 7px; }
+.atlas-heading p:not(.kicker) { margin: 0; color: var(--ink2); font-size: 14px; }
+.atlas-heading label { flex: none; font-size: 13px; display: grid; gap: 5px; }
+.atlas-grid { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 16px; }
+.atlas-card { min-width: 0; background: #fff; border: 1px solid var(--line); border-radius: 13px; padding: 18px; }
+.atlas-card h3 { font-size: 16px; margin-bottom: 14px; }
+.atlas-stack { display: grid; gap: 16px; }
+.atlas-scroll { overflow-x: auto; scrollbar-width: thin; }
+.atlas-scroll svg { width: 100%; min-width: 520px; display: block; }
+.atlas-card svg text, #forecast-chart svg text { font: 11px var(--sans); fill: #536171; }
+.atlas-card svg text[fill] { fill: revert-layer; }
+.atlas-card svg, #forecast-chart svg { display: block; width: 100%; }
+.panel-letter { color: var(--accent); font: 600 12px var(--mono); margin-right: 9px; }
+.atlas-caption { color: #667582; font-size: 12px; line-height: 1.5; margin: 12px 0 0; }
+.atlas-scale, .atlas-passage-scale { display: flex; align-items: center; gap: 8px; font-size: 11px; color: #657383; margin: 10px 0 14px; flex-wrap: wrap; }
+.atlas-scale i { width: 110px; height: 9px; border-radius: 3px; background: linear-gradient(90deg,#315ba0,#f9f7f2,#bc3142); }
+.atlas-scale small { margin-left: auto; }
+.atlas-passage-scale { justify-content: center; }
+.atlas-passage-scale i { width: 100px; height: 8px; background: linear-gradient(90deg,#f0c049,#7e3079); border-radius: 3px; }
+.atlas-gene, [data-sample] { cursor: pointer; }
+.atlas-gene.active { font-weight: 700; fill: #174f8d; }
+.atlas-selected { stroke: #132c49 !important; stroke-width: 2.5px !important; }
+.atlas-point:hover { stroke: #132c49; stroke-width: 2.5px; }
+.atlas-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; justify-content: center; font-size: 11px; color: #5b6875; margin: 8px 0; }
+.atlas-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.atlas-legend i { width: 8px; height: 8px; border-radius: 50%; }
+.atlas-card-head { display: flex; align-items: start; justify-content: space-between; gap: 10px; }
+.atlas-card select, .atlas-heading select { border: 1px solid #ccd6dd; border-radius: 6px; padding: 5px; background: #fff; }
+#atlas-bubble svg { max-height: 540px; }
+.evidence-rings { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.evidence-ring { display: flex; align-items: center; gap: 10px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: #fff; }
+.evidence-ring svg { width: 120px; flex: none; }
+.evidence-ring p { font-size: 14px; color: var(--ink2); }
+.evidence-details > summary { padding: 14px 0; }
+@media (max-width: 980px) { .atlas-grid { grid-template-columns: minmax(0,1fr); } .evidence-ring { flex-direction: column; text-align: center; } }
+@media (max-width: 560px) { .atlas-heading { align-items: start; flex-direction: column; } .atlas-card { padding: 12px; } .evidence-rings { grid-template-columns: minmax(0,1fr); } .evidence-ring { flex-direction: row; text-align: left; } }
+
 /* Method */
 .pipeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
 .pipeline li { background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 13px 14px; position: relative; }
@@ -226,3 +266,6 @@ details summary { cursor: pointer; font-size: 14px; color: var(--accent); margin
   h2 { font-size: 23px; }
 }
 @media print { .top, .scenarios, .upload, .actions, nav, .stage-bottom, .stage-top { display: none; } }
+
+.atlas-heading .atlas-selection { margin-top: 7px; color: var(--accent); font-size: 12px; }
+@media (max-width: 560px) { #atlas-pca svg text, #atlas-curve svg text { font-size: 15px; } #forecast-chart { overflow-x: auto; } #forecast-chart svg { min-width: 720px; } }

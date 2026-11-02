@@ -23,6 +23,8 @@ jobs:
           node-version: '22'
       - name: Browser core matches frozen Python results
         run: node site/test/compare_python.mjs
+      - name: Expression heatmap math
+        run: node site/test/atlas_math.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

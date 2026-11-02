@@ -7,7 +7,7 @@ export function renderEvidence(el, ev) {
   const { ok, registered } = ev.headline;
   const f = ev.facts;
   const finding = (tag, title, body) => `<div class="finding"><h4>${title} <span class="tag">${tag}</span></h4><p>${body}</p></div>`;
-  el.innerHTML = `
+  const details = `
     <div class="tiles">
       <div class="tile"><b>${ok.donors_rising}/${ok.donors}</b><span>donors in new cohorts with a rising score (${pct(ok.share)}, 95% CI ${pct(ok.ci_low)} to ${pct(ok.ci_high)}, ${fmtP(ok.binom_p)})</span></div>
       <div class="tile"><b>${registered.donors_rising}/${registered.donors}</b><span>the same as planned, with one cohort that failed the identity check (${fmtP(registered.binom_p)})</span></div>
@@ -50,4 +50,9 @@ export function renderEvidence(el, ev) {
       ${ev.cohorts.map((r) => `<tr><td><a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=${r.accession}">${r.accession}</a></td><td>${r.tissue}</td><td>${r.design}</td><td>${r.role}</td><td class="num">${r.rising}</td></tr>`).join('')}
       </tbody></table></div></details>
     </div>`;
+  const ring = (up, n, label, color) => `<div class="evidence-ring"><svg viewBox="0 0 160 160" role="img" aria-label="${up} of ${n}: ${label}"><circle cx="80" cy="80" r="58" fill="none" stroke="#e7ebef" stroke-width="13"/><circle cx="80" cy="80" r="58" fill="none" stroke="${color}" stroke-width="13" stroke-dasharray="${up/n*364.425} 364.425" transform="rotate(-90 80 80)" stroke-linecap="round"/><text x="80" y="86" text-anchor="middle" style="font-size:27px;font-weight:600">${up}/${n}</text><text x="80" y="108" text-anchor="middle" style="font-size:11px">donors</text></svg><p>${label}</p></div>`;
+  el.innerHTML = `<div class="evidence-rings">${ring(ok.donors_rising, ok.donors, 'Rising signature ? identity-checked cohorts', '#238b8d')}${ring(registered.donors_rising, registered.donors, 'Rising signature ? all planned cohorts', '#7274b5')}${ring(f.testBeat, f.testN, 'Forecast closer than no change ? held-out cohorts', '#e27b50')}</div>
+    <div class="evidence-chart"><h3>Signature comparison across donors</h3>${shareDots(ev.headToHead)}<p class="atlas-caption">Points: share of donors with a rising score. Lines: exact 95% confidence intervals.</p></div>
+    <details class="evidence-details"><summary>Study methods, uncertainty and complete validation results</summary>${details}</details>`;
+
 }

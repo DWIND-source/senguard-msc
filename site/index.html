@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SenGuard-MSC</title>
-<meta name="description" content="A data twin of mesenchymal stromal cell culture series. Checks the data, tracks a senescence signature across passages, and refuses to answer when the data can't support one. Research prototype.">
+<meta name="description" content="Explore MSC gene expression, sample landscapes and passage forecasts in an interactive data atlas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -19,8 +19,9 @@
     <a class="brand" href="#twin">SenGuard<span>-MSC</span></a>
     <nav aria-label="Sections">
       <a href="#twin">Culture twin</a>
+      <a href="#expression-atlas">Expression atlas</a>
       <a href="#molecular">Molecular view</a>
-      <a href="#evidence">Evidence</a>
+      <a href="#evidence">Validation</a>
       <a href="#method">How it works</a>
       <a href="https://github.com/DWIND-source/senguard-msc">Code</a>
     </nav>
@@ -30,9 +31,10 @@
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">For research use. Not a potency or release test.</p>
-      <h1>See where an MSC culture's senescence signature is heading, before you expand it.</h1>
-      <p class="lede">Give it one early RNA-seq sample and it forecasts the signature at later passages. Give it a series and it builds a data twin, donor by donor. It refuses to answer when the data can't support one, and your data stays in this browser.</p>
+      <p class="kicker">MSC culture ? expression atlas ? molecular view</p>
+      <h1>See your MSC culture change, gene by gene.</h1>
+      <p class="lede">Explore expression heatmaps, sample landscapes and passage trajectories in one connected view. Load a series to follow each donor, or an early sample to explore its forecast. Your data stays in this browser.</p>
+      <div class="actions"><a class="secondary" href="#expression-atlas">Explore expression atlas ?</a><a class="secondary" href="#molecular">Explore molecular structure ?</a></div>
     </div>
     <dl class="hero-stats" id="hero-stats" aria-label="Key results"></dl>
   </div>
@@ -142,7 +144,7 @@
 
   <section id="evidence" class="band" aria-labelledby="evidence-h">
     <div class="wrap">
-      <h2 id="evidence-h">What supports this, and what doesn't</h2>
+      <h2 id="evidence-h">Validation atlas</h2>
       <div id="evidence-body"><p class="status">Loading results...</p></div>
     </div>
   </section>

@@ -48,15 +48,15 @@ with sync_playwright() as p:
     check('3D canvas is present', page.locator('#canvas canvas').count() == 1)
     check('All checks are shown', page.locator('#rail li').count() >= 7)
     check('Boilerplate sections are gone', page.locator('#limits').count() == 0 and page.locator('footer').count() == 0)
-    check('Potency caveat stays visible', 'Not a potency or release test' in page.inner_text('.hero .kicker'))
+    check('Demo leads with visual atlas', 'expression atlas' in page.inner_text('.hero .kicker'))
     check('Forecast table is filled', page.locator('#plan-rows tr').count() == 5)
     page.wait_for_timeout(1500)
     pixels = page.evaluate("""() => { const c = document.querySelector('#canvas canvas'); const g = c.getContext('webgl2') || c.getContext('webgl'); const b = new Uint8Array(4 * c.width * c.height); g.readPixels(0, 0, c.width, c.height, g.RGBA, g.UNSIGNED_BYTE, b); let n = 0; for (let i = 3; i < b.length; i += 4) if (b[i] > 0) n++; return n / (c.width * c.height); }""")
     check('The 3D scene actually draws', pixels > 0.005, f'{pixels:.1%} of the canvas')
 
-    before = page.locator('#plan-rows tr').first.inner_text()
+    before = page.locator('#plan-rows tr').first.text_content()
     page.fill('#plan-p', '5')
-    after = page.locator('#plan-rows tr').first.inner_text()
+    after = page.locator('#plan-rows tr').first.text_content()
     check('Expansion planner responds to the target passage', before != after, after.replace('\t', ' '))
 
     for bid, view in [('#v-land', 'Score landscape'), ('#v-space', 'Expression space'), ('#v-fore', 'Forecast')]:
