@@ -1,0 +1,149 @@
+{
+ "bank": {
+  "cohort": "GSE269586",
+  "donors": [
+   {
+    "donor": "190",
+    "bank": -10.81,
+    "later": -12.87,
+    "laterPassage": 3,
+    "change": -2.06
+   },
+   {
+    "donor": "195",
+    "bank": -8.67,
+    "later": -8.35,
+    "laterPassage": 3,
+    "change": 0.32
+   },
+   {
+    "donor": "196",
+    "bank": -8.21,
+    "later": -2.68,
+    "laterPassage": 2,
+    "change": 5.54
+   },
+   {
+    "donor": "197",
+    "bank": -11.01,
+    "later": -9.09,
+    "laterPassage": 3,
+    "change": 1.92
+   },
+   {
+    "donor": "198",
+    "bank": -9.82,
+    "later": -11.22,
+    "laterPassage": 2,
+    "change": -1.4
+   },
+   {
+    "donor": "199",
+    "bank": -9.32,
+    "later": -4.43,
+    "laterPassage": 3,
+    "change": 4.89
+   },
+   {
+    "donor": "200",
+    "bank": -15.34,
+    "later": -5.97,
+    "laterPassage": 2,
+    "change": 9.37
+   },
+   {
+    "donor": "202",
+    "bank": -12.53,
+    "later": -9.99,
+    "laterPassage": 2,
+    "change": 2.54
+   },
+   {
+    "donor": "203",
+    "bank": -11.99,
+    "later": -9.01,
+    "laterPassage": 3,
+    "change": 2.98
+   },
+   {
+    "donor": "205",
+    "bank": -14.18,
+    "later": -10.65,
+    "laterPassage": 3,
+    "change": 3.53
+   },
+   {
+    "donor": "206",
+    "bank": -11.88,
+    "later": -5.31,
+    "laterPassage": 2,
+    "change": 6.57
+   }
+  ],
+  "rising": 9,
+  "n": 11
+ },
+ "medium": {
+  "cohort": "GSE194298",
+  "rows": [
+   {
+    "donor": "Donor 1",
+    "passage": "P1",
+    "fbs": 3.42,
+    "hpl": 5.39
+   },
+   {
+    "donor": "Donor 1",
+    "passage": "P4-5",
+    "fbs": 6.77,
+    "hpl": 1.49
+   },
+   {
+    "donor": "Donor 2",
+    "passage": "P1",
+    "fbs": 4.46,
+    "hpl": 2.35
+   },
+   {
+    "donor": "Donor 2",
+    "passage": "P4-5",
+    "fbs": 4.51,
+    "hpl": 2.92
+   },
+   {
+    "donor": "Donor 3",
+    "passage": "P1",
+    "fbs": 2.41,
+    "hpl": 0.91
+   },
+   {
+    "donor": "Donor 3",
+    "passage": "P4-5",
+    "fbs": 6.75,
+    "hpl": 4.03
+   },
+   {
+    "donor": "Donor 4",
+    "passage": "P1",
+    "fbs": 3.13,
+    "hpl": 0.24
+   },
+   {
+    "donor": "Donor 4",
+    "passage": "P4-5",
+    "fbs": 8.63,
+    "hpl": 4.29
+   }
+  ],
+  "lateDiff": -3.5,
+  "lowerIn": 4,
+  "n": 4
+ },
+ "noise": {
+  "mdc": 0.4,
+  "retestA": 0.06,
+  "retestB": 0.26,
+  "cohort": "GSE137186",
+  "pairs": 2
+ }
+}

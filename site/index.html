@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SenGuard-MSC</title>
-<meta name="description" content="Explore MSC gene expression, sample landscapes and passage forecasts in an interactive data atlas.">
+<meta name="description" content="Track and compare MSC cultures from the cell bank onward: expression heatmaps, sample landscapes and passage forecasts in one interactive atlas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -18,23 +18,30 @@
   <div class="wrap top-row">
     <a class="brand" href="#twin">SenGuard<span>-MSC</span></a>
     <nav aria-label="Sections">
-      <a href="#twin">Culture twin</a>
-      <a href="#expression-atlas">Expression atlas</a>
-      <a href="#molecular">Molecular view</a>
-      <a href="#evidence">Validation</a>
-      <a href="#method">How it works</a>
-      <a href="https://github.com/DWIND-source/senguard-msc">Code</a>
+      <a href="#twin" data-i18n="navTwin">Culture twin</a>
+      <a href="#expression-atlas" data-i18n="navAtlas">Expression atlas</a>
+      <a href="#process" data-i18n="navProcess">Culture options</a>
+      <a href="#immune" data-i18n="navImmune">IFN-γ response</a>
+      <a href="#molecular" data-i18n="navMolecular">Molecular view</a>
+      <a href="#evidence" data-i18n="navEvidence">Validation</a>
+      <a href="#method" data-i18n="navMethod">How it works</a>
+      <a href="https://github.com/DWIND-source/senguard-msc" data-i18n="navCode">Code</a>
     </nav>
+    <button type="button" id="lang-toggle" class="lang-toggle" lang="vi" aria-label="Xem bằng tiếng Việt">Tiếng Việt</button>
   </div>
 </header>
 
 <section class="hero">
   <div class="wrap hero-grid">
     <div>
-      <p class="kicker">MSC culture ? expression atlas ? molecular view</p>
-      <h1>See your MSC culture change, gene by gene.</h1>
-      <p class="lede">Explore expression heatmaps, sample landscapes and passage trajectories in one connected view. Load a series to follow each donor, or an early sample to explore its forecast. Your data stays in this browser.</p>
-      <div class="actions"><a class="secondary" href="#expression-atlas">Explore expression atlas ?</a><a class="secondary" href="#molecular">Explore molecular structure ?</a></div>
+      <p class="kicker" data-i18n="heroKicker">MSC culture · expression atlas · molecular view</p>
+      <h1 data-i18n="heroTitle">Follow your MSC cultures from the cell bank onward, gene by gene.</h1>
+      <p class="lede" data-i18n="heroLede">Track, evaluate and compare MSC cultures from the cell bank to later passages. Expression heatmaps, sample landscapes and passage trajectories sit in one connected view, so teams can compare culture conditions such as medium, serum supplement and passage limit. Load a series to follow each donor, or an early sample to explore its forecast. Your data stays in this browser.</p>
+      <aside class="explain" id="sencat-what" aria-labelledby="sencat-what-h">
+        <h2 id="sencat-what-h" data-i18n="sencatWhatH">What is the SenCat score?</h2>
+        <p data-i18n="sencatWhat">SenCat is a published gene-expression signature of cellular senescence, the lasting growth arrest that builds up as cells age in culture. It was derived from many senescent and normal human cell types (<a href="https://doi.org/10.1016/j.molcel.2026.05.017">Anerillas et al., Mol Cell 2026</a>). The score weighs genes that rise or fall in senescent cells. Read it within one donor over time: higher means a more senescence-like profile, not a failed batch.</p>
+      </aside>
+      <div class="actions"><a class="secondary" href="#expression-atlas" data-i18n="heroAtlas">Explore expression atlas →</a><a class="secondary" href="#process" data-i18n="heroProcess">Compare culture options →</a></div>
     </div>
     <dl class="hero-stats" id="hero-stats" aria-label="Key results"></dl>
   </div>
@@ -44,24 +51,24 @@
   <section id="twin" class="wrap" aria-labelledby="twin-h">
     <h2 id="twin-h" class="sr">Culture twin</h2>
     <div class="scenarios" role="group" aria-label="Choose data">
-      <button type="button" class="scenario" data-scenario="adipose"><b>Adipose MSC</b><small>GSE309666 · 5 donors</small></button>
-      <button type="button" class="scenario" data-scenario="marrow"><b>Bone-marrow MSC</b><small>GSE178514 · 3 inferred donors</small></button>
-      <button type="button" class="scenario" data-scenario="early"><b>Early sample only</b><small>Passage 1 only, forecast the rest</small></button>
-      <button type="button" class="scenario bad" data-scenario="logged"><b>Already logged</b><small>Bad input, on purpose</small></button>
-      <button type="button" class="scenario bad" data-scenario="entrez"><b>Wrong gene ids</b><small>Bad input, on purpose</small></button>
-      <button type="button" class="scenario bad" data-scenario="mislabelled"><b>Real labelling error</b><small>GSE125632, as on GEO</small></button>
-      <button type="button" class="scenario own" data-scenario="upload"><b>Use my own data</b><small>Stays in this browser</small></button>
+      <button type="button" class="scenario" data-scenario="adipose"><b data-i18n="scAdipose">Adipose MSC</b><small data-i18n="scAdiposeS">GSE309666 · 5 donors</small></button>
+      <button type="button" class="scenario" data-scenario="marrow"><b data-i18n="scMarrow">Bone-marrow MSC</b><small data-i18n="scMarrowS">GSE178514 · 3 inferred donors</small></button>
+      <button type="button" class="scenario" data-scenario="early"><b data-i18n="scEarly">Early sample only</b><small data-i18n="scEarlyS">Passage 1 only, forecast the rest</small></button>
+      <button type="button" class="scenario bad" data-scenario="logged"><b data-i18n="scLogged">Already logged</b><small data-i18n="scBadS">Bad input, on purpose</small></button>
+      <button type="button" class="scenario bad" data-scenario="entrez"><b data-i18n="scEntrez">Wrong gene ids</b><small data-i18n="scBadS">Bad input, on purpose</small></button>
+      <button type="button" class="scenario bad" data-scenario="mislabelled"><b data-i18n="scMislabel">Real labelling error</b><small data-i18n="scMislabelS">GSE125632, as on GEO</small></button>
+      <button type="button" class="scenario own" data-scenario="upload"><b data-i18n="scUpload">Use my own data</b><small data-i18n="scUploadS">Stays in this browser</small></button>
     </div>
 
     <form id="upload" class="upload" hidden>
-      <div class="field"><label for="f-table">1. Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small>First column Ensembl id or gene symbol, one column per sample. .tsv, .csv or .gz</small></div>
-      <div class="field"><label for="f-scale">2. Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small>Untransformed values only</small></div>
-      <div class="field"><label for="f-sheet">Sample sheet (optional)</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt"><small>Columns sample_id, donor, passage, or fill in the table below</small></div>
+      <div class="field"><label for="f-table" data-i18n="upTable">1. Expression table</label><input id="f-table" type="file" accept=".tsv,.csv,.txt,.gz" required><small data-i18n="upTableS">First column Ensembl id or gene symbol, one column per sample. .tsv, .csv or .gz</small></div>
+      <div class="field"><label for="f-scale" data-i18n="upScale">2. Declared scale</label><select id="f-scale"><option value="counts">Counts</option><option value="tpm">TPM</option><option value="fpkm">FPKM</option></select><small data-i18n="upScaleS">Untransformed values only</small></div>
+      <div class="field"><label for="f-sheet" data-i18n="upSheet">Sample sheet (optional)</label><input id="f-sheet" type="file" accept=".csv,.tsv,.txt"><small data-i18n="upSheetS">Columns sample_id, donor, passage, or fill in the table below</small></div>
       <div class="sheet" id="sheet-box" hidden>
-        <p class="sheet-title"><b>3. Tell us about each sample</b> <span id="sheet-note"></span></p>
-        <div class="table-wrap sheet-scroll"><table><thead><tr><th>Use</th><th>Column</th><th>Donor</th><th>Passage</th></tr></thead><tbody id="sheet-rows"></tbody></table></div>
+        <p class="sheet-title"><b data-i18n="upTell">3. Tell us about each sample</b> <span id="sheet-note"></span></p>
+        <div class="table-wrap sheet-scroll"><table><thead><tr><th data-i18n="upUse">Use</th><th data-i18n="upColumn">Column</th><th data-i18n="upDonor">Donor</th><th data-i18n="upPassage">Passage</th></tr></thead><tbody id="sheet-rows"></tbody></table></div>
       </div>
-      <div class="upload-actions"><button type="submit" class="primary">Check and build twin</button><a class="secondary" href="data/example_sample_sheet.csv" download>Example sheet</a></div>
+      <div class="upload-actions"><button type="submit" class="primary" data-i18n="upRun">Check and build twin</button><a class="secondary" href="data/example_sample_sheet.csv" download data-i18n="upExample">Example sheet</a></div>
     </form>
 
     <ol class="rail" id="rail" aria-label="Input checks"></ol>
@@ -72,9 +79,9 @@
         <div class="canvas" id="canvas"></div>
         <div class="stage-top">
           <div class="seg" role="group" aria-label="View">
-            <button type="button" id="v-fore" aria-pressed="false">Forecast vs measured</button>
-            <button type="button" id="v-land" aria-pressed="true">Score landscape</button>
-            <button type="button" id="v-space" aria-pressed="false">Expression space</button>
+            <button type="button" id="v-fore" aria-pressed="false" data-i18n="vFore">Forecast vs measured</button>
+            <button type="button" id="v-land" aria-pressed="true" data-i18n="vLand">Score landscape</button>
+            <button type="button" id="v-space" aria-pressed="false" data-i18n="vSpace">Expression space</button>
           </div>
           <p class="view-note" id="view-note"></p>
         </div>
@@ -83,15 +90,15 @@
           <label class="sr" for="slider">Show samples up to passage</label>
           <input type="range" id="slider" min="0" max="1" step="1" value="1">
           <output id="slider-out" for="slider">P1</output>
-          <div class="scale" aria-hidden="true"><span>Low</span><i></i><span>High score</span></div>
+          <div class="scale" aria-hidden="true"><span data-i18n="scaleLow">Low</span><i></i><span data-i18n="scaleHigh">High score</span></div>
         </div>
         <div class="refusal" id="refusal" hidden>
           <span class="big-x" aria-hidden="true">&#10005;</span>
           <h3 id="refusal-title"></h3>
           <p id="refusal-body"></p>
-          <p class="refusal-foot">A number from this input would look valid and be wrong, so no twin is built.</p>
+          <p class="refusal-foot" data-i18n="refusalFoot">A number from this input would look valid and be wrong, so no twin is built.</p>
         </div>
-        <p class="no-webgl" id="no-webgl" hidden>3D isn't available in this browser. All results are in the charts below.</p>
+        <p class="no-webgl" id="no-webgl" hidden data-i18n="noWebgl">3D isn't available in this browser. All results are in the charts below.</p>
       </div>
       <aside class="inspector" aria-label="Twin details">
         <div class="verdict-block">
@@ -100,6 +107,7 @@
           <p class="sub" id="in-sub"></p>
         </div>
         <div class="donors" id="donors" role="group" aria-label="Focus on a donor"></div>
+        <p class="reading-line" id="reading-line" aria-live="polite"></p>
         <div class="record" id="record"></div>
         <p class="status" id="status" role="status" aria-live="polite"></p>
       </aside>
@@ -108,56 +116,85 @@
     <div id="results" class="results"></div>
   </section>
 
+  <section id="process" class="band" aria-labelledby="process-h">
+    <div class="wrap">
+      <p class="kicker" data-i18n="processKicker">Process development and lot comparison</p>
+      <h2 id="process-h" data-i18n="processH">Compare culture options, from the cell bank onward</h2>
+      <div id="process-body"><p class="status">Loading...</p></div>
+    </div>
+  </section>
+
+  <section id="immune" class="wrap" aria-labelledby="immune-h">
+    <p class="kicker" data-i18n="immuneKicker">Research direction · not part of the score</p>
+    <h2 id="immune-h" data-i18n="immuneH">Immune response to IFN-γ</h2>
+    <div id="immune-body"></div>
+  </section>
+
   <section id="molecular" class="wrap" aria-labelledby="molecular-h">
-    <p class="kicker">From gene expression to a molecular structure</p>
-    <h2 id="molecular-h">Explore the p16–CDK6 complex</h2>
-    <p class="note">p16 is encoded by CDKN2A, one of the markers studied here. This independent molecular model illustrates the complex; it does not represent an uploaded sample or change its forecast.</p>
+    <p class="kicker" data-i18n="molKicker">From gene expression to a molecular structure</p>
+    <h2 id="molecular-h" data-i18n="molH">Explore the p16–CDK6 complex</h2>
+    <p class="note background-only" data-i18n="molBackground"><b>Background only: a 3D view of a protein involved in cell aging. It is not calculated from your data.</b></p>
+    <p class="note" data-i18n="molNote">p16 is encoded by CDKN2A, one of the markers studied here. This independent molecular model illustrates the complex; it does not represent an uploaded sample or change its forecast.</p>
     <div class="md-preview-layout">
       <div class="md-preview-stage">
         <div id="md-canvas" role="img" aria-label="Interactive molecular structure: CDK6 in blue, p16 in orange"></div>
         <p id="md-loading" class="md-loading" role="status">Loading the recorded structure...</p>
         <div id="md-preview-controls" class="md-preview-controls" hidden>
           <div id="md-preview-views" class="seg" role="group" aria-label="Molecular view">
-            <button type="button" data-mode="chain" aria-pressed="true">Complex</button>
-            <button type="button" data-mode="interface" aria-pressed="false">Interface</button>
-            <button type="button" data-mode="water" aria-pressed="false">Water &amp; ions</button>
+            <button type="button" data-mode="chain" aria-pressed="true" data-i18n="mdComplex">Complex</button>
+            <button type="button" data-mode="interface" aria-pressed="false" data-i18n="mdInterface">Interface</button>
+            <button type="button" data-mode="water" aria-pressed="false" data-i18n="mdWater">Water &amp; ions</button>
           </div>
           <button type="button" id="md-rotate" aria-pressed="false">Rotate view</button>
         </div>
         <p id="md-preview-note" class="md-preview-note"></p>
       </div>
       <aside class="md-preview-info">
-        <p class="eyebrow">Recorded equilibration frame · WT</p>
-        <h3>Structure preview</h3>
+        <p class="eyebrow" data-i18n="mdEyebrow">Recorded equilibration frame · WT</p>
+        <h3 data-i18n="mdPreviewH">Structure preview</h3>
         <p id="md-source-status">One real frame from the GROMACS build and equilibration run.</p>
         <p id="md-snapshot-info" class="md-counts"></p>
-        <div class="md-pending"><b>Production analysis pending</b><p>The planned comparison is WT, R24P, D84N and H123Q, with three replicas each. RMSD, flexibility and binding-energy results are not available in this preview.</p></div>
-        <details><summary>Model and source</summary>
+        <div class="md-pending"><b data-i18n="mdPendingH">Production analysis pending</b><p data-i18n="mdPending">The planned comparison is WT, R24P, D84N and H123Q, with three replicas each. RMSD, flexibility and binding-energy results are not available in this preview.</p></div>
+        <details><summary data-i18n="mdModelSource">Model and source</summary>
           <p>Starting complex: PDB <a href="https://www.rcsb.org/structure/1BI7">1BI7</a>. CDK6 residues 49–71 were modelled from <a href="https://www.rcsb.org/structure/1BLX">1BLX</a>. The backbone is drawn through C-alpha atoms; selected side chains are shown as sticks.</p>
           <p>Snapshot: <a href="https://www.kaggle.com/code/phongnguyendinh/senguard-msc-h">kernel H</a>, <code>systems/wt/npt.gro</code>. Protein chains are brought into the same periodic image. No synthetic motion is added.</p>
           <p>Source SHA-256: <code id="md-source-hash" class="md-hash"></code></p>
         </details>
-        <div class="actions"><a href="data/md/preview.json.gz" download>Download coordinates</a><a href="https://github.com/DWIND-source/senguard-msc/blob/main/deliverables/reports/ANALYSIS_AMENDMENT_4_MD.md">Analysis protocol</a></div>
+        <div class="actions"><a href="data/md/preview.json.gz" download data-i18n="mdDownload">Download coordinates</a><a href="https://github.com/DWIND-source/senguard-msc/blob/main/deliverables/reports/ANALYSIS_AMENDMENT_4_MD.md" data-i18n="mdProtocol">Analysis protocol</a></div>
       </aside>
     </div>
   </section>
 
   <section id="evidence" class="band" aria-labelledby="evidence-h">
     <div class="wrap">
-      <h2 id="evidence-h">Validation atlas</h2>
+      <h2 id="evidence-h" data-i18n="evidenceH">Validation atlas</h2>
       <div id="evidence-body"><p class="status">Loading results...</p></div>
+      <div id="panel-body"></div>
     </div>
   </section>
 
   <section id="method" class="wrap" aria-labelledby="method-h">
-    <h2 id="method-h">How it works</h2>
+    <h2 id="method-h" data-i18n="methodH">How it works</h2>
     <ol class="pipeline">
-      <li><span>1</span><b>Check</b><p>Ids, scale, transformation, coverage, depth, identity and design. Each check exists because of a failure met in public data.</p></li>
-      <li><span>2</span><b>Normalize</b><p>Median of ratios for counts, verified against PyDESeq2. FPKM is rescaled to TPM.</p></li>
-      <li><span>3</span><b>Score</b><p>Published <a href="https://doi.org/10.1016/j.molcel.2026.05.017">SenCat</a> weights, fetched at a pinned commit and checksum-verified on load.</p></li>
-      <li><span>4</span><b>Follow each donor</b><p>Slope and rank correlation against passage, never pooled onto one absolute scale.</p></li>
-      <li><span>5</span><b>Forecast and challenge</b><p>A drift model learned across cohorts forecasts later passages. Random signatures and a held-out clock act as controls.</p></li>
+      <li><span>1</span><b data-i18n="m1">Check</b><p data-i18n="m1p">Gene names, number format, coverage, sequencing depth, donor identity and study design. Each check exists because of a real error found in public data.</p></li>
+      <li><span>2</span><b data-i18n="m2">Normalize</b><p data-i18n="m2p">Puts samples sequenced to different depths on the same footing (median of ratios, verified against PyDESeq2). FPKM is rescaled to TPM.</p></li>
+      <li><span>3</span><b data-i18n="m3">Score</b><p data-i18n="m3p">Applies the published <a href="https://doi.org/10.1016/j.molcel.2026.05.017">SenCat</a> gene weights, fetched at a fixed version and checksum-verified on load.</p></li>
+      <li><span>4</span><b data-i18n="m4">Follow each donor</b><p data-i18n="m4p">Compares each donor with its own earliest sample. Scores from different labs or media are never put on one absolute scale.</p></li>
+      <li><span>5</span><b data-i18n="m5">Forecast and challenge</b><p data-i18n="m5p">A drift model learned across cohorts forecasts later passages. Random gene sets and a held-out clock act as controls.</p></li>
     </ol>
+    <details class="glossary"><summary data-i18n="glossH">Words used on this page</summary>
+      <dl data-i18n="gloss">
+        <dt>MSC</dt><dd>Mesenchymal stromal cells, grown in the lab from bone marrow, fat, umbilical cord or other tissue.</dd>
+        <dt>Passage (P)</dt><dd>One round of splitting a culture into new flasks. P3 means the cells have been split three times.</dd>
+        <dt>Donor</dt><dd>The person the cells came from. Each donor is compared with itself.</dd>
+        <dt>Cell bank</dt><dd>Frozen stock of early cells (master or working bank) that later cultures are grown from.</dd>
+        <dt>Senescence</dt><dd>A lasting stop in cell division that builds up with age and repeated culture.</dd>
+        <dt>RNA-seq</dt><dd>Sequencing that measures the activity (expression) of all genes at once. It is the reference method here.</dd>
+        <dt>qPCR</dt><dd>A faster, cheaper test that measures a small set of chosen genes.</dd>
+        <dt>Z-score (heatmap colour)</dt><dd>How far one sample sits from that gene's average across the samples shown, in standard deviations.</dd>
+        <dt>Forecast</dt><dd>A model estimate of later passages from an early sample. It is not a measurement.</dd>
+      </dl>
+    </details>
   </section>
 </main>
 <div id="tip" class="tip" role="tooltip" hidden></div>

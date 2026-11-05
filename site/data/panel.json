@@ -1,0 +1,378 @@
+{
+ "genes": [
+  {
+   "gene_id": "ENSG00000135679",
+   "symbol": "MDM2",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000124201",
+   "symbol": "ZNFX1",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000131747",
+   "symbol": "TOP2A",
+   "in_panel_10": true,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": true,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000048392",
+   "symbol": "RRM2B",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000130066",
+   "symbol": "SAT1",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 4.0,
+   "donors_down": 1.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000102393",
+   "symbol": "GLA",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 4.0,
+   "donors_down": 1.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000145386",
+   "symbol": "CCNA2",
+   "in_panel_10": true,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": true,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000116717",
+   "symbol": "GADD45A",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000185825",
+   "symbol": "BCAP31",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000177556",
+   "symbol": "ATOX1",
+   "in_panel_10": true,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000189403",
+   "symbol": "HMGB1",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000152795",
+   "symbol": "HNRNPDL",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000109572",
+   "symbol": "CLCN3",
+   "in_panel_10": false,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000127483",
+   "symbol": "HP1BP3",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000135018",
+   "symbol": "UBQLN1",
+   "in_panel_10": false,
+   "sencat_sign": 1.0,
+   "donors_up": 3.0,
+   "donors_down": 2.0,
+   "proliferation_set": false,
+   "flag": "Inconsistent direction: 3 donors up, 2 down, expected up"
+  },
+  {
+   "gene_id": "ENSG00000196072",
+   "symbol": "BLOC1S2",
+   "in_panel_10": false,
+   "sencat_sign": 1.0,
+   "donors_up": 1.0,
+   "donors_down": 4.0,
+   "proliferation_set": false,
+   "flag": "Inconsistent direction: 1 donors up, 4 down, expected up"
+  },
+  {
+   "gene_id": "ENSG00000034713",
+   "symbol": "GABARAPL2",
+   "in_panel_10": false,
+   "sencat_sign": 1.0,
+   "donors_up": 5.0,
+   "donors_down": 0.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000101639",
+   "symbol": "CEP192",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": false,
+   "flag": ""
+  },
+  {
+   "gene_id": "ENSG00000259781",
+   "symbol": "HMGB1P6",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": 0.0,
+   "donors_down": 5.0,
+   "proliferation_set": false,
+   "flag": "HMGB1 pseudogene; qPCR primers cannot separate it from HMGB1"
+  },
+  {
+   "gene_id": "ENSG00000132967",
+   "symbol": "HMGB1P5",
+   "in_panel_10": false,
+   "sencat_sign": -1.0,
+   "donors_up": null,
+   "donors_down": null,
+   "proliferation_set": false,
+   "flag": "HMGB1 pseudogene; qPCR primers cannot separate it from HMGB1; no passage-direction data"
+  }
+ ],
+ "comparison": [
+  {
+   "cohort": "GSE309666",
+   "candidate": "Panel 10 (frozen)",
+   "genes_present": 10,
+   "donors": 5,
+   "donors_rising": 5,
+   "direction_matches_rnaseq": 5,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.99
+  },
+  {
+   "cohort": "GSE309666",
+   "candidate": "Panel 20 (frozen)",
+   "genes_present": 19,
+   "donors": 5,
+   "donors_rising": 5,
+   "direction_matches_rnaseq": 5,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.993
+  },
+  {
+   "cohort": "GSE309666",
+   "candidate": "qPCR-ready panel (16 genes)",
+   "genes_present": 16,
+   "donors": 5,
+   "donors_rising": 5,
+   "direction_matches_rnaseq": 5,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.993
+  },
+  {
+   "cohort": "GSE309666",
+   "candidate": "CDKN2A alone",
+   "genes_present": 1,
+   "donors": 5,
+   "donors_rising": 5,
+   "direction_matches_rnaseq": 5,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.95
+  },
+  {
+   "cohort": "GSE178514",
+   "candidate": "Panel 10 (frozen)",
+   "genes_present": 10,
+   "donors": 3,
+   "donors_rising": 3,
+   "direction_matches_rnaseq": 3,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.778
+  },
+  {
+   "cohort": "GSE178514",
+   "candidate": "Panel 20 (frozen)",
+   "genes_present": 18,
+   "donors": 3,
+   "donors_rising": 3,
+   "direction_matches_rnaseq": 3,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.892
+  },
+  {
+   "cohort": "GSE178514",
+   "candidate": "qPCR-ready panel (16 genes)",
+   "genes_present": 16,
+   "donors": 3,
+   "donors_rising": 3,
+   "direction_matches_rnaseq": 3,
+   "median_within_donor_spearman": 1.0,
+   "within_donor_pearson": 0.905
+  },
+  {
+   "cohort": "GSE178514",
+   "candidate": "CDKN2A alone",
+   "genes_present": 1,
+   "donors": 3,
+   "donors_rising": 2,
+   "direction_matches_rnaseq": 2,
+   "median_within_donor_spearman": 0.5,
+   "within_donor_pearson": 0.442
+  }
+ ],
+ "summary": [
+  {
+   "candidate": "Panel 10 (frozen)",
+   "donors": 8,
+   "rising": 8,
+   "match": 8,
+   "r": 0.884
+  },
+  {
+   "candidate": "Panel 20 (frozen)",
+   "donors": 8,
+   "rising": 8,
+   "match": 8,
+   "r": 0.942
+  },
+  {
+   "candidate": "qPCR-ready panel (16 genes)",
+   "donors": 8,
+   "rising": 8,
+   "match": 8,
+   "r": 0.949
+  },
+  {
+   "candidate": "CDKN2A alone",
+   "donors": 8,
+   "rising": 7,
+   "match": 7,
+   "r": 0.696
+  }
+ ],
+ "external": [
+  {
+   "cohort": "GSE309666",
+   "panel_size": 10,
+   "genes_present": 10,
+   "mean_slope": 1.765,
+   "positive": 5,
+   "donors": 5,
+   "sign_flip_p": 0.062,
+   "standardized_slope": 0.307
+  },
+  {
+   "cohort": "GSE309666",
+   "panel_size": 20,
+   "genes_present": 19,
+   "mean_slope": 1.861,
+   "positive": 5,
+   "donors": 5,
+   "sign_flip_p": 0.062,
+   "standardized_slope": 0.312
+  },
+  {
+   "cohort": "GSE309666",
+   "panel_size": 30,
+   "genes_present": 28,
+   "mean_slope": 2.282,
+   "positive": 5,
+   "donors": 5,
+   "sign_flip_p": 0.062,
+   "standardized_slope": 0.312
+  },
+  {
+   "cohort": "GSE178514",
+   "panel_size": 10,
+   "genes_present": 10,
+   "mean_slope": 0.326,
+   "positive": 3,
+   "donors": 3,
+   "sign_flip_p": 0.25,
+   "standardized_slope": 0.193
+  },
+  {
+   "cohort": "GSE178514",
+   "panel_size": 20,
+   "genes_present": 18,
+   "mean_slope": 0.501,
+   "positive": 3,
+   "donors": 3,
+   "sign_flip_p": 0.25,
+   "standardized_slope": 0.225
+  },
+  {
+   "cohort": "GSE178514",
+   "panel_size": 30,
+   "genes_present": 27,
+   "mean_slope": 0.636,
+   "positive": 3,
+   "donors": 3,
+   "sign_flip_p": 0.25,
+   "standardized_slope": 0.234
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+cohort,candidate,donor,samples,slope_sign_matches_rnaseq,spearman_with_rnaseq
+GSE309666,Panel 10 (frozen),A,3,True,1.0
+GSE309666,Panel 10 (frozen),B,4,True,1.0
+GSE309666,Panel 10 (frozen),C,3,True,0.5
+GSE309666,Panel 10 (frozen),D,4,True,1.0
+GSE309666,Panel 10 (frozen),E,4,True,1.0
+GSE309666,Panel 20 (frozen),A,3,True,1.0
+GSE309666,Panel 20 (frozen),B,4,True,1.0
+GSE309666,Panel 20 (frozen),C,3,True,0.5
+GSE309666,Panel 20 (frozen),D,4,True,1.0
+GSE309666,Panel 20 (frozen),E,4,True,1.0
+GSE309666,qPCR-ready panel (16 genes),A,3,True,1.0
+GSE309666,qPCR-ready panel (16 genes),B,4,True,1.0
+GSE309666,qPCR-ready panel (16 genes),C,3,True,0.5
+GSE309666,qPCR-ready panel (16 genes),D,4,True,1.0
+GSE309666,qPCR-ready panel (16 genes),E,4,True,1.0
+GSE309666,CDKN2A alone,A,3,True,1.0
+GSE309666,CDKN2A alone,B,4,True,1.0
+GSE309666,CDKN2A alone,C,3,True,1.0
+GSE309666,CDKN2A alone,D,4,True,1.0
+GSE309666,CDKN2A alone,E,4,True,1.0
+GSE178514,Panel 10 (frozen),393,3,True,1.0
+GSE178514,Panel 10 (frozen),411,3,True,1.0
+GSE178514,Panel 10 (frozen),413,3,True,0.5
+GSE178514,Panel 20 (frozen),393,3,True,1.0
+GSE178514,Panel 20 (frozen),411,3,True,1.0
+GSE178514,Panel 20 (frozen),413,3,True,0.5
+GSE178514,qPCR-ready panel (16 genes),393,3,True,1.0
+GSE178514,qPCR-ready panel (16 genes),411,3,True,1.0
+GSE178514,qPCR-ready panel (16 genes),413,3,True,0.5
+GSE178514,CDKN2A alone,393,3,True,0.5
+GSE178514,CDKN2A alone,411,3,False,-1.0
+GSE178514,CDKN2A alone,413,3,True,0.5

@@ -1,4 +1,5 @@
 import { shareDots } from './charts.js';
+import { t } from './i18n.js';
 
 const pct = (v) => `${Math.round(v * 100)}%`;
 const fmtP = (p) => (p < 0.001 ? 'p < 0.001' : `p = ${p.toFixed(p < 0.01 ? 4 : 3)}`);
@@ -51,8 +52,8 @@ export function renderEvidence(el, ev) {
       </tbody></table></div></details>
     </div>`;
   const ring = (up, n, label, color) => `<div class="evidence-ring"><svg viewBox="0 0 160 160" role="img" aria-label="${up} of ${n}: ${label}"><circle cx="80" cy="80" r="58" fill="none" stroke="#e7ebef" stroke-width="13"/><circle cx="80" cy="80" r="58" fill="none" stroke="${color}" stroke-width="13" stroke-dasharray="${up/n*364.425} 364.425" transform="rotate(-90 80 80)" stroke-linecap="round"/><text x="80" y="86" text-anchor="middle" style="font-size:27px;font-weight:600">${up}/${n}</text><text x="80" y="108" text-anchor="middle" style="font-size:11px">donors</text></svg><p>${label}</p></div>`;
-  el.innerHTML = `<div class="evidence-rings">${ring(ok.donors_rising, ok.donors, 'Rising signature ? identity-checked cohorts', '#238b8d')}${ring(registered.donors_rising, registered.donors, 'Rising signature ? all planned cohorts', '#7274b5')}${ring(f.testBeat, f.testN, 'Forecast closer than no change ? held-out cohorts', '#e27b50')}</div>
-    <div class="evidence-chart"><h3>Signature comparison across donors</h3>${shareDots(ev.headToHead)}<p class="atlas-caption">Points: share of donors with a rising score. Lines: exact 95% confidence intervals.</p></div>
-    <details class="evidence-details"><summary>Study methods, uncertainty and complete validation results</summary>${details}</details>`;
+  el.innerHTML = `<div class="evidence-rings">${ring(ok.donors_rising, ok.donors, t('Rising signature · identity-checked cohorts', 'Chữ ký tăng · cohort đã kiểm tra danh tính'), '#238b8d')}${ring(registered.donors_rising, registered.donors, t('Rising signature · all planned cohorts', 'Chữ ký tăng · mọi cohort theo kế hoạch'), '#7274b5')}${ring(f.testBeat, f.testN, t('Forecast closer than no change · held-out cohorts', 'Dự báo sát hơn "không đổi" · cohort giữ riêng'), '#e27b50')}</div>
+    <div class="evidence-chart"><h3>${t('Signature comparison across donors', 'So sánh các chữ ký trên người hiến')}</h3>${shareDots(ev.headToHead)}<p class="atlas-caption">${t('Points: share of donors with a rising score. Lines: exact 95% confidence intervals.', 'Điểm: tỷ lệ người hiến có điểm tăng. Đường: khoảng tin cậy 95% chính xác.')}</p></div>
+    <details class="evidence-details"><summary>${t('Study methods, uncertainty and complete validation results', 'Phương pháp, độ bất định và toàn bộ kết quả kiểm chứng (tiếng Anh)')}</summary>${details}</details>`;
 
 }

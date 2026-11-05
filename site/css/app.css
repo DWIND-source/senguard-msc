@@ -269,3 +269,41 @@ details summary { cursor: pointer; font-size: 14px; color: var(--accent); margin
 
 .atlas-heading .atlas-selection { margin-top: 7px; color: var(--accent); font-size: 12px; }
 @media (max-width: 560px) { #atlas-pca svg text, #atlas-curve svg text { font-size: 15px; } #forecast-chart { overflow-x: auto; } #forecast-chart svg { min-width: 720px; } }
+
+/* Language switch, plain-language explainers, donor flags and the culture-option sections */
+.lang-toggle { font: 600 13px var(--sans); color: var(--accent); background: var(--card); border: 1px solid var(--line); border-radius: 999px; padding: 5px 12px; cursor: pointer; }
+.lang-toggle:hover { border-color: var(--accent2); }
+.explain { margin: 18px 0 4px; padding: 13px 16px; background: var(--card); border: 1px solid var(--line); border-left: 4px solid var(--accent2); border-radius: 10px; max-width: 42em; }
+.explain h2 { font-size: 16px; margin: 0 0 4px; letter-spacing: 0; }
+.explain p { margin: 0; color: var(--ink2); font-size: 14.5px; }
+.hero .actions { margin-top: 16px; }
+.lede-sm { color: var(--ink2); max-width: 52em; margin: 0 0 18px; }
+.insight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.insight-grid .card svg { width: 100%; height: auto; display: block; margin-top: 8px; }
+.insight-grid .card svg text, .evidence-chart svg text { font: 11.5px var(--sans); fill: var(--ink2); }
+.insight-grid .card svg text.lbl, .evidence-chart svg text.lbl { fill: var(--ink); font-size: 12px; }
+.note.strong { color: var(--ink); font-weight: 500; }
+.flag { display: inline-block; font: 600 11.5px var(--sans); padding: 2px 8px; border-radius: 999px; white-space: nowrap; vertical-align: middle; }
+.flag-noise { color: var(--ok); background: var(--ok-bg); }
+.flag-review { color: var(--warn); background: var(--warn-bg); }
+.flag-na { color: var(--ink2); background: var(--band); }
+.flag-list { display: grid; grid-template-columns: auto 1fr; gap: 6px 10px; margin: 8px 0; font-size: 14px; color: var(--ink2); }
+.flag-list dd { margin: 0; }
+.reading-line { margin: 0; font-size: 14px; line-height: 1.45; color: var(--stage-ink); }
+.reading-line:empty { display: none; }
+.reading-line small { display: block; margin-top: 4px; color: var(--stage-ink2); font-size: 12.5px; }
+.panel-read { margin: 4px 0 0; font-size: 12.8px; line-height: 1.4; color: var(--ink2); }
+.heat-key { margin: 0 0 10px; padding: 8px 11px; background: var(--band); border-radius: 8px; font-size: 13.2px; line-height: 1.45; color: var(--ink2); }
+.gene-table { font-size: 13.2px; }
+.gene-table td { vertical-align: top; }
+.gene-table td small { color: var(--ink2); }
+.gene-table tr.flagged td { background: #fffaf0; }
+.background-only { margin: 0 0 6px; color: var(--ink); }
+.glossary { margin-top: 18px; }
+.glossary dl { display: grid; grid-template-columns: minmax(130px, auto) 1fr; gap: 6px 16px; margin: 10px 0 0; font-size: 14.5px; }
+.glossary dt { font-weight: 600; }
+.glossary dd { margin: 0; color: var(--ink2); }
+@media (max-width: 860px) { .insight-grid { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 560px) { .glossary dl { grid-template-columns: minmax(0, 1fr); } .glossary dd { margin-bottom: 6px; } .lang-toggle { order: -1; } }
+.panel-chart svg { width: 100%; max-width: 680px; height: auto; display: block; margin: 10px auto 0; }
+@media (max-width: 560px) { nav { flex-wrap: nowrap; overflow-x: auto; gap: 16px; width: 100%; padding-bottom: 6px; scrollbar-width: none; } nav a { white-space: nowrap; } }
